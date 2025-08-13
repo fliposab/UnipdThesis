@@ -9,6 +9,7 @@
     key: "termine",
     description: [termine esempio per dimostrare come funziona il glossario.],
   ),
+  /*
   (
     key: "ad",
     short: [Albero di decisione],
@@ -82,4 +83,5 @@
     short: [Regressione lineare],
     description: [desc],
   ),
+  */
 )
