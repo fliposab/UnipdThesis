@@ -6,9 +6,10 @@
 = Gestione delle attività<cap:analisi-requisiti>
 
 #text(style: "italic", [
-    In questo capitolo effettuo l'analisi degli requisiti, norme di progetto, organizzazione e specifica tecnica
+    In questo capitolo approfondisco tutte le attività del progetto: pianificazione, organizzazione, sviluppo, test e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
 ])
 #v(1em)
+
 == Pianificazione
 _Qui descrivo tutto quello che avevo pianificato prima dello stage, con le ore e le attività da svolgere, con confronto con le ore ed attività effettivamente svolte_
 /*Durante la pianificazione del lavoro, ho previsto che lo sviluppo di ognuno di questi livelli impegnerà un massimo di 2 settimane.
@@ -54,14 +55,7 @@ Nella seguente tabella ho riportato le ore totali pianificate del progetto:
   ),
 )*/
 
-== Organizzazione del lavoro
-_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
-=== Attività
-=== Regole di sviluppo
-=== Strumenti
-== Metriche di qualità
-_Qui descrivo le metriche che ho deciso di seguire per garantire qualità al progetto_
-== Analisi dei rischi
+=== Analisi dei rischi
 _Qui svolgo un'analisi dei rischi, con descrizione di quelli pianificati e come sono stati mitigati_
 /*
 === Errata pianificazione dei tempi
@@ -138,8 +132,22 @@ _Qui svolgo un'analisi dei rischi, con descrizione di quelli pianificati e come 
 - *Piano di contingenza*:\
   Rivedere la progettazione dell'architettura in caso di problemi, e valutare l'impatto sui tempi di sviluppo.
 */
-== Analisi dei requisiti
-_Qui descrivo gli attori presenti, tutti i casi d'uso e i requisiti da soddisfare_
+
+=== Casi d'uso
+_Qui descrivo gli attori presenti e tutti i casi d'uso dell'applicazione_
+==== Lista degli attori
+==== Lista dei casi d'uso
+=== Requisiti
+_Qui descrivo i requisiti da soddisfare_
+
+
+== Organizzazione del lavoro
+_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
+=== Attività
+=== Regole di sviluppo
+=== Strumenti
+=== Metriche di qualità
+_Qui descrivo le metriche che ho deciso di seguire per garantire qualità al progetto_
 
 /*
 === Lista degli attori 
@@ -255,9 +263,61 @@ Di seguito, nella @tab:riepilogo-requisiti ho inserito il riepilogo dei requisit
 )<tab:riepilogo-requisiti>
 ]
 */
+== Sviluppo
+=== Tecnologie utilizzate
+_Qui elenco tutte le tecnologie che ho usato_
+/*
+#show figure: set block(breakable: true)
+#figure(caption: [Tecnologie utilizzate], table(
+  columns: (auto, auto, auto),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(210) },
+  table.header([*Nome*], [*Descrizione*], [*Versione*]),
+  table.cell([*Codice*], colspan: 3),
+  [GDScript],[Linguaggio di programmazione di alto livello, con sintassi simile a Python, viene integrato con il motore di gioco Godot],[(Legata a Godot)],
+  [GDShader],[Linguaggio simile a [GLSL ES 3.0], usato per la creazione di materiali più complessi],[(Legata a Godot)],
+  [Typst],[Linguaggio utilizzato per la stesura dei documenti],[0.13.1],
+  table.cell([*Softwares*], colspan: 3),
+  [Godot],[Il motore di gioco open source per lo sviluppo del videogioco],[4.5-beta3-mono],
+  [Blender],[Software di modellazione ed animazione 3D usato per creare i modelli 3D ed animazioni nel gioco],[4.4.3],
+  table.cell([*Strumenti e servizi*], colspan: 3),
+  [Git],[Servizio per il controllo della versione],[2.50.1],
+  [GitHub],[Servizio di hosting per i progetti software, è un'implementazione del servizio Git],[-],
+  [GitHub Actions],[Servizio di integrazione continua e distribuzione continua (CI/CD), utilizzato per compilare i documenti ad ogni push],[-],
+  table.cell([*Tipi di files non generati dagli strumenti elencati sopra*], colspan: 3),
+  [\u{002A}.csv],["Comma separated values", file utilizzato per memorizzare le frasi nelle lingue diverse supportate dal gioco],[-],
+  [\u{002A}.ini],[Tipo di file "plain-text" utilizzato per salvare i dati del gioco],[-],
+  [\u{002A}.glb],["GLTF Binary", file utilizzato per memorizzare i modelli 3D e le loro animazioni in formato binario, in modo da risparmiare spazio e migliorare le prestazioni],[2.0.1]
+))*/
+==== Godot Engine
+/*
+Lo strumento principale che ho usato durante lo sviluppo del progetto è stato il motore di gioco "Godot Engine", con numero di versione _4.5-beta3_.
+Insieme a Godot sono state usate le seguenti tecnologie:
+- *GDScript*: linguaggio di programmazione di alto livello, con sintassi simile a Python, viene integrato con il motore di gioco Godot;
+- *GDShader*: linguaggio simile a #gl("glsl_es") 3.0, usato per la creazione di materiali più complessi;
+- *GUT - Godot Unit test*:  #gl("add-on") di Godot che permette di svolgere test di unità e di integrazione all'interno dell'editor, simulando gli input dell'utente;*/
+==== Blender
+/*#heading([Python], depth: 4, numbering: none)*/
+==== Visual Studio Code
+==== Typst
+==== Git
+==== GitHub
+/*#heading([Github Actions], depth: 4, numbering: none)*/
+==== Notion
+=== Architettura
 
-== Specifica Tecnica
 _Qui descrivo l'architettura delle classi e come comunicano tra loro_
+
+== _Testing_
+_Qui descrivo i test svolti, divisi per tipo_
+=== Test di unità
+=== Test di integrazione
+=== Test di sistema
+=== Test di accettazione
+
+== Validazione
+_Qui descrivo le attività svolte durante il processo di validazione_
 
 == Risultati Ottenuti
 _Qui descrivo i risultati raggiunti rispettivamente su piano qualitativo e quantitativo, con copertura dei requisiti, testing e quantità di prodotti_

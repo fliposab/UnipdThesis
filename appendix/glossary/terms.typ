@@ -6,9 +6,18 @@
     description: [Pratica di programmazione che prevede la frequente integrazione del codice prodotto verso il ramo principale del repository Git. Generalmente prima di poter fare questa integrazione il sistema esegue dei test automatici (compilazione, unità, ecc...).]
   ),*/
   (
+    key: "termine",
+    description: [termine esempio per dimostrare come funziona il glossario.],
+  ),
+  (
     key: "ad",
     short: [Albero di decisione],
     description: [desc]
+  ),
+  (
+    key: "add-on",
+    short: [Add-on],
+    description: [desc],
   ),
   (
     key: "ai",
@@ -37,14 +46,20 @@
     description: [desc]
   ),
   (
+    key: "game_ready",
+    short: [Game Ready],
+    description: [desc],
+  ),
+  (
     key: "gdscript",
     short: [GDScript],
     description: [desc],
   ),
   (
-    key: "game_ready",
-    short: [Game Ready],
-    description: [desc],
+    key: "glsl_es",
+    short: [GLSL ES],
+    long: [OpenGL Shading Language for Embedded Systems],
+    description: [desc]
   ),
   (
     key: "godot",

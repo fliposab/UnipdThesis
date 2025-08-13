@@ -4,15 +4,22 @@
 
 = Conclusioni<cap:conclusioni>
 #text(style: "italic", [
-    In questo capitolo effettuo una retrospettiva sul progetto e sulla mia esperienza di stage
+    In questo capitolo effettuo una retrospettiva sul progetto e sulla mia esperienza di stage, analizzando le esperienze acquisite durante il periodo.
+    Infine metto a confronto gli argomenti insegnati dal percorso di studi e quelli richiesti per lo sviluppo del progetto.
 ])
 #v(1em)
 == Obiettivi stage soddisfatti
-_Qui elenco gli obiettivi che erano stati dichiarati a inizio e quelli soddisfatti a fine stage_
+_Qui elenco gli obiettivi che erano stati dichiarati a inizio nel capitolo 2 e quelli soddisfatti a fine stage_
+
 == Esperienze acquisite
-_Come dice il titolo della sezione, qui descrivo le esperienza che ho acquisito durante lo stage_
+_Come dice il titolo della sezione, qui descrivo le esperienze e conoscenze che ho acquisito durante lo stage_
+
 == Differenza tra stage e percorso studi
 _Qui tratto della differenza tra gli argomenti trattati durante lo stage e gli argomenti insegnati durante il percorso di studi_
+=== Lacune sul percorso studi
+_Se presenti, in questa sezione descrivo alcune delle mie lacune verso gli argomenti insegnati nel percorso di studi verso lo stage e/o mondo del lavoro_
+== Pensieri finali
+_Qui concludo la tesi con  miei pensieri finali sull'ambiente di lavoro, il progetto, e quello che ho imparato per entrare nel mondo del lavoro_
 /*
 == Consuntivo finale
 Una volta terminato il progetto ho redatto il consuntivo orario finale nella @fig:tabella-calcolo-ore che suddivide in maniera approssimata le ore dedicate alle varie fasi.
