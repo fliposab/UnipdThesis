@@ -11,4 +11,4 @@
 #let myUni = "Università degli studi di Padova"
 #let myDepartment = "Dipartimento di Matematica ''Tullio Levi-Civita''"
 #let myFaculty = "Corso di Laurea in Informatica"
-#let myDegree = "Tesi di laurea triennale"
+#let myDegree = "Tesi di Laurea"
