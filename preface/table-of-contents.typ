@@ -8,7 +8,7 @@
     h(1fr)
   }
   #outline(
-    depth: 2
+    depth: 3
   )
 ]
 

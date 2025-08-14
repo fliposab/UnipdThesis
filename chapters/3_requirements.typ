@@ -3,151 +3,12 @@
 
 #pagebreak(to:"odd")
 
-= Gestione delle attività<cap:analisi-requisiti>
+= Gestione dei processi<cap:analisi-requisiti>
 
 #text(style: "italic", [
-    In questo capitolo approfondisco tutte le attività del progetto: pianificazione, organizzazione, sviluppo, test e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
+    In questo capitolo approfondisco tutti i processi del progetto: sviluppo, test e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
 ])
 #v(1em)
-
-== Pianificazione
-_Qui descrivo tutto quello che avevo pianificato prima dello stage, con le ore e le attività da svolgere, con confronto con le ore ed attività effettivamente svolte_
-/*Durante la pianificazione del lavoro, ho previsto che lo sviluppo di ognuno di questi livelli impegnerà un massimo di 2 settimane.
-Vista la familiarità verso gli argomenti dello stage, non ho previsto molte ore
-di formazione, quindi ho aumentato le ore richieste per la pianificazione e progettazione.
-Nella seguente tabella ho riportato le ore totali pianificate del progetto:
-#show figure: set block(breakable: true)
-#figure(
-  caption: [Pianificazione del lavoro],
-  table(
-    columns: (0.5fr, 2fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*Durata (ore)*], [*Descrizione attività*]),
-    [*24*],
-    [Pianificazione struttura applicazione #linebreak() 
-    Pianificazione stuttura livelli #linebreak()
-    Pianificazione implementazione meccaniche di gioco],
-    [*63*],[*Stesura della documentazione*],
-    table.hline(stroke: (dash: "dashed")),
-    [24],[Stesura documentazione relativa ad analisi e progettazione],
-    table.hline(stroke: none),
-    [16],[Stesura delle metriche di qualità],
-    table.hline(stroke: none),
-    [15],[Stesura delle norme e piano di progetto],
-    table.hline(stroke: none),
-    [8],[Stesura del Manuale Utente],
-    [*177*],
-    [*Sviluppo dei livelli*],
-    table.hline(stroke: (dash: "dashed")),
-    [59],
-    [Sviluppo primo livello],
-    table.hline(stroke: none),
-    [59],
-    [Sviluppo secondo livello],
-    table.hline(stroke: none),
-    [59],
-    [Sviluppo terzo livello],
-    [*40*],
-    [Test e verifica dell'applicazione],
-    table.cell([Totale ore: *304*], colspan: 2),
-  ),
-)*/
-
-=== Analisi dei rischi
-_Qui svolgo un'analisi dei rischi, con descrizione di quelli pianificati e come sono stati mitigati_
-/*
-=== Errata pianificazione dei tempi
-- *Descrizione*:\
-  Un'errata pianificazione dei tempi può portare a ritardi nello sviluppo del progetto, con conseguente rischio di non rispettare le scadenze stabilite.
-- *Probabilità*:\
-  Alta
-- *Pericolosità*:\
-  Alta
-- *Rilevamento*:\
-  Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana.
-- *Piano di contingenza*:\
-  Controllare le attività svolte tramite uno strumento di gestione del progetto (ad esempio #gl("diagrammi_gannt") e uso di checklist su #gl("Notion")) e rivedere la pianificazione delle attività in caso di ritardi.\
-//- *Aggiornamento*:\
-=== Impegni personali o universitari
-- *Descrizione*:\
-  Impegni personali o universitari possono influenzare  il tempo a disposizione per lo sviluppo del progetto, causando ritardi o interruzioni nello sviluppo.
-- *Probabilità*:\
-  Media
-- *Pericolosità*:\
-  Media
-- *Rilevamento*:\
-  Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana.
-- *Piano di contingenza*:\
-  Pianificare le attività in modo da tenere conto degli impegni personali o universitari, e rivedere la pianificazione delle attività in caso di imprevisti.\
-
-=== Mancanza di competenze tecniche
-- *Descrizione*:\
-  La mancanza di competenze tecniche può influenzare la qualità del prodotto software, causando ritardi nello sviluppo e problemi di integrazione.
-- *Probabilità*:\
-  Media
-- *Pericolosità*:\
-  Alta
-- *Rilevamento*:\
-  Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana, valutazione delle competenze tecniche.
-- *Piano di contingenza*:\
-  Formazione sulle tecnologie utilizzate e revisione della progettazione in caso di problemi tecnici.\
-
-=== Tecnologie non adeguate
-- *Descrizione*:\
-  L'uso di tecnologie non adeguate può influenzare la qualità del prodotto software, causando problemi di prestazioni basse o #gl("bug") grafici.
-- *Probabilità*:\
-  Alta
-- *Pericolosità*:\
-  Alta
-- *Rilevamento*:\
-  Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana.
-- *Piano di contingenza*:\
-  Valutazione delle tecnologie utilizzate e revisione della progettazione in caso di problemi tecnici.
-  In caso di problemi con le tecnologie utilizzate, si valuterà la possibilità di modificare la progettazione del gioco per adattarsi alle tecnologie disponibili.
-
-=== Cambio dei requisiti
-- *Descrizione*:\
-  Un cambiamento dei requisiti può influenzare la progettazione del sistema, causando ritardi nello sviluppo.
-- *Probabilità*:\
-    Bassa
-- *Pericolosità*:\
-  Alta
-- *Rilevamento*:\
-  Comunicazione frequente con il relatore del progetto per garantire che i requisiti siano chiari e stabili.
-- *Piano di contingenza*:\
-  Rivedere la progettazione del sistema in caso di cambiamenti dei requisiti, e valutare l'impatto sui tempi di sviluppo.
-  In caso di cambiamenti significativi dei requisiti, si valuterà la possibilità di modificare la pianificazione delle attività per tenere conto dei nuovi requisiti.
-
-=== Errore nella progettazione dell'architettura
-- *Descrizione*:\
-  Un errore nella progettazione dell'architettura può creare imprevisti ed un aumento dei tempi richiesti per lo sviluppo del sistema, causando ritardi nello sviluppo.
-- *Probabilità*:\
-  Media
-- *Pericolosità*:\
-  Alta
-- *Rilevamento*:\
-  Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana, valutazione della progettazione dell'architettura.
-- *Piano di contingenza*:\
-  Rivedere la progettazione dell'architettura in caso di problemi, e valutare l'impatto sui tempi di sviluppo.
-*/
-
-=== Casi d'uso
-_Qui descrivo gli attori presenti e tutti i casi d'uso dell'applicazione_
-==== Lista degli attori
-==== Lista dei casi d'uso
-=== Requisiti
-_Qui descrivo i requisiti da soddisfare_
-
-
-== Organizzazione del lavoro
-_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
-=== Attività
-=== Regole di sviluppo
-=== Strumenti
-=== Metriche di qualità
-_Qui descrivo le metriche che ho deciso di seguire per garantire qualità al progetto_
 
 /*
 === Lista degli attori 
@@ -264,6 +125,7 @@ Di seguito, nella @tab:riepilogo-requisiti ho inserito il riepilogo dei requisit
 ]
 */
 == Sviluppo
+_Qui viene descritto come è stato svolto il processo di sviluppo e che strumenti sono stati usati_
 === Tecnologie utilizzate
 _Qui elenco tutte le tecnologie che ho usato_
 /*
@@ -306,7 +168,6 @@ Insieme a Godot sono state usate le seguenti tecnologie:
 /*#heading([Github Actions], depth: 4, numbering: none)*/
 ==== Notion
 === Architettura
-
 _Qui descrivo l'architettura delle classi e come comunicano tra loro_
 
 == _Testing_
@@ -319,5 +180,5 @@ _Qui descrivo i test svolti, divisi per tipo_
 == Validazione
 _Qui descrivo le attività svolte durante il processo di validazione_
 
-== Risultati Ottenuti
+== Risultati ottenuti
 _Qui descrivo i risultati raggiunti rispettivamente su piano qualitativo e quantitativo, con copertura dei requisiti, testing e quantità di prodotti_
