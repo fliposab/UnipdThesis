@@ -21,8 +21,7 @@ Il presente documento descrive il lavoro svolto durante il periodo di stage curr
 
 / #link(<cap:introduzione>)[Il primo capitolo]: introduce l'azienda, la sua propensione per l'innovazione, il contesto organizzativo e i processi interni utilizzati.
 / #link(<cap:descrizione-stage>)[Il secondo capitolo]: descrive il rapporto dell'azienda con gli _stage_ in generale, come ha supportato il mio _stage_. Successivamente descriverò lo _stage_ in dettaglio, con gli obiettivi e vincoli stesi con il tutor aziendale, il rapporto tra l'argomento di _stage_ e l'innovazione e il confronto tra le altre offerte di _stage_.
-/ #link(<cap:analisi-requisiti>)[Il terzo capitolo]: descrive in dettaglio tutte le attività dello _stage_, la pianificazione, l'organizzazione, interazioni con il tutor aziendale, casi d'uso, tracciamento dei requisiti e strumenti di verifica.\
-	Successivamente descriverò le attività svolte, dall'analisi fino alla validazione.
+/ #link(<cap:analisi-requisiti>)[Il terzo capitolo]: descrive in dettaglio tutti i processi di sviluppo, _test_ e validazione dello _stage_.\
 	Seguirà, infine, una descrizione dei risultati che ho raggiunto sul piano qualitativo e quantitativo.
 / #link(<cap:conclusioni>)[Il quarto capitolo]: per finire, descrive l'esperienza personale di _stage_, quanti obiettivi soddisfatti rispetto agli obiettivi totali dichiarati nel secondo capitolo, la maturazione durante lo _stage_, con conoscenze ed abilità acquisiste durante il periodo\	
 	Infine, verrà fatto un confronto tra le competenze richieste a inizio _stage_ rispetto a quelle erogate dal corso di studi, con eventuali lacune su quest'ultimo su competenze che sarebbero state utili per lo _stage_ o mondo del lavoro.
