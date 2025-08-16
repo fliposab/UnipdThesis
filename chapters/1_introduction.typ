@@ -16,8 +16,7 @@ Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedic
 
 Nell'ufficio dove ho svolto lo stage, ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi. Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
 
-#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%) *ticket*: segnalazione o richiesta in un sistema di tracciamento (GitHub) che descrive un problema da risolvere o una funzionalità da implementare.\ \
-#align(center, [2.])])])
+#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%) *ticket*: segnalazione o richiesta in un sistema di tracciamento (GitHub) che descrive un problema da risolvere o una funzionalità da implementare.\ \ #align(center, [2.])])])
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
 Durante lo stage sono stato inserito in un team di sviluppo software composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\ /*L'organizzazione prevedeva una suddivisione dei ruoli ben definita, con una chiara gerarchia e responsabilità assegnate a ciascun membro del gruppo.*/

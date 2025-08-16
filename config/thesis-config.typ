@@ -49,7 +49,7 @@
   }
 
   // Custom styling
-  set list(marker: (sym.bullet, sym.dash))
+  //set list(marker: (sym.bullet, sym.do))
   set table(inset: 10pt)
   set table(
     fill: (x, y) => { 
@@ -64,7 +64,7 @@
     v(1em)
   }
   // Il comando sotto lo tengo commentato perché altrimenti può succedere che l'immagine e la sua caption finiscano in due pagine diverse.
-  // Per questo motivo ogni tabella deve essere racchiusa in un blocco di codice #{ } o di contenuto #[ ] per isolarne le regole. (se trovate un modo migliore aprite una pr :D )
+  // Per questo motivo ogni tabella deve essere racchiusa in un blocco di codice #{ } o di contenuto #[ ] per isolarne le regole. (se trovate un modo migliore aprite una pr :D)
   //show figure: set block(breakable: true)
 
   body
