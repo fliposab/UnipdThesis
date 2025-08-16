@@ -19,7 +19,7 @@ Nell'ufficio dove ho svolto lo stage, ho potuto osservare da vicino l'organizzaz
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%) *ticket*: segnalazione o richiesta in un sistema di tracciamento (GitHub) che descrive un problema da risolvere o una funzionalità da implementare.\ \ #align(center, [2.])])])
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
-Durante lo stage sono stato inserito in un team di sviluppo software composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\ /*L'organizzazione prevedeva una suddivisione dei ruoli ben definita, con una chiara gerarchia e responsabilità assegnate a ciascun membro del gruppo.*/
+Durante lo stage sono stato inserito in un team di sviluppo software composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\
 
 La comunicazione tra i membri del team avveniva principalmente tramite /*riunioni periodiche*/ e strumenti digitali di collaborazione, ad esempio Microsoft Teams, che facilitavano la condivisione delle informazioni e il coordinamento delle attività.\
 Ho potuto osservare come la collaborazione e il confronto costante tra colleghi fossero elementi fondamentali per il buon andamento dei progetti.
@@ -32,10 +32,6 @@ Questa esperienza mi ha permesso di comprendere l'importanza di lavorare in un c
 Durante tutto il periodo di stage, ho svolto le mie attività seguendo i processi interni decisi dall'azienda, che prevedono una gestione strutturata del progetto e una chiara suddivisione dei compiti da eseguire. Ad ogni inizio settimana, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto.\
 Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
 
-/*Le attività quotidiane venivano pianificate attraverso riunioni periodiche, durante le quali si definivano le priorità e si monitorava l'avanzamento dei lavori.*/
-/*
-L'azienda utilizza strumenti digitali per la gestione delle attività, come software di project management e sistemi di versionamento del codice, che facilitano la collaborazione e la condivisione delle informazioni tra i colleghi.*/ 
-
 Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata in per garantire trasparenza ed efficienza.
 
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.
@@ -46,21 +42,8 @@ Questi processi interni mi hanno permesso di acquisire una maggiore consapevolez
 == Clientela
 /*_Qui descrivo il tipo di clientela dell'azienda_*/
 Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende. I prodotti e servizi offerti spaziano da soluzioni gestionali per la contabilità e il personale, a software verticali per settori specifici come la sanità, il retail, la logistica e la produzione industriale.\
-/*
-L'ampiezza dell'offerta permette all'azienda di soddisfare le esigenze di clienti con necessità molto differenti, garantendo soluzioni personalizzate e supporto continuo.*/ 
 Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e all'adattamento dei prodotti alle evoluzioni del mercato.
 #figure(image("../images/zucchetti-clientela.png", width: 90%),caption: [Settori e temi di cui si occupa l'azienda. Fonte: Zucchetti])
-Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato. /*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
+Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico un po' più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato. /*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
 /*Fonte immagine:\ 
 #link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
-
-/*
-
-//== Clientela
-
-/*== Competenze da apprendere
-Il progetto è stato intrapreso con le seguenti competenze da acquisire o espandere:
-- conoscenza del linguaggio di programmazione GDScript;
-- gestione dei salvataggi in file separati, con caricamento e memorizzazione;
-- creazione di _asset_ 3D #gl("game_ready") per applicazioni come videogiochi;
-- approfondimento nell'ambito del _Game Design_.*/

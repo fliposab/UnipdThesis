@@ -53,8 +53,11 @@
   set table(inset: 10pt)
   set table(
     fill: (x, y) => { 
-        if calc.even(y) { 
-          gray.lighten(70%)
+        if y == 0{
+          gray.lighten(40%)
+        }
+        else if calc.even(y) { 
+          gray.lighten(75%)
         } else { white }
       }
   )
