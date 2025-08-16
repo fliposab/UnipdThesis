@@ -6,6 +6,10 @@
     description: [Pratica di programmazione che prevede la frequente integrazione del codice prodotto verso il ramo principale del repository Git. Generalmente prima di poter fare questa integrazione il sistema esegue dei test automatici (compilazione, unità, ecc...).]
   ),*/
   (
+    key: "ludico",
+    description: [Il termine "ludico" si riferisce a tutto ciò che riguarda il gioco o l'attività di giocare. In ambito software, può indicare elementi, meccaniche o approcci che introducono aspetti di gioco per rendere un'attività più coinvolgente o motivante.]
+  ),
+  (
     key: "termine",
     description: [termine esempio per dimostrare come funziona il glossario.],
   ),
