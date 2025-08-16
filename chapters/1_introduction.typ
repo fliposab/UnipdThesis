@@ -16,12 +16,15 @@ Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedic
 
 Nell'ufficio dove ho svolto lo stage, ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi. Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
 
-#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%) *ticket*: segnalazione o richiesta in un sistema di tracciamento (GitHub) che descrive un problema da risolvere o una funzionalità da implementare.\ \ #align(center, [2.])])])
+#set page(footer-descent: -30%, footer: [#align(top, [#line(length: 100%) 
+*Microsoft Teams*: piattaforma di comunicazione e collaborazione sviluppata da Microsoft.\
+*ticket*: segnalazione o richiesta in un sistema di tracciamento (GitHub) che descrive un problema da risolvere o una funzionalità da implementare.\ \ #align(center, context([#counter(page).display("1.")]))])])
+
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
 Durante lo stage sono stato inserito in un team di sviluppo software composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\
 
-La comunicazione tra i membri del team avveniva principalmente tramite /*riunioni periodiche*/ e strumenti digitali di collaborazione, ad esempio Microsoft Teams, che facilitavano la condivisione delle informazioni e il coordinamento delle attività.\
+La comunicazione tra i membri del team avveniva principalmente tramite strumenti digitali di collaborazione, ad esempio #gl("Microsoft_Teams"), che facilitavano la condivisione delle informazioni e il coordinamento delle attività.\
 Ho potuto osservare come la collaborazione e il confronto costante tra colleghi fossero elementi fondamentali per il buon andamento dei progetti.
 
 L'ambiente lavorativo era caratterizzato da una forte attenzione alla qualità del prodotto e al rispetto delle scadenze, con un approccio orientato al miglioramento continuo dei processi produttivi.\ 
@@ -36,8 +39,9 @@ Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica
 
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.
 
-#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%) *ludico*: tutto ciò che riguarda il gioco o l'attività di giocare.\ \
-#align(center, [3.])])])
+#set page(footer-descent: 0pt, footer: [#align(top, [#line(length: 100%) 
+*ludico*: tutto ciò che riguarda il gioco o l'attività di giocare.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 
 == Clientela
 /*_Qui descrivo il tipo di clientela dell'azienda_*/

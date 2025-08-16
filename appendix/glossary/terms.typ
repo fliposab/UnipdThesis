@@ -7,7 +7,12 @@
   ),*/
   (
     key: "ludico",
-    description: [Il termine "ludico" si riferisce a tutto ciò che riguarda il gioco o l'attività di giocare. In ambito software, può indicare elementi, meccaniche o approcci che introducono aspetti di gioco per rendere un'attività più coinvolgente o motivante.]
+    description: [tutto ciò che riguarda il gioco o l'attività di giocare. In ambito software, può indicare elementi, meccaniche o approcci che introducono aspetti di gioco per rendere un'attività più coinvolgente o motivante.]
+  ),
+  (
+    key: "Microsoft_Teams",
+    short: [Microsoft Teams],
+    description: [piattaforma di comunicazione e collaborazione sviluppata da Microsoft, che fornisce chat, videoconferenze, condivisione di file e lavoro di gruppo integrato con gli strumenti forniti da Microsoft.],
   ),
   (
     key: "termine",
@@ -15,7 +20,7 @@
   ),
   (
     key: "ticket",
-    description: [Un ticket è una segnalazione o richiesta registrata in un sistema di tracciamento (come GitHub Issues o Jira) che descrive un problema, una funzionalità da implementare o un'attività da svolgere all'interno di un progetto software.]
+    description: [segnalazione o richiesta registrata in un sistema di tracciamento (come GitHub Issues o Jira) che descrive un problema, una funzionalità da implementare o un'attività da svolgere all'interno di un progetto software.]
   )
   /*
   (
