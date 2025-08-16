@@ -9,6 +9,10 @@
     key: "termine",
     description: [termine esempio per dimostrare come funziona il glossario.],
   ),
+  (
+    key: "ticket",
+    description: [Un ticket è una segnalazione o richiesta registrata in un sistema di tracciamento (come GitHub Issues o Jira) che descrive un problema, una funzionalità da implementare o un'attività da svolgere all'interno di un progetto software.]
+  )
   /*
   (
     key: "ad",

@@ -35,7 +35,7 @@ Durante la stesura del testo ho scelto di adottare le seguenti convenzioni tipog
 
 //Preferenze personali modificabili a discrezione tua o del relatore
 - gli acronimi, le abbreviazioni e i termini di uso non comune menzionati vengono definiti nel #link(<glossary>)[glossario], situato alla fine del documento (#link(<glossary>)[p. #context counter(page).at(<glossary>).at(0)]);
-#set page(footer: [#line(length: 100%) *termine*: termine esempio])
+#set page(numbering: "i", footer: [#line(length: 100%) *termine*: termine esempio])
 - per la prima occorrenza dei termini riportati nel glossario viene utilizzata la seguente nomenclatura: #gl("termine", capitalize: false) e ne viene riportata una breve descrizione del termine a piè di pagina;
 - i termini in lingua straniera non di uso comune o facenti parti del gergo tecnico sono evidenziati con il carattere _corsivo_;
 - all'inizio di ogni capitolo viene riportato un breve sommario sugli argomenti principali che il capitolo tratta;
@@ -52,7 +52,7 @@ Durante la stesura del testo ho scelto di adottare le seguenti convenzioni tipog
     [Valore 2-1],[Valore 2-2],
     ),
 )
-#set page(footer: [])
+#set page(numbering: "i", footer: [])
 - i blocchi di codice sono rappresentati nel seguente modo:
 #linebreak()
 #figure(caption: "Codice d'esempio.")[

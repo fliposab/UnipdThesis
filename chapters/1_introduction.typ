@@ -9,17 +9,50 @@
 #v(1em)
 
 == L'azienda
-_Qui descrivo l'azienda e le mie impressioni durante lo stage, e la sua propensione all'innovazione_
-/*L'azienda Zucchetti Spa è nota come la prima software house italiana, ed offre una vasta gamma di soluzioni software e servizi per le aziende,mantenendosi sempre aggiornati su tematiche come il diritto civile, contabilità, fiscalità, diritto del lavoro e previdenza.*/
+/*_Qui descrivo l'azienda e le mie impressioni durante lo stage, e la sua propensione all'innovazione_*/
+L'azienda Zucchetti Spa opera nel settore informatico da oltre 40 anni ed offre una vasta gamma di soluzioni software e servizi per le aziende, mantenendosi sempre aggiornati su tematiche come il diritto civile, contabilità, fiscalità, diritto del lavoro e previdenza.
 
-== Contesto organizzativo
-_Qui descrivo il contesto organizzativo in cui sono stato inserito_
+Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedicate a ricerca e sviluppo, dimostrando una forte attenzione all'innovazione tecnologica e al miglioramento continuo dei propri prodotti.\ L'azienda investe costantemente in nuove tecnologie e nella formazione del personale, favorendo un ambiente dinamico e orientato alla crescita professionale.
+
+Nell'ufficio dove ho svolto lo stage, ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi. Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
+
+#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%) *ticket*: segnalazione o richiesta in un sistema di tracciamento (GitHub) che descrive un problema da risolvere o una funzionalità da implementare.\ \
+#align(center, [2.])])])
+== Contesto organizzativo e produttivo
+/*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
+Durante lo stage sono stato inserito in un team di sviluppo software composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\ /*L'organizzazione prevedeva una suddivisione dei ruoli ben definita, con una chiara gerarchia e responsabilità assegnate a ciascun membro del gruppo.*/
+
+La comunicazione tra i membri del team avveniva principalmente tramite /*riunioni periodiche*/ e strumenti digitali di collaborazione, ad esempio Microsoft Teams, che facilitavano la condivisione delle informazioni e il coordinamento delle attività. Ho potuto osservare come la collaborazione e il confronto costante tra colleghi fossero elementi fondamentali per il buon andamento dei progetti.
+
+L'ambiente lavorativo era caratterizzato da una forte attenzione alla qualità del prodotto e al rispetto delle scadenze, con un approccio orientato al miglioramento continuo dei processi produttivi.\ 
+Questa esperienza mi ha permesso di comprendere l'importanza di lavorare in un contesto organizzato e strutturato, dove ogni componente contribuisce al raggiungimento degli obiettivi comuni.
 
 == Processi interni utilizzati
-_Qui descrivo i processi interni utilizzati_
+/*_Qui descrivo i processi interni utilizzati_*/
+Durante tutto il periodo di stage, ho svolto le mie attività seguendo i processi interni decisi dall'azienda, che prevedono una gestione strutturata del progetto e una chiara suddivisione dei compiti da eseguire. Ad ogni inizio settimana, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto.\
+Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
+
+/*Le attività quotidiane venivano pianificate attraverso riunioni periodiche, durante le quali si definivano le priorità e si monitorava l'avanzamento dei lavori.*/
+/*
+L'azienda utilizza strumenti digitali per la gestione delle attività, come software di project management e sistemi di versionamento del codice, che facilitano la collaborazione e la condivisione delle informazioni tra i colleghi.*/ 
+
+Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata in per garantire trasparenza ed efficienza.
+
+Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.
+
+#set page(numbering: "1",footer-descent: 30%, footer: [#align(center, [3.])])
 
 == Clientela
-_Qui descrivo il tipo di clientela dell'azienda_
+/*_Qui descrivo il tipo di clientela dell'azienda_*/
+Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende. I prodotti e servizi offerti spaziano da soluzioni gestionali per la contabilità e il personale, a software verticali per settori specifici come la sanità, il retail, la logistica e la produzione industriale.\
+/*
+L'ampiezza dell'offerta permette all'azienda di soddisfare le esigenze di clienti con necessità molto differenti, garantendo soluzioni personalizzate e supporto continuo.*/ 
+Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e all'adattamento dei prodotti alle evoluzioni del mercato.
+#figure(image("../images/zucchetti-clientela.png", width: 90%),caption: [Settori di cui si occupa l'azienda. Fonte: Zucchetti])
+Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico più generale ed ampio. In particolare, il target comprende utenti più giovani e dinamici, attratti sia dall'aspetto ludico sia da quello formativo del prodotto sviluppato. /*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
+/*Fonte immagine:\ 
+#link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
+
 /*
 
 //== Clientela
