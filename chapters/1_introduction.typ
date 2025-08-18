@@ -22,8 +22,8 @@ Nell'ufficio dove ho svolto lo stage, ho potuto osservare da vicino l'organizzaz
 
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
-Durante lo stage sono stato inserito in un team di sviluppo software composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\
-
+Durante lo stage sono stato per lo più indipendente, tuttavia qualora avessi avuto bisogno di aiuto, potevo chiedere ad un gruppo composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e project manager.\
+Ho potuto osservare come la collaborazione e il confronto tra colleghi fossero elementi fondamentali per il buon andamento dei progetti.
 La comunicazione tra i membri del team avveniva principalmente tramite strumenti digitali di collaborazione, ad esempio #gl("Microsoft_Teams"), che facilitavano la condivisione delle informazioni e il coordinamento delle attività.\
 Ho potuto osservare come la collaborazione e il confronto costante tra colleghi fossero elementi fondamentali per il buon andamento dei progetti.
 
