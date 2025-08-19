@@ -57,3 +57,4 @@ Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubb
 
 #pagebreak()
 == Propensione per l'innovazione
+_In questa sezione descrivo la propensione per l'innovazione, e in che modo l'azienda la rappresenta_
