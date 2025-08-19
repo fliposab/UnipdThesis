@@ -2,7 +2,7 @@
 #import "../config/variables.typ": myTutor
 #pagebreak(to:"odd")
 
-= Il progetto<cap:descrizione-stage>
+= Lo _stage_<cap:descrizione-stage>
 #text(style: "italic", [
     In questo capitolo approfondisco il rapporto con l'azienda ospitante verso gli stage in generale, come ha supportato il mio stage, il perché della mia scelta e gli obiettivi e vincoli decisi con il tutor aziendale. Infine verrà messo a confronto il tema dello stage con l'innovazione ed il mercato dove viene inserito il progetto.
 ])

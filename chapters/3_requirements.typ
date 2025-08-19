@@ -3,7 +3,7 @@
 
 #pagebreak(to:"odd")
 
-= Lo _stage_<cap:analisi-requisiti>
+= Il progetto<cap:analisi-requisiti>
 
 #text(style: "italic", [
     In questo capitolo approfondisco tutti i processi del progetto: sviluppo, test e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
