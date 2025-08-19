@@ -2,13 +2,13 @@
 #import "@preview/codly-languages:0.1.8": *
 #import "../config/thesis-config.typ": gl, glpl, glossary-style, linkfn
 
-= Introduzione <cap:introduzione>
+= L'azienda <cap:introduzione>
 #text(style: "italic", [
     In questo capitolo descrivo l'azienda, il contesto organizzativo in cui sono stato inserito, i processi interni utilizzati e la tipologia di clientela a cui si rivolge.
 ])
 #v(1em)
 
-== L'azienda
+== Introduzione
 /*_Qui descrivo l'azienda e le mie impressioni durante lo stage, e la sua propensione all'innovazione_*/
 L'azienda Zucchetti Spa opera nel settore informatico da oltre 45 anni ed offre una vasta gamma di soluzioni software e servizi per le aziende, mantenendosi sempre aggiornati su tematiche come il diritto civile, contabilità, fiscalità, diritto del lavoro e previdenza.
 
@@ -29,6 +29,9 @@ Ho potuto osservare come la collaborazione e il confronto costante tra colleghi 
 
 L'ambiente lavorativo era caratterizzato da una forte attenzione alla qualità del prodotto e al rispetto delle scadenze, con un approccio orientato al miglioramento continuo dei processi produttivi.\ 
 Questa esperienza mi ha permesso di comprendere l'importanza di lavorare in un contesto organizzato e strutturato, dove ogni componente contribuisce al raggiungimento degli obiettivi comuni.
+
+=== Tecnologie di supporto
+_Qui descrivo le tecnologie di supporto e collaborazione che il personale in azienda utilizzava, ad esempio, la sezione sopra su Microsoft Teams la sposterei qui_
 
 == Processi interni utilizzati
 /*_Qui descrivo i processi interni utilizzati_*/
@@ -51,3 +54,6 @@ Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e 
 Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico un po' più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato. /*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
 /*Fonte immagine:\ 
 #link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
+
+#pagebreak()
+== Propensione per l'innovazione
