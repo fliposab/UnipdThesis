@@ -38,7 +38,7 @@ _Qui descrivo le tecnologie di supporto e collaborazione che il personale in azi
 Durante tutto il periodo di stage, ho svolto le mie attività seguendo i processi interni decisi dall'azienda, che prevedono una gestione strutturata del progetto e una chiara suddivisione dei compiti da eseguire. Ad ogni inizio settimana, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto.\
 Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
 
-Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata in per garantire trasparenza ed efficienza.
+Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata per garantire trasparenza ed efficienza.
 
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.
 
