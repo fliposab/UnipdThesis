@@ -25,6 +25,8 @@ _Qui descrivo le mie aspettative riguardo al progetto da svolgere che avevo prim
 
 == Obiettivi
 _Qui descrivo gli obiettivi e le competenze da acquisire_
+=== Rapporto del progetto con l'innovazione
+_Qui descrivo il rapporto del progetto con l'innovazione ed il mercato, rispetto alla visione dell'azienda_
 
 == Vincoli
 _Qui descrivo i vincoli decisi con il tutor_
