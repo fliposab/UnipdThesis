@@ -18,6 +18,8 @@ _Qui descrivo il rapporto dell'azienda con il mio stage_
 _Qui faccio un breve riassunto in cosa consisteva il mio progetto di stage_
 === Scelta del progetto
 _Qui descrivo la scelta del progetto, le ragioni della mia scelta, in confronto con gli altri progetti disponibili_
+=== Scelta dell'azienda
+_Qui descrivo le ragioni per cui ho deciso di svolgere il progetto in questa azienda rispetto alle altre_
 === Aspettative
 _Qui descrivo le mie aspettative riguardo al progetto da svolgere che avevo prima dell'inizio dello stage_
 
