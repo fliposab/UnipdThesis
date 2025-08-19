@@ -49,18 +49,21 @@ Questi strumenti hanno reso possibile una gestione efficiente delle attività e 
 == Clientela
 /*_Qui descrivo il tipo di clientela dell'azienda_*/
 Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende. 
-I prodotti e servizi offerti spaziano da soluzioni gestionali per la contabilità e il personale, a software verticali per settori specifici come la sanità, il retail, la logistica e la produzione industriale.\
 Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e all'adattamento dei prodotti alle evoluzioni del mercato.
 #figure(image("../images/zucchetti-clientela.png", width: 90%),caption: [Settori e temi di cui si occupa l'azienda. Fonte: Zucchetti])
+/*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
+/*Fonte immagine:\ 
+#link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
 Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico un po' più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato. 
 #set page(footer-descent: -60%, footer: [#line(length: 100%) 
 *brainstorming*: tecnica di generazione di idee in gruppo, in cui i partecipanti sono incoraggiati a esprimere liberamente le proprie idee.\
 *LLM - Large Language Model*: modello di intelligenza artificiale progettato per comprendere e generare testo in linguaggio naturale.\
 *temperatura*: parametro che controlla la casualità delle risposte generate da un LLM.\ \
 #align(center, context([#counter(page).display("1.")]))])
-/*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
-/*Fonte immagine:\ 
-#link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
+
+=== Prodotti e servizi
+L'azienda offre una vasta gamma di prodotti e servizi che spaziano da soluzioni gestionali per la contabilità e la gestione del personale, a software verticali progettati per rispondere alle esigenze di settori specifici come la sanità, il retail, la logistica e la produzione industriale. Questi prodotti sono pensati per supportare le aziende nell'ottimizzazione dei processi, nella gestione efficiente delle risorse e nell'adeguamento alle normative vigenti. Oltre ai software, Zucchetti fornisce servizi di consulenza, assistenza tecnica e formazione, garantendo un supporto completo ai propri clienti durante tutte le fasi di adozione e utilizzo delle soluzioni offerte.
+
 
 == Propensione per l'innovazione
 /*_In questa sezione descrivo la propensione per l'innovazione, e in che modo l'azienda la rappresenta_*/
