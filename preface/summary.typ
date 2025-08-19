@@ -3,6 +3,7 @@
 #import "../config/thesis-config.typ": glossary-style, gl, gls
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.8": *
+
 #pagebreak(to: "odd")
 #v(4em)
 
@@ -19,10 +20,9 @@ Il presente documento descrive il lavoro svolto durante il periodo di stage curr
 #linebreak()
 #v(1em)
 
-/ #link(<cap:introduzione>)[Il primo capitolo]: introduce l'azienda, la sua propensione per l'innovazione, il contesto organizzativo e i processi interni utilizzati.
-/ #link(<cap:descrizione-stage>)[Il secondo capitolo]: descrive il rapporto dell'azienda con gli _stage_ in generale, come ha supportato il mio _stage_, i vincoli ed obiettivi decisi con il tutor aziendale. Successivamente descriverò il rapporto tra l'argomento di _stage_ e l'innovazione e il confronto tra le altre offerte di _stage_.\
-	Infine, descriverò lo _stage_ dal mio punto di vista e perché l'ho scelto. 
-/ #link(<cap:analisi-requisiti>)[Il terzo capitolo]: descrive in dettaglio i processi di sviluppo, _test_ e validazione dello _stage_. Seguirà, infine, una descrizione dei risultati che ho raggiunto sul piano qualitativo e quantitativo.
+/ #link(<cap:introduzione>)[Il primo capitolo]: presenta l’azienda ospitante, illustrando il contesto organizzativo e produttivo in cui si è svolto lo stage, i processi interni adottati e la tipologia di clientela a cui si rivolge. Vengono inoltre descritte le principali tecnologie di supporto utilizzate dal personale e la propensione dell’azienda all’innovazione.
+/ #link(<cap:descrizione-stage>)[Il secondo capitolo]: approfondisce il rapporto dell’azienda con gli stage, l’interesse verso il progetto svolto e le motivazioni della scelta. Vengono illustrati gli obiettivi e i vincoli concordati con il tutor aziendale, la pianificazione e il calendario delle attività, l’organizzazione del lavoro e le principali tecnologie utilizzate. Infine, si analizza come il progetto si inserisce nel contesto di innovazione e mercato dell’azienda.
+/ #link(<cap:analisi-requisiti>)[Il terzo capitolo]: descrive in dettaglio l'analisi dei requisiti con i casi d'uso e la lista dei requisiti, l'architettura, _test_ e validazione dello _stage_. Seguirà, infine, una descrizione dei risultati che ho raggiunto sul piano qualitativo e quantitativo.
 / #link(<cap:conclusioni>)[Il quarto capitolo]: per finire, descrive l'esperienza personale di _stage_, quanti obiettivi soddisfatti rispetto agli obiettivi totali dichiarati nel secondo capitolo, la maturazione durante lo _stage_, con conoscenze ed abilità acquisiste durante il periodo\	
 	Infine, verrà fatto un confronto tra le competenze richieste a inizio _stage_ rispetto a quelle erogate dal corso di studi, con eventuali lacune su quest'ultimo su competenze che sarebbero state utili per lo _stage_ o mondo del lavoro.
 

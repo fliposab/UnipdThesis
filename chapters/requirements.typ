@@ -1,4 +1,4 @@
-#import "../config/thesis-config.typ": useCase
+#import "../config/thesis-config.typ"
 
 #pagebreak(to:"odd")
 
