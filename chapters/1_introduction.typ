@@ -30,9 +30,6 @@ Ho potuto osservare come la collaborazione e il confronto costante tra colleghi 
 L'ambiente lavorativo era caratterizzato da una forte attenzione alla qualità del prodotto e al rispetto delle scadenze, con un approccio orientato al miglioramento continuo dei processi produttivi.\ 
 Questa esperienza mi ha permesso di comprendere l'importanza di lavorare in un contesto organizzato e strutturato, dove ogni componente contribuisce al raggiungimento degli obiettivi comuni.
 
-=== Tecnologie di supporto
-_Qui descrivo le tecnologie di supporto e collaborazione che il personale in azienda utilizzava, ad esempio, la sezione sopra su Microsoft Teams la sposterei qui_
-
 == Processi interni utilizzati
 /*_Qui descrivo i processi interni utilizzati_*/
 Durante tutto il periodo di stage, ho svolto le mie attività seguendo i processi interni decisi dall'azienda, che prevedono una gestione strutturata del progetto e una chiara suddivisione dei compiti da eseguire. Ad ogni inizio settimana, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto.\
@@ -42,16 +39,24 @@ Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica
 
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.
 
+
+
+=== Tecnologie di supporto
+_Qui descrivo le tecnologie di supporto e collaborazione che il personale in azienda utilizzava, ad esempio, la sezione sopra su Microsoft Teams la sposterei qui_
+
+#pagebreak()
 #set page(footer-descent: 0pt, footer: [#align(top, [#line(length: 100%) 
 *ludico*: tutto ciò che riguarda il gioco o l'attività di giocare.\ \
 #align(center, context([#counter(page).display("1.")]))])])
-
 == Clientela
 /*_Qui descrivo il tipo di clientela dell'azienda_*/
-Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende. I prodotti e servizi offerti spaziano da soluzioni gestionali per la contabilità e il personale, a software verticali per settori specifici come la sanità, il retail, la logistica e la produzione industriale.\
+Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende. 
+I prodotti e servizi offerti spaziano da soluzioni gestionali per la contabilità e il personale, a software verticali per settori specifici come la sanità, il retail, la logistica e la produzione industriale.\
 Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e all'adattamento dei prodotti alle evoluzioni del mercato.
 #figure(image("../images/zucchetti-clientela.png", width: 90%),caption: [Settori e temi di cui si occupa l'azienda. Fonte: Zucchetti])
-Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico un po' più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato. /*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
+Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico un po' più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato. 
+#set page(footer-descent: 0pt, footer: [#align(center, context([#counter(page).display("1.")]))])
+/*Questa scelta ha influenzato le decisioni progettuali, portando a privilegiare un'interfaccia intuitiva, elementi grafici accattivanti e meccaniche di gioco che favorissero l'apprendimento attraverso il divertimento.*/
 /*Fonte immagine:\ 
 #link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
 
