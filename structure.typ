@@ -8,7 +8,7 @@
 #include "preface/copyright.typ"
 
 #set page(numbering: "i")
-#include "preface/dedication.typ"
+//#include "preface/dedication.typ"
 #include "preface/acknowledgements.typ"
 #include "preface/summary.typ"
 #include "preface/table-of-contents.typ"
