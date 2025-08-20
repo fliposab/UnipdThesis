@@ -16,6 +16,9 @@ Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedic
 
 Nell'ufficio dove ho svolto lo _stage_, ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi. Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
 
+=== Sede dello _stage_
+
+
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
 Durante lo _stage_ sono stato per lo più indipendente, tuttavia qualora avessi avuto bisogno di aiuto, potevo chiedere ad un gruppo composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e _project manager_.\
