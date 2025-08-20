@@ -46,6 +46,18 @@
     description: [piattaforma di comunicazione e collaborazione sviluppata da Microsoft, che fornisce chat, videoconferenze, condivisione di file e lavoro di gruppo integrato con gli strumenti forniti da Microsoft.],
   ),
   (
+    key: "poc",
+    short: [PoC],
+    long: [Proof of Concept],
+    description: []
+  ),
+  (
+    key: "mvp",
+    short: [MVP],
+    long: [Minimum Viable Product],
+    description: [],
+  ),
+  (
     key: "motore_di_gioco",
     short: [motore di gioco],
     description: [software progettato per facilitare lo sviluppo di videogiochi, fornendo strumenti e funzionalità per la gestione della grafica, della fisica, dell'audio e di altre componenti del gioco.]

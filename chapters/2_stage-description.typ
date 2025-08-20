@@ -124,9 +124,8 @@ Durante il secondo colloquio con il tutor aziendale, sono stati definiti dei vin
 - il gioco deve utilizzare una grafica 3D con un movimento del personaggio in terza persona, tridimensionale.
 === Pianificazione
 //_Qui descrivo tutto quello che avevo pianificato prima dello stage, con le ore e le attività da svolgere, con confronto con le ore ed attività effettivamente svolte_
-Il livello contiene 3 livelli...\
-
-Nella seguente tabella vengono riportate le ore totali del progetto, suddivise in pianificazione, documentazione, sviluppo e testing:
+Il gioco contiene 3 livelli, per ognuno di questi livelli sono state dedicate due settimane.
+Nella seguente tabella vengono riportate le ore totali pianificate del progetto:
 #show figure: set block(breakable: false)
 #figure(
   caption: [Pianificazione del lavoro in ore],
@@ -165,11 +164,106 @@ Nella seguente tabella vengono riportate le ore totali del progetto, suddivise i
     table.cell([Totale ore: *304*], colspan: 2),
   ),
 )
+
 === Calendario
-_Qui vengono descritte le attività pianificate per ogni settimana o periodo_
+//_Qui vengono descritte le attività pianificate per ogni settimana o periodo_
+Il periodo di stage è suddiviso in 8 periodi, la cui lunghezza di ognuno 
+corrisponde a una settimana. Qui sotto sono elencate le attività pianificate per ogni settimana:
+#linebreak()
+#linebreak()
+
+//1 - Linear descent
+//2 - Causality
+//3 - Random Forest
+//4 - Support Vector Machine
+- *Settimana 1 - 24 ore*:
+  - Incontro con il personale dell'azienda per discutere i requisiti dell'applicazione da sviluppare.
+  - Verifica credenziali e strumenti di lavoro assegnati
+  - Pianificazione e progettazione dell'applicazione.
+  - Inizio sviluppo.
+  //Obiettivi
+- *Settimana 2 - 40 ore*:
+  - Approfondimento su "Regressione lineare".
+  - Sviluppo degli oggetti principali del primo livello, implementando gli elementi della "Regressione lineare".
+- *Settimana 3 - 40 ore*:
+  - Approfondimento sul tema "Alberi di decisione".
+  - Sviluppo degli oggetti principali del secondo livello.
+- *Settimana 4 - 40 ore*:
+  - Approfondimento sull'argomento "Causalità".
+  - Sviluppo degli oggetti principali del terzo livello.
+  - Compilazione del #gl("poc") .
+- *Settimana 5 - 40 ore*:
+  - Sviluppo del primo livello, sul tema "Regressione Lineare", con gli oggetti creati nella settimana precedente.
+- *Settimana 6 - 40 ore*:
+  - Sviluppo del secondo livello, sul tema "Alberi di decisione", implementando gli oggetti creati nella settimana precedente.
+- *Settimana 7 - 40 ore*:
+  - Sviluppo del terzo livello, sul tema "Causalità", implementando gli oggetti creati nella settimana precedente.
+- *Settimana 8 - 40 ore*: 
+  - Stesura dei _test_.
+  - Compilazione dell'#gl("mvp").
 
 === Organizzazione del lavoro
-_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
+//_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
+
+Durante lo sviluppo, sono state imposte le seguenti regole per garantire corretta organizzazione. Le regole sono suddivise in base all'attività:
+#v(0.5em)
+- *Documentazione*:\
+
+#v(0.5em)
+- *Codifica*:\
+Tutti i file script del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione [*GDScript*]. I nomi delle classi sono salvate con una nomenclatura [*PascalCase*], mentre i nomi dei files e delle variabili usano [*snake_case*].\
+Per maggiori dettagli sulla nomenclatura, si seguono le convenzioni della documentazione ufficiale:\
+#link("https://docs.godotengine.org/it/4.x/tutorials/scripting/gdscript/gdscript_styleguide.html")\
+#v(0.5em)
+- *Modellazione*:\
+Tutti i modelli sono esportati nel formato _[.glb]_. I [materiali] vengono esportati senza immagini, dato che verranno rimpiazzati dal materiale presente nel gioco. Nel caso il modello presenti animazioni, vengono esportate insieme al modello.\
+#v(0.5em)
+- *Animazione*:\
+Le animazioni sono incluse nel modello durante l'esportazione. Per semplificare l'attività, viene usato un [rig] che dispone di [Inverse Kinematics]. Le animazioni sono già separate prima dell'esportazione e possono essere trovate nella sezione [NLA] e selezionate individualmente premendo la linea con il mouse e modificarle usando la scorciatoia _Shift+TAB_.\
+#v(0.5em)
+- *Creazione e modifica di _textures_*:\
+Le textures sono salvate come semplici immagini di tipo _[.png]_. Entrambe le dimensioni della texture (larghezza e altezza)  devono essere una potenza di 2. Risoluzioni esempio: 
+  - 256x256; 
+  - 512x512;
+  - 1024x1024 (1K);
+  - 2048x2048 (2K).
+Di norma, 1024 pixels corrispondono a 1 metro.
+#v(0.5em)
+- *Verifica e validazione*:\
+Il processo di verifica ha lo scopo di garantire che il software sviluppato soddisfi i requisiti stabiliti e che sia conforme agli standard di qualità richiesti.\
+Vi sono due tipologie di verifica, ognuna è focalizzata sulla verifica di vari aspetti dell'applicazione:
+- *analisi statica*: l'analisi statica comporta il controllo del codice prima della sua esecuzione. Questo tipo di verifica non viene applicata solo al codice, ma anche ai documenti del progetto. Questo metodo viene applicato nei seguenti casi:
+  - individuazione di bug nel codice;
+  - individuazione di errori di battitura nei documenti;
+  - verifica della coerenza e completezza della documentazione prodotta;
+- *analisi dinamica*: l'analisi dinamica viene eseguita all'esecuzione del software. Viene usata per controllare se ci sono errori durante l'esecuzione dell'applicazione e dei suoi componenti. Questo tipo di verifica permette di individuare malfunzionamenti, errori logici o comportamenti inattesi che possono emergere solo durante l'esecuzione reale del software. Le principali attività di analisi dinamica includono:
+  - esecuzione di test di unità e di integrazione per verificare il corretto funzionamento delle singole componenti e della loro interazione;
+  - monitoraggio delle prestazioni e dell'utilizzo delle risorse durante l'esecuzione;
+  - individuazione e correzione di bug che si manifestano solo in fase di runtime.
 
 === Tecnologie usate
-_Qui descrivo le principali tecnologie che ho usato_
+//_Qui descrivo le principali tecnologie che ho usato_
+#show figure: set block(breakable: true)
+#figure(caption: [Tecnologie utilizzate], table(
+  columns: (0.4fr, 1fr, 0.5fr),
+  inset: 8pt,
+  align: center + horizon,
+  table.header([*Nome*], [*Descrizione*], [*Versione*]),
+  //fill: (x, y) => if (y == 0) { luma(230) },
+  table.cell([*Codice*], colspan: 3),
+  [GDScript],[Linguaggio di programmazione di alto livello, con sintassi simile a *_Python_*, viene integrato con il motore di gioco Godot],[(Legata a Godot)],
+  [GDShader],[Linguaggio simile a *GLSL ES 3.0*, usato per la creazione di materiali e *shader* più complessi],[(Legata a Godot)],
+  [Typst],[Linguaggio utilizzato per la stesura dei documenti],[0.13.1],
+  table.cell([*_Softwares_*], colspan: 3),
+  [Godot],[Il motore di gioco *open source* per lo sviluppo del videogioco],[4.5-beta3-mono],
+  [Blender],[_Software_ di modellazione ed animazione 3D usato per creare i modelli 3D ed animazioni nel gioco],[4.4.3],
+  table.cell([*Strumenti e servizi*], colspan: 3),
+  [Git],[Servizio per il controllo della versione],[2.50.1],
+  [GitHub],[Servizio di *hosting* per i progetti software, utilizzato per la gestione del codice sorgente],[-],
+  [GitHub\ Actions],[Servizio di *integrazione continua* e *distribuzione continua* (CI/CD), utilizzato per compilare i documenti ad ogni *push*],[-],
+  [Notion],[],[2.53],
+  table.cell([*Tipi di _file_*], colspan: 3),
+  [\u{002A}.csv],["_Comma separated values_", _file_ utilizzato per memorizzare le frasi nelle lingue diverse supportate dal gioco],[-],
+  [\u{002A}.ini],[Tipo di _file_ _plain-text_ utilizzato per salvare i dati del gioco],[-],
+  [\u{002A}.glb],["_GLTF Binary_", _file_ utilizzato per memorizzare i modelli 3D e le loro animazioni in formato binario, in modo da risparmiare spazio e migliorare le prestazioni],[2.0.1]
+))
