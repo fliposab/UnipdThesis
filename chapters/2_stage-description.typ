@@ -116,9 +116,9 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
   [D-4],[Implementazione di un modello di _LLM_ per conversazioni tra personaggi all'interno del gioco]
 ))
 
-#set page(footer-descent: -80%, footer: [#align(top, [#line(length: 100%)
+#set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *open source*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\
-*motore di gioco*: software progettato per facilitare lo sviluppo di videogiochi, fornendo strumenti e funzionalità per la gestione della grafica, della fisica, dell'audio e di altre componenti del gioco.\
+*motore di gioco*: software progettato per facilitare lo sviluppo di videogiochi, fornendo strumenti e funzionalità per la gestione della grafica, della fisica, dell'audio e di altre componenti del gioco.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 == Vincoli
@@ -258,14 +258,14 @@ I documenti che il progetto presenta sono:\
 #v(0.5em)
 - *Codifica*:\
 Tutti i file script del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). I nomi delle classi sono salvate con una nomenclatura #gl("pascalCase"), mentre i nomi dei files e delle variabili usano #gl("snake_case").
-#set page(footer-descent: -150%, footer: [#align(top, [#line(length: 100%)
+#set page(footer-descent: -160%, footer: [#align(top, [#line(length: 100%)
 *.glb*: formato standard di un modello tridimensionale che legge il modello 3D come un file binario.\
 *.png*: formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.\
 *IK - Inverse Kinematics*: descrive il processo di calcolo della posizione delle articolazioni di un modello 3D in base alla posizione finale di una parte del corpo.\
 *NLA - Nonlinear Animations*: sistema di gestione delle animazioni in _Blender_ che consente di combinare e sovrapporre diverse animazioni in modo non lineare.\
 *rig*: struttura scheletrica applicata a un modello 3D.\
 *materiale*: insieme di proprietà che definiscono l'aspetto visivo di un oggetto 3D, come colore, riflessione, trasparenza.\
-*texture*: immagine  applicata a un modello 3D per fornire dettagli visivi, come colori e _pattern_.\
+*texture*: immagine  applicata a un modello 3D per fornire dettagli visivi, come colori e _pattern_.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 Per maggiori dettagli sulla nomenclatura, si seguono le convenzioni della documentazione ufficiale:\
 #link("https://docs.godotengine.org/it/4.x/tutorials/scripting/gdscript/gdscript_styleguide.html")\
@@ -290,10 +290,9 @@ Entrambe le dimensioni della texture (larghezza e altezza)  devono essere una po
 Di norma, 1024 pixels corrispondono a 1 metro.
 
 #v(0.5em)
-#set page(footer-descent: -10%, footer: [#align(top, [#line(length: 100%)
+#set page(footer-descent: -25%, footer: [#align(top, [#line(length: 100%)
 *GLSL ES - OpenGL Shading Language for Embedded Systems*: linguaggio di shading utilizzato per scrivere _shader_.\
-*Python*: linguaggio di programmazione di alto livello, noto per la sua sintassi semplice e leggibile.\
-
+*Python*: linguaggio di programmazione di alto livello, noto per la sua sintassi semplice e leggibile.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 - *Verifica e validazione*:\
