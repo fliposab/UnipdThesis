@@ -17,8 +17,11 @@ Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedic
 Nell'ufficio dove ho svolto lo _stage_, ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi. Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
 
 === Sede dello _stage_
-
-
+/* Qui descrivo la posizione della sede dove ho svolto lo stage*/
+La sede dell'azienda dove ho svolto lo _stage_ si trova a Padova, in un'area ben collegata e facilmente raggiungibile.\
+L'ufficio è situato in un edificio moderno e funzionale, dotato di spazi di lavoro aperti e aree dedicate alla collaborazione tra i membri del _team_.\
+L'ambiente di lavoro è caratterizzato da spazi ben organizzati, che favoriscono la concentrazione e la creatività.\
+#pagebreak()
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
 Durante lo _stage_ sono stato per lo più indipendente, tuttavia qualora avessi avuto bisogno di aiuto, potevo chiedere ad un gruppo composto da professionisti con competenze eterogenee, tra cui sviluppatori, analisti e _project manager_.\
@@ -37,10 +40,7 @@ I processi interni dell'azienda comprendevano fasi distinte per lo sviluppo, la 
 - Durante l'organizzazione del lavoro, ho potuto notare una forte comunicazione tra il personale in ufficio ed anche con i membri che lavoravano in _smart working_ durante alcuni giorni.
 - Per lo sviluppo, ognuno aveva compiti specifici e responsabilità ben definite, con delle eventuali piccole discussioni per chiedere chiarimenti o approfondimenti, ad esempio, sul codice. Molto spesso vedevo due o più membri lavorare insieme su uno stesso argomento, scambiandosi idee e suggerimenti per migliorare il prodotto finale oppure per risolvere eventuali problemi.\
 - Tutto ciò che veniva sviluppato e completato, era anche mantenuto dai membri in base alle esigenze del cliente, in caso di problemi o richieste particolari, come problemi di compatibilità con versioni più vecchie dei _browser_.
-/*Ad ogni inizio settimana, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto, tenendo conto delle priorità e delle scadenze. \
-Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
-Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata per garantire trasparenza ed efficienza.\
-Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.*/
+
 
 === Tecnologie di supporto
 /*_Qui descrivo le tecnologie di supporto e collaborazione che il personale in azienda utilizzava, ad esempio, la sezione sopra su Microsoft Teams la sposterei qui_*/
@@ -59,7 +59,6 @@ Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e 
 Ho potuto osservare una discussione molto aperta e libera tra i membri del team riguardo alle esigenze e alle aspettative dei clienti, modificando i prodotti in base alle richieste e necessità di questi ultimi.\
 /*Fonte immagine:\ 
 #link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
-/*Il progetto di videogioco a cui ho lavorato era rivolto principalmente a un pubblico un po' più generale ed ampio. In particolare, il target comprende per lo più utenti giovani oppure appassionati di questo genere di prodotti specifico, attratti dall'aspetto #gl("ludico") o da quello formativo del prodotto sviluppato.*/
 #set page(footer-descent: -40%, footer: [#line(length: 100%) 
 *brainstorming*: tecnica di generazione di idee in gruppo, in cui i partecipanti sono incoraggiati a esprimere liberamente le proprie idee.\
 *LLM - Large Language Model*: modello di intelligenza artificiale progettato per comprendere e generare testo in linguaggio naturale.\ \
@@ -92,7 +91,7 @@ In questo modo, Zucchetti garantisce un supporto completo ai propri clienti dura
 Zucchetti investe costantemente in ricerca e sviluppo, con oltre 2.000 persone dedicate a queste attività. Questo impegno si traduce in una continua introduzione di nuove tecnologie, metodologie di lavoro innovative e aggiornamenti dei prodotti offerti. L'azienda promuove attivamente la formazione del personale e la sperimentazione di soluzioni all'avanguardia, favorendo un ambiente in cui l'innovazione è parte integrante della cultura aziendale.\
 Durante il mio _stage_, ho potuto osservare come le idee innovative vengano accolte con interesse e valutate attentamente, sia a livello di processo che di prodotto. Ho avuto modo, inoltre, di assistere ad una sessione di #gl("brainstorming")/* con argomento principale la creazione di un linguaggio specifico per gli #gl("llm"),*/ dimostrazione di come l'azienda sia aperta a nuove idee e approcci.\
 Argomento principale delle ricerche che il personale dell'azienda stava svolgendo, erano gli #gl("llm"), tema ancora molto nuovo ed inesplorato nel mondo dell'informatica.\
-#set page(footer-descent: -20%, footer: [#line(length: 100%) 
+#set page(footer-descent: -10%, footer: [#line(length: 100%) 
 *temperatura*: parametro che controlla la casualità delle risposte generate da un LLM.\ \
 #align(center, context([#counter(page).display("1.")]))])
 
