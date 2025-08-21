@@ -193,13 +193,13 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
 //2 - Causality
 //3 - Random Forest
 //4 - Support Vector Machine
-- *Settimana 1 - 24 ore*:
+- *Settimana 1 | 18/06 - 20/06 | 24 ore*:
   - Incontro con il personale dell'azienda per discutere i requisiti dell'applicazione da sviluppare.
   - Verifica credenziali e strumenti di lavoro assegnati
   - Pianificazione e progettazione dell'applicazione.
   - Inizio sviluppo.
   //Obiettivi
-- *Settimana 2 - 40 ore*:
+- *Settimana 2 | 23/06 - 27/06 | 40 ore*:
   - Approfondimento su "Regressione lineare".
   - Sviluppo degli oggetti principali del primo livello, implementando gli elementi della "Regressione lineare".
 
@@ -209,20 +209,20 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
 *ticket*: segnalazione o richiesta registrata in un sistema di tracciamento che descrive un'attività da svolgere.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
-- *Settimana 3 - 40 ore*:
+- *Settimana 3 | 30/06 - 04/07 | 40 ore*:
   - Approfondimento sul tema "Alberi di decisione".
   - Sviluppo degli oggetti principali del secondo livello.
-- *Settimana 4 - 40 ore*:
+- *Settimana 4 | 07/07 - 11/07 | 40 ore*:
   - Approfondimento sull'argomento "Causalità".
   - Sviluppo degli oggetti principali del terzo livello.
   - Compilazione del #gl("poc") .
-- *Settimana 5 - 40 ore*:
+- *Settimana 5 | 14/07 - 18/07 | 40 ore*:
   - Sviluppo del primo livello, sul tema "Regressione Lineare", con gli oggetti creati nella seconda settimana.
-- *Settimana 6 - 40 ore*:
+- *Settimana 6 | 21/07 - 25/07 | 40 ore*:
   - Sviluppo del secondo livello, sul tema "Alberi di decisione", implementando gli oggetti creati nella terza settimana.
-- *Settimana 7 - 40 ore*:
+- *Settimana 7 | 28/07 - 01/08 | 40 ore*:
   - Sviluppo del terzo livello, sul tema "Causalità", implementando gli oggetti creati nella quarta settimana.
-- *Settimana 8 - 40 ore*: 
+- *Settimana 8 | 04/08 - 08/08 | 40 ore*: 
   - Stesura dei _test_.
   - Compilazione dell'#gl("mvp").
 
