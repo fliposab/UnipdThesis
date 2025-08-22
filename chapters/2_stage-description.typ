@@ -21,21 +21,25 @@ Ho potuto osservare questa disponibilità anche durante lo _stage_, dove erano p
 
 == Interesse dell'azienda verso lo _stage_
 /*_Qui descrivo il rapporto dell'azienda con il mio stage_*/
-=== Proposta di progetto
+=== Proposta del progetto
 Sempre durante l'evento _StageIT_ 2025, ho avuto la possibilità di incontrare il tutor aziendale, il quale, prima di presentare i progetti proposti dall'azienda, mi ha dato la possibilità di proporre un tema di progetto diverso.\
-La mia proposta è stata un progetto di #gl("game_design"), un tema a cui sono personalmente molto interessato e familiare.\
-Nonostante ritenessi che la mia proposta avesse poco valore, il tutor ha mostrato un interesse genuino e ha incoraggiato la mia idea, portandomi a svilupparla ulteriormente.
+La mia proposta è stata un progetto di #gl("game_design").
 
-#set page(footer-descent: -150%, footer: [#align(top, [#line(length: 100%)
+=== Motivazioni personali
+Il tema di _Game Design_ è un argomento che mi appassiona da tempo e su cui ho già avuto modo di lavorare in progetti personali, seppure di piccole dimensioni. Inoltre, il _Game Design_ offre l'opportunità di esplorare la creatività e di sviluppare nuove idee in un contesto ludico.
+
+#set page(footer-descent: -120%, footer: [#align(top, [#line(length: 100%)
 *alberi di decisione*: modello predittivo che rappresenta le decisioni e le loro possibili conseguenze sotto forma di un albero.\
 *Machine Learning*: disciplina che si occupa dello sviluppo di algoritmi che permettono ai computer di apprendere dai dati e migliorare le proprie prestazioni nel tempo senza essere esplicitamente programmati.\
 *Nearest neighbor*: algoritmo di classificazione che assegna un'etichetta a un campione in base alle etichette dei suoi vicini più prossimi nel dataset.\
 *Regressione lineare*: tecnica statistica utilizzata per modellare la relazione tra una variabile dipendente e una o più variabili indipendenti, assumendo una relazione lineare.\
-*Support Vector Machines*: classe di algoritmi di apprendimento che cercano di trovare l'iperpiano ottimale che separa le classi nel dataset.\
-*tutorial*: guida passo-passo che insegna come utilizzare un software o completare un'attività specifica.\ \
+*Support Vector Machines*: classe di algoritmi di apprendimento che cercano di trovare l'iperpiano ottimale che separa le classi nel dataset.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
+Questo tema mi ha permesso di combinare la mia passione per lo sviluppo di applicazioni videoludiche con l'apprendimento di nuove competenze tecniche e di sviluppo, rendendo l'esperienza di _stage_ più coinvolgente e stimolante.
+
 === Supporto dell'azienda verso il progetto
+Nonostante ritenessi che la mia proposta avesse poco valore, il tutor ha mostrato un interesse genuino e ha incoraggiato la mia idea, portandomi a svilupparla ulteriormente.\
 Successivo all'evento _StageIT_, ho avuto la possibilità di parlare con il tutor aziendale, attraverso una videochiamata, il quale mi ha supportato nella definizione del progetto, aiutandomi a capire come svilupparlo al meglio.\
 Visto che l'argomento del momento nel mondo dell'informatica era l'uso degli _LLM_, il tutor ha proposto di usare gli argomenti comuni sul tema dell'Intelligenza Artificiale e #gl("machine_learning", long: true) per arricchire il progetto, ed usarli per creare nuove meccaniche nel gioco per creare livelli unici, che il giocatore deve completare.
 In questo modo, tramite il gioco, l'utente impara nuovi argomenti riguardo al mondo dell'Intelligenza artificiale e _Machine Learing_ ed apprende il loro funzionamento.\
@@ -47,13 +51,18 @@ Tra questi temi, sono spiccati di più:
 - #gl("nearest_neighbor");
 - #gl("support_vector_machines")
 
+//*
 == Descrizione del progetto
 /*_Qui faccio un breve riassunto in cosa consisteva il mio progetto di stage_*/
 === Struttura del gioco
 Il progetto si tratta di un videogioco educativo, che ha come obiettivo quello di insegnare i concetti base dell'Intelligenza Artificiale e _Machine Learning_ in modo semplice e divertente.\
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%) 
+*tutorial*: guida passo-passo che insegna come utilizzare un software o completare un'attività specifica.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
+Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore può scegliere il livello che vuole affrontare, sono presenti 3 livelli, ognuno dei quali insegna un concetto diverso:\
 \
-Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore può scegliere il livello che vuole affrontare, sono presenti 3 livelli, ognuno dei quali insegna un concetto diverso:
-#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 - il livello della *regressione lineare*, dove la linea nel grafico diventa un ponte su cui il personaggio può camminare, tuttavia la direzione non è corretta e bisogna modificarla aggiungendo nuovi punti nel grafico, modificando la direzione della linea;
 #figure(caption: [Livello "Regressione lineare"], image("../images/screenshot-linear_regression_level.png", width: 80%))
 
@@ -61,6 +70,9 @@ Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore pu�
 #figure(caption: [Livello "Albero di decisione"], image("../images/screenshot-decision_tree_level.png", width: 80%))
 
 - il livello della *causalità*, dove l'obiettivo principale è cercare la giusta causa di quello che sta avvenendo nel livello, ed in caso di risposta corretta, l'utente viene avvisato e premiato.
+
+#set page(footer :[#align(center+horizon, context([#counter(page).display("1.")]))])
+
 #figure(caption: [Livello "Causalità"], image("../images/screenshot-causality_level.png", width: 80%))
 
 
@@ -237,7 +249,7 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
 
 === Organizzazione del lavoro
 //_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
-- *Titolo*:
+- *Organizzazione generale*:
 Ogni giorno, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto, tenendo conto delle priorità e delle scadenze. \
 Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
 Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata per garantire trasparenza ed efficienza.\
