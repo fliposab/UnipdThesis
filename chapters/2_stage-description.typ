@@ -9,7 +9,7 @@
 
 = Lo _stage_<cap:descrizione-stage>
 #text(style: "italic", [
-    In questo capitolo approfondisco il rapporto con l'azienda ospitante verso gli stage in generale, come ha supportato il mio stage, il perché della mia scelta e gli obiettivi e vincoli decisi con il tutor aziendale. Infine verrà messo a confronto il tema dello stage con l'innovazione ed il mercato dove viene inserito il progetto.
+    In questo capitolo approfondisco il rapporto con l'azienda ospitante verso gli stage in generale, come ha supportato il mio stage, il perché della mia scelta e gli obiettivi e vincoli decisi con il _tutor_ aziendale. Infine verrà messo a confronto il tema dello stage con l'innovazione ed il mercato dove viene inserito il progetto.
 ])
 #v(1em)
 
@@ -17,16 +17,17 @@
 /*_Qui descrivo il rapporto dell'azienda con gli stage in generale_*/
 Da molti anni l'azienda Zucchetti Spa si presenta all'evento #gl("stageIT"), incontrando un vasto numero di studenti, proponendo loro nuovi temi da approfondire per i progetti di _stage_.\
 Oltre a questi progetti, l'azienda è sempre disponibile a valutare nuove idee di progetti proposti dagli studenti, ascoltando le loro esigenze e suggerimenti.\
-Ho potuto osservare questa disponibilità anche durante lo _stage_, dove erano presenti dei miei colleghi, ed alcuni di loro che stavano svolgendo progetti che non erano stati proposti dall'azienda, ma decisi da loro, segno che l'azienda è sempre aperta a nuove idee e proposte.
+Ho potuto osservare questa disponibilità anche durante lo _stage_, dove erano presenti dei miei colleghi, con alcuni di loro che stavano svolgendo progetti che non erano stati proposti dall'azienda, ma decisi da loro, segno che l'azienda è sempre aperta a nuove idee e proposte.
 
 == Interesse dell'azienda verso lo _stage_
 /*_Qui descrivo il rapporto dell'azienda con il mio stage_*/
 === Proposta del progetto
-Sempre durante l'evento _StageIT_ 2025, ho avuto la possibilità di incontrare il tutor aziendale, il quale, prima di presentare i progetti proposti dall'azienda, mi ha dato la possibilità di proporre un tema di progetto diverso.\
+Sempre durante l'evento _StageIT_ 2025, ho avuto la possibilità di incontrare il _tutor_ aziendale, il quale, prima di presentare i progetti proposti dall'azienda, mi ha dato la possibilità di proporre un tema di progetto diverso.\
 La mia proposta è stata un progetto di #gl("game_design").
 
 === Motivazioni personali
-Il tema di _Game Design_ è un argomento che mi appassiona da tempo e su cui ho già avuto modo di lavorare in progetti personali, seppure di piccole dimensioni. Inoltre, il _Game Design_ offre l'opportunità di esplorare la creatività e di sviluppare nuove idee in un contesto ludico.
+Il tema di _Game Design_ è un argomento che mi appassiona da tempo e su cui ho già avuto modo di lavorare in progetti personali, seppure di piccole dimensioni.\
+Inoltre, il _Game Design_ offre l'opportunità di esplorare la creatività e di sviluppare nuove idee in un contesto ludico.
 
 #set page(footer-descent: -120%, footer: [#align(top, [#line(length: 100%)
 *alberi di decisione*: modello predittivo che rappresenta le decisioni e le loro possibili conseguenze sotto forma di un albero.\
@@ -38,55 +39,55 @@ Il tema di _Game Design_ è un argomento che mi appassiona da tempo e su cui ho 
 
 Questo tema mi ha permesso di combinare la mia passione per lo sviluppo di applicazioni videoludiche con l'apprendimento di nuove competenze tecniche e di sviluppo, rendendo l'esperienza di _stage_ più coinvolgente e stimolante.
 
+=== Scelta dell'azienda
+/*_Qui descrivo le ragioni per cui ho deciso di svolgere il progetto in questa azienda rispetto alle altre_*/
+Il motivo principale della mia scelta sull'azienda è stata la disponibilità aperta ad esplorare nuove idee ed approcci.\
+Ulteriore motivo della mia scelta è stata la posizione della sede dove ho svolto lo _stage_, che ho trovato molto comoda da raggiungere, attraverso i mezzi di trasporto disponibili.\
+
 === Supporto dell'azienda verso il progetto
-Nonostante ritenessi che la mia proposta avesse poco valore, il tutor ha mostrato un interesse genuino e ha incoraggiato la mia idea, portandomi a svilupparla ulteriormente.\
-Successivo all'evento _StageIT_, ho avuto la possibilità di parlare con il tutor aziendale, attraverso una videochiamata, il quale mi ha supportato nella definizione del progetto, aiutandomi a capire come svilupparlo al meglio.\
-Visto che l'argomento del momento nel mondo dell'informatica era l'uso degli _LLM_, il tutor ha proposto di usare gli argomenti comuni sul tema dell'Intelligenza Artificiale e #gl("machine_learning", long: true) per arricchire il progetto, ed usarli per creare nuove meccaniche nel gioco per creare livelli unici, che il giocatore deve completare.
+Nonostante ritenessi che la mia proposta avesse poco valore, il _tutor_ ha mostrato un interesse genuino e ha incoraggiato la mia idea, portandomi a svilupparla ulteriormente.\
+Successivo all'evento _StageIT_, ho avuto la possibilità di parlare con il _tutor_ aziendale, attraverso una videochiamata, il quale mi ha supportato nella definizione del progetto, aiutandomi a capire come svilupparlo al meglio e mostrandomi anche esempi di progetti passati svolti sullo stesso argomento\
+Visto che l'argomento del momento nel mondo dell'informatica era l'uso degli _LLM_, il _tutor_ ha proposto di usare gli argomenti comuni sul tema dell'Intelligenza Artificiale e #gl("machine_learning", long: true) per arricchire il progetto, ed usarli per creare nuove meccaniche nel gioco per creare livelli unici, che il giocatore deve completare.
 In questo modo, tramite il gioco, l'utente impara nuovi argomenti riguardo al mondo dell'Intelligenza artificiale e _Machine Learing_ ed apprende il loro funzionamento.\
 \
 Tra questi temi, sono spiccati di più:
-- #gl("regressione_lineare");
-- #gl("alberi_di_decisione");
+- #gl("regressione_lineare") ;
+- #gl("alberi_di_decisione") ;
 - causalità;
-- #gl("nearest_neighbor");
-- #gl("support_vector_machines")
+- #gl("nearest_neighbor") ;
+- #gl("support_vector_machines").
 
-//*
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%) 
+*tutorial*: guida passo-passo che insegna come utilizzare un software o completare un'attività specifica.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 == Descrizione del progetto
 /*_Qui faccio un breve riassunto in cosa consisteva il mio progetto di stage_*/
 === Struttura del gioco
 Il progetto si tratta di un videogioco educativo, che ha come obiettivo quello di insegnare i concetti base dell'Intelligenza Artificiale e _Machine Learning_ in modo semplice e divertente.\
 
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%) 
-*tutorial*: guida passo-passo che insegna come utilizzare un software o completare un'attività specifica.\ \
-#align(center, context([#counter(page).display("1.")]))])])
+
 
 Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore può scegliere il livello che vuole affrontare, sono presenti 3 livelli, ognuno dei quali insegna un concetto diverso:\
 \
 - il livello della *regressione lineare*, dove la linea nel grafico diventa un ponte su cui il personaggio può camminare, tuttavia la direzione non è corretta e bisogna modificarla aggiungendo nuovi punti nel grafico, modificando la direzione della linea;
 #figure(caption: [Livello "Regressione lineare"], image("../images/screenshot-linear_regression_level.png", width: 80%))
 
+#set page(footer :[#align(center+horizon, context([#counter(page).display("1.")]))])
+
 - il livello dell'*albero di decisione*, dove l'utente dovrà classificare diverse razze di cani in base ai valori, già assegnati, in un albero di decisione;
 #figure(caption: [Livello "Albero di decisione"], image("../images/screenshot-decision_tree_level.png", width: 80%))
 
 - il livello della *causalità*, dove l'obiettivo principale è cercare la giusta causa di quello che sta avvenendo nel livello, ed in caso di risposta corretta, l'utente viene avvisato e premiato.
 
-#set page(footer :[#align(center+horizon, context([#counter(page).display("1.")]))])
-
 #figure(caption: [Livello "Causalità"], image("../images/screenshot-causality_level.png", width: 80%))
 
 
-=== Scelta del progetto
+/*=== Scelta del progetto
 /*_Qui descrivo la scelta del progetto, le ragioni della mia scelta, in confronto con gli altri progetti disponibili_*/
 Il motivo principale per cui ho scelto questo progetto è la mia passione per il _Game Design_ e familiarità con strumenti di sviluppo di giochi ed il mercato.\ 
 Volevo creare un videogioco che non solo fosse divertente, ma che potesse anche educare i giocatori su concetti complessi in modo accessibile ed accattivante.\ 
-Inoltre, ho ritenuto che l'uso di meccaniche di gioco basate su elementi di _Machine Learning_ potesse rendere l'apprendimento più coinvolgente rispetto ad approcci più tradizionali.
-
-=== Scelta dell'azienda
-/*_Qui descrivo le ragioni per cui ho deciso di svolgere il progetto in questa azienda rispetto alle altre_*/
-Il motivo principale della mia scelta sull'azienda è stata la disponibilità aperta ad esplorare nuove idee ed approcci.
-L'azienda ha dimostrato un forte interesse verso il progetto, mostrandomi anche esempi di progetti passati svolti sullo stesso argomento.\
-Ulteriore motivo della mia scelta è stata la posizione della sede dove ho svolto lo _stage_, che ho trovato molto comoda da raggiungere, attraverso i mezzi di trasporto disponibili.
+Inoltre, ho ritenuto che l'uso di meccaniche di gioco basate su elementi di _Machine Learning_ potesse rendere l'apprendimento più coinvolgente rispetto ad approcci più tradizionali.*/
 
 === Rapporto del progetto con l'innovazione
 /*_Qui descrivo il rapporto del progetto con l'innovazione ed il mercato, rispetto alla visione dell'azienda_*/
@@ -112,7 +113,7 @@ Tra queste aspettative, vi erano:
 Nella seguente tabella, vengono elencati gli obiettivi personali che ho fissato, insieme al _tutor_ aziendale, suddivisi in obbligatori e desiderabili.\
 Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero. Il prefisso indica con:
 - *O*: gli obiettivi obbligatori, rappresentano le competenze e i risultati minimi da raggiungere durante lo _stage_;
-- *D*: gli obiettivi desiderabili, sono traguardi aggiuntivi che arricchiscono ulteriormente il progetto e la mia esperienza formativa.
+- *D*: gli obiettivi desiderabili, sono traguardi aggiuntivi che arricchiscono ulteriormente il progetto e l'esperienza formativa.
 
 #show figure: set block(breakable: true)
 #figure(caption: [Obiettivi del progetto], table(
@@ -124,15 +125,15 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
   [O-1],
   [Progettazione e realizzazione delle principali meccaniche di gioco (movimento 3D, interazione con altri oggetti...)],
   [O-2],
-  [Implementazione degli argomenti di AI e ML al gioco (Regressione lineare, Alberi di decisione, Causalità...)],
+  [Implementazione degli argomenti di _AI_ e _ML_ al gioco (Regressione lineare, Alberi di decisione, Causalità...)],
   [O-3],
-  [Implementazione di salvataggi e caricamenti dei dati attraverso files di tipo _.json_ oppure _.ini_],
+  [Implementazione di salvataggi e caricamenti dei dati attraverso _file_ di tipo _.json_ oppure _.ini_],
   table.cell(colspan: 2, [*Desiderabili*]),
   [D-1],
   [Supporto della lingua inglese oltre all'italiano, con opzione di cambiare lingua di gioco],
   [D-2],
-  [Implementazione di #glpl("shader"), utilizzando script di tipo #gl("opengl")],
-  [D-3],[Uso dei linguaggi C#sym.hash o C++ per migliorare le prestazioni],
+  [Implementazione di #glpl("shader"), utilizzando _script_ di tipo #gl("opengl")],
+  [D-3],[Uso dei linguaggi _C#sym.hash _ o _C++_ per migliorare le prestazioni],
   [D-4],[Implementazione di un modello di _LLM_ per conversazioni tra personaggi all'interno del gioco]
 ))
 
@@ -144,7 +145,7 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
 == Vincoli
 //_Qui descrivo i vincoli decisi con il tutor_
 === Vincoli temporali e tecnologici
-Durante il secondo colloquio con il tutor aziendale, sono stati definiti dei vincoli obbligatori del progetto da rispettare, concordati tra me e il tutor aziendale.
+Durante il secondo colloquio con il _tutor_ aziendale, sono stati definiti dei vincoli obbligatori del progetto da rispettare, concordati tra me e il _tutor_ aziendale.
 I vincoli sono indicati nella seguente tabella, con il prefisso:
 - *VTM*: vincoli temporali;
 - *VTC*: vincoli tecnologici;
@@ -156,7 +157,7 @@ I vincoli sono indicati nella seguente tabella, con il prefisso:
   [VTM-1],[Il progetto deve essere realizzato in un tempo massimo di 320 ore],
   [VTM-2],[Il numero di ore settimanali non può essere superiore a 40],
   table.cell(colspan: 2, [*Tecnologici*]),
-  [VTC-1],[Il progetto deve essere sviluppato utilizzando il #gl("motore_di_gioco") #gl("open_source") Godot],
+  [VTC-1],[Il progetto deve essere sviluppato utilizzando il #gl("motore_di_gioco") #gl("open_source") _Godot_],
   [VTC-2],[L'applicazione finale deve essere un eseguibile, senza bisogno di installazione o altri strumenti],
   [VTC-3],[Il gioco deve utilizzare una grafica 3D con un movimento del personaggio in terza persona, tridimensionale],
 ))
@@ -199,7 +200,7 @@ Nella tabella a pagina successiva vengono riportate le ore totali pianificate de
     [59],
     [Sviluppo terzo livello],
     [*40*],
-    [Test e verifica dell'applicazione],
+    [_Test_ e verifica dell'applicazione],
     table.cell([Totale ore: *304*], colspan: 2),
   ),
 )
@@ -221,8 +222,8 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
   - Inizio sviluppo.
   //Obiettivi
 - *Settimana 2 | 23/06 - 27/06 | 40 ore*:
-  - Approfondimento su "Regressione lineare".
-  - Sviluppo degli oggetti principali del primo livello, implementando gli elementi della "Regressione lineare".
+  - Approfondimento sul tema _Regressione lineare_.
+  - Sviluppo degli oggetti principali del primo livello, implementando gli elementi della _Regressione lineare_.
 
 #set page(footer-descent: -50%, footer: [#align(top, [#line(length: 100%)
 *PoC*: descrive una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione. \
@@ -231,18 +232,18 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
 #align(center, context([#counter(page).display("1.")]))])])
 
 - *Settimana 3 | 30/06 - 04/07 | 40 ore*:
-  - Approfondimento sul tema "Alberi di decisione".
+  - Approfondimento sul tema _Alberi di decisione_.
   - Sviluppo degli oggetti principali del secondo livello.
 - *Settimana 4 | 07/07 - 11/07 | 40 ore*:
-  - Approfondimento sull'argomento "Causalità".
+  - Approfondimento sull'argomento _Causalità_.
   - Sviluppo degli oggetti principali del terzo livello.
   - Compilazione del #gl("poc") .
 - *Settimana 5 | 14/07 - 18/07 | 40 ore*:
-  - Sviluppo del primo livello, sul tema "Regressione Lineare", con gli oggetti creati nella seconda settimana.
+  - Sviluppo del primo livello, sul tema _Regressione Lineare_, con gli oggetti creati nella seconda settimana.
 - *Settimana 6 | 21/07 - 25/07 | 40 ore*:
-  - Sviluppo del secondo livello, sul tema "Alberi di decisione", implementando gli oggetti creati nella terza settimana.
+  - Sviluppo del secondo livello, sul tema _Alberi di decisione_, implementando gli oggetti creati nella terza settimana.
 - *Settimana 7 | 28/07 - 01/08 | 40 ore*:
-  - Sviluppo del terzo livello, sul tema "Causalità", implementando gli oggetti creati nella quarta settimana.
+  - Sviluppo del terzo livello, sul tema _Causalità_, implementando gli oggetti creati nella quarta settimana.
 - *Settimana 8 | 04/08 - 08/08 | 40 ore*: 
   - Stesura dei _test_.
   - Compilazione dell'#gl("mvp").
@@ -252,12 +253,12 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
 - *Organizzazione generale*:
 Ogni giorno, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto, tenendo conto delle priorità e delle scadenze. \
 Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
-Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata per garantire trasparenza ed efficienza.\
+Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, veniva documentata e tracciata per garantire trasparenza ed efficienza.\
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.\
 Durante lo sviluppo, sono state imposte le seguenti regole per garantire corretta organizzazione. Le regole sono suddivise in base all'attività.
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
-*GDScript*: linguaggio di programmazione specifico per il motore di gioco Godot, progettato per essere semplice e intuitivo.\
+*GDScript*: linguaggio di programmazione specifico per il motore di gioco _Godot_, progettato per essere semplice e intuitivo.\
 *PascalCase*: pratica di scrivere parole composte o frasi unendo tutte le parole tra loro, ma lasciando le loro iniziali maiuscole.\
 *snake_case*: pratica di scrivere parole composte separando le parole tramite trattino basso, con tutte le lettere minuscole.\ \
 #align(center, context([#counter(page).display("1.")]))])])
@@ -266,7 +267,7 @@ Durante lo sviluppo, sono state imposte le seguenti regole per garantire corrett
 Il processo di fornitura deve essere documentato in modo dettagliato, in modo da garantire la tracciabilità delle attività svolte e delle decisioni prese.\
 I documenti che il progetto presenta sono:\
 #show figure: set block(breakable: true)
-#figure(caption: [Documenti], table(
+#figure(caption: [tabella dei documenti], table(
   columns: (auto, auto),
   inset: 8pt,
   align: center + horizon,
@@ -279,10 +280,11 @@ I documenti che il progetto presenta sono:\
 
 #v(0.5em)
 - *Codifica*:\
-Tutti i file script del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). I nomi delle classi sono salvate con una nomenclatura #gl("pascalCase"), mentre i nomi dei files e delle variabili usano #gl("snake_case").
-#set page(footer-descent: -160%, footer: [#align(top, [#line(length: 100%)
+Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). I nomi delle classi sono salvate con una nomenclatura #gl("pascalCase"), mentre i nomi dei _file_ e delle variabili usano #gl("snake_case").
+#set page(footer-descent: -180%, footer: [#align(top, [#line(length: 100%)
 *.glb*: formato standard di un modello tridimensionale che legge il modello 3D come un file binario.\
 *.png*: formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.\
+*Blender*: _software_ di modellazione ed animazione 3D usato per creare modelli 3D ed animazioni.
 *IK - Inverse Kinematics*: descrive il processo di calcolo della posizione delle articolazioni di un modello 3D in base alla posizione finale di una parte del corpo.\
 *NLA - Nonlinear Animations*: sistema di gestione delle animazioni in _Blender_ che consente di combinare e sovrapporre diverse animazioni in modo non lineare.\
 *rig*: struttura scheletrica applicata a un modello 3D.\
@@ -299,17 +301,18 @@ Nel caso il modello 3D presenti animazioni, queste vengono esportate insieme al 
 
 #v(0.5em)
 - *Animazione*:\
-Le animazioni sono incluse nel modello durante l'esportazione. Per semplificare l'attività, viene usato un #gl("rig") che dispone di #gl("ik"). Le animazioni sono già separate prima dell'esportazione e possono essere trovate nella sezione #gl("nla") e selezionate individualmente premendo la linea con il mouse e modificarle usando la scorciatoia _Shift+TAB_.\
+Le animazioni sono incluse nel modello durante l'esportazione. Per semplificare l'attività, viene usato un #gl("rig") che dispone di #gl("ik"). Le animazioni sono già separate prima dell'esportazione e possono essere trovate nella sezione #gl("nla") del _software_ #gl("blender") e selezionate individualmente premendo la linea con il mouse e modificarle usando la scorciatoia _Shift+TAB_.\
 
 #v(0.5em)
 - *Creazione e modifica di _texture_*:\
 Le #gl("texture") sono salvate come semplici immagini di tipo #gl(".png").\
-Entrambe le dimensioni della texture (larghezza e altezza)  devono essere una potenza di 2.\ Risoluzioni esempio: 
+Entrambe le dimensioni della _texture_ (larghezza e altezza) devono essere una potenza di 2.\ 
+Risoluzioni esempio: 
   - 256x256; 
   - 512x512;
   - 1024x1024 (1K);
   - 2048x2048 (2K).
-Di norma, 1024 pixels corrispondono a 1 metro.
+Di norma, 1024 _pixels_ corrispondono a 1 metro.
 
 #v(0.5em)
 #set page(footer-descent: -25%, footer: [#align(top, [#line(length: 100%)
@@ -323,7 +326,7 @@ Vi sono due tipologie di verifica, ognuna è focalizzata sulla verifica di vari 
 #v(0.5em)
 #h(2em)*analisi statica*: l'analisi statica comporta il controllo del codice prima della sua esecuzione. Questo tipo di verifica non viene applicata solo al codice, ma anche ai documenti del progetto. \
 Questo metodo viene applicato nei seguenti casi:\
-#h(2em)- individuazione di bug nel codice;\
+#h(2em)- individuazione di _bug_ nel codice;\
 #h(2em)- individuazione di errori di battitura nei documenti;\
 #h(2em)- verifica della coerenza e completezza della documentazione prodotta;\
 #v(0.5em)
@@ -346,7 +349,7 @@ Questo metodo viene applicato nei seguenti casi:\
   [Typst],[Linguaggio utilizzato per la stesura dei documenti],[0.13.1],
 ))
 
-#set page(footer-descent: -80%, footer: [#align(top, [#line(length: 100%)
+#set page(footer-descent: -90%, footer: [#align(top, [#line(length: 100%)
 *CI - Continuos Integration*: processo di integrazione continua delle modifiche del codice in un _repository_ condiviso, garantendo che il codice sia sempre in uno stato funzionante e testato.\
 *CD - Continuos Delivery*: processo di rilascio continuo delle modifiche del codice in produzione, garantendo che il _software_ sia sempre in uno stato utilizzabile.\
 *hosting*: descrive il servizio che consente di archiviare e rendere accessibili _online_ siti _web_, applicazioni o progetti _software_.\

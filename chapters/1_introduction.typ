@@ -53,7 +53,7 @@ Questi strumenti hanno reso possibile una gestione efficiente delle attività e 
 
 #pagebreak()
 #set page(footer:[#align(center + horizon, context([#counter(page).display("1.")]))])
-== Clientela
+== Clientela e prodotti
 /*_Qui descrivo il tipo di clientela dell'azienda_*/
 === Tipologia di clientela
 Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende, tutte queste private.\

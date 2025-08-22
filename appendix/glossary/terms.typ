@@ -2,19 +2,24 @@
   (
     key: ".glb",
     short: [.glb],
-    long: [Graphics Library Binary],
+    long: [_GLTF (Graphics Library Transmission Format) Binary_],
     description: [formato standard di un modello tridimensionale che legge il modello 3D come un file binario, permettendo una lettura e _rendering_ più veloce e minimizzando lo spazio occupato dal _file_.]
   ),
   (
     key: ".png",
     short: [.png],
-    long: [Portable Network Graphics],
+    long: [_Portable Network Graphics_],
     description: [formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.]
   ),
   (
     key: "alberi_di_decisione",
     short: [Alberi di decisione],
     description: [modello predittivo utilizzato in statistica e _Machine Learning_, che rappresenta le decisioni e le loro possibili conseguenze sotto forma di un albero, facilitando l'interpretazione e la visualizzazione delle scelte.]
+  ),
+  (
+    key: "blender",
+    short: [Blender],
+    description: [_software_ di modellazione ed animazione 3D _open source_ usato per creare modelli 3D ed animazioni.],
   ),
   (
     key: "brainstorming",
@@ -24,13 +29,13 @@
   (
     key: "cd",
     short: [CD],
-    long: [Continuos Delivery],
+    long: [_Continuos Delivery_],
     description: [pratica di sviluppo _software_ che consente di rilasciare frequentemente e in modo affidabile nuove versioni del _software_, garantendo che il codice sia sempre in uno stato pronto per la produzione.]
   ),
   (
     key: "ci",
     short: [CI],
-    long: [Continuos Integration],
+    long: [_Continuos Integration_],
     description: [pratica di sviluppo _software_ che consente di integrare frequentemente le modifiche del codice in un repository condiviso, garantendo che il codice sia sempre in uno stato funzionante e testato.]
   ),
   (
@@ -51,7 +56,7 @@
   (
     key: "glsl_es",
     short: [GLSL ES],
-    long: [OpenGL Shading Language for Embedded Systems],
+    long: [_OpenGL Shading Language for Embedded Systems_],
     description: [linguaggio di shading utilizzato per scrivere shader per applicazioni embedded, come giochi e grafica in tempo reale.]
   ),
   (
@@ -72,19 +77,19 @@
   (
     key: "ik",
     short: [IK],
-    long: [Inverse Kinematics],
+    long: [_Inverse Kinematics_],
     description: [soluzione usata nell'ambito dell'animazione 3D. Si tratta di semplificare l'animazione calcolando il movimento di altre ossa o articolazioni in base all'ultimo osso della catena. Ad esempio, automatizza il movimento del braccio muovendo solo la mano, anziché ruotare singolarmente braccio, avambraccio e mano. Questo metodo risulta anche molto più simile a come ci si muove naturalmente.]
   ),
   (
     key: "llm",
     short: "LLM",
-    long: "Large Language Model",
+    long: [_Large Language Model_],
     description: [modello di intelligenza artificiale progettato per comprendere e generare testo in linguaggio naturale, addestrato su grandi quantità di dati testuali per svolgere compiti come la traduzione, la risposta a domande e la generazione di contenuti.]
   ),
   (
     key: "machine_learning",
     short: [ML],
-    long: [Machine Learning],
+    long: [_Machine Learning_],
     description: [disciplina che si occupa dello sviluppo di algoritmi e modelli statistici che permettono ai computer di apprendere dai dati e migliorare le proprie prestazioni nel tempo senza essere esplicitamente programmati.]
   ),
   (
@@ -95,13 +100,13 @@
   (
     key: "nla",
     short: [NLA],
-    long: [Nonlinear Animation],
-    description: [],
+    long: [_Nonlinear Animation_],
+    description: [sistema di gestione delle animazioni in _Blender_ che consente di combinare e sovrapporre diverse animazioni in modo non lineare, permettendo una maggiore flessibilità e controllo sulle animazioni dei modelli 3D.]
   ),
   (
     key: "opengl",
     short: [OpenGL],
-    long: [Open Graphics Language],
+    long: [_Open Graphics Language_],
     description: [linguaggio di programmazione grafica utilizzato per creare applicazioni 3D e 2D, fornendo un'interfaccia standardizzata per l'interazione con la scheda grafica del computer.],
   ),
   (
@@ -112,13 +117,13 @@
   (
     key: "poc",
     short: [PoC],
-    long: [Proof of Concept],
+    long: [_Proof of Concept_],
     description: [una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione. È spesso utilizzato nelle fasi iniziali di un progetto per validare il funzionamento teorico e pratico, incluso il modo in cui diverse componenti del sistema possono integrarsi tra loro per raggiungere l'obiettivo prefissato.]
   ),
   (
     key: "push",
     short: [push],
-    description: [],
+    description: [operazione che consente di inviare le modifiche locali del codice a un _repository_ remoto, aggiornando così la versione del codice condiviso con altri membri del _team_.]
   ),
   (
     key: "materiale",
@@ -128,7 +133,7 @@
   (
     key: "mvp",
     short: [MVP],
-    long: [Minimum Viable Product],
+    long: [_Minimum Viable Product_],
     description: [Versione minima di un prodotto che include solo le funzionalità essenziali per essere utilizzato dagli utenti.],
   ),
   (
