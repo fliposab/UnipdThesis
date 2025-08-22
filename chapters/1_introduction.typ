@@ -10,17 +10,18 @@
 
 == Introduzione
 /*_Qui descrivo l'azienda e le mie impressioni durante lo stage, e la sua propensione all'innovazione_*/
-L'azienda Zucchetti Spa opera nel settore informatico da oltre 45 anni ed offre una vasta gamma di soluzioni software e servizi per le aziende, mantenendosi sempre aggiornati su tematiche come il diritto civile, contabilità, fiscalità, diritto del lavoro e previdenza.
+=== Informazioni sull'azienda
+L'azienda Zucchetti Spa opera nel settore informatico da oltre 45 anni ed offre una vasta gamma di soluzioni _software_ e servizi per le aziende, mantenendosi sempre aggiornati su tematiche come il diritto civile, contabilità, fiscalità, diritto del lavoro e previdenza.
 
-Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedicate a ricerca e sviluppo, dimostrando una forte attenzione all'innovazione tecnologica e al miglioramento continuo dei propri prodotti.\ L'azienda investe costantemente in nuove tecnologie e nella formazione del personale, favorendo un ambiente dinamico e orientato alla crescita professionale.
-
-Nell'ufficio dove ho svolto lo _stage_, ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi. Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
+Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedicate a ricerca e sviluppo, dimostrando una forte attenzione all'innovazione tecnologica e al miglioramento continuo dei propri prodotti.\ L'azienda investe costantemente in nuove tecnologie e nella formazione del personale, favorendo un ambiente dinamico e orientato alla crescita professionale.\
 
 === Sede dello _stage_
 /* Qui descrivo la posizione della sede dove ho svolto lo stage*/
 La sede dell'azienda dove ho svolto lo _stage_ si trova a Padova, in un'area ben collegata e facilmente raggiungibile.\
 L'ufficio è situato in un edificio moderno e funzionale, dotato di spazi di lavoro aperti e aree dedicate alla collaborazione tra i membri del _team_.\
 L'ambiente di lavoro è caratterizzato da spazi ben organizzati, che favoriscono la concentrazione e la creatività.\
+Ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi.\
+Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
 #pagebreak()
 == Contesto organizzativo e produttivo
 /*_Qui descrivo il contesto organizzativo in cui sono stato inserito_*/
@@ -35,6 +36,7 @@ Questo mi ha aiutato a comprendere l'importanza di lavorare in un contesto organ
 
 == Processi interni utilizzati
 /*_Qui descrivo i processi interni utilizzati_*/
+=== Sviluppo, manutenzione ed organizzazione del lavoro
 Durante tutto il periodo di _stage_, ho svolto le mie attività seguendo i processi interni decisi dall'azienda, che prevedevano una gestione strutturata del progetto e una chiara suddivisione dei compiti da eseguire. 
 I processi interni dell'azienda comprendevano fasi distinte per lo sviluppo, la manutenzione e l'organizzazione del lavoro.
 - Durante l'organizzazione del lavoro, ho potuto notare una forte comunicazione tra il personale in ufficio ed anche con i membri che lavoravano in _smart working_ durante alcuni giorni.
@@ -53,6 +55,7 @@ Questi strumenti hanno reso possibile una gestione efficiente delle attività e 
 #set page(footer:[#align(center + horizon, context([#counter(page).display("1.")]))])
 == Clientela
 /*_Qui descrivo il tipo di clientela dell'azienda_*/
+=== Tipologia di clientela
 Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende, tutte queste private.\
 Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e all'adattamento dei prodotti alle evoluzioni del mercato, contribuendo a mantenere un'offerta sempre aggiornata e competitiva.
 #figure(image("../images/zucchetti-clientela.png", width: 90%),caption: [Settori e temi di cui si occupa l'azienda. Fonte: Zucchetti])
