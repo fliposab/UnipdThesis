@@ -19,7 +19,7 @@ Da molti anni l'azienda Zucchetti Spa si presenta all'evento #gl("stageIT"), inc
 Oltre a questi progetti, l'azienda è sempre disponibile a valutare nuove idee di progetti proposti dagli studenti, ascoltando le loro esigenze e suggerimenti.\
 Ho potuto osservare questa disponibilità anche durante lo _stage_, dove erano presenti dei miei colleghi, con alcuni di loro che stavano svolgendo progetti che non erano stati proposti dall'azienda, ma decisi da loro, segno che l'azienda è sempre aperta a nuove idee e proposte.
 
-== Interesse dell'azienda verso lo _stage_
+== Interesse personale e dell'azienda verso lo _stage_
 /*_Qui descrivo il rapporto dell'azienda con il mio stage_*/
 === Proposta del progetto
 Sempre durante l'evento _StageIT_ 2025, ho avuto la possibilità di incontrare il _tutor_ aziendale, il quale, prima di presentare i progetti proposti dall'azienda, mi ha dato la possibilità di proporre un tema di progetto diverso.\
