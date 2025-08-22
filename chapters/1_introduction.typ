@@ -19,8 +19,8 @@ Zucchetti ha un organico di circa 9.000 persone, con oltre 2.000 di queste dedic
 /* Qui descrivo la posizione della sede dove ho svolto lo stage*/
 La sede dell'azienda dove ho svolto lo _stage_ si trova a Padova, in un'area ben collegata e facilmente raggiungibile.\
 L'ufficio è situato in un edificio moderno e funzionale, dotato di spazi di lavoro aperti e aree dedicate alla collaborazione tra i membri del _team_.\
-L'ambiente di lavoro è caratterizzato da spazi ben organizzati, che favoriscono la concentrazione e la creatività.\
-Ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale. L'ambiente si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi.\
+L'ambiente di lavoro si è rivelato collaborativo e stimolante, con una particolare attenzione alla condivisione delle conoscenze e al supporto reciproco tra colleghi.\
+Ho potuto osservare da vicino l'organizzazione del lavoro e l'interazione tra il personale.\
 Questa esperienza mi ha permesso di comprendere meglio le dinamiche aziendali e di apprezzare l'importanza dell'innovazione continua all'interno dell'azienda.\
 #pagebreak()
 == Contesto organizzativo e produttivo
@@ -41,13 +41,13 @@ Durante tutto il periodo di _stage_, ho svolto le mie attività seguendo i proce
 I processi interni dell'azienda comprendevano fasi distinte per lo sviluppo, la manutenzione e l'organizzazione del lavoro.
 - Durante l'organizzazione del lavoro, ho potuto notare una forte comunicazione tra il personale in ufficio ed anche con i membri che lavoravano in _smart working_ durante alcuni giorni.
 - Per lo sviluppo, ognuno aveva compiti specifici e responsabilità ben definite, con delle eventuali piccole discussioni per chiedere chiarimenti o approfondimenti, ad esempio, sul codice. Molto spesso vedevo due o più membri lavorare insieme su uno stesso argomento, scambiandosi idee e suggerimenti per migliorare il prodotto finale oppure per risolvere eventuali problemi.\
-- Tutto ciò che veniva sviluppato e completato, era anche mantenuto dai membri in base alle esigenze del cliente, in caso di problemi o richieste particolari, come problemi di compatibilità con versioni più vecchie dei _browser_.
+- Tutto ciò che veniva sviluppato e completato, era anche mantenuto in base alle esigenze del cliente, in caso di problemi o richieste particolari, come problemi di compatibilità con versioni più vecchie dei _browser_.
 
 
 === Tecnologie di supporto
 /*_Qui descrivo le tecnologie di supporto e collaborazione che il personale in azienda utilizzava, ad esempio, la sezione sopra su Microsoft Teams la sposterei qui_*/
 Per facilitare la comunicazione e la collaborazione tra i membri del _team_, l'azienda ha adottato diverse tecnologie di supporto. La comunicazione tra i membri del _team_ avveniva principalmente tramite strumenti digitali di collaborazione, ad esempio #gl("microsoft_teams"), che facilitavano la condivisione delle informazioni e il coordinamento delle attività. Attraverso questa piattaforma, i membri svolgevano anche riunioni o videochiamate, permettendo una comunicazione rapida ed efficace, anche a distanza.\
-Inoltre, per sincronizzare i cambiamenti e garantire che tutti i membri del _team_ fossero aggiornati, venivano utilizzati sistemi di versionamento e repository condivisi, in un #gl("database") interno.
+Inoltre, per sincronizzare i cambiamenti e garantire che tutti i membri del _team_ fossero aggiornati, venivano utilizzati sistemi di versionamento e _repository_ condivisi, in un #gl("database") interno.
 Questi strumenti hanno reso possibile una gestione efficiente delle attività e una rapida risoluzione dei problemi, contribuendo a mantenere un flusso di lavoro fluido e produttivo.\
 
 
@@ -73,15 +73,15 @@ Alcuni esempi sono:
 - soluzioni gestionali per la contabilità;
 - la gestione del personale;
 - la gestione della produzione;
-- software verticali progettati per rispondere alle esigenze di settori specifici come:
+- _software_ verticali progettati per rispondere alle esigenze di settori specifici come:
     - sanità;
-    - retail;
+    - _retail_;
     - logistica;
     - produzione industriale. 
 \
 Questi prodotti sono pensati per supportare le aziende nell'ottimizzazione dei processi, nella gestione efficiente delle risorse e nell'adeguamento alle normative vigenti.\ 
 \
-Oltre ai software, Zucchetti fornisce anche servizi, che possono essere di:
+Oltre ai _software_, Zucchetti fornisce anche servizi, che possono essere di:
 - consulenza; 
 - assistenza tecnica;
 - formazione. 

@@ -10,7 +10,7 @@
 #text(24pt, weight: "semibold", abstract)
 
 #v(1em)
-Il presente documento descrive il lavoro svolto durante il periodo di stage curricolare, della durata di circa trecento ore, dal laureando #text(myName) presso l'azienda #text(myCompany). Lo stage è stato condotto sotto la supervisione del tutor aziendale #myTutor, mentre il prof. #text(myProf) ha ricoperto il ruolo di tutor accademico.
+Il presente documento descrive il lavoro svolto durante il periodo di _stage_ curricolare, della durata di circa trecento ore, dal laureando #text(myName) presso l'azienda #text(myCompany). Lo _stage_ è stato condotto sotto la supervisione del tutor aziendale #myTutor, mentre il prof. #text(myProf) ha ricoperto il ruolo di tutor accademico.
 /* / / */
 /*Questa tesi tratta la progettazione e lo sviluppo di *AI trAIning*, un videogioco il cui scopo è .... L'obiettivo è quello di ....*/
 
@@ -20,8 +20,8 @@ Il presente documento descrive il lavoro svolto durante il periodo di stage curr
 #linebreak()
 #v(1em)
 
-/ #link(<cap:introduzione>)[Il primo capitolo]: presenta l’azienda ospitante, illustrando il contesto organizzativo e produttivo in cui si è svolto lo stage, i processi interni adottati e la tipologia di clientela a cui si rivolge. Vengono inoltre descritte le principali tecnologie di supporto utilizzate dal personale e la propensione dell’azienda all’innovazione.
-/ #link(<cap:descrizione-stage>)[Il secondo capitolo]: approfondisce il rapporto dell’azienda con gli stage, l’interesse verso il progetto svolto e le motivazioni della scelta. Vengono illustrati gli obiettivi e i vincoli concordati con il tutor aziendale, la pianificazione e il calendario delle attività, l’organizzazione del lavoro e le principali tecnologie utilizzate. Infine, si analizza come il progetto si inserisce nel contesto di innovazione e mercato dell’azienda.
+/ #link(<cap:introduzione>)[Il primo capitolo]: presenta l’azienda ospitante, illustrando il contesto organizzativo e produttivo in cui si è svolto lo _stage_, i processi interni adottati e la tipologia di clientela a cui si rivolge. Vengono inoltre descritte le principali tecnologie di supporto utilizzate dal personale e la propensione dell’azienda all’innovazione.
+/ #link(<cap:descrizione-stage>)[Il secondo capitolo]: approfondisce il rapporto dell’azienda con gli _stage_, l’interesse verso il progetto svolto e le motivazioni della scelta. Vengono illustrati gli obiettivi e i vincoli concordati con il tutor aziendale, la pianificazione e il calendario delle attività, l’organizzazione del lavoro e le principali tecnologie utilizzate. Infine, si analizza come il progetto si inserisce nel contesto di innovazione e mercato dell’azienda.
 / #link(<cap:analisi-requisiti>)[Il terzo capitolo]: descrive in dettaglio l'analisi dei requisiti con i casi d'uso e la lista dei requisiti, l'architettura, _test_ e validazione dello _stage_. Seguirà, infine, una descrizione dei risultati che ho raggiunto sul piano qualitativo e quantitativo.
 / #link(<cap:conclusioni>)[Il quarto capitolo]: per finire, descrive l'esperienza personale di _stage_, quanti obiettivi soddisfatti rispetto agli obiettivi totali dichiarati nel secondo capitolo, la maturazione durante lo _stage_, con conoscenze ed abilità acquisiste durante il periodo\	
 	Infine, verrà fatto un confronto tra le competenze richieste a inizio _stage_ rispetto a quelle erogate dal corso di studi, con eventuali lacune su quest'ultimo su competenze che sarebbero state utili per lo _stage_ o mondo del lavoro.
