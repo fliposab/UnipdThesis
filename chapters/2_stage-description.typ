@@ -21,6 +21,7 @@ Ho potuto osservare questa disponibilità anche durante lo _stage_, dove erano p
 
 == Interesse dell'azienda verso lo _stage_
 /*_Qui descrivo il rapporto dell'azienda con il mio stage_*/
+=== Proposta di progetto
 Sempre durante l'evento _StageIT_ 2025, ho avuto la possibilità di incontrare il tutor aziendale, il quale, prima di presentare i progetti proposti dall'azienda, mi ha dato la possibilità di proporre un tema di progetto diverso.\
 La mia proposta è stata un progetto di #gl("game_design"), un tema a cui sono personalmente molto interessato e familiare.\
 Nonostante ritenessi che la mia proposta avesse poco valore, il tutor ha mostrato un interesse genuino e ha incoraggiato la mia idea, portandomi a svilupparla ulteriormente.
@@ -48,13 +49,20 @@ Tra questi temi, sono spiccati di più:
 
 == Descrizione del progetto
 /*_Qui faccio un breve riassunto in cosa consisteva il mio progetto di stage_*/
+=== Struttura del gioco
 Il progetto si tratta di un videogioco educativo, che ha come obiettivo quello di insegnare i concetti base dell'Intelligenza Artificiale e _Machine Learning_ in modo semplice e divertente.\
 \
 Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore può scegliere il livello che vuole affrontare, sono presenti 3 livelli, ognuno dei quali insegna un concetto diverso:
 #set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 - il livello della *regressione lineare*, dove la linea nel grafico diventa un ponte su cui il personaggio può camminare, tuttavia la direzione non è corretta e bisogna modificarla aggiungendo nuovi punti nel grafico, modificando la direzione della linea;
+#figure(caption: [Livello "Regressione lineare"], image("../images/screenshot-linear_regression_level.png", width: 80%))
+
 - il livello dell'*albero di decisione*, dove l'utente dovrà classificare diverse razze di cani in base ai valori, già assegnati, in un albero di decisione;
+#figure(caption: [Livello "Albero di decisione"], image("../images/screenshot-decision_tree_level.png", width: 80%))
+
 - il livello della *causalità*, dove l'obiettivo principale è cercare la giusta causa di quello che sta avvenendo nel livello, ed in caso di risposta corretta, l'utente viene avvisato e premiato.
+#figure(caption: [Livello "Causalità"], image("../images/screenshot-causality_level.png", width: 80%))
+
 
 === Scelta del progetto
 /*_Qui descrivo la scelta del progetto, le ragioni della mia scelta, in confronto con gli altri progetti disponibili_*/
@@ -123,6 +131,7 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
 
 == Vincoli
 //_Qui descrivo i vincoli decisi con il tutor_
+=== Vincoli temporali e tecnologici
 Durante il secondo colloquio con il tutor aziendale, sono stati definiti dei vincoli obbligatori del progetto da rispettare, concordati tra me e il tutor aziendale.
 I vincoli sono indicati nella seguente tabella, con il prefisso:
 - *VTM*: vincoli temporali;
@@ -228,11 +237,12 @@ corrisponde a una settimana. Qui sotto sono elencate le attività pianificate pe
 
 === Organizzazione del lavoro
 //_Qui descrivo come mi sono organizzato per svolgere il lavoro, con le attività svolte, le regole che ho seguito e gli strumenti usati_
+- *Titolo*:
 Ogni giorno, sceglievo le attività da svolgere in base allo stato di avanzamento del progetto, tenendo conto delle priorità e delle scadenze. \
 Utilizzavo strumenti digitali per la gestione delle attività, come sistemi di versionamento o uso di #gl("ticket"), per aiutarmi a tenere traccia dei compiti svolti.\
 Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica, è documentata e tracciata per garantire trasparenza ed efficienza.\
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.\
-Durante lo sviluppo, sono state imposte le seguenti regole per garantire corretta organizzazione. Le regole sono suddivise in base all'attività:
+Durante lo sviluppo, sono state imposte le seguenti regole per garantire corretta organizzazione. Le regole sono suddivise in base all'attività.
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *GDScript*: linguaggio di programmazione specifico per il motore di gioco Godot, progettato per essere semplice e intuitivo.\
