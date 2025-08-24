@@ -39,10 +39,10 @@ Il gioco prevede un solo attore, il *giocatore*, cioè l'utente che interagisce 
 === Casi d'uso
 #set heading(numbering: none)
 ==== UC1 - Movimento
-#figure(image("../images/usecase/uc-movimento.png", width: 60%), caption: [Diagramma UML _use case_ sul movimento])
-#desc Il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra utilizzando i tasti direzionali o i comandi di movimento del *joypad*.\
-#prec Il giocatore deve essere in un livello del gioco.\
-#posc Il personaggio si muove nella direzione desiderata e interagisce con l'ambiente circostante.\
+#figure(image("../images/usecase/uc-movimento.png", width: 80%), caption: [Diagramma UML _use case_ sul movimento])
+#desc il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra utilizzando i tasti direzionali o i comandi di movimento del *joypad*.\
+#prec Iil giocatore deve essere in un livello del gioco.\
+#posc il personaggio si muove nella direzione desiderata e interagisce con l'ambiente circostante.\
 /**Scenario principale*:\
 - Il giocatore preme il tasto o muove la levetta nel *joypad*.
 - Il personaggio si muove nella direzione desiderata.*/
@@ -50,16 +50,16 @@ Il gioco prevede un solo attore, il *giocatore*, cioè l'utente che interagisce 
 #gnr Movimento con oggetto.\
 
 ==== UC1.1 - Movimento con oggetto
-#desc Il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra, mentre sta portando un oggetto, utilizzando lo stick analogico sinistro del joypad.\
-#prec Il giocatore deve essere in un livello del gioco e ha un oggetto con sé.\
-#posc Il personaggio si muove nella direzione desiderata e sposta con sé l'oggetto.\
+#desc il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra, mentre sta portando un oggetto, utilizzando lo stick analogico sinistro del joypad.\
+#prec il giocatore deve essere in un livello del gioco e ha un oggetto con sé.\
+#posc il personaggio si muove nella direzione desiderata e sposta con sé l'oggetto.\
 
 ==== UC2 - Salto
 #figure(image("../images/usecase/uc-salto.png", width: 60%), caption: [Diagramma UML _use case_ sul salto])
-#desc Il giocatore può far saltare il personaggio utilizzando un tasto specifico.\
-#prec Il giocatore deve essere in un livello del gioco e deve essere libero di muoversi.\
-#posc Il personaggio esegue il salto.\
-#gnr salto con oggetto.\
+#desc il giocatore può far saltare il personaggio utilizzando un tasto specifico.\
+#prec il giocatore deve essere in un livello del gioco e deve essere libero di muoversi.\
+#posc il personaggio esegue il salto.\
+#gnr Salto con oggetto.\
 
 // UC3 - Rotazione telecamera
 ==== UC3 - Rotazione telecamera
@@ -67,8 +67,8 @@ Il gioco prevede un solo attore, il *giocatore*, cioè l'utente che interagisce 
 #desc il giocatore può ruotare la telecamera attorno al personaggio utilizzando i comandi del mouse o del _joypad_.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la telecamera si muove attorno al personaggio, cambiando l'angolo di visualizzazione.\
-#gnr - rotazione telecamera manuale;\
-#h(8.82em) \- rotazione telecamera automatica.
+#gnr - Rotazione telecamera manuale;\
+#h(8.82em) \- Rotazione telecamera automatica.
 
 ==== UC3.1 - Rotazione telecamera manuale
 #desc il giocatore può ruotare la telecamera attorno al personaggio utilizzando i comandi del mouse o del _joypad_.\
@@ -86,9 +86,349 @@ Il gioco prevede un solo attore, il *giocatore*, cioè l'utente che interagisce 
 #desc il giocatore cade dal livello e viene riportato in una zona dove si trovava prima.\
 #prec il giocatore deve essere in un livello del gioco e deve entrare in un'area di caduta.\
 #posc: il giocatore torna dove era prima di cadere.\
-#incl riposizionamento.
-#set heading(numbering: "1.")
+#incl Riposizionamento.
 
+// UC5 - Riposizionamento
+==== UC5 - Riposizionamento
+#desc il giocatore viene posizionato in una certa zona del livello.\
+#prec il giocatore deve essere in un livello del gioco.\
+#posc il giocatore viene riposizionato.\
+
+// UC6 - Raccolta collezionabile
+==== UC6 - Raccolta _collezionabile_
+#figure(image("../images/usecase/uc-raccolta_collezionabile.png", width: 50%), caption: "Raccolta collezionabile")
+#desc il giocatore può raccogliere oggetti _collezionabili_ presenti nel livello quando si avvicina.\
+#prec il giocatore deve essere in un livello del gioco e deve esserci un oggetto collezionabile nelle vicinanze.\
+#posc il numero di collezionabili sale di un certo valore.\
+
+// UC7 - Interazione con entità
+==== UC7 - Interazione con entità
+#figure(image("../images/usecase/uc-interazione.png", width: 60%), caption: "Interazione entità")
+#desc il giocatore si avvicina a un'_entità_ e vede un messaggio.\
+#prec il giocatore deve essere vicino ad un'entità.\
+#posc l'entità mostra un messaggio.\
+#gnr - Interazione con un'entità automatica.\
+#h(8.82em)\- Interazione con un'entità manuale.
+
+==== UC7.1 - Interazione con entità automatica
+#figure(image("../images/usecase/uc-interazione_automatica.png", width: 60%), caption: "Interazione entità automatica")
+#desc il giocatore si avvicina a un'entità.\
+#prec il giocatore deve essere vicino ad un'entità.\
+#posc il giocatore interagisce con l'entità.\
+#gnr - Raccolta collezionabile.\
+#h(8.82em) \- Visualizzazione messaggio.
+
+==== UC7.1.1 - Visualizzazione messaggio
+#desc il giocatore vuole visualizzare il messaggio di un'entità del gioco.\
+#prec il giocatore deve essere lontano dall'entità.\
+#posc il giocatore visualizza il messaggio. \
+
+==== UC7.2 - Interazione con entità manuale
+#figure(image("../images/usecase/uc-interazione_manuale.png", width: 90%), caption: "Interazione manuale")
+#desc il giocatore si avvicina a un'entità e vede l'input che deve premere per interagire.\
+#prec il giocatore deve essere vicino ad un'entità.\
+#posc il giocatore ha premuto l'input per interagire.\
+#incl Visualizzazione messaggio.\
+#gnr - Interazione con personaggio non giocabile.\
+#h(8.82em) - Prendere un oggetto.\
+#h(8.82em) - Interazione con un cartello.\
+#h(8.82em) - Interazione con zona di transizione.\
+#h(8.82em) - Interazione con macchina LR.\
+#h(8.82em) - Accensione unità esterna condizionatore.\
+
+// UC8 - Interazione con personaggio non giocabile
+==== UC8 - Interazione con personaggio non giocabile
+#figure(image("../images/usecase/uc-dialogo.png", width: 70%), caption: "Interazione personaggio non giocabile")
+#desc il giocatore si avvicina a un personaggio non giocabile e vede l'input che deve premere per interagire.\
+#prec il giocatore deve essere vicino a un personaggio non giocabile.\
+#posc il giocatore ha premuto l'input per interagire.\
+#incl Visualizzazione dialogo.\
+
+==== UC8.1 - Visualizzazione dialogo
+#desc il giocatore visualizza il dialogo mostrato dall'entità.\
+#prec il giocatore ha premuto l'input per interagire con l'entità.\
+#posc l'entità mostra il dialogo mentre il giocatore non può muoversi.\
+
+==== UC8.2 - Scelta opzione dialogo
+#desc il giocatore deve scegliere un'opzione per andare avanti nel dialogo.\
+#prec il giocatore deve essere in un dialogo e visualizza le opzioni tra cui scegliere.\
+#posc il giocatore ha scelto l'opzione ed il dialogo finisce.\
+#incl Avanti nel dialogo.\
+
+==== UC8.3 - Avanti nel dialogo
+#desc il giocatore vuole continuare il dialogo.\
+#prec il giocatore ha premuto l'input per andare avanti nel dialogo.\
+#posc viene mostrato il messaggio successivo del dialogo.\
+#ext Fine interazione.\
+
+==== UC8.4 - Fine interazione
+#figure(image("../images/usecase/uc-fine_interazione.png", width: 50%), caption: "Fine interazione")
+#desc il giocatore vuole terminare l'interazione.\
+#prec il giocatore sta interagendo con un'entità.\
+#posc - il giocatore preme l'input, smette di interagire con l'entità e può muoversi di nuovo.
+
+// UC9 - Prendere un oggetto
+==== UC9 - Prendere un oggetto
+#figure(image("../images/usecase/uc-prendere_oggetto.png", width: 40%), caption: "Prendere un oggetto")
+#desc il giocatore può prendere un oggetto e poi muoversi con esso.\
+#prec il giocatore deve essere in un livello del gioco e deve esserci un oggetto che può raccogliere davanti ad esso.\
+#posc il giocatore interagisce con l'oggetto.\
+
+// UC10 - Lasciare un oggetto
+==== UC10 - Lasciare un oggetto
+#figure(image("../images/usecase/uc-lasciare_oggetto.png", width: 60%), caption: "Lasciare un oggetto")
+#desc
+- Il giocatore può lasciare un oggetto.
+#prec
+- Il giocatore deve essere in un livello del gioco.
+- Il giocatore sta portando un oggetto.
+#posc
+- Il giocatore lascia l'oggetto.
+- L'oggetto rimane nella posizione lasciato.
+*Scenario principale*:
+- Il giocatore preme lo stesso tasto con cui ha raccolto l'oggetto.
+- Il giocatore lascia l'oggetto.
+#ext
+- Inserimento oggetto nello spazio dedicato.
+
+// UC11 - Interazione con un cartello
+==== UC11 - Interazione con un cartello
+#figure(image("../images/usecase/uc-interazione_cartello.png", width: 90%), caption: "Interazione cartello")
+*Attori principali*:
+- Giocatore.
+#desc
+- Il giocatore si avvicina a un cartello e vede l'input che deve premere per interagire.
+#prec
+- Il giocatore deve essere vicino a un cartello.
+#posc
+- Il giocatore ha premuto il tasto.
+*Scenario principale*:
+- Il giocatore preme il tasto per interagire con il cartello.
+- Il giocatore visualizza il messaggio del cartello.
+#incl
+- Visualizzazione messaggio cartello.
+
+==== UC11.1 - Visualizzazione messaggio cartello
+*Attori principali*:
+- Giocatore.
+#desc
+- Il giocatore visualizza il messaggio del cartello.
+#prec
+- Il giocatore deve aver interagito con un cartello.
+#posc
+- Il giocatore visualizza il messaggio del cartello.
+*Scenario principale*:
+- Il giocatore preme il tasto per interagire con il cartello.
+- Il giocatore visualizza il messaggio del cartello.
+#gnr
+- Visualizzazione classificazioni oggetti scoperti.
+- Visualizzazione grafico.
+
+==== UC11.2 - Visualizzazione classificazioni oggetti scoperti
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore vuole visualizzare tutte le classificazioni degli oggetti che è riuscito ad indovinare nel livello.
+#prec
+- Il giocatore è dentro il livello del Decision Tree.
+- Il livello deve contenere un Decision Tree.
+#posc
+- Il giocatore visualizza le classificazioni degli oggetti scoperti.
+*Scenario principale*:
+- Il giocatore visualizza le classificazioni degli oggetti scoperti.
+#ext
+- Fine interazione.
+
+==== UC11.3 - Visualizzazione grafico
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore vuole visualizzare un grafico presente in un cartello.
+#prec
+- Il giocatore deve avere interagito con un cartello.
+#posc
+- Il giocatore visualizza il grafico.
+*Scenario principale*:
+- Il giocatore visualizza il grafico.
+#ext
+- Fine interazione.
+
+==== UC11.4 - Aggiornamento dato di un cartello
+*Attori principali*: 
+- Giocatore.
+#desc
+- Un dato di un cartello può essere modificato in base a determinate azioni del giocatore all'interno del livello.
+#prec
+- Il giocatore ed il cartello devono essere nello stesso livello.
+#posc
+- Il dato del cartello viene aggiornato.
+*Scenario principale*:
+- Il giocatore svolge una determinata azione che modifica il dato del cartello.
+- Il dato nel cartello viene modificato.
+
+// UC12 - Interazione con zona di transizione
+==== UC12 - Interazione con zona di transizione
+#figure(image("../images/usecase/uc-transizione.png", width: 80%), caption: "Interazione zona di transizione")
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore si avvicina a una zona di transizione per cambiare livello.
+#prec
+- Il giocatore deve essere in un livello del gioco.
+#posc
+- Il giocatore ha premuto il tasto.
+*Scenario principale*:
+- Il giocatore si avvicina alla zona di transizione.
+- Il giocatore preme il tasto per interagire.
+
+==== UC12.1 - Transizione scena
+*Attori principali*: 
+- Giocatore
+#desc
+- Il giocatore cambia livello.
+#prec
+- Il giocatore deve aver interagito con un'area di transizione.
+#posc
+- Il giocatore è nel nuovo livello.
+*Scenario principale*:
+- Dopo aver premuto il tasto, avviene una transizione.
+- Dopo la transizione, il giocatore si trova nel nuovo livello.
+#incl
+- Salvataggio.
+
+// UC13 - Interazione con macchina LR
+==== UC13 - Interazione con macchina LR
+#figure(image("../images/usecase/uc-macchina_lr.png", width: 60%), caption: "Interazione con macchina LR")
+*Attori principali*: 
+- Giocatore
+#desc
+- Il giocatore vuole interagire con la macchina per posizionare dei punti sul grafico _LR_.
+#prec
+- Il giocatore deve trovarsi in un'area per interagire con la macchina.
+#posc
+- Il giocatore può usare la macchina.
+*Scenario principale*:
+- Il giocatore entra in una zona per interagire con la macchina.
+- Il giocatore preme il tasto "interagisci".
+- Il giocatore usa la macchina.
+
+// UC14 - Inserimento punto nel grafico LR
+==== UC14 - Inserimento punto nel grafico LR
+*Attori principali*: 
+- Giocatore
+#desc
+- Il giocatore vuole posizionare un punto sul grafico LR.
+#prec
+- Il giocatore deve essere in utilizzo di una macchina LR.
+#posc
+- Il punto viene posizionato sul grafico.
+*Scenario principale*:
+- Il giocatore mire dove vuole posizionare il punto.
+- Il giocatore preme il tasto "Interagisci".
+- Il punto viene posizionato e la retta del grafico viene aggiornata.
+
+// UC15 - Reset punti aggiunti nel grafico LR
+==== UC15 - Reset punti aggiunti nel grafico LR
+*Attori principali*: 
+- Giocatore
+#desc
+- Il giocatore vuole togliere i punti da lui aggiunti nel grafico.
+#prec
+- Il giocatore deve essere in utilizzo di una macchina LR.
+#posc
+- I punti aggiunti dal giocatore vengono tolti
+*Scenario principale*:
+- Il giocatore preme il tasto "Reset".
+- I punti aggiunti dal giocatore vengono tolti e la retta del grafico viene aggiornata.
+
+==== UC16 - Posizionamento sopra un nodo dell'albero di decisione
+#figure(image("../images/usecase/uc-nodo_albero.png", width: 70%), caption: "Scelte albero di decisione")
+*Attori principali*:
+- Giocatore.
+#desc
+- Il giocatore vuole posizionarsi sopra un nodo dell'albero di decisione.
+#prec
+- Il giocatore deve essere in un livello del gioco.
+- Deve essere presente un albero di decisione nel livello.
+#posc
+- Il giocatore è posizionato sopra un nodo dell'albero di decisione.
+*Scenario principale*:
+- Il giocatore si muove verso il nodo scelto.
+- Il giocatore si posiziona sopra il nodo.
+#ext
+- Visualizzazione delle scelte sul nodo.
+
+==== UC16.1 - Visualizzazione scelte sul nodo
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore vuole proseguire nell'albero di decisione.
+#prec
+- Il giocatore deve essere sopra un nodo dell'albero di decisione.
+#posc
+- Il giocatore sceglie la direzione in base alle scelte disponibili.
+*Scenario principale*:
+- Il giocatore si posiziona sopra un nodo dell'albero di decisione.
+- Il giocatore vede le scelte disponibili.
+- Il giocatore sceglie una direzione.
+
+// UC17 - Inserimento dell’oggetto nello spazio dedicato
+==== UC17 - Inserimento dell’oggetto nello spazio dedicato
+#figure(image("../images/usecase/uc-inserimento_spazio.png", width: 90%), caption: "Inserimento dell’oggetto nello spazio dedicato")
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore posiziona l'oggetto che sta portando in uno spazio apposito.
+#prec
+- Il giocatore deve portare un oggetto.
+#posc
+- Se l'oggetto è giusto, il nuovo oggetto viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.
+*Scenario principale*:
+- Il giocatore lascia l'oggetto in una zona speciale.
+#gnr
+- Inserimento nello spazio corretto.
+- Inserimento nello spazio sbagliato.
+
+==== UC17.1 - Inserimento nello spazio corretto
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore posiziona l'oggetto nello spazio corretto.
+#prec
+- Il giocatore deve portare un oggetto.
+#posc
+- L'oggetto viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.
+*Scenario principale*:
+- Il giocatore lascia l'oggetto nello spazio corretto.
+#incl
+- Salvataggio.
+
+==== UC17.2 - Inserimento nello spazio sbagliato
+*Attori principali*: 
+- Giocatore.
+#desc
+- Il giocatore posiziona l'oggetto nello spazio sbagliato.
+#prec
+- Il giocatore deve portare un oggetto.
+#posc
+- L'oggetto non viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.
+*Scenario principale*:
+- Il giocatore lascia l'oggetto nello spazio sbagliato.
+
+==== UC18 - Salvataggio
+*Attori principali*: 
+- Giocatore.
+#desc 
+- Il gioco salva in automatico in momenti specifici.
+#prec 
+- Il giocatore deve essere in un livello del gioco.
+#posc 
+- La partita viene salvata e il giocatore può riprendere da quel punto in un secondo momento.
+*Scenario principale*:
+- Il giocatore passa in una zona di transizione.
+- Il gioco salva i dati.
+
+#set heading(numbering: "1.")
 === Requisiti
 In questa sezione vengono elencati i requisiti del progetto, individuati durante la fase di analisi. Ogni requisito viene
 identificato da un codice, scelto in base ai seguenti parametri:
