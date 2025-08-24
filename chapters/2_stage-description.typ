@@ -71,16 +71,16 @@ Il progetto si tratta di un videogioco educativo, che ha come obiettivo quello d
 Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore può scegliere il livello che vuole affrontare, sono presenti 3 livelli, ognuno dei quali insegna un concetto diverso:\
 \
 - il livello della *regressione lineare*, dove la linea nel grafico diventa un ponte su cui il personaggio può camminare, tuttavia la direzione non è corretta e bisogna modificarla aggiungendo nuovi punti nel grafico, modificando la direzione della linea;
-#figure(caption: [Livello "Regressione lineare"], image("../images/screenshot-linear_regression_level.png", width: 80%))
+#figure(caption: [Livello _Regressione lineare_], image("../images/screenshot-linear_regression_level.png", width: 80%))
 
 #set page(footer :[#align(center+horizon, context([#counter(page).display("1.")]))])
 
 - il livello dell'*albero di decisione*, dove l'utente dovrà classificare diverse razze di cani in base ai valori, già assegnati, in un albero di decisione;
-#figure(caption: [Livello "Albero di decisione"], image("../images/screenshot-decision_tree_level.png", width: 80%))
+#figure(caption: [Livello _Albero di decisione_], image("../images/screenshot-decision_tree_level.png", width: 80%))
 
 - il livello della *causalità*, dove l'obiettivo principale è cercare la giusta causa di quello che sta avvenendo nel livello, ed in caso di risposta corretta, l'utente viene avvisato e premiato.
 
-#figure(caption: [Livello "Causalità"], image("../images/screenshot-causality_level.png", width: 80%))
+#figure(caption: [Livello _Causalità_], image("../images/screenshot-causality_level.png", width: 80%))
 
 
 /*=== Scelta del progetto
