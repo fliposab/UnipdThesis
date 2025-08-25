@@ -900,12 +900,12 @@ La telecamera del giocatore viene gestita da più classi per garantire diverse f
 Oltre che a gestire il lavoro di tutte le altre classi per il corretto funzionamento della telecamera, la classe `CameraRayCast` lancia un raggio dalla posizione del giocatore verso il basso per controllare velocemente la distanza dal terreno del giocatore. Nel caso il raggio tocca ancora il terreno, la telecamera rimane per terra e non si sposta in alto con il giocatore.
 Di seguito vengono descritte le classi principali associate alla classe `CameraRayCast`:
 #v(0.5em)
-- `PlayerCamera`: la telecamera effettiva, eredita dalla classe di _Godot_ `Camera3D`. Offre il metodo `look_at_target()` che si occupa di girare la telecamera verso un obiettivo, specificato dalla variabile `custom_target` nella classe. Questo metodo viene usato da `CameraRayCast` per girare la telecamera verso un punto calcolata da quest'ultima.
+- *`PlayerCamera`*: la telecamera effettiva, eredita dalla classe di _Godot_ `Camera3D`. Offre il metodo `look_at_target()` che si occupa di girare la telecamera verso un obiettivo, specificato dalla variabile `custom_target` nella classe. Questo metodo viene usato da `CameraRayCast` per girare la telecamera verso un punto calcolata da quest'ultima.
 
-- `CameraProjectUI`: gestisce gli elementi della _UI_ la cui posizione viene proiettata dallo spazio 3D del gioco, allo spazio 2D dello schermo. Contiene un array, composto da questi elementi. Nel caso l'array sia vuoto, la modalità di processo viene disabilitata, cioè le operazioni della classe non vengono più effettuate ad ogni fotogramma del gioco, risparmiando risorse.\
-- `SpringArm3D`: classe fornita da _Godot_. La sua posizione globale corrisponde sempre a quella del giocatore, e si occupa di avvicinare la telecamera quando è vicino ad un muro per evitare il _clipping_.
+- *`CameraProjectUI`*: gestisce gli elementi della _UI_ la cui posizione viene proiettata dallo spazio 3D del gioco, allo spazio 2D dello schermo. Contiene un array, composto da questi elementi. Nel caso l'array sia vuoto, la modalità di processo viene disabilitata, cioè le operazioni della classe non vengono più effettuate ad ogni fotogramma del gioco, risparmiando risorse.\
+- *`SpringArm3D`*: classe fornita da _Godot_. La sua posizione globale corrisponde sempre a quella del giocatore, e si occupa di avvicinare la telecamera quando è vicino ad un muro per evitare il _clipping_.
 
-- `CameraTarget`: eredita dalla classe di _Godot_ `Marker3D`. La sua posizione viene calcolata da `CameraRayCast` e si occupa di gestire gli input per ruotare e muovere la telecamera intorno al giocatore.\
+- *`CameraTarget`*: eredita dalla classe di _Godot_ `Marker3D`. La sua posizione viene calcolata da `CameraRayCast` e si occupa di gestire gli input per ruotare e muovere la telecamera intorno al giocatore.
 
 ==== `StateMachine`
 #figure(caption: [Diagramma _UML_ sulla struttura della macchina di stati],image("../images/classi/class-state_machine.png"))\
@@ -915,18 +915,18 @@ La classe `StateMachine` si occupa di gestire la transizione degli stati.\
 L'attributo `state` indica lo stato corrente del personaggio del giocatore. Quando riceve il segnale `finished(...)` dallo stato in cui si trova, si occupa di passare allo stato indicato dal segnale, passando gli eventuali dati contenuto nel `Dictionary` allo stato successivo.\
 Tutti gli stati ereditano dalla classe base astratta `State`. Questa include un riferimento al giocatore ed alla macchina di stati.
 #v(0.5em)
-- `IdleState`: stato iniziale del giocatore. Questo stato viene chiamato quando il giocatore è fermo per terra. Può passare a tutti gli altri stati in base agli input premuti in diverse condizioni. Ad esempio se il giocatore sta portando qualcosa e preme il tasto di interazione, il personaggio passa allo stato "Release", ma se non sta portando niente, allora non succede niente. Invece se preme lo stesso tasto dentro un area specifica, il personaggio passa allo stato "Interact"
+- *`IdleState`*: stato iniziale del giocatore. Questo stato viene chiamato quando il giocatore è fermo per terra. Può passare a tutti gli altri stati in base agli input premuti in diverse condizioni. Ad esempio se il giocatore sta portando qualcosa e preme il tasto di interazione, il personaggio passa allo stato _Release_, ma se non sta portando niente, allora non succede niente. Invece se preme lo stesso tasto dentro un area specifica, il personaggio passa allo stato _Interact_.
 
 
-- `GroundMovementState`: il personaggio del giocatore passa allo stato _GroundMovement_ quando viene premuto un input per spostarsi rimanendo per terra. Come lo stato _Idle_, si può passare a tutti gli altri stati anche da questo, seguendo le stesse condizioni dello stato _Idle_.
+- *`GroundMovementState`*: il personaggio del giocatore passa allo stato _GroundMovement_ quando viene premuto un input per spostarsi rimanendo per terra. Come lo stato _Idle_, si può passare a tutti gli altri stati anche da questo, seguendo le stesse condizioni dello stato _Idle_.
 
-- `AirState`: si può passare a questo stato in due condizioni: il giocatore cade da una piattaforma, o preme il tasto per saltare. Nell'ultimo caso, lo stato precedente manda un valore `jump = true` all'interno del `Dictionary`, in questo modo lo stato controlla se è presente il medesimo valore ed in caso positivo, esegue il salto, caricando la rispettiva animazione e modificando la velocità verticale.
+- *`AirState`*: si può passare a questo stato in due condizioni: il giocatore cade da una piattaforma, o preme il tasto per saltare. Nell'ultimo caso, lo stato precedente manda un valore `jump = true` all'interno del `Dictionary`, in questo modo lo stato controlla se è presente il medesimo valore ed in caso positivo, esegue il salto, caricando la rispettiva animazione e modificando la velocità verticale.
 
-- `InteractState`: lo stato _Interact_ indica che il personaggio del giocatore è impegnato ad interagire con un'altra entità, ad esempio mentre parla con un personaggio non giocabile o legge un cartello. A differenza degli altri stati, non è un input a far cambiare stato, ma i segnali dalle entità esterne.
+- *`InteractState`*: lo stato _Interact_ indica che il personaggio del giocatore è impegnato ad interagire con un'altra entità, ad esempio mentre parla con un personaggio non giocabile o legge un cartello. A differenza degli altri stati, non è un input a far cambiare stato, ma i segnali dalle entità esterne.
 
-- `GrabState`: il personaggio del giocatore passa allo stato _Grab_ quando il giocatore preme il tasto per prendere un oggetto vicino a uno di questi. Importante notare che questo stato rappresenta solo quando il personaggio prende un oggetto, dopo aver svolto l'azione, il personaggio torna allo stato _Idle_, cambiando le animazioni in modo che rispecchino la situazione.
+- *`GrabState`*: il personaggio del giocatore passa allo stato _Grab_ quando il giocatore preme il tasto per prendere un oggetto vicino a uno di questi. Importante notare che questo stato rappresenta solo quando il personaggio prende un oggetto, dopo aver svolto l'azione, il personaggio torna allo stato _Idle_, cambiando le animazioni in modo che rispecchino la situazione.
 
-- `ReleaseState`: quando il giocatore preme di nuovo il tasto per prendere un oggetto mentre il personaggio sta portando un oggetto, questo passa allo stato _Release_ e lascia l'oggetto. Come il suo stato opposto, una volta lasciato l'oggetto, il giocatore torna allo stato _Idle_.\
+- *`ReleaseState`*: quando il giocatore preme di nuovo il tasto per prendere un oggetto mentre il personaggio sta portando un oggetto, questo passa allo stato _Release_ e lascia l'oggetto. Come il suo stato opposto, una volta lasciato l'oggetto, il giocatore torna allo stato _Idle_.\
 #v(0.5em)
 La figura a pagina successiva mostra il flusso degli stati.
 #figure(caption: [Diagramma sul flusso degli stati del giocatore], image("../images/sm-player_states.png", width: 60%))
@@ -943,6 +943,8 @@ Nei livelli sono presenti diverse _entità_ con cui il giocatore può interagire
 - *`NPC`*: rappresenta un personaggio non giocabile che ha assegnato una semplice frase come messaggio. Questa frase viene visualizzata in una classe `SimpleProjectLabel` il cui funzionamento è stato spiegato nella sezione precedente. Presenta anche una classe `Marker3D` che segna la posizione della _UI_, e una classe `NPCModel` che gestisce le animazioni del modello 3D del personaggio.
 - *`InteractableSign`*: rappresenta un cartello che il giocatore può leggere. \ Il cartello può contenere diverse informazioni, come una lista o un grafico. \ Il contenuto del cartello è inserito in un'altra classe `Control`.
 - *`NPCDialogue`*: rappresenta un personaggio non giocabile che, a differenza della classe `NPC`, presenta un dialogo. Il giocatore può interagire con il personaggio e visualizzare il dialogo premendo il rispettivo tasto.
+=== Gestione dei salvataggi
+#figure(caption: [Diagramma sul funzionamento dei salvataggi],image("../images/classi/class-saves.png"))
 
 === `LevelsTransition`
 #figure(caption: [Diagramma _UML_ delle classi _Autoloads_],image("../images/classi/class-autoloads.png", width: auto))
@@ -959,15 +961,15 @@ Ogni livello viene creato con le seguenti classi:
 - *`PlayerSpawn`*: classe che si occupa di generare il giocatore nella posizione in cui si trova. Appena generato il giocatore viene assegnato alla classe `Level`
 - *`PauseMenu`*: il menu di pausa, questo viene caricato quando il giocatore preme il rispettivo tasto, mettendo in pausa tutta la scena.
 
-=== Livello _Regressione lineare_
+//=== Livello _Regressione lineare_
+=== `LRCannon`
 #figure(caption: [Diagramma sul funzionamento di un grafico _Linear Regression_ nel gioco],image("../images/classi/class-linear_regression.png"))
-==== `LRCannon`
 La classe `LRCannon` rappresenta il cannone nel livello. Eredita da `InteractableArea` e infatti il giocatore può interagirci quando entra dentro l'area apposita.\
 Quando il giocatore preme l'_input_ per interagire, la telecamera viene cambiata ed il giocatore entra nello stato _Interact_.
 La classe è composta da: 
 - *`CannonMesh`*: si occupa della rotazione del cannone quando questo è attivo e quando viene inserito un nuovo punto nel grafico.
 - *`LRCannonInputHandler`*: gestisce gli _input_ del giocatore quando questo sta controllando il _cannone LR_.
-==== `LinearRegressionGraph`
+=== `LinearRegressionGraph`
 Classe base astratta usata per i due tipi di grafico presenti nel livello: orizzontale e verticale.
 Si occupa di svolgere le operazioni di regressione lineare per ottenere la formula della retta $y = a + b x$.\
 Tuttavia, non si può applicare la formula direttamente ad un oggetto 3D.\
@@ -985,10 +987,32 @@ Le trasformazioni globali vengono poi modificate in base al tipo della classe:
 
 === Livello _Albero di decisione_
 #figure(caption: [Diagramma sul funzionamento dell'Albero di decisione],image("../images/classi/class-decision_tree_level.png", width: auto))
+- *`DecisionTree`*: la classe che rappresenta un Albero di decisione nel livello composta da più istanze di `DecisionNodeFinal` e `DecisionNodeIntermediate`, inserite tutte come nodi figli nella scena.\ Si occupa di inviare i segnali agli altri nodi presenti nel livello.
+- *`DecisionNode`*: classe base astratta per i due tipi di nodi presenti nell'albero: _intermediate_ e _final_. Fornisce i metodi virtuali `on_area_3d_body_entered(body: CharacterBody3D)` e `on_area_3d_body_exited(body: CharacterBody3D)` che vengono chiamati quando entra un oggetto di tipo `CharacterBody3D` nell'area sopra la piattaforma.\ Il comportamento poi viene modificato dalle classi figlie.
+  - *`DecisionNodeIntermediate`*: quando entra il giocatore nell'area, viene visualizzata la _UI_ con le indicazioni da seguire;
+  - *`DecisionNodeFinal`*: quando entra un cane nell'area, controlla se l'`id` di questo corrisponde all'`id` associato all'istanza.
+- *`DogBreedsSign`*: oltre all'albero di decisione nel livello è presente anche un cartello con cui il giocatore può interagire e visualizzare le razze die cani che ha indovinato.\ La classe `DogBreedsSign` rappresenta questo cartello. Questa, è composta da una classe `DogSignUI` che è il contenuto del cartello, contenente tutte le razze dei cani che il giocatore ha indovinato.\ Quando il cartello viene chiuso, emette il segnale `hide_grid()` che chiama il metodo `on_dog_breed_sign_hide_grid()` nella classe `CheckUnlocked`.
 
+- *`CheckUnlocked`*: classe che si occupa di controllare le razze di cani sbloccate e tenere il conto di quelle nuove che il giocatore non ha ancora controllato, nell'attributo `td_to_give`\ Il valore di questo attributo viene modificato all'inizio del caricamento del livello e quando il giocatore indovina una nuova razza nell'albero di decisione, ed è la differenza tra l'attributo `value` e il valore `td_given`.\ Al caricamento del livello, riceve il segnale `data_loaded` dal nodo che gestisce i salvataggi `DTSavesHandler`, assegna il valore dell'attributo `td_given`. Quando riceve il segnale `new_breed_unlocked` dall'albero di decisione, `value` aumenta di 1, ed aggiorna il valore di `td_to_give`.\ Quando riceve il segnale `hide_grid` dal cartello, chiama la funzione per generare i  `training_data` tanti quanti il valore di `td_to_give`.
 === Livello _Causalità_
+==== Struttura del livello
 #figure(caption: [Diagramma del livello  _Causalità_],image("../images/classi/class-causality_level.png"))
-/**/
+- *`ACUnit`*: rappresenta un condizionatore. Eredita da `InteractableArea`, il giocatore, quando entra nell'area, può premere il tasto di interazione per accenderlo.\ Quando viene acceso, il valore dell'array nodo padre, in questo caso `ACUnits`, viene aggiornato con il giusto indice.
+- *`ACUnits`*: si occupa di gestire tutte le istanze di `ACUnit`, inserite come nodi figli nella scena.\ Quando viene acceso un condizionatore, emette il segnale `unit_turned_on(index: int)`, passando direttamente l'array aggiornato come argomento nel segnale.\ Quando tutti i condizionatori sono stati accesi, manda il segnale `all_units_on()`, usato in questo caso per far iniziare la scene di intermezzo.
+- *`CutscenesHandler`*: si occupa di gestire le scene di intermezzo nel livello, inserite come nodi figli nella scena. Nonostante la classe è stata pianificata per gestire più scene, alla fine ne è presente solo una.\ Questa classe svolge anche il ruolo da mediatore, ricevendo i segnali dal livello e mandandoli ai nodi figli, gestendo il traffico dei segnali.
+/*- *`CausalitySavesHandler`*: gestisce i salvataggi e cambio di variabili all'interno del livello _Causality_. In questa classe, le variabili sono salvate in un `Dictionary`. Quando i salvataggi vengono caricati, la classe emette il segnale `data_loaded()`.*/
+==== Scena di intermezzo
+Dopo la scena di intermezzo, alcuni personaggi possono cambiare il dialogo a loro assegnato, oppure il comportamento con il giocatore.
+#figure(caption: [Diagramma sul funzionamento dei personaggi non giocabili nella scena di intermezzo],image("../images/classi/class-cutscene_npc.png"))
+- *`CrashCutscene`*: la classe che gestisce la scena di intermezzo principale del livello.Si occupa principalmente di inviare i segnali per iniziare correttamente la scena. \ Quando il giocatore accende l'ultimo condizionatore, viene emesso il segnale `change_values()`. Se invece il livello viene caricato con già tutti i condizionatori accessi, viene emesso il segnale `change_specific_values()`.
+- *`ChangeNPCScientistBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ All'inizio del livello, il personaggio presenta un dialogo predefinito e non si gira quando parla con il giocatore.\ Dopo aver ricevuto il segnale _change_values_ dalla classe "CrashCutscene", sostituisce il dialogo del personaggio con il dialogo assegnato alla classe, e cambia il comportamento, in modo che si giri e cambi animazione quando parla con il giocatore.\ Inoltre, dopo che il giocatore risponde correttamente alla domanda del nuovo dialogo, il comportamento cambia di nuovo, e viene tolto il dialogo, rimpiazzando il messaggio automatico che appare quando il giocatore entra nell'area di interazione.\
+
+- *`ChangeNPCIceCreamBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ Funziona nello stesso modo della classe descritta prima, però avviene solo un cambio del dialogo e non c'è la modifica del comportamento.
+
+- *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale _change_specific_values_, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
+
+- *`ChangeSignUI`*: questa classe si occupa di cambiare il contenuto del rispettivo cartello. Viene assegnata ad un nodo figlio del nodo del cartello.\ Funziona nello stesso modo delle classi che cambiano il dialogo o comportamento dei personaggi. Quando riceve il segnale _change_values_, cambia il contenuto del cartello, rimpiazzandolo con l'istanza assegnata alla classe.
+
 == Verifica e validazione
 === Macchina di _test_
 Tutti i test sono stati eseguiti sulla mia macchina con specifiche hardware e software definite nella tabella. Molto importante è specificare le componenti della macchina su cui viene testato il gioco, dato che macchine diverse offrono prestazioni diverse.
@@ -1022,7 +1046,7 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   [TU-04],[Si verifica che la rotazione iniziale sull'asse y della telecamera è la stessa del giocatore],[\u{2713}],
   [TU-05],[Si verifica che la telecamera ruoti intorno al giocatore quando viene premuto il rispettivo tasto],[\u{2713}],
   [TU-06],[Si verifica che il giocatore si muovi ad una determinata velocità quando viene premuto il rispettivo tasto],[\u{2713}],
-  [TU-07],[Si verifica che se il giocatore si muove su una piattaforma, il suo stato nella macchina di stati è "GroundMove"],[\u{2713}],
+  [TU-07],[Si verifica che se il giocatore si muove su una piattaforma, il suo stato nella macchina di stati è _GroundMove_],[\u{2713}],
   [TU-08],[Si verifica che quando il giocatore si muove su una piattaforma, utilizza l'animazione della corsa],[\u{2713}],
   [TU-09],[Si verifica che quando il giocatore si muove, la telecamera ruota automaticamente],[\u{2713}],
   [TU-10],[Si verifica che quando il giocatore salti quando viene premuto il rispettivo tasto],[\u{2713}],
@@ -1119,6 +1143,7 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   [TI-37],[Si verifica che quando il giocatore si avvicina ad un "Training data" di colore blu, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
   [TI-38],[Si verifica che quando il giocatore cade dal livello, torna in una zona dove si trovava precedentemente],[\u{2713}],
 ))
+
 === _Test_ di sistema
 #figure(caption: [_Test_ di sistema], table(
   columns: (0.4fr, 1fr, 0.3fr),
@@ -1138,7 +1163,6 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   "TS-09","Si verifica che il tempo necessario alla GPU per caricare un _frame_ sia inferiore a 33.3 millisecondi","\u{2713}",
   "TS-10","Si verifica che non siano presenti nodi non utilizzati nella scena","\u{2713}",))
 
-#pagebreak()
 === _Test_ di accettazione
 #figure(caption: [Tabella dei _test_ di accettazione], table(
   columns: (0.4fr, 1fr, 0.3fr),

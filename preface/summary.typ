@@ -39,7 +39,7 @@ Durante la stesura del testo ho scelto di adottare le seguenti convenzioni tipog
 - per la prima occorrenza dei termini riportati nel glossario viene utilizzata la seguente nomenclatura: #gl("termine", capitalize: false) e ne viene riportata una breve descrizione del termine a piè di pagina;
 - i termini in lingua straniera non di uso comune o facenti parti del gergo tecnico sono evidenziati con il carattere _corsivo_;
 - all'inizio di ogni capitolo viene riportato un breve sommario sugli argomenti principali che il capitolo tratta;
-- i nomi di funzioni o variabili appartenenti ad un linguaggio di programmazione vengono scritte con un carattere `monospaziato`;
+- i nomi di funzioni, variabili o classi appartenenti ad un linguaggio di programmazione vengono scritte con un carattere `monospaziato`;
 - le citazioni ad un libro o ad una risorsa presente nella #link(<bibliography>)[bibliografia] (#link(<bibliography>)[p. #context counter(page).at(<bibliography>).at(0)]) saranno affiancate dal rispettivo numero identificativo, es. $[1]$;
 - ogni immagine sarà accompagnata da un titolo e verrà elencata nel suo indice apposito a inizio documento, esempio:
 #figure(image("../images/icon_big.png", width: 30%), caption: [Immagine esempio])
