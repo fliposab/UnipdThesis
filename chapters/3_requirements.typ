@@ -1050,9 +1050,9 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   [TU-08],[Si verifica che quando il giocatore si muove su una piattaforma, utilizza l'animazione della corsa],[\u{2713}],
   [TU-09],[Si verifica che quando il giocatore si muove, la telecamera ruota automaticamente],[\u{2713}],
   [TU-10],[Si verifica che quando il giocatore salti quando viene premuto il rispettivo tasto],[\u{2713}],
-  [TU-11],[Si verifica che quando il giocatore salta, lo stato nella macchina di stati cambia a "Air"],[\u{2713}],
+  [TU-11],[Si verifica che quando il giocatore salta, lo stato nella macchina di stati cambia a _Air_],[\u{2713}],
   [TU-12],[Si verifica che quando il giocatore salta utilizza l'animazione del salto],[\u{2713}],
-  [TU-13],[Si verifica che quando il giocatore cade da una piattaforma, con velocità verticale negativa, lo stato nella macchina di stati sia "Air"],[\u{2713}],
+  [TU-13],[Si verifica che quando il giocatore cade da una piattaforma, con velocità verticale negativa, lo stato nella macchina di stati sia _Air_],[\u{2713}],
   [TU-14],[Si verifica che quando il giocatore cade da una piattaforma, con velocità verticale negativa, utilizzi l'animazione della caduta],[\u{2713}],
   //Pausa
   [TU-15],[Si verifica che il menu di pausa venga visualizzato quando viene premuto il rispettivo tasto],[\u{2713}],
