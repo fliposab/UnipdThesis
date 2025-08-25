@@ -17,6 +17,11 @@
     description: [modello predittivo utilizzato in statistica e _Machine Learning_, che rappresenta le decisioni e le loro possibili conseguenze sotto forma di un albero, facilitando l'interpretazione e la visualizzazione delle scelte.]
   ),
   (
+    key: "autoload",
+    short: [autoload],
+    description: [meccanismo di _Godot_ che consente di caricare automaticamente una risorsa all'avvio del gioco, rendendola disponibile in tutte le scene senza doverla caricare manualmente.]
+  ),
+  (
     key: "blender",
     short: [Blender],
     description: [_software_ di modellazione ed animazione 3D _open source_ usato per creare modelli 3D ed animazioni.],
@@ -39,9 +44,29 @@
     description: [pratica di sviluppo _software_ che consente di integrare frequentemente le modifiche del codice in un repository condiviso, garantendo che il codice sia sempre in uno stato funzionante e testato.]
   ),
   (
+    key: "clipping",
+    short: [clipping],
+    description: [fenomeno che si verifica quando la telecamera di un videogioco passa attraverso un oggetto solido, causando la visualizzazione errata della scena.]
+  ),
+  (
     key: "database",
     short: [database],
     description: [insieme organizzato di dati, generalmente memorizzato e gestito in modo da facilitarne l'accesso e la manipolazione. In ambito _software_, i database sono utilizzati per archiviare informazioni in modo strutturato, consentendo operazioni di ricerca, aggiornamento e gestione dei dati.]
+  ),
+  (
+    key: "diagrammi_gannt",
+    short: [diagrammi di _Gannt_],
+    description: [strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata, le dipendenze e le scadenze delle attività in un formato visivo facile da comprendere.]
+  ),
+  (
+    key: "drifting",
+    short: [drifting],
+    description: [fenomeno che si verifica quando un dispositivo di input, come uno _stick_ analogico, registra movimenti o pressioni anche quando non viene toccato, causando comportamenti indesiderati nel gioco.]
+  ),
+  (
+    key: "frame",
+    short: [frame],
+    description: [unità di misura temporale utilizzata nei videogiochi e nelle animazioni, che rappresenta un singolo fotogramma di un'animazione o di un ciclo di gioco. Tipicamente sono 60 in un secondo (60 FPS - _Frames Per Second_).]
   ),
   (
     key: "game_design",
@@ -79,6 +104,11 @@
     short: [IK],
     long: [_Inverse Kinematics_],
     description: [soluzione usata nell'ambito dell'animazione 3D. Si tratta di semplificare l'animazione calcolando il movimento di altre ossa o articolazioni in base all'ultimo osso della catena. Ad esempio, automatizza il movimento del braccio muovendo solo la mano, anziché ruotare singolarmente braccio, avambraccio e mano. Questo metodo risulta anche molto più simile a come ci si muove naturalmente.]
+  ),
+  (
+    key: "joypad",
+    short: [joypad],
+    description: [dispositivo di input utilizzato principalmente per come dispositivo di _input_ nei videogiochi, dotato di pulsanti, leve e altri controlli per interagire con il gioco.]
   ),
   (
     key: "llm",
@@ -162,6 +192,11 @@
     description: [programma che calcola l'aspetto visivo di un oggetto 3D, determinando come la luce interagisce con le superfici.]
   ),
   (
+    key: "singleton",
+    short: [singleton],
+    description: [design pattern garantisce che esista un'unica istanza di una classe, garantendo un punto di accesso globale a essa.]
+  ),
+  (
     key: "snake_case",
     short: [snake_case],
     description: [pratica di scrivere parole composte separando le parole tramite trattino basso, solitamente con le prime lettere delle singole parole in minuscolo.]
@@ -197,6 +232,12 @@
     key: "tutorial",
     short: [tutorial],
     description: [concetto usato per indicare una guida introduttiva ad un determinato argomento. In questo caso, rappresenta il livello introduttivo di un videogioco, progettato per insegnare all'utente i concetti base del gioco, ad esempio i comandi.]
+  ),
+  (
+    key: "ui",
+    short: [UI],
+    long: [_User Interface_],
+    description: [insieme di elementi grafici e controlli che consentono all'utente di interagire con un'applicazione o un videogioco.]
   ),
   /*
   (
