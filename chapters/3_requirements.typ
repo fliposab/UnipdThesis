@@ -152,7 +152,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere in un livello del gioco e deve essere libero di muoversi.\
 #posc il personaggio esegue il salto.\
 #gnr - Salto con oggetto.\
-
+/*
 // UC3 - Rotazione telecamera
 ==== UC3 - Rotazione telecamera
 #figure(image("../images/usecase/uc-rotazione_telecamera.png", width: 80%), caption: [Diagramma _UML_ sulla rotazione della telecamera])
@@ -166,12 +166,12 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore può ruotare la telecamera attorno al personaggio utilizzando i comandi della tastiera o del _joypad_.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la telecamera si muove attorno al personaggio, cambiando l'angolo di visualizzazione.
-
+*/
 ==== UC3.2 - Rotazione telecamera automatica
 #desc la telecamera può modificare in autonomia la sua posizione e rotazione per inquadrare ciò che c'è davanti al personaggio quando questo si sta muovendo.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la telecamera si muove attorno al personaggio, cambiando l'angolo di visualizzazione.
-
+/*
 // UC4 - Caduta
 #pagebreak()
 ==== UC4 - Caduta
@@ -186,15 +186,17 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore viene posizionato in una certa zona del livello.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc il giocatore viene riposizionato.\
-
+*/
 // UC6 - Raccolta collezionabile
+/*
 ==== UC6 - Raccolta _collezionabile_
 #figure(image("../images/usecase/uc-raccolta_collezionabile.png", width: 50%), caption: [Diagramma _UML_ sulla raccolta collezionabile])
 #desc il giocatore può raccogliere oggetti _collezionabili_ presenti nel livello quando si avvicina.\
 #prec il giocatore deve essere in un livello del gioco e deve esserci un oggetto collezionabile nelle vicinanze.\
 #posc il numero di collezionabili sale di un certo valore.\
-
+*/
 // UC7 - Interazione con _entità_
+/*
 ==== UC7 - Interazione con _entità_
 #figure(image("../images/usecase/uc-interazione.png", width: 60%), caption: [Diagramma _UML_ sull'interazione con un'_entità_])
 #desc il giocatore si avvicina a un'_entità_ e vede un messaggio.\
@@ -202,7 +204,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc l'_entità_ mostra un messaggio.\
 #gnr - Interazione con un'_entità_ automatica.\
 #h(8.82em)\- Interazione con un'_entità_ manuale.
-
+*/
 ==== UC7.1 - Interazione con _entità_ automatica
 #figure(image("../images/usecase/uc-interazione_automatica.png", width: 60%), caption: [Diagramma _UML_ sull'interazione automatica con un'_entità_])
 #desc il giocatore si avvicina ad un'_entità_ e l'interazione avviene automaticamente.\
@@ -210,12 +212,12 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore interagisce con l'_entità_.\
 #gnr - Raccolta collezionabile.\
 #h(8.82em) \- Visualizzazione messaggio.
-
+/*
 ==== UC7.1.1 - Visualizzazione messaggio
 #desc il giocatore può visualizzare un messaggio automatico di un'_entità_ del gioco.\
 #prec il giocatore deve essere vicino all'_entità_.\
 #posc il giocatore visualizza il messaggio. \
-
+*/
 ==== UC7.2 - Interazione con _entità_ manuale
 #figure(image("../images/usecase/uc-interazione_manuale.png", width: 90%), caption: [Diagramma _UML_ sull'interazione manuale con un'_entità_])
 #desc il giocatore si avvicina a un'_entità_ e vede l'_input_ che deve premere per interagire.\
@@ -236,7 +238,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere vicino a un personaggio non giocabile.\
 #posc il giocatore ha premuto l'_input_ per interagire.\
 #incl - Visualizzazione dialogo.\
-
+/*
 ==== UC8.1 - Visualizzazione dialogo
 #desc il giocatore visualizza il dialogo mostrato dall'_entità_.\
 #prec il giocatore ha premuto l'_input_ per interagire con l'_entità_.\
@@ -259,7 +261,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore vuole terminare l'interazione.\
 #prec il giocatore sta interagendo con un'_entità_.\
 #posc il giocatore preme l'_input_, smette di interagire con l'_entità_ e può muoversi di nuovo.
-
+*/
 // UC9 - Prendere un oggetto
 ==== UC9 - Prendere un oggetto
 #figure(image("../images/usecase/uc-prendere_oggetto.png", width: 40%), caption: [Diagramma _UML_ sul prendere un oggetto])
@@ -282,7 +284,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere vicino a un cartello.\
 #posc il giocatore ha premuto il tasto.\
 #incl - Visualizzazione messaggio cartello.
-
+/*
 ==== UC11.1 - Visualizzazione messaggio cartello
 #desc il giocatore visualizza il messaggio del cartello.\
 #prec il giocatore deve aver interagito con un cartello.\
@@ -306,8 +308,9 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc un dato di un cartello può essere modificato in base a determinate azioni del giocatore all'interno del livello.\
 #prec il giocatore ed il cartello devono essere nello stesso livello.\
 #posc il dato del cartello viene aggiornato.\
-
+*/
 // UC12 - Interazione con zona di transizione
+/*
 ==== UC12 - Interazione con zona di transizione
 #figure(image("../images/usecase/uc-transizione.png", width: 80%), caption: [Diagramma _UML_ sull'interazione con una zona di transizione])
 #desc il giocatore si avvicina a una zona di transizione per cambiare livello. \
@@ -320,6 +323,11 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore è nel nuovo livello.\
 #incl - Salvataggio.\
 
+==== UC18 - Salvataggio
+#desc il gioco salva in automatico in momenti specifici.\
+#prec il giocatore deve essere in un livello del gioco.\
+#posc la partita viene salvata e il giocatore può riprendere da quel punto in un secondo momento.\
+*/
 // UC13 - Interazione con macchina _LR_
 ==== UC13 - Interazione con macchina _LR_
 #figure(image("../images/usecase/uc-macchina_lr.png", width: 60%), caption: [Diagramma _UML_ sull'interazione con una macchina _LR_])
@@ -334,23 +342,24 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il punto viene posizionato sul grafico.\
 
 // UC15 - Reset punti aggiunti nel grafico _LR_
+/*
 ==== UC15 - Reset punti aggiunti nel grafico _LR_
 #desc il giocatore toglie i punti da lui aggiunti nel grafico premendo il tasto _Reset_.\
 #prec il giocatore deve essere in utilizzo di una macchina _LR_.\
 #posc i punti aggiunti dal giocatore vengono tolti.
-
+*/
 ==== UC16 - Posizionamento sopra un nodo dell'Albero di decisione
 #figure(image("../images/usecase/uc-nodo_albero.png", width: 70%), caption: [Diagramma _UML_ sulle scelte da prendere nell'Albero di decisione])
 #desc il giocatore si posiziona sopra un nodo dell'Albero di decisione.\
 #prec il giocatore deve essere in un livello del gioco e deve essere presente un Albero di decisione.\
 #posc il giocatore è posizionato sopra un nodo dell'Albero di decisione.\
 #ext - Visualizzazione delle scelte sul nodo.\
-
+/*
 ==== UC16.1 - Visualizzazione scelte sul nodo
 #desc il giocatore vuole proseguire nell'Albero di decisione.\
 #prec il giocatore deve essere sopra un nodo dell'Albero di decisione.\
 #posc il giocatore sceglie la direzione in base alle scelte disponibili.\
-
+*/
 // UC17 - Inserimento dell’oggetto nello spazio dedicato
 ==== UC17 - Inserimento dell’oggetto nello spazio dedicato
 #figure(image("../images/usecase/uc-inserimento_spazio.png", width: 90%), caption: [Diagramma _UML_ sull'inserimento dell’oggetto nello spazio dedicato])
@@ -359,7 +368,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc se l'oggetto è giusto, il nuovo oggetto viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.\
 #gnr - Inserimento nello spazio corretto.\
 #h(8.85em) - Inserimento nello spazio sbagliato.
-
+/*
 ==== UC17.1 - Inserimento nello spazio corretto
 #desc il giocatore posiziona l'oggetto nello spazio corretto.\
 #prec il giocatore deve portare un oggetto.\
@@ -370,17 +379,12 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore posiziona l'oggetto nello spazio sbagliato.\
 #prec il giocatore deve portare un oggetto.\
 #posc l'oggetto non viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.\
-
+*//*
 ==== UC18 - Salvataggio
 #desc il gioco salva in automatico in momenti specifici.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la partita viene salvata e il giocatore può riprendere da quel punto in un secondo momento.\
-
-==== UC18 - Salvataggio
-#desc il gioco salva in automatico in momenti specifici.\
-#prec il giocatore deve essere in un livello del gioco.\
-#posc la partita viene salvata e il giocatore può riprendere da quel punto in un secondo momento.\
-
+*//*
 // UC19 - Pausa
 ==== UC19 - Pausa
 #figure(image("../images/usecase/uc-pausa.png", width: 40%), caption: [Diagramma _UML_ sull'apertura menu di pausa])
@@ -418,7 +422,8 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore può chiudere il gioco premendo l'apposito tasto.\
 #prec il gioco deve essere in pausa o nel menu principale.\
 #posc il gioco viene chiuso.
-
+*/
+/*
 // UC25 - Carica partita
 ==== UC25 - Carica partita
 //#figure(image("../images/usecase/uc-menu_principale.png", width: 70%), caption: "Menu principale")
@@ -431,7 +436,8 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore può avviare il gioco dal menu principale.\
 #prec il gioco deve essere avviato con il menu principale visualizzato e non deve presentare dei dati di salvataggio esistenti.\
 #posc il gioco viene resettato ed il giocatore viene portato al livello base.\
-
+*/
+/**
 // UC27 - Modifica modalità finestra
 ==== UC27 - Modifica modalità finestra
 #figure(image("../images/usecase/uc-menu_opzioni.png", width: 100%), caption: [Diagramma _UML_ sul menu delle opzioni])
@@ -481,6 +487,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere nel menu di opzioni.\
 #posc il gioco salva ed applica le opzioni.\
 #incl - Salvataggio.
+*/
 
 // UC35 - Accensione unità esterna condizionatore
 ==== UC35 - Accensione unità esterna condizionatore
@@ -497,23 +504,25 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #desc il giocatore visualizza una scena di intermezzo.\
 #prec il giocatore deve soddisfare certe condizioni.\
 #posc il giocatore visualizza la scena di intermezzo.\
-
+/*
 ==== UC37 - Visualizzazione _input_ tastiera
 #figure(image("../images/usecase/uc-input_prompt.png", width: 70%), caption: [Diagramma _UML_ sulla visualizzazione di un _input_ nella _UI_])
 #desc il giocatore deve vedere che _input_ deve premere dal dispositivo che sta utilizzando.\
 #prec il giocatore deve avere la tastiera collegata alla macchina.\
-
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)*_UI_* *-* *_User Interface_*: interfaccia grafica che consente all'utente di interagire con un'applicazione o un videogioco.\ \
-#align(center, context([#counter(page).display("1.")]))])])
+*/
 
 #posc il giocatore visualizza nella #gl("ui") il tasto della tastiera da premere.\
-
+/*
 ==== UC38 - Visualizzazione _input_ _joypad_
 #desc il giocatore deve vedere che _input_ deve premere del dispositivo che sta utilizzando dalla _UI_ del gioco.\
 #prec il giocatore deve soddisfare certe condizioni e deve avere un _joypad_ collegato alla macchina.\
 #posc il giocatore visualizza nella _UI_ il tasto del _joypad_ da premere.\
-
+*/
 #set heading(numbering: "1.")
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)*_UI_* *-* *_User Interface_*: interfaccia grafica che consente all'utente di interagire con un'applicazione o un videogioco.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 === Requisiti
 In questa sezione elenco tutti i requisiti del progetto, individuati durante la fase di analisi. Ogni requisito viene identificato da un codice, scelto in base ai seguenti parametri:
 #align(center, [*R - [numero] - [tipo] - [priorità]*])
@@ -527,9 +536,19 @@ con:
 - *Priorità*: può essere
   - *O*: Obbligatorio e necessario per considerare il prodotto completo;
   - *D*: Desiderabile, non strettamente necessario ma è un valore aggiunto.
-
+#figure(
+  caption: [Totale requisiti],
+  table(
+    columns: (auto, auto, auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*],[*Totale*]),
+    [Funzionali],[43],[10],[53],
+    [Qualità],[4],[-],[4],
+    [Accessibilità],[3],[3],[6],
+    table.cell(colspan: 3, [*Totale*]),[*63*]))
 #set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
-
+/*
 === Lista dei requisiti
 
 #figure(
@@ -758,7 +777,7 @@ con:
     "R-05-A-O",[Il gioco deve mostrare gli _input_ del dispositivo che si sta usando],
     [R-06-A-O],[Il gioco deve essere giocabile anche senza una connessione _internet_]
   ),
-)
+)*/
 #show figure: set block(breakable: true)
 /*
 Ad ogni requisito è associato un codice costruito in base alle sue caratteristiche:
@@ -979,17 +998,19 @@ Nei livelli sono presenti diverse _entità_ con cui il giocatore può interagire
 - *`NPC`*: rappresenta un personaggio non giocabile che ha assegnato una semplice frase come messaggio. Questa frase viene visualizzata in una classe `SimpleProjectLabel`. Presenta anche una classe `Marker3D` che segna la posizione della _UI_, e una classe `NPCModel` che gestisce le animazioni del modello 3D del personaggio.
 - *`InteractableSign`*: rappresenta un cartello che il giocatore può leggere. \ Il cartello può contenere diverse informazioni, come una lista o un grafico. \ Il contenuto del cartello è inserito in un'altra classe `Control`.
 - *`NPCDialogue`*: rappresenta un personaggio non giocabile che, a differenza della classe `NPC`, presenta un dialogo. Il giocatore può interagire con il personaggio e visualizzare il dialogo premendo il rispettivo tasto.
+/*
 === Gestione dei salvataggi
 #figure(caption: [Diagramma sul funzionamento dei salvataggi],image("../images/classi/class-saves.png"))
 - *`Saves`*: classe base astratta per tutte le classi che si occupano di salvare o caricare i dati dal file _.ini_.\ Fornisce l'attributo `save_path` che indica il percorso dove salvare il file _.ini_.\ Inoltre fornisce i metodi virtuali `save_data()` e `load_data()` per salvare o caricare i dati. Questi due metodi sono sovrascritti nelle classi figlie.
 - *`SavesHandler`*: classe base astratta per tutte le classi che gestiscono il cambio dei dati da salvare, contengono una copia dei dati da salvare prima di mandarli alla rispettiva classe `Saves`.\ Inoltre fornisce un attributo booleano `debug_mode`, attivabile dall'_editor_.\ Se attivato, impedisce che vengano caricati i dati di salvataggio. Utile per quando dovevo testare alcune funzionalità con alcuni valori già cambiati nei salvataggi.
 #v(0.5em)
 Tutte le classi derivate di `SavesHandler` e `Saves` si occupano di gestire i salvataggi e i caricamenti dei rispettivi livelli o funzionalità.
-
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*/
+/*#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
 *_drifting_*: fenomeno che si verifica uno _stick_ analogico registra movimenti o pressioni anche quando non viene toccato.\ \
 #align(center, context([#counter(page).display("1.")]))])])
-
+*/
+/*
 === `LevelsTransition`
 #figure(caption: [Diagramma _UML_ delle classi _Autoloads_],image("../images/classi/class-autoloads.png", width: auto))
 La classe `LevelsTransition` si occupa della transizione tra due classi. Il metodo `switch_level(new_level_path: String)` carica il livello il cui percorso è fornito come argomento della funzione. Il motivo per cui è stato usato il percorso come `String` anziché il livello stesso come `PackedScene` è stato per evitare riferimenti ciclici, in quanto se due livelli contenevano un riferimento tra di loro nella scena, il gioco non caricava correttamente il livello successivo.
@@ -1000,7 +1021,7 @@ La classe `InputUIHandler` si occupa di controllare i dispositivi di _input_ col
 Il metodo `check_minimum_input_left_strength_threshold()` stabilisce la potenza minima che l'_input_ deve superare per mandare il segnale. Questo perché alcuni _joypad_ presentano il problema del #gl("drifting") e la classe potrebbe leggere _input_ che non sono premuti dal giocatore.
 === Struttura base di un livello
 Ogni livello viene creato con le seguenti classi:
-
+*/
 #set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 #figure(caption: [Diagramma delle classi di un livello base],image("../images/classi/class-base_level.png", width: auto))
@@ -1080,18 +1101,19 @@ Le trasformazioni globali vengono poi modificate in base al tipo della classe:
 - *`ACUnits`*: si occupa di gestire tutte le istanze di `ACUnit`, inserite come nodi figli nella scena.\ Quando viene acceso un condizionatore, emette il segnale `unit_turned_on(index: int)`, passando direttamente l'array aggiornato come argomento nel segnale.\ Quando tutti i condizionatori sono stati accesi, manda il segnale `all_units_on()`, usato in questo caso per far iniziare la scene di intermezzo.
 - *`CutscenesHandler`*: si occupa di gestire le scene di intermezzo nel livello, inserite come nodi figli nella scena. Nonostante la classe è stata pianificata per gestire più scene, alla fine ne è presente solo una.\ Questa classe svolge anche il ruolo da mediatore, ricevendo i segnali dal livello e mandandoli ai nodi figli, gestendo il traffico dei segnali.
 /*- *`CausalitySavesHandler`*: gestisce i salvataggi e cambio di variabili all'interno del livello _Causality_. In questa classe, le variabili sono salvate in un `Dictionary`. Quando i salvataggi vengono caricati, la classe emette il segnale `data_loaded()`.*/
+/*
 ==== Scena di intermezzo
 Dopo la scena di intermezzo, alcuni personaggi possono cambiare il dialogo a loro assegnato, oppure il comportamento con il giocatore.
 #figure(caption: [Diagramma _UML_ sul funzionamento dei personaggi non giocabili nella scena di intermezzo e dopo],image("../images/classi/class-cutscene_npc.png"))
 - *`CrashCutscene`*: la classe che gestisce la scena di intermezzo principale del livello. Si occupa principalmente di inviare i segnali per iniziare correttamente la scena. \ Quando il giocatore accende l'ultimo condizionatore, viene emesso il segnale `change_values()`. Se invece il livello viene caricato con già tutti i condizionatori accessi, viene emesso il segnale `change_specific_values()`.
 - *`ChangeNPCScientistBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ All'inizio del livello, il personaggio presenta un dialogo predefinito e non si gira quando parla con il giocatore.\ Dopo aver ricevuto il segnale `change_values()` dalla classe `CrashCutscene`, sostituisce il dialogo del personaggio con il dialogo assegnato alla classe, e cambia il comportamento, in modo che si giri e cambi animazione quando parla con il giocatore.\ Inoltre, dopo che il giocatore risponde correttamente alla domanda del nuovo dialogo, il comportamento cambia di nuovo, viene tolto il dialogo e viene rimpiazzanto il messaggio automatico che appare quando il giocatore entra nell'area di interazione.\
-
+*//*
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *_CPU_ - _Central Processing Unit_*: unità di elaborazione centrale di un computer, responsabile dell'esecuzione delle istruzioni.\
 *_GPU_ - _Graphics Processing Unit_*: unità di elaborazione grafica di un computer, progettata per gestire e accelerare la creazione di immagini ed elaborazione di grafica 3D.\
 *_RAM_ - _Random Access Memory_*: memoria piccola e rapida di un computer che consente un accesso rapido e diretto ai dati in uso.\ \
 #align(center, context([#counter(page).display("1.")]))])])
-
+*/
 - *`ChangeNPCIceCreamBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ Funziona nello stesso modo della classe descritta prima, però avviene solo un cambio del dialogo e non c'è la modifica del comportamento.
 
 - *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale `change_specific_values()`, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
@@ -1099,7 +1121,7 @@ Dopo la scena di intermezzo, alcuni personaggi possono cambiare il dialogo a lor
 - *`ChangeSignUI`*: questa classe si occupa di cambiare il contenuto del rispettivo cartello. Viene assegnata ad un nodo figlio del nodo del cartello.\ Funziona nello stesso modo delle classi che cambiano il dialogo o comportamento dei personaggi. Quando riceve il segnale `change_values()`, cambia il contenuto del cartello, rimpiazzandolo con l'istanza assegnata alla classe.
 
 == Verifica e validazione
-=== Macchina di _test_
+/*=== Macchina di _test_
 Tutti i _test_ sono stati eseguiti sulla mia macchina con specifiche hardware e software definite nella tabella. Molto importante è specificare le componenti della macchina su cui viene testato il gioco, dato che macchine diverse offrono prestazioni diverse.
 #figure(caption: [Componenti della macchina su cui sono stati eseguiti i _test_], table(
   columns: (auto, auto),
@@ -1114,6 +1136,7 @@ Tutti i _test_ sono stati eseguiti sulla mia macchina con specifiche hardware e 
 In sintesi, la macchina su cui viene testato il gioco offre prestazioni sulla fascia media-bassa, quindi si ritiene che se il gioco offre delle buone prestazioni sulla macchina di _testing_, offrirà in media buone prestazioni su tutte le macchine con un sistema operativo supportato.
 #set page(footer-descent: 0%, footer: [
 #align(center+horizon, context([#counter(page).display("1.")]))])
+*/
 === Nomenclatura _test_
 Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per verificare e validare il prodotto _software_. Le metodologie di _testing_ sono suddivise in quattro categorie:
 - *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, questi _test_ sono stati svolti con l'_add-on_ della community _GUT - Godot Unit Test_;\
@@ -1121,6 +1144,18 @@ Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per
 - *_test_ di sistema*: _test_ che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche _test_ sulle prestazioni, e sono svolti utilizzando gli strumenti forniti da _Godot_;\
 - *_test_ di accettazione*: _test_ che verificano se il prodotto è pronto per essere rilasciato.
 
+#figure(caption: [Totale _test_ eseguiti], table(
+  columns: (auto, auto, auto),
+  inset: 8pt,
+  align: center + horizon,
+  table.header([*Tipologia*], [*Eseguiti*], [*Superati*]),
+  [Unità],[44],[44],
+  [Integrazione],[37],[37],
+  [Sistema],[10],[10],
+  [Accettazione],[4],[4],
+  [*Totale*],[*95*],[*95*]
+))
+/*
 === _Test_ di unità
 #figure(caption: [_Test_ di unità], table(
   columns: (auto, auto, auto),
@@ -1231,10 +1266,11 @@ Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per
   [TI-37],[Si verifica che quando il giocatore si avvicina ad un _collezionabile_ di colore blu, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
   [TI-38],[Si verifica che quando il giocatore cade dal livello, torna in una zona dove si trovava precedentemente],[\u{2713}],
 ))
-
+*/
 #set page(footer-descent: -10%, footer: [#align(top, [#line(length: 100%)
 *_VRAM_ - _Video Random Access Memory_*: tipo di memoria utilizzata dalle schede grafiche per memorizzare dati relativi alla grafica, come _texture_ o immagini.\ \
 #align(center, context([#counter(page).display("1.")]))])])
+/*
 === _Test_ di sistema
 #figure(caption: [_Test_ di sistema], table(
   columns: (0.4fr, 1fr, 0.3fr),
@@ -1251,8 +1287,10 @@ Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per
   "TS-08",[Si verifica che il tempo necessario alla _CPU_ per caricare un _frame_ sia minore di 2 millisecondi],[ \u{2713}],
   "TS-09",[Si verifica che il tempo necessario alla _GPU_ per caricare un _frame_ sia inferiore a 33.3 millisecondi],[ \u{2713}],
   "TS-10",[Si verifica che non siano presenti nodi non utilizzati nella scena],[ \u{2713}],))
+  */
 #set page(footer-descent: 0%, footer: [
 #align(center+horizon, context([#counter(page).display("1.")]))])
+/*
 === _Test_ di accettazione
 #figure(caption: [Tabella dei _test_ di accettazione], table(
   columns: (0.4fr, 1fr, 0.3fr),
@@ -1263,23 +1301,22 @@ Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per
     [TA-02],[Si verifica che il gioco funzioni nel sistema operativo Windows 11],[\u{2713}],
     [TA-03],[Si verifica che il gioco rilevi _input_ da tastiera],[\u{2713}],[TA-04],[Si verifica che il giocatore possa muoversi in uno spazio tridimensionale],[\u{2713}],
 ))
-
+*/
 == Risultati ottenuti
 //_Qui descrivo i risultati raggiunti rispettivamente su piano qualitativo e quantitativo, con copertura dei requisiti, testing e quantità di prodotti_
 //=== Prodotto finale
 === Meccaniche dei livelli
 Di seguito vengono mostrate le meccaniche principali dei livelli.
-#figure(caption: [Immagine del cannone _LR_ per posizionare nuovi punti nel grafico della Regressione lineare], image("../images/screenshot-cannon_lr.png", width: auto))
-#figure(caption: [Immagine dell'Albero di decisione con i possibili percorsi da seguire], image("../images/screenshot-decision_tree_1.png", width: auto))
+#figure(caption: [Immagine del cannone _LR_ per posizionare nuovi punti nel grafico della Regressione lineare], image("../images/screenshot-cannon_lr.png", width: 90%))
+#figure(caption: [Immagine dell'Albero di decisione con i possibili percorsi da seguire], image("../images/screenshot-decision_tree_1.png", width: 90%))
 #figure(caption: [Immagine di un posizionamento corretto in un nodo finale dell'Albero di decisione], image("../images/screenshot-decision_tree_2.png"))
-#figure(caption: [Immagine del cartello che mostra le razze di cani indovinate nell'Albero di decisione], image("../images/screenshot-dog_breeds_sign.png"))
+//#figure(caption: [Immagine del cartello che mostra le razze di cani indovinate nell'Albero di decisione], image("../images/screenshot-dog_breeds_sign.png"))
 #figure(caption: [Immagine della scena di intermezzo del livello _Causalità_], image("../images/screenshot-cutscene.png"))
-#figure(caption: [Immagine presa dopo la scena di intermezzo], image("../images/screenshot-post_cutscene.png"))
-#figure(caption: [Immagine del grafico della temperatura, visualizzabile dopo la scena di intermezzo], image("../images/screenshot-graph.png"))
-=== Interazioni
-Di seguito vengono mostrate le interazioni con i personaggi non giocabili.
+//#figure(caption: [Immagine presa dopo la scena di intermezzo], image("../images/screenshot-post_cutscene.png"))
+//#figure(caption: [Immagine del grafico della temperatura, visualizzabile dopo la scena di intermezzo], image("../images/screenshot-graph.png"))
 #figure(caption: [Immagine dell'_input_ da premere per aprire il dialogo di un _NPC_], image("../images/screenshot-project.png", width: auto))
 #figure(caption: [Immagine di un dialogo con risposta multipla], image("../images/screenshot-scientist_text_2.png", width: auto))
+/*
 === Dispositivi di _input_ nella _UI_
 Il gioco supporta sia tastiera che _joypad_ come dispositivi di _input_, e aggiorna in tempo reale i simboli dei tasti da premere nelle guide della _UI_ in base al dispositivo che si sta utilizzando.
 Di seguito vegono elencati i comandi del gioco per i due dispositivi:
@@ -1343,24 +1380,24 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
   - *MSAA 4x*: _Multi-Sample Anti-Aliasing_ a 4 campioni. Tecnica che migliora molto la qualità dei bordi degli oggetti campionando ogni _pixel_ più volte e mediando i risultati, riducendo l’_aliasing_ con un impatto alto sulle prestazioni.
 - *Qualità delle ombre*: Modifica la risoluzione delle ombre. Il valore va da _alto_ a _molto basso_, ovviamente, un valore _alto_ ha un impatto molto più significativo sulle prestazioni rispetto a _molto basso_.
 - *Lingua*: cambia la lingua del gioco. La modifica viene applicata subito e non è necessario un riavvio del gioco.
-
+*/
 === Copertura dei requisiti
 #figure(
   caption: [Totale requisiti],
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (auto, auto, auto, auto,auto),
     inset: 8pt,
     align: center + horizon,
-    table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*],[*Totale*]),
-    [Funzionali],[43],[10],[53],
-    [Qualità],[4],[-],[4],
-    [Accessibilità],[3],[3],[6],
-    table.cell(colspan: 3, [*Totale*]),[*63*]))
+    table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*],[*Soddisfatti*],[*Totale*]),
+    [Funzionali],[43],[10],[53],[53],
+    [Qualità],[4],[-],[4],[4],
+    [Accessibilità],[3],[3],[4],[6],
+    table.cell(colspan: 3, [*Totale*]),[*61*],[*63*]))
 La tabella mostra la copertura dei requisiti funzionali, di qualità e di accessibilità, con un totale di 63 requisiti.
-Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
+/*Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
 #v(0.5em)
 - *R-03-A-D*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
-- *R-04-A-D*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.
+- *R-04-A-D*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.*/
 === Copertura dei _test_
 #figure(caption: [Totale _test_ eseguiti], table(
   columns: (auto, auto, auto),
