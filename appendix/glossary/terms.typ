@@ -49,6 +49,12 @@
     description: [fenomeno che si verifica quando la telecamera di un videogioco passa attraverso un oggetto solido, causando la visualizzazione errata della scena.]
   ),
   (
+    key: "cpu",
+    short: [CPU],
+    long: [_Central Processing Unit_],
+    description: [unità di elaborazione centrale di un computer, responsabile dell'esecuzione delle istruzioni e della gestione delle operazioni aritmetiche e logiche.]
+  ),
+  (
     key: "database",
     short: [database],
     description: [insieme organizzato di dati, generalmente memorizzato e gestito in modo da facilitarne l'accesso e la manipolazione. In ambito _software_, i database sono utilizzati per archiviare informazioni in modo strutturato, consentendo operazioni di ricerca, aggiornamento e gestione dei dati.]
@@ -83,6 +89,12 @@
     short: [GLSL ES],
     long: [_OpenGL Shading Language for Embedded Systems_],
     description: [linguaggio di shading utilizzato per scrivere shader per applicazioni embedded, come giochi e grafica in tempo reale.]
+  ),
+  (
+    key: "gpu",
+    short: [GPU],
+    long: [_Graphics Processing Unit_],
+    description: [unità di elaborazione grafica di un computer, progettata per gestire e accelerare la creazione di immagini e video, nonché per eseguire calcoli complessi legati alla grafica 3D.]
   ),
   (
     key: "hosting",
@@ -177,6 +189,12 @@
     description: [algoritmo di apprendimento automatico utilizzato per la classificazione e la regressione, che si basa sull'idea di trovare i punti dati più vicini a un dato punto di input e fare previsioni in base a questi punti.]
   ),
   (
+    key: "ram",
+    short: [RAM],
+    long: [_Random Access Memory_],
+    description: [memoria volatile e rapida di un computer utilizzata per memorizzare temporaneamente i dati e le istruzioni in uso, consentendo un accesso rapido e diretto.]
+  ),
+  (
     key: "regressione_lineare",
     short: [Regressione lineare],
     description: [modello statistico utilizzato per analizzare la relazione tra una variabile dipendente e una o più variabili indipendenti, assumendo che questa relazione sia lineare.]
@@ -237,7 +255,13 @@
     key: "ui",
     short: [UI],
     long: [_User Interface_],
-    description: [insieme di elementi grafici e controlli che consentono all'utente di interagire con un'applicazione o un videogioco.]
+    description: [interfaccia grafica che consente all'utente di interagire con un'applicazione o un videogioco. Può essere composta da pulsanti, menu, finestre di dialogo o altri elementi interattivi.]
+  ),
+  (
+    key: "vram",
+    short: [VRAM],
+    long: [_Video Random Access Memory_],
+    description: [tipo di memoria utilizzata dalle schede grafiche per memorizzare dati relativi alla grafica, come _texture_, consentendo un accesso rapido e migliorando le prestazioni grafiche.]
   ),
   /*
   (

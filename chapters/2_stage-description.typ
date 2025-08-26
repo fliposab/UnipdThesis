@@ -1,6 +1,6 @@
 #import "../config/thesis-config.typ": glpl, gl,
 #import "../config/variables.typ": myTutor
-#pagebreak(to:"odd")
+#pagebreak(to:"even")
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
 *Game Design*: disciplina che si occupa della progettazione e dello sviluppo di giochi.\

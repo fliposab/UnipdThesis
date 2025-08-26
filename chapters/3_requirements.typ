@@ -1,14 +1,18 @@
-#import "../config/thesis-config.typ": glpl, gl
 #import "data/requirements_list.typ": *
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.8": *
+#import "../config/thesis-config.typ": glpl, gl
 
-#pagebreak(to:"odd")
+#pagebreak(to:"even")
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*diagrammi di _Gannt_*: strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 
 = Il progetto<cap:analisi-requisiti>
 
 #text(style: "italic", [
-    In questo capitolo approfondisco tutti i processi del progetto: sviluppo, test e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
+    In questo capitolo approfondisco tutti i processi del progetto: sviluppo, _test_ e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
 ])
 #v(1em)
 
@@ -29,6 +33,7 @@
     [*Piano di contingenza*],[Controllare le attività svolte tramite uno strumento di gestione del progetto (ad esempio #gl("diagrammi_gannt") e uso di _checklist_ su _Notion_) e rivedere la pianificazione delle attività in caso di ritardi.]
 ))
 
+#set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
 #figure(
   caption: [Impegni personali o universitari],
   table(
@@ -119,10 +124,14 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #let ext = [*Estensioni:*]
 #let gnr = [*Generalizzazioni:*]
 
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*_joypad_*:  dispositivo di _input_ dotato di pulsanti, levette e altri controlli per interagire con il gioco.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 === Casi d'uso
 #set heading(numbering: none)
 ==== UC1 - Movimento
-#figure(image("../images/usecase/uc-movimento.png", width: 80%), caption: [Diagramma UML _use case_ sul movimento])
+#figure(image("../images/usecase/uc-movimento.png", width: 80%), caption: [Diagramma _UML_ _use case_ sul movimento])
 #desc il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra utilizzando i tasti direzionali della tastiera o lo _stick_ analogico sinistro del del #gl("joypad").\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc il personaggio si muove nella direzione desiderata e interagisce con l'ambiente circostante.\
@@ -135,7 +144,10 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il personaggio si muove nella direzione desiderata e sposta con sé l'oggetto.\
 
 ==== UC2 - Salto
-#figure(image("../images/usecase/uc-salto.png", width: 50%), caption: [Diagramma UML _use case_ sul salto])
+#figure(image("../images/usecase/uc-salto.png", width: 50%), caption: [Diagramma _UML_ sul salto])
+
+#set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+
 #desc il giocatore può far saltare il personaggio utilizzando un tasto specifico.\
 #prec il giocatore deve essere in un livello del gioco e deve essere libero di muoversi.\
 #posc il personaggio esegue il salto.\
@@ -143,7 +155,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC3 - Rotazione telecamera
 ==== UC3 - Rotazione telecamera
-#figure(image("../images/usecase/uc-rotazione_telecamera.png", width: 80%), caption: "Rotazione telecamera")
+#figure(image("../images/usecase/uc-rotazione_telecamera.png", width: 80%), caption: [Diagramma _UML_ sulla rotazione della telecamera])
 #desc il giocatore può ruotare la telecamera attorno al personaggio utilizzando i comandi del mouse o del _joypad_.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la telecamera si muove attorno al personaggio, cambiando l'angolo di visualizzazione.\
@@ -163,7 +175,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 // UC4 - Caduta
 #pagebreak()
 ==== UC4 - Caduta
-#figure(image("../images/usecase/uc-caduta.png", width: 60%), caption: "Caduta")
+#figure(image("../images/usecase/uc-caduta.png", width: 60%), caption: [Diagramma _UML_ sulla caduta])
 #desc il giocatore cade dal livello e viene riportato in una zona dove si trovava prima.\
 #prec il giocatore deve essere in un livello del gioco e deve entrare in un'_area di caduta_.\
 #posc: il giocatore torna dove si trovava, prima di cadere.\
@@ -177,14 +189,14 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC6 - Raccolta collezionabile
 ==== UC6 - Raccolta _collezionabile_
-#figure(image("../images/usecase/uc-raccolta_collezionabile.png", width: 50%), caption: "Raccolta collezionabile")
+#figure(image("../images/usecase/uc-raccolta_collezionabile.png", width: 50%), caption: [Diagramma _UML_ sulla raccolta collezionabile])
 #desc il giocatore può raccogliere oggetti _collezionabili_ presenti nel livello quando si avvicina.\
 #prec il giocatore deve essere in un livello del gioco e deve esserci un oggetto collezionabile nelle vicinanze.\
 #posc il numero di collezionabili sale di un certo valore.\
 
 // UC7 - Interazione con _entità_
 ==== UC7 - Interazione con _entità_
-#figure(image("../images/usecase/uc-interazione.png", width: 60%), caption: "Interazione _entità_")
+#figure(image("../images/usecase/uc-interazione.png", width: 60%), caption: [Diagramma _UML_ sull'interazione con un'_entità_])
 #desc il giocatore si avvicina a un'_entità_ e vede un messaggio.\
 #prec il giocatore deve essere vicino ad un'_entità_.\
 #posc l'_entità_ mostra un messaggio.\
@@ -192,7 +204,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #h(8.82em)\- Interazione con un'_entità_ manuale.
 
 ==== UC7.1 - Interazione con _entità_ automatica
-#figure(image("../images/usecase/uc-interazione_automatica.png", width: 60%), caption: "Interazione _entità_ automatica")
+#figure(image("../images/usecase/uc-interazione_automatica.png", width: 60%), caption: [Diagramma _UML_ sull'interazione automatica con un'_entità_])
 #desc il giocatore si avvicina ad un'_entità_ e l'interazione avviene automaticamente.\
 #prec il giocatore deve essere vicino ad un'_entità_.\
 #posc il giocatore interagisce con l'_entità_.\
@@ -205,7 +217,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore visualizza il messaggio. \
 
 ==== UC7.2 - Interazione con _entità_ manuale
-#figure(image("../images/usecase/uc-interazione_manuale.png", width: 90%), caption: "Interazione manuale")
+#figure(image("../images/usecase/uc-interazione_manuale.png", width: 90%), caption: [Diagramma _UML_ sull'interazione manuale con un'_entità_])
 #desc il giocatore si avvicina a un'_entità_ e vede l'_input_ che deve premere per interagire.\
 #prec il giocatore deve essere vicino all'_entità_.\
 #posc il giocatore ha premuto l'_input_ per interagire.\
@@ -219,7 +231,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC8 - Interazione con personaggio non giocabile
 ==== UC8 - Interazione con personaggio non giocabile
-#figure(image("../images/usecase/uc-dialogo.png", width: 70%), caption: "Interazione personaggio non giocabile")
+#figure(image("../images/usecase/uc-dialogo.png", width: 70%), caption: [Diagramma _UML_ sull'interazione con un personaggio non giocabile])
 #desc il giocatore si avvicina a un personaggio non giocabile e vede l'_input_ che deve premere per interagire.\
 #prec il giocatore deve essere vicino a un personaggio non giocabile.\
 #posc il giocatore ha premuto l'_input_ per interagire.\
@@ -250,14 +262,14 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC9 - Prendere un oggetto
 ==== UC9 - Prendere un oggetto
-#figure(image("../images/usecase/uc-prendere_oggetto.png", width: 40%), caption: "Prendere un oggetto")
+#figure(image("../images/usecase/uc-prendere_oggetto.png", width: 40%), caption: [Diagramma _UML_ sul prendere un oggetto])
 #desc il giocatore può prendere un oggetto e poi muoversi con esso.\
 #prec il giocatore deve essere in un livello del gioco ,deve esserci un oggetto che può raccogliere davanti ad esso e non deve averne già uno.\
 #posc il giocatore interagisce con l'oggetto.\
 
 // UC10 - Lasciare un oggetto
 ==== UC10 - Lasciare un oggetto
-#figure(image("../images/usecase/uc-lasciare_oggetto.png", width: 60%), caption: "Lasciare un oggetto")
+#figure(image("../images/usecase/uc-lasciare_oggetto.png", width: 60%), caption: [Diagramma _UML_ sul lasciare un oggetto])
 #desc il giocatore può lasciare un oggetto.\
 #prec il giocatore deve essere in un livello del gioco e sta portando un oggetto.\
 #posc il giocatore lascia l'oggetto e questo rimane nella posizione dove viene lasciato.\
@@ -265,7 +277,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC11 - Interazione con un cartello
 ==== UC11 - Interazione con un cartello
-#figure(image("../images/usecase/uc-interazione_cartello.png", width: 90%), caption: "Interazione cartello")
+#figure(image("../images/usecase/uc-interazione_cartello.png", width: 90%), caption: [Diagramma _UML_ sull'interazione con un cartello])
 #desc il giocatore si avvicina a un cartello e vede l'_input_ che deve premere per interagire.\
 #prec il giocatore deve essere vicino a un cartello.\
 #posc il giocatore ha premuto il tasto.\
@@ -280,7 +292,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 ==== UC11.2 - Visualizzazione classificazioni oggetti scoperti
 #desc il giocatore vuole visualizzare tutte le classificazioni degli oggetti che è riuscito ad indovinare nel livello.\
-#prec il giocatore è dentro il livello _Albero di decisione_.\
+#prec il giocatore è dentro il livello Albero di decisione.\
 #posc il giocatore visualizza le classificazioni degli oggetti scoperti.\
 #ext - Fine interazione.
 
@@ -297,7 +309,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC12 - Interazione con zona di transizione
 ==== UC12 - Interazione con zona di transizione
-#figure(image("../images/usecase/uc-transizione.png", width: 80%), caption: "Interazione zona di transizione")
+#figure(image("../images/usecase/uc-transizione.png", width: 80%), caption: [Diagramma _UML_ sull'interazione con una zona di transizione])
 #desc il giocatore si avvicina a una zona di transizione per cambiare livello. \
 #prec il giocatore deve essere in un livello del gioco.\
 #posc il giocatore ha premuto il tasto.\
@@ -310,8 +322,8 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC13 - Interazione con macchina _LR_
 ==== UC13 - Interazione con macchina _LR_
-#figure(image("../images/usecase/uc-macchina_lr.png", width: 60%), caption: [Interazione con macchina _LR_])
-#desc il giocatore vuole interagire con la macchina per posizionare dei punti sul grafico _LR_.\
+#figure(image("../images/usecase/uc-macchina_lr.png", width: 60%), caption: [Diagramma _UML_ sull'interazione con una macchina _LR_])
+#desc il giocatore vuole interagire con la macchina per posizionare dei punti sul grafico _LR_ (chiamata anche _Cannone LR_).\
 #prec il giocatore deve trovarsi in un'area per interagire con la macchina.\
 #posc il giocatore può usare la macchina.
 
@@ -327,21 +339,21 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere in utilizzo di una macchina _LR_.\
 #posc i punti aggiunti dal giocatore vengono tolti.
 
-==== UC16 - Posizionamento sopra un nodo dell'albero di decisione
-#figure(image("../images/usecase/uc-nodo_albero.png", width: 70%), caption: "Scelte albero di decisione")
-#desc il giocatore si posiziona sopra un nodo dell'albero di decisione.\
-#prec il giocatore deve essere in un livello del gioco e deve essere presente un _Albero di decisione_.\
-#posc il giocatore è posizionato sopra un nodo dell'albero di decisione.\
+==== UC16 - Posizionamento sopra un nodo dell'Albero di decisione
+#figure(image("../images/usecase/uc-nodo_albero.png", width: 70%), caption: [Diagramma _UML_ sulle scelte da prendere nell'Albero di decisione])
+#desc il giocatore si posiziona sopra un nodo dell'Albero di decisione.\
+#prec il giocatore deve essere in un livello del gioco e deve essere presente un Albero di decisione.\
+#posc il giocatore è posizionato sopra un nodo dell'Albero di decisione.\
 #ext - Visualizzazione delle scelte sul nodo.\
 
 ==== UC16.1 - Visualizzazione scelte sul nodo
-#desc il giocatore vuole proseguire nell'albero di decisione.\
-#prec il giocatore deve essere sopra un nodo dell'albero di decisione.\
+#desc il giocatore vuole proseguire nell'Albero di decisione.\
+#prec il giocatore deve essere sopra un nodo dell'Albero di decisione.\
 #posc il giocatore sceglie la direzione in base alle scelte disponibili.\
 
 // UC17 - Inserimento dell’oggetto nello spazio dedicato
 ==== UC17 - Inserimento dell’oggetto nello spazio dedicato
-#figure(image("../images/usecase/uc-inserimento_spazio.png", width: 90%), caption: "Inserimento dell’oggetto nello spazio dedicato")
+#figure(image("../images/usecase/uc-inserimento_spazio.png", width: 90%), caption: [Diagramma _UML_ sull'inserimento dell’oggetto nello spazio dedicato])
 #desc il giocatore posiziona l'oggetto che sta portando in uno spazio apposito.\
 #prec il giocatore deve portare un oggetto ed essere sopra un nodo finale dell'_albero_.\
 #posc se l'oggetto è giusto, il nuovo oggetto viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.\
@@ -371,14 +383,14 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC19 - Pausa
 ==== UC19 - Pausa
-#figure(image("../images/usecase/uc-pausa.png", width: 40%), caption: "Apertura menu di pausa")
+#figure(image("../images/usecase/uc-pausa.png", width: 40%), caption: [Diagramma _UML_ sull'apertura menu di pausa])
 #desc il giocatore può mettere in pausa il gioco in qualsiasi momento per accedere al menu di pausa.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc il gioco si interrompe e viene visualizzato il menu di pausa.\
 
 // UC20 - Riprendi
 ==== UC20 -  Riprendi
-#figure(image("../images/usecase/uc-menu_pausa.png", width: 80%), caption: "Menu di pausa")
+#figure(image("../images/usecase/uc-menu_pausa.png", width: 80%), caption: [Diagramma _UML_ sul menu di pausa])
 #desc il giocatore può riprendere il gioco dal menu di pausa.\
 #prec il gioco deve essere in pausa e il menu di pausa deve essere visualizzato.\
 #posc il gioco riprende dalla posizione in cui era stato interrotto.\
@@ -422,7 +434,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC27 - Modifica modalità finestra
 ==== UC27 - Modifica modalità finestra
-#figure(image("../images/usecase/uc-menu_opzioni.png", width: 100%), caption: "Menu opzioni")
+#figure(image("../images/usecase/uc-menu_opzioni.png", width: 100%), caption: [Diagramma _UML_ sul menu delle opzioni])
 #desc il giocatore può modificare la modalità di visualizzazione del gioco (finestra o schermo intero) dal menu delle opzioni.\
 #prec il gioco deve essere in pausa e il menu delle opzioni deve essere visualizzato.\
 #posc la modalità di visualizzazione del gioco viene modificata in base alle preferenze del giocatore.\
@@ -472,7 +484,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 
 // UC35 - Accensione unità esterna condizionatore
 ==== UC35 - Accensione unità esterna condizionatore
-#figure(image("../images/usecase/uc-ac.png", width: 90%), caption: "Accensione unità esterna condizionatore")
+#figure(image("../images/usecase/uc-ac.png", width: 90%), caption:[Diagramma _UML_ sull'accensione di un'unità esterna di un condizionatore])
 #desc il giocatore accende un'unità esterna di un condizionatore.\
 #prec il giocatore deve essere in un livello.\
 #posc l'unità esterna del condizionatore viene accesa ed il giocatore non può più interagire con l'_entità_.\
@@ -487,9 +499,13 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore visualizza la scena di intermezzo.\
 
 ==== UC37 - Visualizzazione _input_ tastiera
-#figure(image("../images/usecase/uc-input_prompt.png", width: 70%), caption: [Visualizzazione _input_ nella _UI_])
+#figure(image("../images/usecase/uc-input_prompt.png", width: 70%), caption: [Diagramma _UML_ sulla visualizzazione di un _input_ nella _UI_])
 #desc il giocatore deve vedere che _input_ deve premere dal dispositivo che sta utilizzando.\
 #prec il giocatore deve avere la tastiera collegata alla macchina.\
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)*_UI_* *-* *_User Interface_*: interfaccia grafica che consente all'utente di interagire con un'applicazione o un videogioco.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 #posc il giocatore visualizza nella #gl("ui") il tasto della tastiera da premere.\
 
 ==== UC38 - Visualizzazione _input_ _joypad_
@@ -511,6 +527,8 @@ con:
 - *Priorità*: può essere
   - *O*: Obbligatorio e necessario per considerare il prodotto completo;
   - *D*: Desiderabile, non strettamente necessario ma è un valore aggiunto.
+
+#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 === Lista dei requisiti
 
@@ -625,12 +643,12 @@ con:
     [Il giocatore deve poter resettare i punti aggiunti nel grafico _LR_],
     [UC15],
     //UC16
-    [R-28-F-O],[Il giocatore deve poter salire sopra un nodo dell'albero di decisione],[UC16],
+    [R-28-F-O],[Il giocatore deve poter salire sopra un nodo dell'Albero di decisione],[UC16],
     //UC16.1
     [R-29-F-O],[Il giocatore deve poter visualizzare le scelte da prendere sopra il nodo],[UC16.1],
     //UC17
     [R-30-F-O],
-    [Il giocatore deve poter piazzare un oggetto sopra un nodo dell'albero di decisione],
+    [Il giocatore deve poter piazzare un oggetto sopra un nodo dell'Albero di decisione],
     [UC17],
     //UC17.1
     [R-31-F-O],
@@ -685,7 +703,7 @@ con:
     [Il giocatore deve poter modificare la scala di risoluzione del gioco],
     [UC29\ ],
     [R-45-F-D],
-    [Il giocatore deve essere in grado di poter modificare il tipo di anti-aliasing usato nel gioco, oppure non usarlo],
+    [Il giocatore deve essere in grado di poter modificare il tipo di _anti-aliasing_ usato nel gioco, oppure non usarlo],
     [UC30\ ],
     [R-46-F-D],[Il giocatore deve essere in grado di modificare la qualità delle ombre nel gioco],
     [UC31\ ],
@@ -723,7 +741,7 @@ con:
   ),
 )
 
-#show figure: set block(breakable: false)
+//#show figure: set block(breakable: false)
 #figure(
   caption: [Tabella dei requisiti di accessibilità],
   table(
@@ -833,7 +851,7 @@ riprodurre un suono, rappresentare una camera, e molto altro.
 Tutti i nodi hanno le seguenti caratteristiche:
 - un nome;
 - proprietà modificabili;
-- ricevono _callback_ per aggiornarsi ad ogni _frame_;
+- ricevono _callback_ per aggiornarsi ad ogni #gl("frame");
 - si possono estendere con nuove proprietà e funzioni;
 - si possono aggiungere a un altro nodo come figlio. @godot-node
 Inoltre ad ogni nodo si può assegnare uno script, che estende il tipo di quel nodo e aggiunge nuove funzionalità.\
@@ -846,7 +864,8 @@ I principali tipi di nodi che vengono utilizzati in questo progetto sono:
   - `CollisionShape3D`: rappresenta una forma di collisione nello spazio tridimensionale, utilizzata per gestire le interazioni fisiche tra gli oggetti.
   - `Area3D`: rappresenta un'area nello spazio tridimensionale, utilizzata per gestire le interazioni tra gli oggetti che entrano ed escono da essa.
 - `AnimationPlayer`: gestisce le animazioni degli oggetti nella scena, permettendo di riprodurre animazioni sul modello 3D, telecamere e altri nodi.
-- `Control`: rappresenta un nodo _UI_, utilizzato per gestire gli elementi dell'interfaccia utente del gioco.
+- `Control`: rappresenta un nodo _UI_, utilizzato per gestire gli elementi dell'interfaccia utente del gioco.\
+#align(bottom, [#line(length: 100%)*_frame_*: unità di misura temporale utilizzata nei videogiochi e nelle animazioni. Tipicamente sono 60 in un secondo.])
 
 ==== Scene
 Quando si organizzano nodi in un albero, come il nostro personaggio, possiamo chiamare questa formazione una scena. Una volta salvata, la scena si presenta come un nuovo nodo nell’_editor_, dove possiamo aggiungerlo come figlio di un nodo esistente. In questo caso, l’istanza della scena appare come nodo singolo con interni nascosti.
@@ -859,7 +878,7 @@ Oltre che a comportarsi come nodi, le scene hanno anche le seguenti caratteristi
 - Si possono creare quante più istanze di una scena si desideri. Ad esempio, si possono avere cinque o dieci personaggi nel gioco, creati da una determinata scena.
 
 ==== Segnali
-I segnali sono un modo per far comunicare i nodi in maniera asincrona in Godot. Ogni classe presenta dei segnali preimpostati ed emessi in determinati momenti, ad esempio quando un nodo viene caricato, questo emette il segnale `ready()`, oppure quando un bottone viene premuto, viene emesso il segnale `pressed()`.\
+I segnali sono un modo per far comunicare i nodi in maniera asincrona in _Godot_. Ogni classe presenta dei segnali preimpostati ed emessi in determinati momenti, ad esempio quando un nodo viene caricato, questo emette il segnale `ready()`, oppure quando un bottone viene premuto, viene emesso il segnale `pressed()`.\
 I segnali inoltre possono anche contenere dei parametri, che possono essere utilizzati per passare informazioni tra i nodi.\
 Infine, si possono creare segnali personalizzati, che possono essere emessi in qualsiasi momento dal nodo che li ha definiti tramite il metodo `signal.emit(...)`.\
 Ci sono due modi per collegare un segnale ad un altro nodo:
@@ -872,10 +891,11 @@ Molte classi del progetto presentano delle funzioni virtuali comuni, che vengono
 _`+ready(): void`_\
 Questa funzione viene chiamata quando il nodo entra nella scena, ovvero quando tutti i nodi figli sono stati caricati e il nodo è pronto per essere utilizzato.\
 In questa funzione è possibile inizializzare le variabili, collegare i segnali e impostare le proprietà del nodo.\
-È importante notare che questa funzione viene chiamata solo una volta, quando il nodo viene caricato per la prima volta nella scena, e non ad ogni #gl("frame") del gioco.
+È importante notare che questa funzione viene chiamata solo una volta, quando il nodo viene caricato per la prima volta nella scena, e non ad ogni _frame_ del gioco.
 #v(0.5em)
 _`+process(delta: float): void`_\
 Questa funzione viene chiamata ad ogni _frame_ del gioco e permette di aggiornare lo stato della classe, ad ogni _frame_ di inattività. \
+Un _frame_ di inattività corrisponde ad un _frame_ effettivo del gioco.\
 Il parametro `delta` rappresenta il tempo trascorso dall'ultimo _frame_ di inattività, ed è utile per gestire le animazioni e le interazioni in modo fluido e coerente. @godot-process
 #v(0.5em)
 _`+physics_process(delta: float): void`_\
@@ -884,12 +904,17 @@ Questa funzione è utile per gestire le interazioni fisiche tra gli oggetti, com
 Il parametro `delta` rappresenta il tempo trascorso dall'ultimo _frame_ di fisica. @godot-process
 #v(0.5em)
 _`+_input_(event: InputEvent): void`_\
-Funzione chiamata ogni volta che il gioco rileva un qualsiasi _input_, sia da tastiera che dal _joypad_. Il parametro _event_ rappresenta l'_input_ che chiama la funzione.
+Funzione chiamata ogni volta che il gioco rileva un qualsiasi _input_, sia da tastiera che dal _joypad_. Il parametro `event` rappresenta l'_input_ che chiama la funzione.
+
+#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
+*_autoload_*: meccanismo di _Godot_ che consente di caricare automaticamente una risorsa all'avvio del gioco e mantenerla sempre attiva.\
+*_singleton_*: _design pattern_ che garantisce ci sia solo un'istanza di una classe in tutto il gioco, rendendola accessibile da qualsiasi parte del codice.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 
 === Classi del giocatore
 ==== `Player`
 #figure(caption: [Diagramma _UML_ delle classi del giocatore],image("../images/classi/class-player.png", width: auto))
-Il giocatore può essere considerata la classe principale di tutta l'applicazione, attraverso il quale l'utente può interagire con la maggior parte dell'applicazione.\ Nonostante ci sia solo un giocatore presente del gioco, questo non è un #gl("singleton"), poiché per implementare un _singleton_ in Godot è richiesto che questo sia caricato come #gl("autoload") in ogni scena, e non c'è motivo di caricare il giocatore nel menu principale, all'avvio del gioco.
+Il giocatore può essere considerata la classe principale di tutta l'applicazione, attraverso il quale l'utente può interagire con la maggior parte del gioco.\ Nonostante ci sia solo un giocatore presente del gioco, questo non è un #gl("singleton"), poiché per implementare un _singleton_ in _Godot_ è richiesto che questo sia caricato come #gl("autoload") in ogni scena, e non c'è motivo di caricare il giocatore nel menu principale, all'avvio del gioco.
 
 Molte variabili presenti nel giocatore sono riferimenti ai suoi nodi figli presenti nella scena, queste variabili sono precedute dalla parola chiave `@onready` nel codice.
 Similmente, molte funzioni della classe servono solo per accedere alle variabili dei suoi nodi figli.
@@ -897,16 +922,22 @@ Similmente, molte funzioni della classe servono solo per accedere alle variabili
 La classe del giocatore ha associate delle classi che offrono funzionalità diverse,
 di seguito vengono descritte in dettaglio quelle più importanti.
 //==== _Movement_
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*_clipping_*: fenomeno che si verifica quando la telecamera o un oggetto solido di un videogioco passa attraverso un altro oggetto solido.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 ==== `CameraRayCast`
 #figure(caption: [Diagramma _UML_ delle classi della telecamera del giocatore],image("../images/classi/class-camera.png"))
 La telecamera del giocatore viene gestita da più classi per garantire diverse funzionalità tra quali la rotazione intorno al giocatore, proiezione di elementi della _UI_ sullo schermo ed evitare che la telecamera passi attraverso i muri, generando il fenomeno chiamato #gl("clipping").\
 Oltre che a gestire il lavoro di tutte le altre classi per il corretto funzionamento della telecamera, la classe `CameraRayCast` lancia un raggio dalla posizione del giocatore verso il basso per controllare velocemente la distanza dal terreno del giocatore. Nel caso il raggio tocca ancora il terreno, la telecamera rimane per terra e non si sposta in alto con il giocatore.
 Di seguito vengono descritte le classi principali associate alla classe `CameraRayCast`:
 #v(0.5em)
+
 - *`PlayerCamera`*: la telecamera effettiva, eredita dalla classe di _Godot_ `Camera3D`. Offre il metodo `look_at_target()` che si occupa di girare la telecamera verso un obiettivo, specificato dalla variabile `custom_target` nella classe. Questo metodo viene usato da `CameraRayCast` per girare la telecamera verso un punto calcolata da quest'ultima.
 
-- *`CameraProjectUI`*: gestisce gli elementi della _UI_ la cui posizione viene proiettata dallo spazio 3D del gioco, allo spazio 2D dello schermo. Contiene un array, composto da questi elementi. Nel caso l'array sia vuoto, la modalità di processo viene disabilitata, cioè le operazioni della classe non vengono più effettuate ad ogni fotogramma del gioco, risparmiando risorse.\
+- *`CameraProjectUI`*: gestisce gli elementi della _UI_ la cui posizione viene proiettata dallo spazio 3D del gioco, allo spazio 2D dello schermo. Contiene un _array_, composto da questi elementi. Nel caso l'_array_ sia vuoto, la modalità di processo viene disabilitata, cioè le operazioni della classe non vengono più effettuate ad ogni _frame_ del gioco, risparmiando risorse.\
 - *`SpringArm3D`*: classe fornita da _Godot_. La sua posizione globale corrisponde sempre a quella del giocatore, e si occupa di avvicinare la telecamera quando è vicino ad un muro per evitare il _clipping_.
+
+#set page(footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 - *`CameraTarget`*: eredita dalla classe di _Godot_ `Marker3D`. La sua posizione viene calcolata da `CameraRayCast` e si occupa di gestire gli input per ruotare e muovere la telecamera intorno al giocatore.
 
@@ -917,21 +948,23 @@ L'uso della macchina di stati, inoltre, ha garantito una gestione più semplice 
 La classe `StateMachine` si occupa di gestire la transizione degli stati.\
 L'attributo `state` indica lo stato corrente del personaggio del giocatore. Quando riceve il segnale `finished(...)` dallo stato in cui si trova, si occupa di passare allo stato indicato dal segnale, passando gli eventuali dati contenuto nel `Dictionary` allo stato successivo.\
 Tutti gli stati ereditano dalla classe base astratta `State`. Questa include un riferimento al giocatore ed alla macchina di stati.
+Di seguito sono descritti tutte le classi degli stati del personaggio:
 #v(0.5em)
-- *`IdleState`*: stato iniziale del giocatore. Questo stato viene chiamato quando il giocatore è fermo per terra. Può passare a tutti gli altri stati in base agli input premuti in diverse condizioni. Ad esempio se il giocatore sta portando qualcosa e preme il tasto di interazione, il personaggio passa allo stato _Release_, ma se non sta portando niente, allora non succede niente. Invece se preme lo stesso tasto dentro un area specifica, il personaggio passa allo stato _Interact_.
-
+- *`IdleState`*: stato iniziale del personaggio. Questo stato viene chiamato quando è fermo per terra. Può passare a tutti gli altri stati in base agli input premuti in diverse condizioni. Ad esempio se il personaggio sta portando qualcosa ed il giocatore preme il tasto di interazione, il personaggio passa allo stato _Release_, ma se non sta portando niente, allora non succede niente. Invece se preme lo stesso tasto dentro un'area specifica, il personaggio passa allo stato _Interact_.
 
 - *`GroundMovementState`*: il personaggio del giocatore passa allo stato _GroundMovement_ quando viene premuto un input per spostarsi rimanendo per terra. Come lo stato _Idle_, si può passare a tutti gli altri stati anche da questo, seguendo le stesse condizioni dello stato _Idle_.
 
-- *`AirState`*: si può passare a questo stato in due condizioni: il giocatore cade da una piattaforma, o preme il tasto per saltare. Nell'ultimo caso, lo stato precedente manda un valore `jump = true` all'interno del `Dictionary`, in questo modo lo stato controlla se è presente il medesimo valore ed in caso positivo, esegue il salto, caricando la rispettiva animazione e modificando la velocità verticale.
+- *`AirState`*: si può passare a questo stato in due condizioni: il personaggio cade da una piattaforma, o il giocatore preme il tasto per saltare. Nell'ultimo caso, lo stato precedente manda un valore `jump = true` all'interno del `Dictionary`. Lo stato controlla se è presente il medesimo valore non appena il personaggio entra in quello stato, ed in caso positivo, esegue il salto, caricando la rispettiva animazione e modificando la velocità verticale.
 
-- *`InteractState`*: lo stato _Interact_ indica che il personaggio del giocatore è impegnato ad interagire con un'altra entità, ad esempio mentre parla con un personaggio non giocabile o legge un cartello. A differenza degli altri stati, non è un input a far cambiare stato, ma i segnali dalle entità esterne.
+- *`InteractState`*: lo stato _Interact_ indica che il personaggio del giocatore è impegnato ad interagire con un'altra entità, ad esempio mentre parla con un personaggio non giocabile o legge un cartello.
 
-- *`GrabState`*: il personaggio del giocatore passa allo stato _Grab_ quando il giocatore preme il tasto per prendere un oggetto vicino a uno di questi. Importante notare che questo stato rappresenta solo quando il personaggio prende un oggetto, dopo aver svolto l'azione, il personaggio torna allo stato _Idle_, cambiando le animazioni in modo che rispecchino la situazione.
+- *`GrabState`*: il personaggio del giocatore passa allo stato _Grab_ quando il giocatore preme il tasto per prendere un oggetto vicino. Importante notare che questo stato rappresenta solo quando il personaggio prende un oggetto, dopo aver svolto l'azione, il personaggio torna allo stato _Idle_, cambiando le animazioni in modo che rispecchino il fatto che sta portando un oggetto.
 
 - *`ReleaseState`*: quando il giocatore preme di nuovo il tasto per prendere un oggetto mentre il personaggio sta portando un oggetto, questo passa allo stato _Release_ e lascia l'oggetto. Come il suo stato opposto, una volta lasciato l'oggetto, il giocatore torna allo stato _Idle_.\
+
 #v(0.5em)
-La figura a pagina successiva mostra il flusso degli stati.
+
+La figura mostra il flusso degli stati.
 #figure(caption: [Diagramma sul flusso degli stati del giocatore], image("../images/sm-player_states.png", width: 60%))
 //==== _PlayerSavesHandler_
 //==== _GrabItem_
@@ -943,34 +976,42 @@ La figura a pagina successiva mostra il flusso degli stati.
 Nei livelli sono presenti diverse _entità_ con cui il giocatore può interagire. Di seguito vengono descritte i diversi tipi di _entità_, e le classi che le compongono:
 #v(0.5em)
 - *`InteractableArea`*: classe base astratta che fornisce i metodi alle classi figlie. La classe è composta da un'`Area3D`, che invia i segnali quando il giocatore entra ed esce, e da una classe `Control` che rappresenta la _UI_ che il giocatore visualizza quando entra.
-- *`NPC`*: rappresenta un personaggio non giocabile che ha assegnato una semplice frase come messaggio. Questa frase viene visualizzata in una classe `SimpleProjectLabel` il cui funzionamento è stato spiegato nella sezione precedente. Presenta anche una classe `Marker3D` che segna la posizione della _UI_, e una classe `NPCModel` che gestisce le animazioni del modello 3D del personaggio.
+- *`NPC`*: rappresenta un personaggio non giocabile che ha assegnato una semplice frase come messaggio. Questa frase viene visualizzata in una classe `SimpleProjectLabel`. Presenta anche una classe `Marker3D` che segna la posizione della _UI_, e una classe `NPCModel` che gestisce le animazioni del modello 3D del personaggio.
 - *`InteractableSign`*: rappresenta un cartello che il giocatore può leggere. \ Il cartello può contenere diverse informazioni, come una lista o un grafico. \ Il contenuto del cartello è inserito in un'altra classe `Control`.
 - *`NPCDialogue`*: rappresenta un personaggio non giocabile che, a differenza della classe `NPC`, presenta un dialogo. Il giocatore può interagire con il personaggio e visualizzare il dialogo premendo il rispettivo tasto.
 === Gestione dei salvataggi
 #figure(caption: [Diagramma sul funzionamento dei salvataggi],image("../images/classi/class-saves.png"))
 - *`Saves`*: classe base astratta per tutte le classi che si occupano di salvare o caricare i dati dal file _.ini_.\ Fornisce l'attributo `save_path` che indica il percorso dove salvare il file _.ini_.\ Inoltre fornisce i metodi virtuali `save_data()` e `load_data()` per salvare o caricare i dati. Questi due metodi sono sovrascritti nelle classi figlie.
-- *`SavesHandler`*: classe base astratta per tutte le classi che gestiscono il cambio dei dati da salvare, fornisce i metodi virtuali per caricare o salvare i dati modificati e passarli alla classe che li salva nel file _.ini_.\ Inoltre fornisce un attributo `debug_mode`, attivabile dall'_editor_. Se attivato, impedisce che vengano caricati i dati di salvataggio.
+- *`SavesHandler`*: classe base astratta per tutte le classi che gestiscono il cambio dei dati da salvare, contengono una copia dei dati da salvare prima di mandarli alla rispettiva classe `Saves`.\ Inoltre fornisce un attributo booleano `debug_mode`, attivabile dall'_editor_.\ Se attivato, impedisce che vengano caricati i dati di salvataggio. Utile per quando dovevo testare alcune funzionalità con alcuni valori già cambiati nei salvataggi.
 #v(0.5em)
-Tutte le classi derivate di `SavesHandler` e `Saves` si occupano di gestire i salvataggi e i caricamenti dei diversi livelli.
+Tutte le classi derivate di `SavesHandler` e `Saves` si occupano di gestire i salvataggi e i caricamenti dei rispettivi livelli o funzionalità.
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*_drifting_*: fenomeno che si verifica uno _stick_ analogico registra movimenti o pressioni anche quando non viene toccato.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 === `LevelsTransition`
 #figure(caption: [Diagramma _UML_ delle classi _Autoloads_],image("../images/classi/class-autoloads.png", width: auto))
-La classe `LevelsTransition` si occupa della transizione tra due classi. Il metodo `switch_level(new_level_path: String)` carica il livello il cui percorso è fornito come argomento della funzione. Il motivo per cui è stato usato il percorso come `String` anziché il livello stesso come `PackedScene` è stato per evitare riferimenti ciclici, in quanto se due livelli contenevano un riferimento a tra di loro nella scena, il gioco non caricava correttamente il livello successivo.
+La classe `LevelsTransition` si occupa della transizione tra due classi. Il metodo `switch_level(new_level_path: String)` carica il livello il cui percorso è fornito come argomento della funzione. Il motivo per cui è stato usato il percorso come `String` anziché il livello stesso come `PackedScene` è stato per evitare riferimenti ciclici, in quanto se due livelli contenevano un riferimento tra di loro nella scena, il gioco non caricava correttamente il livello successivo.
 === `OptionsSave`
 `OptionsSave` è la classe che carica le impostazioni del gioco. Queste opzioni devono essere sempre disponibili, in quanto servono per applicare le modifiche fatte dal giocatore in qualsiasi momento, come la risoluzione alla finestra, il volume dell'applicazione, etc...
 ==== `InputUIHandler`
-La classe `InputUIHandler` si occupa di controllare i dispositivi di _input_ collegati, e mandare il segnale `device_changed` nel caso il nome del dispositivo dell'ultimo _input_ non corrisponda all'attributo `current_joy`.
+La classe `InputUIHandler` si occupa di controllare i dispositivi di _input_ collegati, e mandare il segnale `device_changed(current_joy: String)` nel caso il nome del dispositivo dell'ultimo _input_ non corrisponda all'attributo `current_joy`.\
 Il metodo `check_minimum_input_left_strength_threshold()` stabilisce la potenza minima che l'_input_ deve superare per mandare il segnale. Questo perché alcuni _joypad_ presentano il problema del #gl("drifting") e la classe potrebbe leggere _input_ che non sono premuti dal giocatore.
 === Struttura base di un livello
 Ogni livello viene creato con le seguenti classi:
+
+#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
+
 #figure(caption: [Diagramma delle classi di un livello base],image("../images/classi/class-base_level.png", width: auto))
-- *`Level`*: classe del livello, non svolge molte funzioni visto che i componenti possono comunicare tra di loro attraverso segnali. Gli attributi booleani `red_collectibles`, `blue_collectibles` e `green_collectibles` stabiliscono quali tipi di _collezionabili_ sono presenti nel livello, e quindi quali far visualizzare nella _UI_ del giocatore.
+- *`Level`*: classe del livello, non svolge molte funzioni visto che i componenti possono comunicare tra di loro attraverso i segnali. Gli attributi booleani `red_collectibles`, `blue_collectibles` e `green_collectibles` stabiliscono quali tipi di _collezionabili_ sono presenti nel livello, e quindi quali far visualizzare nella _UI_ del giocatore.
 - *`PlayerSpawn`*: classe che si occupa di generare il giocatore nella posizione in cui si trova. Appena generato il giocatore viene assegnato alla classe `Level`
 - *`PauseMenu`*: il menu di pausa, questo viene caricato quando il giocatore preme il rispettivo tasto, mettendo in pausa tutta la scena.
 
 //=== Livello _Regressione lineare_
 === `LRCannon`
 #figure(caption: [Diagramma sul funzionamento di un grafico _Linear Regression_ nel gioco],image("../images/classi/class-linear_regression.png"))
-La classe `LRCannon` rappresenta il cannone nel livello. Eredita da `InteractableArea` e infatti il giocatore può interagirci quando entra dentro l'area apposita.\
+La classe `LRCannon` rappresenta il cannone nel livello per aggiungere nuovi dati nel grafico della Regressione lineare.\ Eredita da `InteractableArea` e infatti il giocatore può interagirci quando entra dentro l'area apposita.\
 Quando il giocatore preme l'_input_ per interagire, la telecamera viene cambiata ed il giocatore entra nello stato _Interact_.
 La classe è composta da: 
 - *`CannonMesh`*: si occupa della rotazione del cannone quando questo è attivo e quando viene inserito un nuovo punto nel grafico.
@@ -979,14 +1020,15 @@ La classe è composta da:
 Classe base astratta usata per i due tipi di grafico presenti nel livello: orizzontale e verticale.
 Si occupa di svolgere le operazioni di regressione lineare per ottenere la formula della retta $y = a + b x$.\
 Tuttavia, non si può applicare la formula direttamente ad un oggetto 3D.\
-Il metodo `calculate_a_b()`si occupa di calcolare le variabili `a` e `b` della formula della retta con le seguenti formule:\\
+Il metodo `calculate_a_b()`si occupa di calcolare le variabili `a` e `b` della formula della retta con le seguenti formule:\
 
 #v(1em)
-#text(size: 14pt, [#align(center, [$a = (sum_()y sum_()x^2 - sum_()x * sum_()x y)/(n(sum_()x^2)-(sum_()x)^2))$ #h(3em)
+#text(size: 14pt, [#align(center, [$a = (sum_()y sum_()x^2 - sum_()x  sum_()x y)/(n(sum_()x^2)-(sum_()x)^2)$ #h(3em)
 $b = (n sum_()x y - (sum_()x)(sum_()y))/(n sum_()x^2-(sum_()x)^2)$\ ])])
 #v(1em)
-Dove _n_ è uguale al numero di punti che abbiamo nel grafico.\
-Tutte le sommatorie sono state calcolate in un ciclo _for_ e dopo inserite come variabili nella formula:
+
+Dove _x_ e _y_ sono le coordinate dei punti, ed _n_ è uguale al numero di punti che abbiamo nel grafico.\
+Tutte le sommatorie sono state calcolate in un ciclo _for_ e dopo inserite come variabili nelle formule.
 
 #codly(
   languages: (
@@ -1021,54 +1063,63 @@ Le trasformazioni globali vengono poi modificate in base al tipo della classe:
 - *`LinearRegressionGraphHorizontal`*: il grafico orizzontale, parallelo al terreno.
 - *`LinearRegressionGraphVertical`*: il grafico verticale, perpendicolare al terreno.
 
-=== Livello _Albero di decisione_
+=== Livello Albero di decisione
 #figure(caption: [Diagramma sul funzionamento dell'Albero di decisione],image("../images/classi/class-decision_tree_level.png", width: auto))
-- *`DecisionTree`*: la classe che rappresenta un Albero di decisione nel livello composta da più istanze di `DecisionNodeFinal` e `DecisionNodeIntermediate`, inserite tutte come nodi figli nella scena.\ Si occupa di inviare i segnali agli altri nodi presenti nel livello.
+- *`DecisionTree`*: la classe che rappresenta un Albero di decisione nel livello composta da più istanze di `DecisionNodeFinal` e `DecisionNodeIntermediate`, inserite tutte come nodi figli nella _scena_.\ Si occupa di inviare i segnali agli altri nodi presenti nel livello.
 - *`DecisionNode`*: classe base astratta per i due tipi di nodi presenti nell'albero: _intermediate_ e _final_. Fornisce i metodi virtuali `on_area_3d_body_entered(body: CharacterBody3D)` e `on_area_3d_body_exited(body: CharacterBody3D)` che vengono chiamati quando entra un oggetto di tipo `CharacterBody3D` nell'area sopra la piattaforma.\ Il comportamento poi viene modificato dalle classi figlie.
   - *`DecisionNodeIntermediate`*: quando entra il giocatore nell'area, viene visualizzata la _UI_ con le indicazioni da seguire;
   - *`DecisionNodeFinal`*: quando entra un cane nell'area, controlla se l'`id` di questo corrisponde all'`id` associato all'istanza.
-- *`DogBreedsSign`*: oltre all'albero di decisione nel livello è presente anche un cartello con cui il giocatore può interagire e visualizzare le razze die cani che ha indovinato.\ La classe `DogBreedsSign` rappresenta questo cartello. Questa, è composta da una classe `DogSignUI` che è il contenuto del cartello, contenente tutte le razze dei cani che il giocatore ha indovinato.\ Quando il cartello viene chiuso, emette il segnale `hide_grid()` che chiama il metodo `on_dog_breed_sign_hide_grid()` nella classe `CheckUnlocked`.
+- *`DogBreedsSign`*: oltre all'Albero di decisione nel livello è presente anche un cartello con cui il giocatore può interagire e visualizzare le razze die cani che ha indovinato.\ La classe `DogBreedsSign` rappresenta questo cartello. Questa, è composta da una classe `DogSignUI` che è il contenuto del cartello, contenente tutte le razze dei cani che il giocatore ha indovinato.\ Quando il cartello viene chiuso, emette il segnale `hide_grid()` che chiama il metodo `on_dog_breed_sign_hide_grid()` nella classe `CheckUnlocked`.
 
-- *`CheckUnlocked`*: classe che si occupa di controllare le razze di cani sbloccate e tenere il conto di quelle nuove che il giocatore non ha ancora controllato, nell'attributo `td_to_give`\ Il valore di questo attributo viene modificato all'inizio del caricamento del livello e quando il giocatore indovina una nuova razza nell'albero di decisione, ed è la differenza tra l'attributo `value` e il valore `td_given`.\ Al caricamento del livello, riceve il segnale `data_loaded` dal nodo che gestisce i salvataggi `DTSavesHandler`, assegna il valore dell'attributo `td_given`. Quando riceve il segnale `new_breed_unlocked` dall'albero di decisione, `value` aumenta di 1, ed aggiorna il valore di `td_to_give`.\ Quando riceve il segnale `hide_grid` dal cartello, chiama la funzione per generare i  `training_data` tanti quanti il valore di `td_to_give`.
+- *`CheckUnlocked`*: classe che si occupa di controllare le razze di cani sbloccate e tenere il conto di quelle nuove che il giocatore non ha ancora controllato, nell'attributo `td_to_give`.\ Il valore di questo attributo viene modificato all'inizio del caricamento del livello e quando il giocatore indovina una nuova razza nell'Albero di decisione, ed è la differenza tra l'attributo `value` e il valore `td_given`.\ Al caricamento del livello, riceve il segnale `data_loaded` dal nodo che gestisce i salvataggi `DTSavesHandler`, assegna il valore dell'attributo `td_given`. Quando riceve il segnale `new_breed_unlocked` dall'Albero di decisione, `value` aumenta di 1, ed aggiorna il valore di `td_to_give`.\ Quando riceve il segnale `hide_grid` dal cartello, chiama la funzione per generare i _collezionabili_ tanti quanti il valore di `td_to_give`. 
 
 === Livello _Causalità_
 ==== Struttura del livello
 #figure(caption: [Diagramma del livello  _Causalità_],image("../images/classi/class-causality_level.png"))
-- *`ACUnit`*: rappresenta un condizionatore. Eredita da `InteractableArea`, il giocatore, quando entra nell'area, può premere il tasto di interazione per accenderlo.\ Quando viene acceso, il valore dell'array nodo padre, in questo caso `ACUnits`, viene aggiornato con il giusto indice.
+- *`ACUnit`*: rappresenta un condizionatore. Eredita da `InteractableArea`.\ Il giocatore, quando entra nell'area, può premere il tasto di interazione per accenderlo.\ Quando viene acceso, il valore dell'_array_ nodo padre, in questo caso `ACUnits`, viene aggiornato con il giusto indice.
 - *`ACUnits`*: si occupa di gestire tutte le istanze di `ACUnit`, inserite come nodi figli nella scena.\ Quando viene acceso un condizionatore, emette il segnale `unit_turned_on(index: int)`, passando direttamente l'array aggiornato come argomento nel segnale.\ Quando tutti i condizionatori sono stati accesi, manda il segnale `all_units_on()`, usato in questo caso per far iniziare la scene di intermezzo.
 - *`CutscenesHandler`*: si occupa di gestire le scene di intermezzo nel livello, inserite come nodi figli nella scena. Nonostante la classe è stata pianificata per gestire più scene, alla fine ne è presente solo una.\ Questa classe svolge anche il ruolo da mediatore, ricevendo i segnali dal livello e mandandoli ai nodi figli, gestendo il traffico dei segnali.
 /*- *`CausalitySavesHandler`*: gestisce i salvataggi e cambio di variabili all'interno del livello _Causality_. In questa classe, le variabili sono salvate in un `Dictionary`. Quando i salvataggi vengono caricati, la classe emette il segnale `data_loaded()`.*/
 ==== Scena di intermezzo
 Dopo la scena di intermezzo, alcuni personaggi possono cambiare il dialogo a loro assegnato, oppure il comportamento con il giocatore.
-#figure(caption: [Diagramma sul funzionamento dei personaggi non giocabili nella scena di intermezzo],image("../images/classi/class-cutscene_npc.png"))
-- *`CrashCutscene`*: la classe che gestisce la scena di intermezzo principale del livello.Si occupa principalmente di inviare i segnali per iniziare correttamente la scena. \ Quando il giocatore accende l'ultimo condizionatore, viene emesso il segnale `change_values()`. Se invece il livello viene caricato con già tutti i condizionatori accessi, viene emesso il segnale `change_specific_values()`.
-- *`ChangeNPCScientistBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ All'inizio del livello, il personaggio presenta un dialogo predefinito e non si gira quando parla con il giocatore.\ Dopo aver ricevuto il segnale `change_values` dalla classe `CrashCutscene`, sostituisce il dialogo del personaggio con il dialogo assegnato alla classe, e cambia il comportamento, in modo che si giri e cambi animazione quando parla con il giocatore.\ Inoltre, dopo che il giocatore risponde correttamente alla domanda del nuovo dialogo, il comportamento cambia di nuovo, e viene tolto il dialogo, rimpiazzando il messaggio automatico che appare quando il giocatore entra nell'area di interazione.\
+#figure(caption: [Diagramma _UML_ sul funzionamento dei personaggi non giocabili nella scena di intermezzo e dopo],image("../images/classi/class-cutscene_npc.png"))
+- *`CrashCutscene`*: la classe che gestisce la scena di intermezzo principale del livello. Si occupa principalmente di inviare i segnali per iniziare correttamente la scena. \ Quando il giocatore accende l'ultimo condizionatore, viene emesso il segnale `change_values()`. Se invece il livello viene caricato con già tutti i condizionatori accessi, viene emesso il segnale `change_specific_values()`.
+- *`ChangeNPCScientistBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ All'inizio del livello, il personaggio presenta un dialogo predefinito e non si gira quando parla con il giocatore.\ Dopo aver ricevuto il segnale `change_values()` dalla classe `CrashCutscene`, sostituisce il dialogo del personaggio con il dialogo assegnato alla classe, e cambia il comportamento, in modo che si giri e cambi animazione quando parla con il giocatore.\ Inoltre, dopo che il giocatore risponde correttamente alla domanda del nuovo dialogo, il comportamento cambia di nuovo, viene tolto il dialogo e viene rimpiazzanto il messaggio automatico che appare quando il giocatore entra nell'area di interazione.\
+
+#set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
+*_CPU_ - _Central Processing Unit_*: unità di elaborazione centrale di un computer, responsabile dell'esecuzione delle istruzioni.\
+*_GPU_ - _Graphics Processing Unit_*: unità di elaborazione grafica di un computer, progettata per gestire e accelerare la creazione di immagini ed elaborazione di grafica 3D.\
+*_RAM_ - _Random Access Memory_*: memoria piccola e rapida di un computer che consente un accesso rapido e diretto ai dati in uso.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 
 - *`ChangeNPCIceCreamBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ Funziona nello stesso modo della classe descritta prima, però avviene solo un cambio del dialogo e non c'è la modifica del comportamento.
 
-- *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale `change_specific_values`, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
+- *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale `change_specific_values()`, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
 
-- *`ChangeSignUI`*: questa classe si occupa di cambiare il contenuto del rispettivo cartello. Viene assegnata ad un nodo figlio del nodo del cartello.\ Funziona nello stesso modo delle classi che cambiano il dialogo o comportamento dei personaggi. Quando riceve il segnale `change_values`, cambia il contenuto del cartello, rimpiazzandolo con l'istanza assegnata alla classe.
+- *`ChangeSignUI`*: questa classe si occupa di cambiare il contenuto del rispettivo cartello. Viene assegnata ad un nodo figlio del nodo del cartello.\ Funziona nello stesso modo delle classi che cambiano il dialogo o comportamento dei personaggi. Quando riceve il segnale `change_values()`, cambia il contenuto del cartello, rimpiazzandolo con l'istanza assegnata alla classe.
 
 == Verifica e validazione
 === Macchina di _test_
-Tutti i test sono stati eseguiti sulla mia macchina con specifiche hardware e software definite nella tabella. Molto importante è specificare le componenti della macchina su cui viene testato il gioco, dato che macchine diverse offrono prestazioni diverse.
+Tutti i _test_ sono stati eseguiti sulla mia macchina con specifiche hardware e software definite nella tabella. Molto importante è specificare le componenti della macchina su cui viene testato il gioco, dato che macchine diverse offrono prestazioni diverse.
 #figure(caption: [Componenti della macchina su cui sono stati eseguiti i _test_], table(
   columns: (auto, auto),
   inset: 8pt,
   align: center + horizon,
   table.header([*Componente*], [*Dettagli*]),
-  [*_CPU_*],[_AMD® Ryzen 5 4500U_],
-  [*_GPU_*],[_AMD® Radeon Graphics (RADV RENOIR)_ \ Integrata alla _CPU_],
-  [*_RAM_*],[_8GB DDR4_],
+  [*#gl("cpu")*],[_AMD® Ryzen 5 4500U_],
+  [*#gl("gpu")*],[_AMD® Radeon Graphics (RADV RENOIR)_ \ Integrata alla _CPU_],
+  [*#gl("ram")*],[_8GB DDR4_],
   [*Sistema Operativo*],[_Ubuntu 22.04_]
-))\
+))
+In sintesi, la macchina su cui viene testato il gioco offre prestazioni sulla fascia media-bassa, quindi si ritiene che se il gioco offre delle buone prestazioni sulla macchina di _testing_, offrirà in media buone prestazioni su tutte le macchine con un sistema operativo supportato.
+#set page(footer-descent: 0%, footer: [
+#align(center+horizon, context([#counter(page).display("1.")]))])
 === Nomenclatura _test_
-Di seguito sono elencate le metodologie di testing che verranno utilizzate per verificare e validare il prodotto software. Le metodologie di testing sono suddivise in quattro categorie:
-- *test di unità*: test che verificano il corretto funzionamento di singole unità del codice, questi test sono stati svolti con l'_add-on_ della community _GUT - Godot Unit Test_;\
-- *test di integrazione*: test che verificano il corretto funzionamento dell'interazione tra più unità del codice, anche questi svolti con l'_add-on_ _GUT_;\
-- *test di sistema*: test che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche test sulle prestazioni, e sono svolti utilizzando gli strumenti forniti da _Godot_;\
-- *test di accettazione*: test che verificano se il prodotto è pronto per essere rilasciato.
+Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per verificare e validare il prodotto _software_. Le metodologie di _testing_ sono suddivise in quattro categorie:
+- *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, questi _test_ sono stati svolti con l'_add-on_ della community _GUT - Godot Unit Test_;\
+- *_test_ di integrazione*: _test_ che verificano il corretto funzionamento dell'interazione tra più unità del codice, anche questi svolti con l'_add-on_ _GUT_;\
+- *_test_ di sistema*: _test_ che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche _test_ sulle prestazioni, e sono svolti utilizzando gli strumenti forniti da _Godot_;\
+- *_test_ di accettazione*: _test_ che verificano se il prodotto è pronto per essere rilasciato.
 
 === _Test_ di unità
 #figure(caption: [_Test_ di unità], table(
@@ -1077,12 +1128,12 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { center + horizon } else { center + horizon },
   table.header([*Identificativo*], [*Descrizione*], [*Superato*]),
   //giocatore
-  [TU-01],[Si verifica che il giocatore stia su una piattaforma con velocità pari a zero],[\u{2713}],
+  [TU-01],[Si verifica che il giocatore stia su una piattaforma con velocità pari a zero quando non si muove],[\u{2713}],
   [TU-02],[Si verifica che se il giocatore è fermo su una piattaforma, il suo stato nella macchina di stati è _Idle_],[\u{2713}],
   [TU-03],[Si verifica che quando il giocatore è fermo su una piattaforma, utilizza l'animazione _idle_],[\u{2713}],
-  [TU-04],[Si verifica che la rotazione iniziale sull'asse y della telecamera è la stessa del giocatore],[\u{2713}],
+  [TU-04],[Si verifica che la rotazione iniziale sull'asse _y_ della telecamera è la stessa del giocatore],[\u{2713}],
   [TU-05],[Si verifica che la telecamera ruoti intorno al giocatore quando viene premuto il rispettivo tasto],[\u{2713}],
-  [TU-06],[Si verifica che il giocatore si muovi ad una determinata velocità quando viene premuto il rispettivo tasto],[\u{2713}],
+  [TU-06],[Si verifica che il giocatore si muova ad una determinata velocità quando viene premuto il rispettivo tasto],[\u{2713}],
   [TU-07],[Si verifica che se il giocatore si muove su una piattaforma, il suo stato nella macchina di stati è _GroundMove_],[\u{2713}],
   [TU-08],[Si verifica che quando il giocatore si muove su una piattaforma, utilizza l'animazione della corsa],[\u{2713}],
   [TU-09],[Si verifica che quando il giocatore si muove, la telecamera ruota automaticamente],[\u{2713}],
@@ -1094,28 +1145,28 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   //Pausa
   [TU-15],[Si verifica che il menu di pausa venga visualizzato quando viene premuto il rispettivo tasto],[\u{2713}],
   [TU-16],[Si verifica che quando viene aperto il menu di pausa, l'applicazione viene messa in pausa],[\u{2713}],
-  [TU-17],[Si verifica che quando viene premuto il tasto "riprendi", il menu di pausa viene nascosto e viene ripresa l'esecuzione],[\u{2713}],
+  [TU-17],[Si verifica che quando viene premuto il rispettivo tasto, il menu di pausa viene nascosto e viene ripresa l'esecuzione],[\u{2713}],
   [TU-18],[Si verifica che quando viene premuto lo stesso tasto quando il menu di pausa è aperto, questo viene nascosto e viene ripresa l'esecuzione],[\u{2713}],
   [TU-19],[Si verifica che quando viene premuto il tasto delle opzioni, venga aperto il menu di opzioni],[\u{2713}],
   [TU-20],[Si verifica che quando viene premuto il tasto "Ritorna alla _hub_", il giocatore viene riportato al livello Hub],[\u{2713}],
   [TU-21],[Si verifica che quando viene premuto il tasto del menu principale, il giocatore viene riportato al menu principale],[\u{2713}],
   [TU-22],[Si verifica che il gioco venga chiuso quando viene premuto il bottone "Esci dal gioco"],[\u{2713}],
   //Opzioni
-  [TU-23],[Si verifica che viene cambiata la modalità della finestra quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-24],[Si verifica che viene cambiata la risoluzione della finestra quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-25],[Si verifica che viene cambiata la scala di risoluzione quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-26],[Si verifica che viene cambiato il valore del volume quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-27],[Si verifica che viene cambiato il valore massimo degli FPS quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-28],[Si verifica che viene cambiato il metodo di Anti Aliasing quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-29],[Si verifica che viene cambiata la qualità/risoluzione delle ombre quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-30],[Si verifica che viene cambiata la lingua del gioco quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
-  [TU-31],[Si verifica che vengano salvati i nuovi valori delle opzioni quando viene premuto il rispettivo bottone nel menu opzioni],[\u{2713}],
+  [TU-23],[Si verifica che viene cambiata la modalità della finestra quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-24],[Si verifica che viene cambiata la risoluzione della finestra quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-25],[Si verifica che viene cambiata la scala di risoluzione quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-26],[Si verifica che viene cambiato il valore del volume quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-27],[Si verifica che viene cambiato il valore massimo degli FPS quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-28],[Si verifica che viene cambiato il metodo di Anti Aliasing quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-29],[Si verifica che viene cambiata la qualità/risoluzione delle ombre quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-30],[Si verifica che viene cambiata la lingua del gioco quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
+  [TU-31],[Si verifica che vengano salvati i nuovi valori delle opzioni quando viene premuto il rispettivo bottone nel menu delle opzioni],[\u{2713}],
   //Menu principale
   [TU-32],[Si verifica che venga caricato il gioco con i salvataggi esistenti quando viene premuto il bottone "Carica partita"],[\u{2713}],
   [TU-33],[Si verifica che venga caricata una nuova partita, cancellando i dati di salvataggio esistenti, quando viene premuto il bottone "Nuova partita"],[\u{2713}],
   //NPC
   [TU-34],[Si verifica che il messaggio del personaggio non giocabile venga nascosto quando il giocatore non è vicino],[\u{2713}],
-  [TU-35],[Si verifica che il personaggio non giocabile, sia con dialogo che senza dialogo, usi l'animazione "idle" quando il giocatore non è vicino],[\u{2713}],
+  [TU-35],[Si verifica che il personaggio non giocabile, sia con dialogo che senza dialogo, usi l'animazione _idle_ quando il giocatore non è vicino],[\u{2713}],
   //_LR_
   [TU-36],[Si verifica che il grafico orizzontale venga caricato con la giusta rotazione],[\u{2713}],
   [TU-37],[Si verifica che la linea del grafico orizzontale cambi correttamente con l'aggiunta di un punto],[\u{2713}],
@@ -1125,7 +1176,7 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   //Decision Tree
   [TU-41],[Si verifica che un cane possa ritornare alla sua posizione iniziale],[\u{2713}],
   //Causality
-  [TU-42],[Si verifica che l'NPC che esce dall'appartamento corra verso l'obiettivo],[\u{2713}],
+  [TU-42],[Si verifica che l'_NPC_ che esce dall'appartamento corra verso l'obiettivo],[\u{2713}],
   [TU-43],[Si verifica che l'applicazione rilevi un cambio di dispositivo di Input],[\u{2713}],
   [TU-44],[Si verifica che l'applicazione mostri i rispettivi _input_ del dispositivo che si sta usando nella _UI_],[\u{2713}],
 ))
@@ -1140,7 +1191,7 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   [TI-01],[Si verifica che il personaggio non giocabile mostri il messaggio quando il giocatore si avvicina],[\u{2713}],
   [TI-02],[Si verifica che il personaggio non giocabile senza dialogo usi l'animazione per parlare quando il giocatore is avvicina],[\u{2713}],
   [TI-03],[Si verifica che il personaggio non giocabile con il dialogo usi l'animazione per salutare quando il giocatore is avvicina],[\u{2713}],
-  [TI-04],[Si verifica che quando il giocatore preme il rispettivo _input_ vicino ad un'_entità_ con cui può interagire, lo stato nella macchina di stati passi a "Interact"],[\u{2713}],
+  [TI-04],[Si verifica che quando il giocatore preme il rispettivo _input_ vicino ad un'_entità_ con cui può interagire, lo stato nella macchina di stati passi a _Interact_],[\u{2713}],
   [TI-05],[Si verifica che quando il giocatore preme il rispettivo _input_ vicino a un cartello, ne visualizzi i contenuti],[\u{2713}],
   [TI-06],[Si verifica che quando il giocatore preme lo stesso _input_ durante un'interazione, smette di interagire con l'_entità_],[\u{2713}],
   [TI-07],[Si verifica che quando il giocatore preme il rispettivo _input_ vicino a un personaggio con un dialogo, il giocatore si ferma e visualizza il dialogo del personaggio],[\u{2713}],
@@ -1155,14 +1206,14 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   [TI-15],[Si verifica che il giocatore possa interrompere l'interazione con il cannone _LR_],[\u{2713}],                                              
   //DT
   [TI-16],[Si verifica che quando il giocatore si avvicina ad un oggetto che può raccogliere, viene mostrato sullo schermo il tasto da premere],[\u{2713}],
-  [TI-17],[Si verifica che quando il giocatore raccoglie un oggetto, lo stato nella macchina di stati passi a "Grab"],[\u{2713}],
+  [TI-17],[Si verifica che quando il giocatore raccoglie un oggetto, lo stato nella macchina di stati passi a _Grab_],[\u{2713}],
   [TI-18],[Si verifica che l'oggetto raccolto sia lo stesso che il giocatore sta portando],[\u{2713}],
   [TI-19],[Si verifica che il giocatore possa muoversi con l'oggetto],[\u{2713}],
   [TI-20],[Si verifica che il giocatore possa saltare con l'oggetto],[\u{2713}],
   [TI-21],[Si verifica che il giocatore può lasciare l'oggetto],[\u{2713}],
-  [TI-22],[Si verifica che quando il giocatore lascia un oggetto, lo stato nella macchina di stati passi a "Release"],[\u{2713}],
+  [TI-22],[Si verifica che quando il giocatore lascia un oggetto, lo stato nella macchina di stati passi a _Release_],[\u{2713}],
   [TI-23],[Si verifica che l'oggetto rimanga nella posizione dove è stato lasciato],[\u{2713}],
-  [TI-24],[Si verifica che le informazioni dei rami vengano visualizzate quando il giocatore si posiziona sopra un nodo dell'albero di decisione],[\u{2713}],
+  [TI-24],[Si verifica che le informazioni dei rami vengano visualizzate quando il giocatore si posiziona sopra un nodo dell'Albero di decisione],[\u{2713}],
   [TI-25],[Si verifica che il nodo riconosca se il cane posizionato sopra è corretto],[\u{2713}],
   [TI-26],[Si verifica che il nodo riconosca se il cane posizionato sopra è sbagliato],[\u{2713}],
   [TI-27],[Si verifica che il cartello con le razze di cani indovinate si aggiorni quando il giocatore dà una risposta corretta],[\u{2713}],
@@ -1170,36 +1221,38 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
   [TI-28],[Si verifica che un'unità esterna di un condizionatore venga accesa quando il giocatore preme il rispettivo _input_ quando è vicino],[\u{2713}],
   [TI-29],[Si verifica che il grafico dei condizionatori usati venga aggiornato all'inizio del livello],[\u{2713}],
   [TI-30],[Si verifica che il grafico dei condizionatori usati venga aggiornato quando viene acceso un condizionatore],[\u{2713}],
-  [TI-31],[Si verifica che la scena di intermezzo inizi quando il giocatore accende tutti i condizionatori nel livello "Causalità"],[\u{2713}],
+  [TI-31],[Si verifica che la scena di intermezzo inizi quando il giocatore accende tutti i condizionatori nel livello _Causalità_],[\u{2713}],
   [TI-32],[Si verifica che i personaggi non giocabili che seguono un obiettivo, smettano di seguirlo quando entrano in una specifica area],[\u{2713}],
-  [TI-33],[Si verifica che il personaggio "scienziato" cambi dialogo quando vengono accese tutti i condizionatori nel livello "Causalità"],[\u{2713}],
-  [TI-34],[Si verifica che il personaggio "gelataio" cambi dialogo quando vengono accesi tutti i condizionatori nel livello "Causalità"],[\u{2713}],
+  [TI-33],[Si verifica che il personaggio _scienziato_ cambi dialogo quando vengono accese tutti i condizionatori nel livello _Causalità_],[\u{2713}],
+  [TI-34],[Si verifica che il personaggio _gelataio_ cambi dialogo quando vengono accesi tutti i condizionatori nel livello _Causalità_],[\u{2713}],
   //Forgot
-  [TI-35],[Si verifica che quando il giocatore si avvicina ad un "Training data" di colore rosso, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
-  [TI-36],[Si verifica che quando il giocatore si avvicina ad un "Training data" di colore verde, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
-  [TI-37],[Si verifica che quando il giocatore si avvicina ad un "Training data" di colore blu, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
+  [TI-35],[Si verifica che quando il giocatore si avvicina ad un _collezionabile_ di colore rosso, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
+  [TI-36],[Si verifica che quando il giocatore si avvicina ad un _collezionabile_ di colore verde, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
+  [TI-37],[Si verifica che quando il giocatore si avvicina ad un _collezionabile_ di colore blu, questo viene preso ed aumenta il rispettivo contatore],[\u{2713}],
   [TI-38],[Si verifica che quando il giocatore cade dal livello, torna in una zona dove si trovava precedentemente],[\u{2713}],
 ))
 
+#set page(footer-descent: -10%, footer: [#align(top, [#line(length: 100%)
+*_VRAM_ - _Video Random Access Memory_*: tipo di memoria utilizzata dalle schede grafiche per memorizzare dati relativi alla grafica, come _texture_ o immagini.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 === _Test_ di sistema
 #figure(caption: [_Test_ di sistema], table(
   columns: (0.4fr, 1fr, 0.3fr),
   inset: 8pt,
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { center + horizon } else { center + horizon },
   table.header([*Identificativo*], [*Descrizione*], [*Superato*]),
-  "TS-01","Si verifica che il gioco ricevi _input_ dalla tastiera","\u{2713}",
-  "TS-02","Si verifica che il gioco riceva _input_ da un joystick generico","\u{2713}",
-  "TS-03","Si verifica che il gioco mantenga almeno 30fps durante l'esecuzione (caricamenti esclusi)",
-  "\u{2713}",
-  "TS-04","Si verifica che il tempo tra un _frame_ e l'altro sia minore di 33.3 millisecondi durante l'esecuzione (caricamenti esclusi)",
-  "\u{2713}",
-  "TS-05","Si verifica che il tempo tra un _frame_ di fisica e l'altro rimanga costante a 16.67 millisecondi durante l'esecuzione (caricamenti esclusi)","\u{2713}",
-  "TS-06","Si verifica che l'uso della memoria video (VRAM) non superi 500MB durante tutta l'esecuzione","\u{2713}",
-  "TS-07","Si verifica che l'uso della memoria statica non superi 200MB durante tutta l'esecuzione","\u{2713}",
-  "TS-08","Si verifica che il tempo necessario alla CPU per caricare un _frame_ sia minore di 2 millisecondi","\u{2713}",
-  "TS-09","Si verifica che il tempo necessario alla GPU per caricare un _frame_ sia inferiore a 33.3 millisecondi","\u{2713}",
-  "TS-10","Si verifica che non siano presenti nodi non utilizzati nella scena","\u{2713}",))
-
+  "TS-01",[Si verifica che il gioco ricevi _input_ dalla tastiera],[\u{2713}],
+  "TS-02",[Si verifica che il gioco riceva _input_ da un _joypad_ generico],[ \u{2713}],
+  "TS-03",[Si verifica che il gioco mantenga almeno 30fps durante l'esecuzione (caricamenti esclusi)],[ \u{2713}],
+  "TS-04",[Si verifica che il tempo tra un _frame_ e l'altro sia minore di 33.3 millisecondi durante l'esecuzione (caricamenti esclusi)],[ \u{2713}],
+  "TS-05",[Si verifica che il tempo tra un _frame_ di fisica e l'altro rimanga costante a 16.67 millisecondi durante l'esecuzione (caricamenti esclusi)],[ \u{2713}],
+  "TS-06",[Si verifica che l'uso della memoria video (#gl("vram")) non superi 500MB durante tutta l'esecuzione],[ \u{2713}],
+  "TS-07",[Si verifica che l'uso della memoria statica non superi 200MB durante tutta l'esecuzione],[ \u{2713}],
+  "TS-08",[Si verifica che il tempo necessario alla _CPU_ per caricare un _frame_ sia minore di 2 millisecondi],[ \u{2713}],
+  "TS-09",[Si verifica che il tempo necessario alla _GPU_ per caricare un _frame_ sia inferiore a 33.3 millisecondi],[ \u{2713}],
+  "TS-10",[Si verifica che non siano presenti nodi non utilizzati nella scena],[ \u{2713}],))
+#set page(footer-descent: 0%, footer: [
+#align(center+horizon, context([#counter(page).display("1.")]))])
 === _Test_ di accettazione
 #figure(caption: [Tabella dei _test_ di accettazione], table(
   columns: (0.4fr, 1fr, 0.3fr),
@@ -1230,32 +1283,33 @@ Di seguito vengono mostrate le interazioni con i personaggi non giocabili.
 === Dispositivi di _input_ nella _UI_
 Il gioco supporta sia tastiera che _joypad_ come dispositivi di _input_, e aggiorna in tempo reale i simboli dei tasti da premere nelle guide della _UI_ in base al dispositivo che si sta utilizzando.
 Di seguito vegono elencati i comandi del gioco per i due dispositivi:
+#v(0.5em)
 - *Tastiera*:
   - *WASD*: movimento del personaggio
   - *Frecce direzionali*: movimento telecamera / navigazione nei menu
   - *Barra spaziatrice*: salto
   - *E*: interazione
   - *Q*: stop interazione
-  - *R*: reset (durante l'uso del cannone LR)
-  - *Invio*: conferma nella UI
+  - *R*: reset (durante l'uso del cannone _LR_)
+  - *Invio*: conferma nella _UI_
   - *Esc*: apertura/chiusura menu di pausa
 #figure(caption: [Visualizzazione tasti della tastiera nel gioco], image("../images/screenshot-keyboard.png"))
 
 Per il _joypad_, vengono elencati i tasti di un _joypad_ _Xbox_ generico, visto che è il _joypad_ più supportato per i giochi su PC.
-#figure(caption: [Tasti _joypad_ Xbox. Fonte: Microsoft],image("../images/controller-diagram.png"))
+#figure(caption: [Tasti _joypad_ _Xbox_. Fonte: _Microsoft_],image("../images/controller-diagram.png"))
 - _*Joypad*_:
   - *Levetta analogica sinistra*: movimento del personaggio
   - *Levetta analogica destra*: movimento telecamera
-  - *A*: salto / conferma nella UI
+  - *A*: salto / conferma nella _UI_
   - *B*: stop interazione
   - *X*: interazione
-  - *Y*: reset (durante l'uso del cannone LR)
+  - *Y*: reset (durante l'uso del cannone _LR_)
   - *D-Pad*: Navigazione nei menu
   - *Menu button*: apertura / chiusura del menù di pausa.
 
 #figure(caption: [Visualizzazione tasti del _joypad_ nel gioco], image("../images/screenshot-joypad.png"))
-In generale i joypad sono sviluppati per essere usati con una _console_ proprietaria, e differiscono nei simboli mostrati sui tasti.
-Per risolvere questo problema, durante la sessione di gioco, viene mostrata un'interfaccia universale dei tasti del joypad, indicandone la posizione piuttosto che la lettera o il simbolo.
+In generale i _joypad_ sono sviluppati per essere usati con una _console_ proprietaria, e differiscono nei simboli mostrati sui tasti.
+Per risolvere questo problema, durante la sessione di gioco, viene mostrata un'interfaccia universale dei tasti del _joypad_, indicandone la posizione piuttosto che la lettera o il simbolo.
 === Menu principale
 #figure(caption: [Menu principale], image("../images/menu_principale.png",width:auto))
 Appena avviato, il gioco mostrerà la schermata principale con le seguenti opzioni:
@@ -1275,18 +1329,18 @@ Il giocatore può scegliere le seguenti azioni:
 - *Salva ed esci dal gioco*: salva la partita e chiude il gioco. Attenzione a non chiudere il gioco attraverso la toolbar della finestra o scorciatoie del sistema operativo (ad esempio _Alt+F4_), visto che questi metodi NON salvano automaticamente la partita.
 === Menu opzioni
 #figure(caption: [Opzioni con valori predefiniti], image("../images/menu_opzioni.png",width:auto))
-Il menu opzioni permette di cambiare alcuni valori del gioco, grafica e lingua.\
+Il menu delle opzioni permette di cambiare alcuni valori del gioco, grafica e lingua.\
 I valori predefini sono stati selezionati in modo da garantire un buon rapporto tra qualità dell'immagine e prestazioni.\
 Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve descrizione sotto. Il giocatore può cambiare i seguenti valori:
 - *Modalità finestra*: il giocatore può scegliere se giocare in modalità finestra o mettere il gioco a schermo intero occupando tutto lo spazio dello schermo.
 - *Risoluzione finestra*: il giocatore può scegliere la risoluzione per quando gioca in modalità finestra, questa si adatterà alla scelta del giocatore. Cambiare questa opzione in modalità schermo intero non ha nessun effetto.
 - *Scala risoluzione*: valore a cui la risoluzione del gioco viene moltiplicata. La differenza rispetto all'opzione precedente sta nel fatto che la finestra mantiene le dimensioni quando viene modificata. Utile se si sta giocando a schermo intero.
-- *FPS Massimi*: rappresenta il numero massimo di fotogrammi in un secondo. Un valore più alto risulta in un video più fluido, ma richiede più risorse.\ Nota: questo valore non può superare la frequenza di aggiornamento dello schermo.
-- *Anti-Aliasing*: tecnica che riduce l’effetto “scalettatura” (aliasing) sui bordi degli oggetti, rendendo le immagini più lisce e meno frastagliate.\ Offre le seguenti opzioni:
-  - *Nessuno*: non viene applicata alcuna tecnica di anti-aliasing.
-  - *FXAA*: Fast Approximate Anti Aliasing, tecnica di anti-aliasing che applica un filtro rapido alle immagini per ridurre l’effetto “scalettatura” senza richiedere molta potenza di calcolo. Offre un buon compromesso tra qualità visiva e prestazioni.
-  - *MSAA 2x*: Multi-Sample Anti-Aliasing a 2 campioni. Tecnica che migliora la qualità dei bordi degli oggetti campionando ogni pixel più volte e mediando i risultati, riducendo l’aliasing con un impatto moderato sulle prestazioni.
-  - *MSAA 4x*: Multi-Sample Anti-Aliasing a 4 campioni. Tecnica che migliora molto la qualità dei bordi degli oggetti campionando ogni pixel più volte e mediando i risultati, riducendo l’aliasing con un impatto alto sulle prestazioni.
+- *_FPS_ Massimi*: rappresenta il numero massimo di _frame_ in un secondo. Un valore più alto risulta in un video più fluido, ma richiede più risorse.\ Nota: questo valore non può superare la frequenza di aggiornamento dello schermo.
+- *Anti-Aliasing*: tecnica che riduce l’effetto “scalettatura” (_aliasing_) sui bordi degli oggetti, rendendo le immagini più lisce e meno frastagliate.\ Offre le seguenti opzioni:
+  - *Nessuno*: non viene applicata alcuna tecnica di _anti-aliasing_.
+  - *FXAA*: _Fast Approximate Anti Aliasing_, tecnica di _anti-aliasing_ che applica un filtro rapido alle immagini per ridurre l’effetto “scalettatura” senza richiedere molta potenza di calcolo. Offre un buon compromesso tra qualità visiva e prestazioni.
+  - *MSAA 2x*: _Multi-Sample Anti-Aliasing_ a 2 campioni. Tecnica che migliora la qualità dei bordi degli oggetti campionando ogni _pixel_ più volte e mediando i risultati, riducendo l’_aliasing_ con un impatto moderato sulle prestazioni.
+  - *MSAA 4x*: _Multi-Sample Anti-Aliasing_ a 4 campioni. Tecnica che migliora molto la qualità dei bordi degli oggetti campionando ogni _pixel_ più volte e mediando i risultati, riducendo l’_aliasing_ con un impatto alto sulle prestazioni.
 - *Qualità delle ombre*: Modifica la risoluzione delle ombre. Il valore va da _alto_ a _molto basso_, ovviamente, un valore _alto_ ha un impatto molto più significativo sulle prestazioni rispetto a _molto basso_.
 - *Lingua*: cambia la lingua del gioco. La modifica viene applicata subito e non è necessario un riavvio del gioco.
 
@@ -1304,6 +1358,7 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
     table.cell(colspan: 3, [*Totale*]),[*63*]))
 La tabella mostra la copertura dei requisiti funzionali, di qualità e di accessibilità, con un totale di 63 requisiti.
 Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
+#v(0.5em)
 - *R-03-A-D*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
 - *R-04-A-D*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.
 === Copertura dei _test_
