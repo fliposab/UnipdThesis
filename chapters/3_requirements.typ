@@ -944,6 +944,7 @@ di seguito vengono descritte in dettaglio quelle più importanti.
 #set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
 *_clipping_*: fenomeno che si verifica quando la telecamera o un oggetto solido di un videogioco passa attraverso un altro oggetto solido.\ \
 #align(center, context([#counter(page).display("1.")]))])])
+/*
 ==== `CameraRayCast`
 #figure(caption: [Diagramma _UML_ delle classi della telecamera del giocatore],image("../images/classi/class-camera.png"))
 La telecamera del giocatore viene gestita da più classi per garantire diverse funzionalità tra quali la rotazione intorno al giocatore, proiezione di elementi della _UI_ sullo schermo ed evitare che la telecamera passi attraverso i muri, generando il fenomeno chiamato #gl("clipping").\
@@ -956,9 +957,10 @@ Di seguito vengono descritte le classi principali associate alla classe `CameraR
 - *`CameraProjectUI`*: gestisce gli elementi della _UI_ la cui posizione viene proiettata dallo spazio 3D del gioco, allo spazio 2D dello schermo. Contiene un _array_, composto da questi elementi. Nel caso l'_array_ sia vuoto, la modalità di processo viene disabilitata, cioè le operazioni della classe non vengono più effettuate ad ogni _frame_ del gioco, risparmiando risorse.\
 - *`SpringArm3D`*: classe fornita da _Godot_. La sua posizione globale corrisponde sempre a quella del giocatore, e si occupa di avvicinare la telecamera quando è vicino ad un muro per evitare il _clipping_.
 
-#set page(footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
-
 - *`CameraTarget`*: eredita dalla classe di _Godot_ `Marker3D`. La sua posizione viene calcolata da `CameraRayCast` e si occupa di gestire gli input per ruotare e muovere la telecamera intorno al giocatore.
+*/
+
+#set page(footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 ==== `StateMachine`
 #figure(caption: [Diagramma _UML_ sulla struttura della macchina di stati],image("../images/classi/class-state_machine.png"))\
@@ -1383,7 +1385,7 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
 */
 === Copertura dei requisiti
 #figure(
-  caption: [Totale requisiti],
+  caption: [Tabella con copertura requisiti],
   table(
     columns: (auto, auto, auto, auto,auto),
     inset: 8pt,
@@ -1399,7 +1401,7 @@ La tabella mostra la copertura dei requisiti funzionali, di qualità e di access
 - *R-03-A-D*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
 - *R-04-A-D*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.*/
 === Copertura dei _test_
-#figure(caption: [Totale _test_ eseguiti], table(
+#figure(caption: [Tabella con copertura _test_ eseguiti], table(
   columns: (auto, auto, auto),
   inset: 8pt,
   align: center + horizon,
