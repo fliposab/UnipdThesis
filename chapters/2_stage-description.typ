@@ -257,15 +257,17 @@ Ogni fase del lavoro, dalla raccolta dei requisiti allo sviluppo e alla verifica
 Questi processi interni mi hanno permesso di acquisire una maggiore consapevolezza sull'importanza dell'organizzazione e della comunicazione all'interno di un contesto lavorativo strutturato.\
 Durante lo sviluppo, sono state imposte le seguenti regole per garantire corretta organizzazione. Le regole sono suddivise in base all'attività.
 
+#v(0.5em)
+
+- *Documentazione*:\
+Il processo di fornitura deve essere documentato in modo dettagliato, in modo da garantire la tracciabilità delle attività svolte e delle decisioni prese.\
+I documenti che il progetto presenta sono:\
+
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *GDScript*: linguaggio di programmazione specifico per il motore di gioco _Godot_, progettato per essere semplice e intuitivo.\
 *PascalCase*: pratica di scrivere parole composte o frasi unendo tutte le parole tra loro, ma lasciando le loro iniziali maiuscole.\
 *snake_case*: pratica di scrivere parole composte separando le parole tramite trattino basso, con tutte le lettere minuscole.\ \
 #align(center, context([#counter(page).display("1.")]))])])
-
-- *Documentazione*:\
-Il processo di fornitura deve essere documentato in modo dettagliato, in modo da garantire la tracciabilità delle attività svolte e delle decisioni prese.\
-I documenti che il progetto presenta sono:\
 #show figure: set block(breakable: true)
 #figure(caption: [tabella dei documenti], table(
   columns: (auto, auto),
@@ -273,12 +275,12 @@ I documenti che il progetto presenta sono:\
   align: center + horizon,
   table.header([*Nome*], [*Descrizione*]),
   [*Analisi dei requisiti*], [Definisce tutti gli i casi d'uso e i requisiti funzionali del progetto. Questi sono stati raccolti in collaborazione con il tutor aziendale e sono stati utilizzati come base per la progettazione e lo sviluppo del _software_],
+  [*Glossario*], [Contiene la definizione dei termini utilizzati nel progetto],
   [*Piano di progetto*],[Definisce le attività da svolgere e i tempi previsti per lo sviluppo del _software_, viene descritto in dettaglio ogni periodo di sviluppo, con una retrospettiva delle attività svolte e una pianificazione delle attività future],
   [*Norme di progetto*],[Definisce le regole e le convenzioni da seguire durante lo sviluppo del _software_, come la nomenclatura dei _file_, la struttura del codice e le pratiche di programmazione da seguire],
   [*Piano di qualifica*],[Definisce le metriche che vengono usate per garantire la qualità del prodotto _software_. Vengono inoltre scritte le modalità di _test_ e verifica del _software_, in modo da garantire che il prodotto soddisfi i requisiti stabiliti],[*Specifica tecnica*],[Descrive in dettaglio l'architettura del sistema, i componenti _software_ e le loro interazioni],
   [*Manuale utente*],[Fornisce istruzioni dettagliate su come utilizzare il _software_ all'utente e garantirne il corretto funzionamento],))
 
-#v(0.5em)
 - *Codifica*:\
 Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). I nomi delle classi sono salvate con una nomenclatura #gl("pascalCase"), mentre i nomi dei _file_ e delle variabili usano #gl("snake_case").
 #set page(footer-descent: -180%, footer: [#align(top, [#line(length: 100%)

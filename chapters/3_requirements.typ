@@ -735,7 +735,8 @@ con:
     "R-03-A-D","Il gioco deve supportare il sistema operativo Mac-OS",
     "R-04-A-D",
     "La piattaforma deve essere responsive e funzionare correttamente su dispositivi desktop con risoluzione minima di 640\u{00D7}360px",
-    "R-05-A-O"," Il gioco deve mostrare gli _input_ del dispositivo che si sta usando"
+    "R-05-A-O",[Il gioco deve mostrare gli _input_ del dispositivo che si sta usando],
+    [R-06-A-O],[Il gioco deve essere giocabile anche senza una connessione _internet_]
   ),
 )
 #show figure: set block(breakable: true)
@@ -945,7 +946,10 @@ Nei livelli sono presenti diverse _entità_ con cui il giocatore può interagire
 - *`NPCDialogue`*: rappresenta un personaggio non giocabile che, a differenza della classe `NPC`, presenta un dialogo. Il giocatore può interagire con il personaggio e visualizzare il dialogo premendo il rispettivo tasto.
 === Gestione dei salvataggi
 #figure(caption: [Diagramma sul funzionamento dei salvataggi],image("../images/classi/class-saves.png"))
-
+- *`Saves`*: classe base astratta per tutte le classi che si occupano di salvare o caricare i dati dal file _.ini_.\ Fornisce l'attributo `save_path` che indica il percorso dove salvare il file _.ini_.\ Inoltre fornisce i metodi virtuali `save_data()` e `load_data()` per salvare o caricare i dati. Questi due metodi sono sovrascritti nelle classi figlie.
+- *`SavesHandler`*: classe base astratta per tutte le classi che gestiscono il cambio dei dati da salvare, fornisce i metodi virtuali per caricare o salvare i dati modificati e passarli alla classe che li salva nel file _.ini_.\ Inoltre fornisce un attributo `debug_mode`, attivabile dall'_editor_. Se attivato, impedisce che vengano caricati i dati di salvataggio.
+#v(0.5em)
+Tutte le classi derivate di `SavesHandler` e `Saves` si occupano di gestire i salvataggi e i caricamenti dei diversi livelli.
 === `LevelsTransition`
 #figure(caption: [Diagramma _UML_ delle classi _Autoloads_],image("../images/classi/class-autoloads.png", width: auto))
 La classe `LevelsTransition` si occupa della transizione tra due classi. Il metodo `switch_level(new_level_path: String)` carica il livello il cui percorso è fornito come argomento della funzione. Il motivo per cui è stato usato il percorso come `String` anziché il livello stesso come `PackedScene` è stato per evitare riferimenti ciclici, in quanto se due livelli contenevano un riferimento a tra di loro nella scena, il gioco non caricava correttamente il livello successivo.
@@ -994,6 +998,7 @@ Le trasformazioni globali vengono poi modificate in base al tipo della classe:
 - *`DogBreedsSign`*: oltre all'albero di decisione nel livello è presente anche un cartello con cui il giocatore può interagire e visualizzare le razze die cani che ha indovinato.\ La classe `DogBreedsSign` rappresenta questo cartello. Questa, è composta da una classe `DogSignUI` che è il contenuto del cartello, contenente tutte le razze dei cani che il giocatore ha indovinato.\ Quando il cartello viene chiuso, emette il segnale `hide_grid()` che chiama il metodo `on_dog_breed_sign_hide_grid()` nella classe `CheckUnlocked`.
 
 - *`CheckUnlocked`*: classe che si occupa di controllare le razze di cani sbloccate e tenere il conto di quelle nuove che il giocatore non ha ancora controllato, nell'attributo `td_to_give`\ Il valore di questo attributo viene modificato all'inizio del caricamento del livello e quando il giocatore indovina una nuova razza nell'albero di decisione, ed è la differenza tra l'attributo `value` e il valore `td_given`.\ Al caricamento del livello, riceve il segnale `data_loaded` dal nodo che gestisce i salvataggi `DTSavesHandler`, assegna il valore dell'attributo `td_given`. Quando riceve il segnale `new_breed_unlocked` dall'albero di decisione, `value` aumenta di 1, ed aggiorna il valore di `td_to_give`.\ Quando riceve il segnale `hide_grid` dal cartello, chiama la funzione per generare i  `training_data` tanti quanti il valore di `td_to_give`.
+
 === Livello _Causalità_
 ==== Struttura del livello
 #figure(caption: [Diagramma del livello  _Causalità_],image("../images/classi/class-causality_level.png"))
@@ -1005,13 +1010,13 @@ Le trasformazioni globali vengono poi modificate in base al tipo della classe:
 Dopo la scena di intermezzo, alcuni personaggi possono cambiare il dialogo a loro assegnato, oppure il comportamento con il giocatore.
 #figure(caption: [Diagramma sul funzionamento dei personaggi non giocabili nella scena di intermezzo],image("../images/classi/class-cutscene_npc.png"))
 - *`CrashCutscene`*: la classe che gestisce la scena di intermezzo principale del livello.Si occupa principalmente di inviare i segnali per iniziare correttamente la scena. \ Quando il giocatore accende l'ultimo condizionatore, viene emesso il segnale `change_values()`. Se invece il livello viene caricato con già tutti i condizionatori accessi, viene emesso il segnale `change_specific_values()`.
-- *`ChangeNPCScientistBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ All'inizio del livello, il personaggio presenta un dialogo predefinito e non si gira quando parla con il giocatore.\ Dopo aver ricevuto il segnale _change_values_ dalla classe "CrashCutscene", sostituisce il dialogo del personaggio con il dialogo assegnato alla classe, e cambia il comportamento, in modo che si giri e cambi animazione quando parla con il giocatore.\ Inoltre, dopo che il giocatore risponde correttamente alla domanda del nuovo dialogo, il comportamento cambia di nuovo, e viene tolto il dialogo, rimpiazzando il messaggio automatico che appare quando il giocatore entra nell'area di interazione.\
+- *`ChangeNPCScientistBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ All'inizio del livello, il personaggio presenta un dialogo predefinito e non si gira quando parla con il giocatore.\ Dopo aver ricevuto il segnale `change_values` dalla classe `CrashCutscene`, sostituisce il dialogo del personaggio con il dialogo assegnato alla classe, e cambia il comportamento, in modo che si giri e cambi animazione quando parla con il giocatore.\ Inoltre, dopo che il giocatore risponde correttamente alla domanda del nuovo dialogo, il comportamento cambia di nuovo, e viene tolto il dialogo, rimpiazzando il messaggio automatico che appare quando il giocatore entra nell'area di interazione.\
 
 - *`ChangeNPCIceCreamBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ Funziona nello stesso modo della classe descritta prima, però avviene solo un cambio del dialogo e non c'è la modifica del comportamento.
 
-- *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale _change_specific_values_, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
+- *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale `change_specific_values`, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
 
-- *`ChangeSignUI`*: questa classe si occupa di cambiare il contenuto del rispettivo cartello. Viene assegnata ad un nodo figlio del nodo del cartello.\ Funziona nello stesso modo delle classi che cambiano il dialogo o comportamento dei personaggi. Quando riceve il segnale _change_values_, cambia il contenuto del cartello, rimpiazzandolo con l'istanza assegnata alla classe.
+- *`ChangeSignUI`*: questa classe si occupa di cambiare il contenuto del rispettivo cartello. Viene assegnata ad un nodo figlio del nodo del cartello.\ Funziona nello stesso modo delle classi che cambiano il dialogo o comportamento dei personaggi. Quando riceve il segnale `change_values`, cambia il contenuto del cartello, rimpiazzandolo con l'istanza assegnata alla classe.
 
 == Verifica e validazione
 === Macchina di _test_
@@ -1175,4 +1180,130 @@ Di seguito sono elencate le metodologie di testing che verranno utilizzate per v
 ))
 
 == Risultati ottenuti
-_Qui descrivo i risultati raggiunti rispettivamente su piano qualitativo e quantitativo, con copertura dei requisiti, testing e quantità di prodotti_
+//_Qui descrivo i risultati raggiunti rispettivamente su piano qualitativo e quantitativo, con copertura dei requisiti, testing e quantità di prodotti_
+//=== Prodotto finale
+=== Meccaniche dei livelli
+Di seguito vengono mostrate le meccaniche principali dei livelli.
+#figure(caption: [Immagine del cannone _LR_ per posizionare nuovi punti nel grafico della Regressione lineare], image("../images/screenshot-cannon_lr.png", width: auto))
+#figure(caption: [Immagine dell'Albero di decisione con i possibili percorsi da seguire], image("../images/screenshot-decision_tree_1.png", width: auto))
+#figure(caption: [Immagine di un posizionamento corretto in un nodo finale dell'Albero di decisione], image("../images/screenshot-decision_tree_2.png"))
+#figure(caption: [Immagine del cartello che mostra le razze di cani indovinate nell'Albero di decisione], image("../images/screenshot-dog_breeds_sign.png"))
+#figure(caption: [Immagine della scena di intermezzo del livello _Causalità_], image("../images/screenshot-cutscene.png"))
+#figure(caption: [Immagine presa dopo la scena di intermezzo], image("../images/screenshot-post_cutscene.png"))
+#figure(caption: [Immagine del grafico della temperatura, visualizzabile dopo la scena di intermezzo], image("../images/screenshot-graph.png"))
+=== Interazioni
+Di seguito vengono mostrate le interazioni con i personaggi non giocabili.
+#figure(caption: [Immagine dell'_input_ da premere per aprire il dialogo di un _NPC_], image("../images/screenshot-project.png", width: auto))
+#figure(caption: [Immagine di un dialogo con risposta multipla], image("../images/screenshot-scientist_text_2.png", width: auto))
+=== Dispositivi di _input_ nella _UI_
+Il gioco supporta sia tastiera che _joypad_ come dispositivi di _input_, e aggiorna in tempo reale i simboli dei tasti da premere nelle guide della _UI_ in base al dispositivo che si sta utilizzando.
+Di seguito vegono elencati i comandi del gioco per i due dispositivi:
+- *Tastiera*:
+  - *WASD*: movimento del personaggio
+  - *Frecce direzionali*: movimento telecamera / navigazione nei menu
+  - *Barra spaziatrice*: salto
+  - *E*: interazione
+  - *Q*: stop interazione
+  - *R*: reset (durante l'uso del cannone LR)
+  - *Invio*: conferma nella UI
+  - *Esc*: apertura/chiusura menu di pausa
+#figure(caption: [Visualizzazione tasti della tastiera nel gioco], image("../images/screenshot-keyboard.png"))
+
+Per il _joypad_, vengono elencati i tasti di un _joypad_ _Xbox_ generico, visto che è il _joypad_ più supportato per i giochi su PC.
+#figure(caption: [Tasti _joypad_ Xbox. Fonte: Microsoft],image("../images/controller-diagram.png"))
+- _*Joypad*_:
+  - *Levetta analogica sinistra*: movimento del personaggio
+  - *Levetta analogica destra*: movimento telecamera
+  - *A*: salto / conferma nella UI
+  - *B*: stop interazione
+  - *X*: interazione
+  - *Y*: reset (durante l'uso del cannone LR)
+  - *D-Pad*: Navigazione nei menu
+  - *Menu button*: apertura / chiusura del menù di pausa.
+
+#figure(caption: [Visualizzazione tasti del _joypad_ nel gioco], image("../images/screenshot-joypad.png"))
+In generale i joypad sono sviluppati per essere usati con una _console_ proprietaria, e differiscono nei simboli mostrati sui tasti.
+Per risolvere questo problema, durante la sessione di gioco, viene mostrata un'interfaccia universale dei tasti del joypad, indicandone la posizione piuttosto che la lettera o il simbolo.
+=== Menu principale
+#figure(caption: [Menu principale], image("../images/menu_principale.png",width:auto))
+Appena avviato, il gioco mostrerà la schermata principale con le seguenti opzioni:
+- *Carica partita*: disponibile solo se sono presenti dati di salvataggio, porta il giocatore al livello principale tenendo i progressi salvati nelle sessioni precedenti.
+- *Nuova partita*: elimina tutti i dati di salvataggio, se presenti, ad eccezione dei dati delle opzioni, e porta il giocatore al livello principale.
+- *Opzioni*: apre il menù delle opzioni dove il giocatore può modificare alcuni valori del gioco come la risoluzione della finestra, la qualità delle ombre e la lingua del gioco.
+- *Esci dal gioco*: chiude il gioco.
+=== Menu di pausa
+#figure(image("../images/menu_pausa.png", width: auto), caption: [Menu di pausa])
+Il menu di pausa è accessibile in qualsiasi momento durante un livello quando il giocatore è libero di muoversi.\
+Premendo il tasto apposito, il gioco viene fermato e viene visualizzato il menu.\
+Il giocatore può scegliere le seguenti azioni:
+- *Riprendi*: riprende il gioco. Si può anche premere lo stesso tasto di pausa per eseguire questa azione.
+- *Torna al livello hub*: disponibile solo se il giocatore non è già nel livello hub. Salva la partita e riporta il giocatore al livello principale.
+- *Opzioni*: apre il menu delle opzioni.
+- *Torna al menu principale*: salva la partita e porta il giocatore al menu principale.
+- *Salva ed esci dal gioco*: salva la partita e chiude il gioco. Attenzione a non chiudere il gioco attraverso la toolbar della finestra o scorciatoie del sistema operativo (ad esempio _Alt+F4_), visto che questi metodi NON salvano automaticamente la partita.
+=== Menu opzioni
+#figure(caption: [Opzioni con valori predefiniti], image("../images/menu_opzioni.png",width:auto))
+Il menu opzioni permette di cambiare alcuni valori del gioco, grafica e lingua.\
+I valori predefini sono stati selezionati in modo da garantire un buon rapporto tra qualità dell'immagine e prestazioni.\
+Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve descrizione sotto. Il giocatore può cambiare i seguenti valori:
+- *Modalità finestra*: il giocatore può scegliere se giocare in modalità finestra o mettere il gioco a schermo intero occupando tutto lo spazio dello schermo.
+- *Risoluzione finestra*: il giocatore può scegliere la risoluzione per quando gioca in modalità finestra, questa si adatterà alla scelta del giocatore. Cambiare questa opzione in modalità schermo intero non ha nessun effetto.
+- *Scala risoluzione*: valore a cui la risoluzione del gioco viene moltiplicata. La differenza rispetto all'opzione precedente sta nel fatto che la finestra mantiene le dimensioni quando viene modificata. Utile se si sta giocando a schermo intero.
+- *FPS Massimi*: rappresenta il numero massimo di fotogrammi in un secondo. Un valore più alto risulta in un video più fluido, ma richiede più risorse.\ Nota: questo valore non può superare la frequenza di aggiornamento dello schermo.
+- *Anti-Aliasing*: tecnica che riduce l’effetto “scalettatura” (aliasing) sui bordi degli oggetti, rendendo le immagini più lisce e meno frastagliate.\ Offre le seguenti opzioni:
+  - *Nessuno*: non viene applicata alcuna tecnica di anti-aliasing.
+  - *FXAA*: Fast Approximate Anti Aliasing, tecnica di anti-aliasing che applica un filtro rapido alle immagini per ridurre l’effetto “scalettatura” senza richiedere molta potenza di calcolo. Offre un buon compromesso tra qualità visiva e prestazioni.
+  - *MSAA 2x*: Multi-Sample Anti-Aliasing a 2 campioni. Tecnica che migliora la qualità dei bordi degli oggetti campionando ogni pixel più volte e mediando i risultati, riducendo l’aliasing con un impatto moderato sulle prestazioni.
+  - *MSAA 4x*: Multi-Sample Anti-Aliasing a 4 campioni. Tecnica che migliora molto la qualità dei bordi degli oggetti campionando ogni pixel più volte e mediando i risultati, riducendo l’aliasing con un impatto alto sulle prestazioni.
+- *Qualità delle ombre*: Modifica la risoluzione delle ombre. Il valore va da _alto_ a _molto basso_, ovviamente, un valore _alto_ ha un impatto molto più significativo sulle prestazioni rispetto a _molto basso_.
+- *Lingua*: cambia la lingua del gioco. La modifica viene applicata subito e non è necessario un riavvio del gioco.
+
+=== Copertura dei requisiti
+#figure(
+  caption: [Totale requisiti],
+  table(
+    columns: (auto, auto, auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*],[*Totale*]),
+    [Funzionali],[43],[10],[53],
+    [Qualità],[4],[-],[4],
+    [Accessibilità],[3],[3],[6],
+    table.cell(colspan: 3, [*Totale*]),[*63*]))
+La tabella mostra la copertura dei requisiti funzionali, di qualità e di accessibilità, con un totale di 63 requisiti.
+Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
+- *R-03-A-D*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
+- *R-04-A-D*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.
+=== Copertura dei _test_
+#figure(caption: [Totale _test_ eseguiti], table(
+  columns: (auto, auto, auto),
+  inset: 8pt,
+  align: center + horizon,
+  table.header([*Tipologia*], [*Eseguiti*], [*Superati*]),
+  [Unità],[44],[44],
+  [Integrazione],[37],[37],
+  [Sistema],[10],[10],
+  [Accettazione],[4],[4],
+  [*Totale*],[*95*],[*95*]
+))
+
+La tabella mostra il totale dei _test_ eseguiti, suddivisi per tipologia, con un totale di 95 _test_ eseguiti e superati con successo.
+
+=== Quantità di prodotti
+A fine _stage_ sono stati prodotti 8 documenti:
+- Analisi dei requisiti;
+- Glossario;
+- Piano di progetto;
+- Piano di qualifica;
+- Manuale utente;
+- Specifica tecnica.
+#v(0.5em)
+Inoltre, sono stati prodotte 2 applicazioni:
+#figure(caption: [Tabella delle applicazioni prodotte nello _stage_], table(
+  columns: (auto, auto),
+  inset: 8pt,
+  align: center + horizon,
+  table.header([*Prodotto*], [*Descrizione*]),
+  [PoC \ Proof of Concept],[Demo del progetto, che ha come scopo principale quello di dimostrare la fattibilità del concetto, implementando le funzionalità principali],
+  [MVP \ Minimum Viable Product],[Versione minima del prodotto che si può considerare pronta per il rilascio. Rappresenta il prodotto finale dello _stage_ e include tutte le funzionalità principali richieste nel progetto],
+))
