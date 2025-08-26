@@ -1,5 +1,7 @@
 #import "../config/thesis-config.typ": glpl, gl
 #import "data/requirements_list.typ": *
+#import "@preview/codly:1.3.0": *
+#import "@preview/codly-languages:0.1.8": *
 
 #pagebreak(to:"odd")
 
@@ -977,12 +979,42 @@ La classe è composta da:
 Classe base astratta usata per i due tipi di grafico presenti nel livello: orizzontale e verticale.
 Si occupa di svolgere le operazioni di regressione lineare per ottenere la formula della retta $y = a + b x$.\
 Tuttavia, non si può applicare la formula direttamente ad un oggetto 3D.\
-Il metodo `calculate_a_b()`si occupa di calcolare le variabili _a_ e _b_ della formula della retta con la seguente formula:\
-#v(0.5em)
-$a = $\
-#v(0.5em)
-$b = $\
-#v(0.5em)
+Il metodo `calculate_a_b()`si occupa di calcolare le variabili `a` e `b` della formula della retta con le seguenti formule:\\
+
+#v(1em)
+#text(size: 14pt, [#align(center, [$a = (sum_()y sum_()x^2 - sum_()x * sum_()x y)/(n(sum_()x^2)-(sum_()x)^2))$ #h(3em)
+$b = (n sum_()x y - (sum_()x)(sum_()y))/(n sum_()x^2-(sum_()x)^2)$\ ])])
+#v(1em)
+Dove _n_ è uguale al numero di punti che abbiamo nel grafico.\
+Tutte le sommatorie sono state calcolate in un ciclo _for_ e dopo inserite come variabili nella formula:
+
+#codly(
+  languages: (
+    python: (name: "GDScript", icon: box(align(start+horizon, image("../images/godot_icon.svg", format: "svg")), height: 0.9em), color: rgb("#00aac0")),
+  ))
+
+#figure(caption: [Funzione `calculate_a_b()`])[
+\
+
+```python
+func calculate_a_b() -> void:
+	var sum_x : float = 0.0
+	var sum_x2 : float = 0.0
+	var sum_y : float = 0.0
+	var sum_xy : float = 0.0
+	var num : float = 0.0
+	
+	for i in points.get_child_count():
+		num += 1
+		sum_x += points.get_child(i).global_position.x
+		sum_y += points.get_child(i).global_position.z
+		sum_x2 += (points.get_child(i).global_position.x)**2
+		sum_xy += (points.get_child(i).global_position.z)*\
+    (points.get_child(i).global_position.x)
+  
+  #Vengono poi applicate le formule
+```
+]
 Il metodo `calculate_pos_rot(a: float, b: float)`, poi, prende la formula della retta, e posiziona due punti nel grafico lungo la retta calcolata dal metodo precedente. Questi due punti vengono passati al metodo successivo.\
 Il metodo `position_line(pos1: Vector3, pos2: Vector3)`, infine, posiziona il modello 3D della retta in mezzo ai due punti e lo ruota in modo che li intersechi.\
 Le trasformazioni globali vengono poi modificate in base al tipo della classe:
