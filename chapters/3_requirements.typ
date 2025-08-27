@@ -1354,7 +1354,7 @@ Inoltre, durante il periodo di _stage_ ho sviluppato 2 applicazioni dello stesso
   [PoC \ Proof of Concept],[Demo del progetto, che ha come scopo principale quello di dimostrare la fattibilità del concetto, implementando le funzionalità principali],
   [MVP \ Minimum Viable Product],[Versione minima del prodotto che si può considerare pronta per il rilascio. Rappresenta il prodotto finale dello _stage_ e include tutte le funzionalità principali richieste nel progetto],
 ))
-
+/*
 === Rischi occorsi e moitigazione
 /*Durante lo _stage_, ho dovuto affrontare dei problemi che avevo previsto una possibilità nel presentarsi nella sezione 2.5.6. 
 #v(0.5em)*/
@@ -1377,4 +1377,4 @@ Ad esempio, volevo implementare un sistema di _CI/CD_ (Continuous Integration/Co
 Al contrario, invece, alcuni _add-on_ e _plugin_ per _Godot_ si sono rivelati molto utili e ben documentati, ad esempio _GUT_, che mi ha facilitato lo svolgimento dei _test_ di unità e di integrazione.
 
 ==== Errore nella progettazione dell'architettura
-Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che dimostrasse le funzionalità principali, ma ho trascurato alcuni aspetti architetturali che si sono rivelati problematici in seguito. Ad esempio, non avevo ben definito la gestione dei cambi degli stati del giocatore e delle transizioni tra le diverse schermate, portando a un codice più complesso e difficile da mantenere. Ho dovuto quindi rivedere parte dell'architettura per migliorare la modularità e la manutenibilità del codice.
+Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che dimostrasse le funzionalità principali, ma ho trascurato alcuni aspetti architetturali che si sono rivelati problematici in seguito. Ad esempio, non avevo ben definito la gestione dei cambi degli stati del giocatore e delle transizioni tra le diverse schermate, portando a un codice più complesso e difficile da mantenere. Ho dovuto quindi rivedere parte dell'architettura per migliorare la modularità e la manutenibilità del codice.*/
