@@ -41,9 +41,9 @@ Durante la stesura del testo ho scelto di adottare le seguenti convenzioni tipog
 - all'inizio di ogni capitolo viene riportato un breve sommario sugli argomenti principali che il capitolo tratta;
 - i nomi di funzioni, variabili o classi appartenenti ad un linguaggio di programmazione vengono scritte con un carattere `monospaziato`;
 - le citazioni ad un libro o ad una risorsa presente nella #link(<bibliography>)[bibliografia] (#link(<bibliography>)[p. #context counter(page).at(<bibliography>).at(0)]) saranno affiancate dal rispettivo numero identificativo, es. $[1]$;
-- ogni immagine sarà accompagnata da un titolo e verrà elencata nel suo indice apposito a inizio documento, esempio:
+- ogni immagine sarà accompagnata da un titolo e verrà elencata nel suo indice apposito a inizio documento, l'immagine 1 mostra un esempio:
 #figure(image("../images/icon_big.png", width: 30%), caption: [Immagine esempio])
-- allo stesso modo, ogni tabella sarà seguita da un suo titolo ed inserita nel suo indice apposito. Inoltre ogni riga avrà un colore diverso dalle righe vicine per renderla più accessibile, esempio:
+- allo stesso modo, ogni tabella sarà seguita da un suo titolo ed inserita nel suo indice apposito. Inoltre ogni riga avrà un colore diverso dalle righe vicine per renderla più accessibile, la tabella 1 mostra un esempio:
 #figure(caption: "Tabella esempio", table(
     columns: (auto,auto),
     table.header([*Titolo 1*], [*Titolo 2*]),
@@ -53,7 +53,7 @@ Durante la stesura del testo ho scelto di adottare le seguenti convenzioni tipog
     ),
 )
 #set page(numbering: "i", footer: [])
-- i blocchi di codice sono rappresentati nel seguente modo:
+- i blocchi di codice sono rappresentati come il blocco di Codice 1:
 #linebreak()
 #figure(caption: "Codice d'esempio.")[
 ```c

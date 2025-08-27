@@ -1304,7 +1304,7 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
 - *Qualità delle ombre*: Modifica la risoluzione delle ombre. Il valore va da _alto_ a _molto basso_, ovviamente, un valore _alto_ ha un impatto molto più significativo sulle prestazioni rispetto a _molto basso_.
 - *Lingua*: cambia la lingua del gioco. La modifica viene applicata subito e non è necessario un riavvio del gioco.
 */
-=== Grado di superamento dei requisiti
+=== Requisiti soddisfatti
 #figure(
   caption: [Tabella con grado di superamento requisiti],
   table(
@@ -1321,7 +1321,7 @@ Non sono riuscito a soddisfare alcuni dei requisiti di accessibilità desiderabi
 #v(0.5em)
 - *"Il gioco deve supportare il sistema operativo MacOS"*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
 - *"Il gioco deve supportare una risoluzione bassa, ad esempio 640\u{00D7}360px"*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.
-=== Grado di superamento dei _test_
+=== _Test_ superati
 #figure(caption: [Tabella con grado di superamento _test_ eseguiti], table(
   columns: (auto, auto, auto),
   inset: 8pt,
