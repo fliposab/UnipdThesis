@@ -131,27 +131,27 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 === Casi d'uso
 #set heading(numbering: none)
 ==== UC1 - Movimento
-#figure(image("../images/usecase/uc-movimento.png", width: 80%), caption: [Diagramma _UML_ _use case_ sul movimento])
+#figure(image("../images/usecase/uc-movimento.png", width: 50%), caption: [Diagramma _UML_ _use case_ sul movimento])
 #desc il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra utilizzando i tasti direzionali della tastiera o lo _stick_ analogico sinistro del del #gl("joypad").\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc il personaggio si muove nella direzione desiderata e interagisce con l'ambiente circostante.\
-#incl - Rotazione telecamera automatica.\
-#gnr - Movimento con oggetto.\
+//#incl - Rotazione telecamera automatica.\
+//#gnr - Movimento con oggetto.\
 
-==== UC1.1 - Movimento con oggetto
+/*
+==== UC2 - Movimento con oggetto
 #desc il giocatore può muovere il personaggio in avanti, indietro, a sinistra e a destra, mentre sta portando un oggetto, utilizzando i tasti direzionali della tastiera o lo _stick_ analogico sinistro del _joypad_.\
 #prec il giocatore deve essere in un livello del gioco e ha un oggetto con sé.\
 #posc il personaggio si muove nella direzione desiderata e sposta con sé l'oggetto.\
-
+*/
 ==== UC2 - Salto
-#figure(image("../images/usecase/uc-salto.png", width: 50%), caption: [Diagramma _UML_ sul salto])
-
-#set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+//#figure(image("../images/usecase/uc-salto.png", width: 50%), caption: [Diagramma _UML_ sul salto])
 
 #desc il giocatore può far saltare il personaggio utilizzando un tasto specifico.\
 #prec il giocatore deve essere in un livello del gioco e deve essere libero di muoversi.\
 #posc il personaggio esegue il salto.\
-#gnr - Salto con oggetto.\
+
+//#gnr - Salto con oggetto.\
 /*
 // UC3 - Rotazione telecamera
 ==== UC3 - Rotazione telecamera
@@ -167,10 +167,12 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la telecamera si muove attorno al personaggio, cambiando l'angolo di visualizzazione.
 */
+/*
 ==== UC3.2 - Rotazione telecamera automatica
 #desc la telecamera può modificare in autonomia la sua posizione e rotazione per inquadrare ciò che c'è davanti al personaggio quando questo si sta muovendo.\
 #prec il giocatore deve essere in un livello del gioco.\
 #posc la telecamera si muove attorno al personaggio, cambiando l'angolo di visualizzazione.
+*/
 /*
 // UC4 - Caduta
 #pagebreak()
@@ -205,39 +207,47 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #gnr - Interazione con un'_entità_ automatica.\
 #h(8.82em)\- Interazione con un'_entità_ manuale.
 */
-==== UC7.1 - Interazione con _entità_ automatica
-#figure(image("../images/usecase/uc-interazione_automatica.png", width: 60%), caption: [Diagramma _UML_ sull'interazione automatica con un'_entità_])
-#desc il giocatore si avvicina ad un'_entità_ e l'interazione avviene automaticamente.\
+==== UC3 - Interazione con _entità_ automatica
+#figure(image("../images/usecase/uc-interazione_automatica.png", width: 80%), caption: [Diagramma _UML_ sull'interazione automatica con un'_entità_])
+#desc il giocatore si avvicina ad un'_entità_ e l'interazione avviene automaticamente, mostrando un messaggio.\
 #prec il giocatore deve essere vicino ad un'_entità_.\
 #posc il giocatore interagisce con l'_entità_.\
-#gnr - Raccolta collezionabile.\
-#h(8.82em) \- Visualizzazione messaggio.
+#gnr - Posizionamento sopra un nodo dell'Albero di decisione.\
+#set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+
+//#gnr - Raccolta collezionabile.\
+//#h(8.82em) \- Visualizzazione messaggio.
 /*
 ==== UC7.1.1 - Visualizzazione messaggio
 #desc il giocatore può visualizzare un messaggio automatico di un'_entità_ del gioco.\
 #prec il giocatore deve essere vicino all'_entità_.\
 #posc il giocatore visualizza il messaggio. \
 */
-==== UC7.2 - Interazione con _entità_ manuale
+==== UC4 - Interazione con _entità_ manuale
 #figure(image("../images/usecase/uc-interazione_manuale.png", width: 90%), caption: [Diagramma _UML_ sull'interazione manuale con un'_entità_])
-#desc il giocatore si avvicina a un'_entità_ e vede l'_input_ che deve premere per interagire.\
+#desc il giocatore si avvicina a un'_entità_, che può essere un cartello o un personaggio non giocabile, e vede l'_input_ che deve premere per interagire.\
 #prec il giocatore deve essere vicino all'_entità_.\
 #posc il giocatore ha premuto l'_input_ per interagire.\
-#incl Visualizzazione messaggio.\
-#gnr - Interazione con personaggio non giocabile.\
-#h(8.82em) - Prendere un oggetto.\
-#h(8.82em) - Interazione con un cartello.\
-#h(8.82em) - Interazione con zona di transizione.\
-#h(8.82em) - Interazione con macchina _LR_.\
-#h(8.82em) - Accensione unità esterna condizionatore.\
+#gnr - Interazione con un cartello.\
+#h(8.85em) - Interazione con macchina _LR_.\
+#h(8.85em) - Accensione unità esterna condizionatore.\
+#h(8.85em) - Interazione con personaggio non giocabile.\
+#h(8.85em) - Prendere un oggetto.
+//#incl Visualizzazione messaggio.\
+//#gnr - Interazione con personaggio non giocabile.\
+//#h(8.82em) - Prendere un oggetto.\
+//#h(8.82em) - Interazione con un cartello.\
+//#h(8.82em) - Interazione con zona di transizione.\
+//#h(8.82em) - Interazione con macchina _LR_.\
+//#h(8.82em) - Accensione unità esterna condizionatore.\
 
 // UC8 - Interazione con personaggio non giocabile
-==== UC8 - Interazione con personaggio non giocabile
-#figure(image("../images/usecase/uc-dialogo.png", width: 70%), caption: [Diagramma _UML_ sull'interazione con un personaggio non giocabile])
+==== UC5 - Interazione con personaggio non giocabile
+//#figure(image("../images/usecase/uc-dialogo.png", width: 70%), caption: [Diagramma _UML_ sull'interazione con un personaggio non giocabile])
 #desc il giocatore si avvicina a un personaggio non giocabile e vede l'_input_ che deve premere per interagire.\
 #prec il giocatore deve essere vicino a un personaggio non giocabile.\
 #posc il giocatore ha premuto l'_input_ per interagire.\
-#incl - Visualizzazione dialogo.\
+//#incl - Visualizzazione dialogo.\
 /*
 ==== UC8.1 - Visualizzazione dialogo
 #desc il giocatore visualizza il dialogo mostrato dall'_entità_.\
@@ -263,27 +273,28 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore preme l'_input_, smette di interagire con l'_entità_ e può muoversi di nuovo.
 */
 // UC9 - Prendere un oggetto
-==== UC9 - Prendere un oggetto
-#figure(image("../images/usecase/uc-prendere_oggetto.png", width: 40%), caption: [Diagramma _UML_ sul prendere un oggetto])
+==== UC6 - Prendere un oggetto
+//#figure(image("../images/usecase/uc-prendere_oggetto.png", width: 40%), caption: [Diagramma _UML_ sul prendere un oggetto])
 #desc il giocatore può prendere un oggetto e poi muoversi con esso.\
 #prec il giocatore deve essere in un livello del gioco ,deve esserci un oggetto che può raccogliere davanti ad esso e non deve averne già uno.\
-#posc il giocatore interagisce con l'oggetto.\
+#posc il giocatore tiene l'oggetto e può muoversi con esso.\
 
 // UC10 - Lasciare un oggetto
-==== UC10 - Lasciare un oggetto
+#pagebreak()
+==== UC7 - Lasciare un oggetto
 #figure(image("../images/usecase/uc-lasciare_oggetto.png", width: 60%), caption: [Diagramma _UML_ sul lasciare un oggetto])
-#desc il giocatore può lasciare un oggetto.\
+#desc il giocatore può lasciare un oggetto che sta portando.\
 #prec il giocatore deve essere in un livello del gioco e sta portando un oggetto.\
 #posc il giocatore lascia l'oggetto e questo rimane nella posizione dove viene lasciato.\
 #ext - Inserimento oggetto nello spazio dedicato.
 
 // UC11 - Interazione con un cartello
-==== UC11 - Interazione con un cartello
-#figure(image("../images/usecase/uc-interazione_cartello.png", width: 90%), caption: [Diagramma _UML_ sull'interazione con un cartello])
-#desc il giocatore si avvicina a un cartello e vede l'_input_ che deve premere per interagire.\
-#prec il giocatore deve essere vicino a un cartello.\
-#posc il giocatore ha premuto il tasto.\
-#incl - Visualizzazione messaggio cartello.
+==== UC8 - Interazione con un cartello
+//#figure(image("../images/usecase/uc-interazione_cartello.png", width: 90%), caption: [Diagramma _UML_ sull'interazione con un cartello])
+#desc il giocatore si avvicina ad un cartello e vede l'_input_ che deve premere per leggerlo.\
+#prec il giocatore deve essere vicino ad un cartello.\
+#posc il giocatore ha premuto il tasto e legge il contenuto del cartello.\
+//#incl - Visualizzazione messaggio cartello.
 /*
 ==== UC11.1 - Visualizzazione messaggio cartello
 #desc il giocatore visualizza il messaggio del cartello.\
@@ -329,15 +340,15 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc la partita viene salvata e il giocatore può riprendere da quel punto in un secondo momento.\
 */
 // UC13 - Interazione con macchina _LR_
-==== UC13 - Interazione con macchina _LR_
+==== UC9 - Interazione con macchina _LR_
 #figure(image("../images/usecase/uc-macchina_lr.png", width: 60%), caption: [Diagramma _UML_ sull'interazione con una macchina _LR_])
-#desc il giocatore vuole interagire con la macchina per posizionare dei punti sul grafico _LR_ (chiamata anche _Cannone LR_).\
+#desc il giocatore vuole interagire con la macchina _LR_ (chiamata anche _Cannone LR_) per posizionare dei punti sul grafico della Regressione lineare.\
 #prec il giocatore deve trovarsi in un'area per interagire con la macchina.\
-#posc il giocatore può usare la macchina.
+#posc il giocatore sta usando la macchina _LR_.
 
 // UC14 - Inserimento punto nel grafico _LR_
-==== UC14 - Inserimento punto nel grafico _LR_
-#desc il giocatore vuole posizionare un punto sul grafico _LR_.\
+==== UC10 - Inserimento punto nel grafico _LR_
+#desc il giocatore vuole posizionare un punto sul grafico _LR_, mentre sta usando la macchina _LR_.\
 #prec il giocatore deve essere in utilizzo di una macchina _LR_.\
 #posc il punto viene posizionato sul grafico.\
 
@@ -348,12 +359,12 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere in utilizzo di una macchina _LR_.\
 #posc i punti aggiunti dal giocatore vengono tolti.
 */
-==== UC16 - Posizionamento sopra un nodo dell'Albero di decisione
-#figure(image("../images/usecase/uc-nodo_albero.png", width: 70%), caption: [Diagramma _UML_ sulle scelte da prendere nell'Albero di decisione])
+==== UC11 - Posizionamento sopra un nodo dell'Albero di decisione
+//#figure(image("../images/usecase/uc-nodo_albero.png", width: 70%), caption: [Diagramma _UML_ sulle scelte da prendere nell'Albero di decisione])
 #desc il giocatore si posiziona sopra un nodo dell'Albero di decisione.\
 #prec il giocatore deve essere in un livello del gioco e deve essere presente un Albero di decisione.\
 #posc il giocatore è posizionato sopra un nodo dell'Albero di decisione.\
-#ext - Visualizzazione delle scelte sul nodo.\
+//#ext - Visualizzazione delle scelte sul nodo.\
 /*
 ==== UC16.1 - Visualizzazione scelte sul nodo
 #desc il giocatore vuole proseguire nell'Albero di decisione.\
@@ -361,13 +372,13 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore sceglie la direzione in base alle scelte disponibili.\
 */
 // UC17 - Inserimento dell’oggetto nello spazio dedicato
-==== UC17 - Inserimento dell’oggetto nello spazio dedicato
-#figure(image("../images/usecase/uc-inserimento_spazio.png", width: 90%), caption: [Diagramma _UML_ sull'inserimento dell’oggetto nello spazio dedicato])
+==== UC12 - Inserimento dell’oggetto nello spazio dedicato
+//#figure(image("../images/usecase/uc-inserimento_spazio.png", width: 90%), caption: [Diagramma _UML_ sull'inserimento dell’oggetto nello spazio dedicato])
 #desc il giocatore posiziona l'oggetto che sta portando in uno spazio apposito.\
 #prec il giocatore deve portare un oggetto ed essere sopra un nodo finale dell'_albero_.\
-#posc se l'oggetto è giusto, il nuovo oggetto viene mostrato nella visualizzazione delle classificazioni degli oggetti scoperti.\
-#gnr - Inserimento nello spazio corretto.\
-#h(8.85em) - Inserimento nello spazio sbagliato.
+#posc se l'oggetto è giusto, il giocatore viene avvisato ed il nuovo oggetto viene mostrato nell'apposito cartello.\
+//#gnr - Inserimento nello spazio corretto.\
+//#h(8.85em) - Inserimento nello spazio sbagliato.
 /*
 ==== UC17.1 - Inserimento nello spazio corretto
 #desc il giocatore posiziona l'oggetto nello spazio corretto.\
@@ -490,17 +501,17 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 */
 
 // UC35 - Accensione unità esterna condizionatore
-==== UC35 - Accensione unità esterna condizionatore
-#figure(image("../images/usecase/uc-ac.png", width: 90%), caption:[Diagramma _UML_ sull'accensione di un'unità esterna di un condizionatore])
+==== UC13 - Accensione unità esterna condizionatore
+#figure(image("../images/usecase/uc-ac.png", width: 70%), caption:[Diagramma _UML_ sull'accensione di un'unità esterna di un condizionatore])
 #desc il giocatore accende un'unità esterna di un condizionatore.\
 #prec il giocatore deve essere in un livello.\
-#posc l'unità esterna del condizionatore viene accesa ed il giocatore non può più interagire con l'_entità_.\
-#incl - Aggiornamento dato di un cartello.\
-#h(5.53em)- Salvataggio.\
+#posc l'unità esterna del condizionatore viene accesa ed il giocatore non può più interagire con l'_entità_. Se sono state accese tutte le unità, parte la scena di intermezzo.\
+//#incl - Aggiornamento dato di un cartello.\
+//#h(5.53em)- Salvataggio.\
 #ext - Visualizzazione scena di intermezzo.
 
 // UC36 - Visualizzazione scena di intermezzo
-==== UC36 - Visualizzazione scena di intermezzo
+==== UC14 - Visualizzazione scena di intermezzo
 #desc il giocatore visualizza una scena di intermezzo.\
 #prec il giocatore deve soddisfare certe condizioni.\
 #posc il giocatore visualizza la scena di intermezzo.\
@@ -509,9 +520,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #figure(image("../images/usecase/uc-input_prompt.png", width: 70%), caption: [Diagramma _UML_ sulla visualizzazione di un _input_ nella _UI_])
 #desc il giocatore deve vedere che _input_ deve premere dal dispositivo che sta utilizzando.\
 #prec il giocatore deve avere la tastiera collegata alla macchina.\
-*/
-
-#posc il giocatore visualizza nella #gl("ui") il tasto della tastiera da premere.\
+#posc il giocatore visualizza nella #gl("ui") il tasto della tastiera da premere.\ */
 /*
 ==== UC38 - Visualizzazione _input_ _joypad_
 #desc il giocatore deve vedere che _input_ deve premere del dispositivo che sta utilizzando dalla _UI_ del gioco.\
@@ -519,23 +528,18 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore visualizza nella _UI_ il tasto del _joypad_ da premere.\
 */
 #set heading(numbering: "1.")
-
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)*_UI_* *-* *_User Interface_*: interfaccia grafica che consente all'utente di interagire con un'applicazione o un videogioco.\ \
-#align(center, context([#counter(page).display("1.")]))])])
-
+#pagebreak()
 === Requisiti
-In questa sezione elenco tutti i requisiti del progetto, individuati durante la fase di analisi. Ogni requisito viene identificato da un codice, scelto in base ai seguenti parametri:
-#align(center, [*R - [numero] - [tipo] - [priorità]*])
-con:
-- *Numero*: numero progressivo che identifica il requisito, parte da 01.
-- *Tipo*: può essere
-  - *F*: requisito funzionale, indica una funzionalità del sistema;
-  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come il sistema deve esibirsi;
+In questa sezione viene mostrato il numero totale di requisiti del progetto. I requisiti sono divisi in base al *tipo* e alla *priorità*.
+//#align(center, [*R - [numero] - [tipo] - [priorità]*])
+- *Tipo*: possono essere
+  - *Funzionali*: indicano una funzionalità del sistema;
+  - *Qualità*: indicano le caratteristiche della qualità del prodotto, come un sistema deve essere o come il sistema deve esibirsi;
   /*- *V*: requisito deciso con il tutor aziendale e vincolante per il completamento del progetto;*/
-  - *A*: requisito di accessibilità, indica una funzionalità da soddisfare per rendere il gioco accessibile ad un numero maggiore di utenti.
-- *Priorità*: può essere
-  - *O*: Obbligatorio e necessario per considerare il prodotto completo;
-  - *D*: Desiderabile, non strettamente necessario ma è un valore aggiunto.
+  - *Accessibilità*: indicano una caratteristica da soddisfare per rendere il gioco accessibile ad un numero maggiore di utenti.
+- *Priorità*: possono essere
+  - *Obbligatori*: necessari per considerare il prodotto completo;
+  - *Desiderabili*: non strettamente necessari ma sono un valore aggiunto.
 #figure(
   caption: [Totale requisiti],
   table(
@@ -858,6 +862,10 @@ Di seguito, nella @tab:riepilogo-requisiti ho inserito il riepilogo dei requisit
 ]
 */
 
+#set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
+*_frame_*: unità di misura temporale utilizzata nei videogiochi e nelle animazioni. Tipicamente sono 60 in un secondo.\
+*_UI_* *-* *_User Interface_*: interfaccia grafica che consente all'utente di interagire con un'applicazione o un videogioco.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 == Architettura
 //_Qui descrivo l'architettura delle classi e come comunicano tra loro_
 /*=== Modellazione 3D
@@ -878,23 +886,26 @@ I principali tipi di nodi che vengono utilizzati in questo progetto sono:
 - `Node`: nodo base da cui vengono estesi tutti gli altri nodi, in questo progetto viene usato principalmente per assegnare classi e inserirle come figlie in altri nodi.
 - `Node3D`: rappresenta un oggetto nello spazio tridimensionale.
   - `CharacterBody3D`: rappresenta un personaggio che si può muovere nel gioco, gestendo la sua posizione e interazioni.
-  - `Camera3D`: rappresenta una telecamera nello spazio tridimensionale, che può essere utilizzata per visualizzare la scena.
+  - `Camera3D`: rappresenta una telecamera nello spazio tridimensionale, che può essere utilizzata per visualizzare la _scena_.
   - `MeshInstance3D`: rappresenta un oggetto tridimensionale.
   - `CollisionShape3D`: rappresenta una forma di collisione nello spazio tridimensionale, utilizzata per gestire le interazioni fisiche tra gli oggetti.
   - `Area3D`: rappresenta un'area nello spazio tridimensionale, utilizzata per gestire le interazioni tra gli oggetti che entrano ed escono da essa.
-- `AnimationPlayer`: gestisce le animazioni degli oggetti nella scena, permettendo di riprodurre animazioni sul modello 3D, telecamere e altri nodi.
-- `Control`: rappresenta un nodo _UI_, utilizzato per gestire gli elementi dell'interfaccia utente del gioco.\
-#align(bottom, [#line(length: 100%)*_frame_*: unità di misura temporale utilizzata nei videogiochi e nelle animazioni. Tipicamente sono 60 in un secondo.])
+- `AnimationPlayer`: gestisce le animazioni degli oggetti nella _scena_, permettendo di riprodurre animazioni sul modello 3D, telecamere e altri nodi.
+- `Control`: rappresenta un nodo #gl("ui"), utilizzato per gestire gli elementi dell'interfaccia utente del gioco.\
 
 ==== Scene
-Quando si organizzano nodi in un albero, come il nostro personaggio, possiamo chiamare questa formazione una scena. Una volta salvata, la scena si presenta come un nuovo nodo nell’_editor_, dove possiamo aggiungerlo come figlio di un nodo esistente. In questo caso, l’istanza della scena appare come nodo singolo con interni nascosti.
+Quando si organizzano nodi in un albero, come il nostro personaggio, possiamo chiamare questa formazione una _scena_. Una volta salvata, la _scena_ si presenta come un nuovo nodo nell’_editor_, dove possiamo aggiungerlo come figlio di un nodo esistente. In questo caso, l’istanza della _scena_ appare come nodo singolo con interni nascosti.
+
+#set page(footer-descent: 0%, footer: [
+#align(center+horizon, context([#counter(page).display("1.")]))])
+
 Le scene di consentono di strutturare il codice del gioco in qualunque modo si voglia. Si possono comporre nodi per creare nodi personalizzati e complessi, come un personaggio di gioco che si muove e salta, una barra della vita, una cesta con cui puoi interagire, e molto altro. @godot-node
 #figure(caption: [_Scena_ del personaggio del giocatore], 
 image("../images/godot-scene_example.png"))
 Oltre che a comportarsi come nodi, le scene hanno anche le seguenti caratteristiche:
 - Hanno sempre un nodo `owner`, come il `Player` nel nostro esempio.
 - Si possono salvare sul disco locale e caricarle in seguito.
-- Si possono creare quante più istanze di una scena si desideri. Ad esempio, si possono avere cinque o dieci personaggi nel gioco, creati da una determinata scena.
+- Si possono creare quante più istanze di una _scena_ si desideri. Ad esempio, si possono avere cinque o dieci personaggi nel gioco, creati da una determinata _scena_.
 
 ==== Segnali
 I segnali sono un modo per far comunicare i nodi in maniera asincrona in _Godot_. Ogni classe presenta dei segnali preimpostati ed emessi in determinati momenti, ad esempio quando un nodo viene caricato, questo emette il segnale `ready()`, oppure quando un bottone viene premuto, viene emesso il segnale `pressed()`.\
@@ -1140,22 +1151,22 @@ In sintesi, la macchina su cui viene testato il gioco offre prestazioni sulla fa
 #align(center+horizon, context([#counter(page).display("1.")]))])
 */
 === Nomenclatura _test_
-Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per verificare e validare il prodotto _software_. Le metodologie di _testing_ sono suddivise in quattro categorie:
+Di seguito sono elencate le metodologie di _testing_ che ho utilizzato per verificare e validare il prodotto _software_. Le metodologie di _testing_ sono suddivise in quattro categorie:
 - *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, questi _test_ sono stati svolti con l'_add-on_ della community _GUT - Godot Unit Test_;\
 - *_test_ di integrazione*: _test_ che verificano il corretto funzionamento dell'interazione tra più unità del codice, anche questi svolti con l'_add-on_ _GUT_;\
 - *_test_ di sistema*: _test_ che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche _test_ sulle prestazioni, e sono svolti utilizzando gli strumenti forniti da _Godot_;\
 - *_test_ di accettazione*: _test_ che verificano se il prodotto è pronto per essere rilasciato.
 
 #figure(caption: [Totale _test_ eseguiti], table(
-  columns: (auto, auto, auto),
+  columns: (auto, auto),
   inset: 8pt,
   align: center + horizon,
-  table.header([*Tipologia*], [*Eseguiti*], [*Superati*]),
-  [Unità],[44],[44],
-  [Integrazione],[37],[37],
-  [Sistema],[10],[10],
-  [Accettazione],[4],[4],
-  [*Totale*],[*95*],[*95*]
+  table.header([*Tipologia*], [*Eseguiti*]),
+  [Unità],[44],
+  [Integrazione],[37],
+  [Sistema],[10],
+  [Accettazione],[4],
+  [*Totale*],[*95*]
 ))
 /*
 === _Test_ di unità
@@ -1309,15 +1320,15 @@ Di seguito sono elencate le metodologie di _testing_ che verranno utilizzate per
 //=== Prodotto finale
 === Meccaniche dei livelli
 Di seguito vengono mostrate le meccaniche principali dei livelli.
-#figure(caption: [Immagine del cannone _LR_ per posizionare nuovi punti nel grafico della Regressione lineare], image("../images/screenshot-cannon_lr.png", width: 90%))
-#figure(caption: [Immagine dell'Albero di decisione con i possibili percorsi da seguire], image("../images/screenshot-decision_tree_1.png", width: 90%))
-#figure(caption: [Immagine di un posizionamento corretto in un nodo finale dell'Albero di decisione], image("../images/screenshot-decision_tree_2.png"))
+#figure(caption: [Immagine del cannone _LR_ per posizionare nuovi punti nel grafico della Regressione lineare], image("../images/screenshot-cannon_lr.png", width: auto))
+//#figure(caption: [Immagine dell'Albero di decisione con i possibili percorsi da seguire], image("../images/screenshot-decision_tree_1.png", width: 90%))
+//#figure(caption: [Immagine di un posizionamento corretto in un nodo finale dell'Albero di decisione], image("../images/screenshot-decision_tree_2.png"))
 //#figure(caption: [Immagine del cartello che mostra le razze di cani indovinate nell'Albero di decisione], image("../images/screenshot-dog_breeds_sign.png"))
 #figure(caption: [Immagine della scena di intermezzo del livello _Causalità_], image("../images/screenshot-cutscene.png"))
 //#figure(caption: [Immagine presa dopo la scena di intermezzo], image("../images/screenshot-post_cutscene.png"))
 //#figure(caption: [Immagine del grafico della temperatura, visualizzabile dopo la scena di intermezzo], image("../images/screenshot-graph.png"))
-#figure(caption: [Immagine dell'_input_ da premere per aprire il dialogo di un _NPC_], image("../images/screenshot-project.png", width: auto))
-#figure(caption: [Immagine di un dialogo con risposta multipla], image("../images/screenshot-scientist_text_2.png", width: auto))
+//#figure(caption: [Immagine dell'_input_ da premere per aprire il dialogo di un _NPC_], image("../images/screenshot-project.png", width: auto))
+//#figure(caption: [Immagine di un dialogo con risposta multipla], image("../images/screenshot-scientist_text_2.png", width: auto))
 /*
 === Dispositivi di _input_ nella _UI_
 Il gioco supporta sia tastiera che _joypad_ come dispositivi di _input_, e aggiorna in tempo reale i simboli dei tasti da premere nelle guide della _UI_ in base al dispositivo che si sta utilizzando.
@@ -1390,16 +1401,16 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
     columns: (auto, auto, auto, auto,auto),
     inset: 8pt,
     align: center + horizon,
-    table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*],[*Soddisfatti*],[*Totale*]),
+    table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*],[*Totale*],[*Soddisfatti*]),
     [Funzionali],[43],[10],[53],[53],
     [Qualità],[4],[-],[4],[4],
-    [Accessibilità],[3],[3],[4],[6],
-    table.cell(colspan: 3, [*Totale*]),[*61*],[*63*]))
+    [Accessibilità],[3],[3],[6],[4],
+    table.cell(colspan: 3, [*Totale*]),[*63*],[*61*]))
 La tabella mostra la copertura dei requisiti funzionali, di qualità e di accessibilità, con un totale di 63 requisiti.
-/*Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
+Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
 #v(0.5em)
-- *R-03-A-D*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
-- *R-04-A-D*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.*/
+- *"Il gioco deve supportare il sistema operativo MacOS"*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
+- *"Il gioco deve supportare una risoluzione bassa, ad esempio 640\u{00D7}360px"*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.
 === Copertura dei _test_
 #figure(caption: [Tabella con copertura _test_ eseguiti], table(
   columns: (auto, auto, auto),
