@@ -436,7 +436,7 @@ Ad esempio, il giocatore può muovere il personaggio, saltare, prendere oggetti,
 #set heading(numbering: "1.")
 === Requisiti
 /*In questa sezione riporto il numero totale di requisiti del progetto. */
-I requisiti sono divisi in base al *tipo* e alla *priorità*.
+Ho diviso i requisiti in base al *tipo* e alla *priorità*.
 //#align(center, [*R - [numero] - [tipo] - [priorità]*])
 - *Tipo*: possono essere
   - *Funzionali*: indicano una funzionalità del sistema;
