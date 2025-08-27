@@ -1,6 +1,6 @@
 #import "../config/thesis-config.typ": glpl, gl,
 #import "../config/variables.typ": myTutor
-#pagebreak(to:"even")
+#pagebreak(to:"odd")
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
 *Game Design*: disciplina che si occupa della progettazione e dello sviluppo di giochi.\
@@ -92,7 +92,7 @@ Inoltre, ho ritenuto che l'uso di meccaniche di gioco basate su elementi di _Mac
 === Rapporto del progetto con l'innovazione
 /*_Qui descrivo il rapporto del progetto con l'innovazione ed il mercato, rispetto alla visione dell'azienda_*/
 Il progetto si inserisce in un mercato in crescita, dove l’innovazione rappresenta un elemento chiave per attrarre e coinvolgere nuovi utenti.\
-La clientela _target_ del progetto è costituita principalmente da giovani e appassionati di tecnologia e videogiochi, interessati sia all’aspetto ludico sia a quello educativo. Il prodotto si rivolge a chi desidera apprendere concetti di Intelligenza Artificiale e _Machine Learning_ in modo interattivo e coinvolgente, offrendo un’esperienza che unisce apprendimento e divertimento. 
+La possibile clientela _target_ del progetto è costituita principalmente da giovani e appassionati di tecnologia e videogiochi, interessati sia all’aspetto ludico sia a quello educativo. Il prodotto si rivolge a chi desidera apprendere concetti di Intelligenza Artificiale e _Machine Learning_ in modo interattivo e coinvolgente, offrendo un’esperienza che unisce apprendimento e divertimento. 
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
 *OpenGL*: linguaggio di programmazione grafica utilizzato per creare applicazioni 3D e 2D.\
@@ -110,7 +110,7 @@ Tra queste aspettative, vi erano:
 
 == Obiettivi
 //_Qui descrivo gli obiettivi e le competenze da acquisire_
-Nella seguente tabella, vengono elencati gli obiettivi personali che ho fissato, insieme al _tutor_ aziendale, suddivisi in obbligatori e desiderabili.\
+Nella tabella 2, ho elencato gli obiettivi personali fissati, insieme al _tutor_ aziendale, suddivisi in obbligatori e desiderabili.\
 Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero. Il prefisso indica con:
 - *O*: gli obiettivi obbligatori, rappresentano le competenze e i risultati minimi da raggiungere durante lo _stage_;
 - *D*: gli obiettivi desiderabili, sono traguardi aggiuntivi che arricchiscono ulteriormente il progetto e l'esperienza formativa.
@@ -145,8 +145,8 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
 == Vincoli
 //_Qui descrivo i vincoli decisi con il tutor_
 === Vincoli temporali e tecnologici
-Durante il secondo colloquio con il _tutor_ aziendale, sono stati definiti dei vincoli obbligatori del progetto da rispettare, concordati tra me e il _tutor_ aziendale.
-I vincoli sono indicati nella seguente tabella, con il prefisso:
+Durante il secondo colloquio con il _tutor_ aziendale, abbiamo definito dei vincoli obbligatori del progetto da rispettare.\ //concordati tra me e il _tutor_ aziendale.
+Ho indicato nella tabella 3 i vincoli, con il prefisso:
 - *VTM*: vincoli temporali;
 - *VTC*: vincoli tecnologici;
 #figure(caption: [Vincoli del progetto], table(
@@ -163,8 +163,8 @@ I vincoli sono indicati nella seguente tabella, con il prefisso:
 ))
 === Pianificazione
 //_Qui descrivo tutto quello che avevo pianificato prima dello stage, con le ore e le attività da svolgere, con confronto con le ore ed attività effettivamente svolte_
-Il gioco contiene 3 livelli, per ognuno di questi livelli sono state dedicate due settimane.
-Nella tabella a pagina successiva vengono riportate le ore totali pianificate del progetto:
+Il gioco contiene 3 livelli, per ognuno di questi livelli sono state dedicate due settimane.\
+Nella tabella 4 ho riportato le ore totali pianificate del progetto:
 #set page(footer-descent: -0%, footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
 #show figure: set block(breakable: false)
 #figure(
@@ -208,7 +208,7 @@ Nella tabella a pagina successiva vengono riportate le ore totali pianificate de
 === Calendario
 //_Qui vengono descritte le attività pianificate per ogni settimana o periodo_
 Il periodo di _stage_ è suddiviso in 8 periodi, la cui lunghezza di ognuno 
-corrisponde a una settimana. Qui sotto sono elencate le attività pianificate per ogni settimana:\
+corrisponde a una settimana. Qui sotto ho elencato le attività pianificate per ogni settimana:\
 \
 
 //1 - Linear descent
@@ -260,8 +260,8 @@ Durante lo sviluppo, sono state imposte le seguenti regole per garantire corrett
 #v(0.5em)
 
 - *Documentazione*:\
-Il processo di fornitura deve essere documentato in modo dettagliato, in modo da garantire la tracciabilità delle attività svolte e delle decisioni prese.\
-I documenti che il progetto presenta sono:\
+Dovevo documentare in modo dettagliato il processo di fornitura, in modo da garantire la tracciabilità delle attività svolte e delle decisioni che prendevo.\
+I documenti che dovevo scrivere erano:\
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *GDScript*: linguaggio di programmazione specifico per il motore di gioco _Godot_, progettato per essere semplice e intuitivo.\
@@ -282,7 +282,7 @@ I documenti che il progetto presenta sono:\
   [*Manuale utente*],[Fornisce istruzioni dettagliate su come utilizzare il _software_ all'utente e garantirne il corretto funzionamento],))
 
 - *Codifica*:\
-Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). I nomi delle classi sono salvate con una nomenclatura #gl("pascalCase"), mentre i nomi dei _file_ e delle variabili usano #gl("snake_case").
+Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). Ho salvato i nomi delle classi con una nomenclatura #gl("pascalCase"), mentre i nomi dei _file_ e delle variabili usano #gl("snake_case").
 #set page(footer-descent: -180%, footer: [#align(top, [#line(length: 100%)
 *.glb*: formato standard di un modello tridimensionale che legge il modello 3D come un file binario.\
 *.png*: formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.\
@@ -293,22 +293,22 @@ Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono 
 *materiale*: insieme di proprietà che definiscono l'aspetto visivo di un oggetto 3D, come colore, riflessione, trasparenza.\
 *texture*: immagine  applicata a un modello 3D per fornire dettagli visivi, come colori e _pattern_.\ \
 #align(center, context([#counter(page).display("1.")]))])])
-Per maggiori dettagli sulla nomenclatura, si seguono le convenzioni della documentazione ufficiale:\
+Per maggiori dettagli sulla nomenclatura, ho seguito le convenzioni della documentazione ufficiale:\
 #link("https://docs.godotengine.org/it/4.x/tutorials/scripting/gdscript/gdscript_styleguide.html")\
 
 #v(0.5em)
 - *Modellazione*:\
-Tutti i modelli sono esportati nel formato #gl(".glb") . Il #gl("materiale") esportato insieme al modello 3D viene esportato senza immagini, come un _placeholder_, dato che verrà rimpiazzato dal materiale presente nei _file_ del gioco.\ 
-Nel caso il modello 3D presenti animazioni, queste vengono esportate insieme al modello.\
+Ho esportati tutti i modelli nel formato #gl(".glb") .Esportavo il #gl("materiale") insieme al modello 3D senza immagini, come un _placeholder_, dato che veniva rimpiazzato dal materiale presente nei _file_ del gioco.\ 
+Nel caso il modello 3D presentava animazioni, queste venivano esportate insieme al modello.\
 
 #v(0.5em)
 - *Animazione*:\
-Le animazioni sono incluse nel modello durante l'esportazione. Per semplificare l'attività, viene usato un #gl("rig") che dispone di #gl("ik"). Le animazioni sono già separate prima dell'esportazione e possono essere trovate nella sezione #gl("nla") del _software_ #gl("blender") e selezionate individualmente premendo la linea con il mouse e modificarle usando la scorciatoia _Shift+TAB_.\
+Le animazioni sono incluse nel modello durante l'esportazione. Per semplificare l'attività, ho usato un #gl("rig") che dispone di #gl("ik"). Le animazioni sono già separate prima dell'esportazione e possono essere trovate nella sezione #gl("nla") del _software_ #gl("blender") e selezionate individualmente premendo la linea con il mouse e modificarle usando la scorciatoia _Shift+TAB_.\
 
 #v(0.5em)
 - *Creazione e modifica di _texture_*:\
-Le #gl("texture") sono salvate come semplici immagini di tipo #gl(".png").\
-Entrambe le dimensioni della _texture_ (larghezza e altezza) devono essere una potenza di 2.\ 
+Ho salvato le #gl("texture") come semplici immagini di tipo #gl(".png").\
+Entrambe le dimensioni della _texture_ (larghezza e altezza) dovevano essere una potenza di 2.\ 
 Risoluzioni esempio: 
   - 256x256; 
   - 512x512;
@@ -323,23 +323,24 @@ Di norma, 1024 _pixels_ corrispondono a 1 metro.
 #align(center, context([#counter(page).display("1.")]))])])
 
 - *Verifica e validazione*:\
-Il processo di verifica ha lo scopo di garantire che il _software_ sviluppato soddisfi i requisiti stabiliti e che sia conforme agli _standard_ di qualità richiesti.\
-Vi sono due tipologie di verifica, ognuna è focalizzata sulla verifica di vari aspetti dell'applicazione:\
+Il processo di verifica aveva lo scopo di garantire che il _software_ sviluppato soddisfi i requisiti stabiliti e che sia conforme agli _standard_ di qualità richiesti.\
+Ho svolto due tipologie di verifica, ognuna è focalizzata sulla verifica di vari aspetti dell'applicazione:\
 #v(0.5em)
-#h(2em)*analisi statica*: l'analisi statica comporta il controllo del codice prima della sua esecuzione. Questo tipo di verifica non viene applicata solo al codice, ma anche ai documenti del progetto. \
-Questo metodo viene applicato nei seguenti casi:\
+#h(2em)*analisi statica*: l'analisi statica comportava il controllo del codice prima della sua esecuzione. Applicavo questo tipo di verifica non solo al codice, ma anche ai documenti del progetto. \
+Casi dove ho applicato l'analisi statica:\
 #h(2em)- individuazione di _bug_ nel codice;\
 #h(2em)- individuazione di errori di battitura nei documenti;\
 #h(2em)- verifica della coerenza e completezza della documentazione prodotta;\
 #v(0.5em)
-#h(2em)*analisi dinamica*: l'analisi dinamica viene eseguita all'esecuzione del _software_. Viene usata per controllare se ci sono errori durante l'esecuzione dell'applicazione e dei suoi componenti.\ Questo tipo di verifica permette di individuare malfunzionamenti, errori logici o comportamenti inattesi che possono emergere solo durante l'esecuzione reale del _software_. Le principali attività di analisi dinamica includono:\
+#h(2em)*analisi dinamica*: l'analisi dinamica veniva eseguita all'esecuzione del _software_. Usavo l'analisi dinamica per controllare se erano presenti errori durante l'esecuzione dell'applicazione e dei suoi componenti.\ Questo tipo di verifica mi permetteva di individuare malfunzionamenti, errori logici o comportamenti inattesi che potevano emergere solo durante l'esecuzione reale del _software_.\ 
+Le principali attività di analisi dinamica includevano:\
 #h(2em)- esecuzione di _test_ di unità e di integrazione per verificare il corretto funzionamento delle singole componenti e della loro interazione;\
 #h(2em)- monitoraggio delle prestazioni e dell'utilizzo delle risorse durante l'esecuzione;\
 #h(2em)- individuazione e correzione di _bug_ che si manifestano solo in fase di runtime.\
 
-=== Tecnologie usate
+=== Tecnologie scelte
 //_Qui descrivo le principali tecnologie che ho usato_
-#figure(caption: [Linguaggi di programmazione utilizzati], table(
+#figure(caption: [Linguaggi di programmazione scelti], table(
   columns: (0.4fr, 1fr, 0.5fr),
   inset: 8pt,
   align: center + horizon,
@@ -358,34 +359,132 @@ Questo metodo viene applicato nei seguenti casi:\
 *push*: descrive l'azione di inviare le modifiche del codice a un _repository_ remoto.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
-#figure(caption: [_Softwares_ utilizzati], table(
+#figure(caption: [_Softwares_ scelti], table(
   columns: (0.4fr, 1fr, 0.5fr),
   inset: 8pt,
   align: center + horizon,
   table.header([*Nome*], [*Descrizione*], [*Versione*]),
   //table.cell([*_Softwares_*], colspan: 3),
-  [Godot],[Il motore di gioco _open source_ per lo sviluppo del videogioco],[4.5-beta3-mono],
-  [Blender],[_Software_ di modellazione ed animazione 3D usato per creare i modelli 3D ed animazioni nel gioco],[4.4.3],))
+  [_*Godot*_],[Il motore di gioco _open source_ per lo sviluppo del videogioco],[4.5-beta3-mono],
+  [_*Blender*_],[_Software_ di modellazione ed animazione 3D usato per creare i modelli 3D ed animazioni nel gioco],[4.4.3],))
 #figure(caption: [Strumenti e servizi utilizzati], table(
   columns: (0.4fr, 1fr, 0.5fr),
   inset: 8pt,
   align: center + horizon,
   table.header([*Nome*], [*Descrizione*], [*Versione*]),
   //table.cell([*Strumenti e servizi*], colspan: 3),
-  [Git],[Servizio per il controllo della versione],[2.50.1],
-  [GitHub],[Servizio di #gl("hosting") per i progetti _software_, utilizzato per la gestione del codice sorgente],[-],
-  [GitHub\ Actions],[Servizio di integrazione continua e distribuzione continua (#gl("ci")/#gl("cd")), utilizzato per compilare i documenti ad ogni #gl("push")],[-],
-  [Notion],[Applicazione per la gestione dei progetti e la collaborazione], [2.53],))
+  [_*Git*_],[Servizio per il controllo della versione],[2.50.1],
+  [_*GitHub*_],[Servizio di #gl("hosting") per i progetti _software_, utilizzato per la gestione del codice sorgente],[-],
+  [_*GitHub\ Actions*_],[Servizio di integrazione continua e distribuzione continua (#gl("ci")/#gl("cd")), utilizzato per compilare i documenti ad ogni #gl("push")],[-],
+  [_*Notion*_],[Applicazione per la gestione dei progetti e la collaborazione], [2.53],))
 
 #set page(footer-descent: 0%, footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
 
-#figure(caption: [Tipi di _file_ utilizzati], table(
+#figure(caption: [Tipi di _file_ scelti], table(
   columns: (0.4fr, 1fr, 0.5fr),
   inset: 8pt,
   align: center + horizon,
   table.header([*Nome*], [*Descrizione*], [*Versione*]),
   //table.cell([*Tipi di _file_*], colspan: 3),
-  [\u{002A}.csv],["_Comma separated values_", _file_ utilizzato per memorizzare le frasi nelle lingue diverse supportate dal gioco],[-],
-  [\u{002A}.ini],[Tipo di _file_ _plain-text_ utilizzato per salvare i dati del gioco],[-],
-  [\u{002A}.glb],["_GLTF Binary_", _file_ utilizzato per memorizzare i modelli 3D e le loro animazioni in formato binario, in modo da risparmiare spazio e migliorare le prestazioni],[2.0.1]
+  [_*\u{002A}.csv*_],["_Comma separated values_", _file_ utilizzato per memorizzare le frasi nelle lingue diverse supportate dal gioco],[-],
+  [_*\u{002A}.ini*_],[Tipo di _file_ _plain-text_ utilizzato per salvare i dati del gioco],[-],
+  [_*\u{002A}.glb*_],["_GLTF Binary_", _file_ utilizzato per memorizzare i modelli 3D e le loro animazioni in formato binario, in modo da risparmiare spazio e migliorare le prestazioni],[2.0.1]
+))
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*diagrammi di _Gannt_*: strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
+#show figure: set block(breakable: true)
+
+=== Analisi dei rischi
+==== Rischi organizzativi
+#figure(
+  caption: [Errata pianificazione dei tempi],
+  table(
+    columns: (auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header(table.cell(colspan: 2, [*Errata pianificazione dei tempi*])),
+    [*Descrizione*],[Un'errata pianificazione dei tempi può portare a ritardi nello sviluppo del progetto, con conseguente rischio di non rispettare le scadenze stabilite.],
+    [*Probabilità*],[Alta],
+    [*Pericolosità*],[Alta],
+    [*Rilevamento*],[Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana],
+    [*Piano di contingenza*],[Controllare le attività svolte tramite uno strumento di gestione del progetto (ad esempio #gl("diagrammi_gannt") e uso di _checklist_ su _Notion_) e rivedere la pianificazione delle attività in caso di ritardi.]
+))
+
+#set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+#figure(
+  caption: [Impegni personali o universitari],
+  table(
+    columns: (auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header(table.cell(colspan: 2, [*Impegni personali o universitari*])),
+    [*Descrizione*],[Impegni personali o universitari possono influenzare  il tempo a disposizione per lo sviluppo del progetto, causando ritardi o interruzioni nello sviluppo.],
+    [*Probabilità*],[Alta],
+    [*Pericolosità*],[Media],
+    [*Rilevamento*],[Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana],
+    [*Piano di contingenza*],[Pianificare le attività in modo da tenere conto degli impegni personali o universitari, e rivedere la pianificazione delle attività in caso di imprevisti.]
+))
+
+==== Rischi tecnici
+#figure(
+  caption: [Mancanza di competenze tecniche],
+  table(
+    columns: (auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header(table.cell(colspan: 2, [*Mancanza di competenze tecniche*])),
+    [*Descrizione*],[La mancanza di competenze tecniche può influenzare la qualità del prodotto software, causando ritardi nello sviluppo e problemi di integrazione],
+    [*Probabilità*],[Media],
+    [*Pericolosità*],[Alta],
+    [*Rilevamento*],[Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana],
+    [*Piano di contingenza*],[Formazione sulle tecnologie utilizzate e revisione della progettazione in caso di problemi tecnici]
+))
+
+#figure(
+  caption: [Tecnologie non adeguate],
+  table(
+    columns: (auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header(table.cell(colspan: 2, [*Tecnologie non adeguate*])),
+    [*Descrizione*],[L'uso di tecnologie non adeguate può influenzare la qualità del prodotto _software_, causando problemi di prestazioni basse o _bug_.],
+    [*Probabilità*],[Alta],
+    [*Pericolosità*],[Alta],
+    [*Rilevamento*],[Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana],
+    [*Piano di contingenza*],[Valutazione delle tecnologie utilizzate e revisione della progettazione in caso di problemi tecnici.\
+    In caso di problemi con le tecnologie utilizzate, si valuterà la possibilità di modificare la progettazione del gioco per adattarsi alle tecnologie disponibili]
+))
+
+==== Rischi di analisi e progettazione
+
+#figure(
+  caption: [Cambio dei requisiti],
+  table(
+    columns: (auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header(table.cell(colspan: 2, [*Cambio dei requisiti*])),
+    [*Descrizione*],[Un cambiamento dei requisiti può influenzare la progettazione del sistema, causando ritardi nello sviluppo],
+    [*Probabilità*],[Bassa],
+    [*Pericolosità*],[Alta],
+    [*Rilevamento*],[Comunicazione frequente con il relatore del progetto per garantire che i requisiti siano chiari e stabili],
+    [*Piano di contingenza*],[Rivedere la progettazione del sistema in caso di cambiamenti dei requisiti, e valutare l'impatto sui tempi di sviluppo.
+  In caso di cambiamenti significativi dei requisiti, si valuterà la possibilità di modificare la pianificazione delle attività per tenere conto dei nuovi requisiti]
+))
+
+#figure(
+  caption: [Errore nella progettazione dell'architettura],
+  table(
+    columns: (auto, auto),
+    inset: 8pt,
+    align: center + horizon,
+    table.header(table.cell(colspan: 2, [*Errore nella progettazione dell'architettura*])),
+    [*Descrizione*],[Un errore nella progettazione dell'architettura può influenzare la qualità del prodotto _software_, causando ritardi nello sviluppo e problemi di integrazione],
+    [*Probabilità*],[Media],
+    [*Pericolosità*],[Alta],
+    [*Rilevamento*],[Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana, valutazione della progettazione dell'architettura],
+    [*Piano di contingenza*],[Rivedere la progettazione dell'architettura in caso di problemi, e valutare l'impatto sui tempi di sviluppo]
 ))

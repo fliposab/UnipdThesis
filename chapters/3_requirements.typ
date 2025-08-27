@@ -2,118 +2,18 @@
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.8": *
 #import "../config/thesis-config.typ": glpl, gl
-
-#pagebreak(to:"even")
-
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
-*diagrammi di _Gannt_*: strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata.\ \
-#align(center, context([#counter(page).display("1.")]))])])
+#pagebreak(to:"odd")
 
 = Il progetto<cap:analisi-requisiti>
-
-#text(style: "italic", [
-    In questo capitolo approfondisco tutti i processi del progetto: sviluppo, _test_ e validazione. In pratica descrivo cosa ho fatto di preciso, e come l'ho svolto.
-])
-#v(1em)
-
-#show figure: set block(breakable: true)
-== Analisi dei rischi
-=== Rischi organizzativi
-#figure(
-  caption: [Errata pianificazione dei tempi],
-  table(
-    columns: (auto, auto),
-    inset: 8pt,
-    align: center + horizon,
-    table.header(table.cell(colspan: 2, [*Errata pianificazione dei tempi*])),
-    [*Descrizione*],[Un'errata pianificazione dei tempi può portare a ritardi nello sviluppo del progetto, con conseguente rischio di non rispettare le scadenze stabilite.],
-    [*Probabilità*],[Alta],
-    [*Pericolosità*],[Alta],
-    [*Rilevamento*],[Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana],
-    [*Piano di contingenza*],[Controllare le attività svolte tramite uno strumento di gestione del progetto (ad esempio #gl("diagrammi_gannt") e uso di _checklist_ su _Notion_) e rivedere la pianificazione delle attività in caso di ritardi.]
-))
-
-#set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
-#figure(
-  caption: [Impegni personali o universitari],
-  table(
-    columns: (auto, auto),
-    inset: 8pt,
-    align: center + horizon,
-    table.header(table.cell(colspan: 2, [*Impegni personali o universitari*])),
-    [*Descrizione*],[Impegni personali o universitari possono influenzare  il tempo a disposizione per lo sviluppo del progetto, causando ritardi o interruzioni nello sviluppo.],
-    [*Probabilità*],[Alta],
-    [*Pericolosità*],[Media],
-    [*Rilevamento*],[Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana],
-    [*Piano di contingenza*],[Pianificare le attività in modo da tenere conto degli impegni personali o universitari, e rivedere la pianificazione delle attività in caso di imprevisti.]
-))
-=== Rischi tecnici
-#figure(
-  caption: [Mancanza di competenze tecniche],
-  table(
-    columns: (auto, auto),
-    inset: 8pt,
-    align: center + horizon,
-    table.header(table.cell(colspan: 2, [*Mancanza di competenze tecniche*])),
-    [*Descrizione*],[La mancanza di competenze tecniche può influenzare la qualità del prodotto software, causando ritardi nello sviluppo e problemi di integrazione],
-    [*Probabilità*],[Media],
-    [*Pericolosità*],[Alta],
-    [*Rilevamento*],[Monitoraggio delle attività pianificate e dei tempi di esecuzione ogni settimana],
-    [*Piano di contingenza*],[Formazione sulle tecnologie utilizzate e revisione della progettazione in caso di problemi tecnici]
-))
-
-#figure(
-  caption: [Tecnologie non adeguate],
-  table(
-    columns: (auto, auto),
-    inset: 8pt,
-    align: center + horizon,
-    table.header(table.cell(colspan: 2, [*Tecnologie non adeguate*])),
-    [*Descrizione*],[L'uso di tecnologie non adeguate può influenzare la qualità del prodotto _software_, causando problemi di prestazioni basse o _bug_.],
-    [*Probabilità*],[Alta],
-    [*Pericolosità*],[Alta],
-    [*Rilevamento*],[Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana],
-    [*Piano di contingenza*],[Valutazione delle tecnologie utilizzate e revisione della progettazione in caso di problemi tecnici.\
-    In caso di problemi con le tecnologie utilizzate, si valuterà la possibilità di modificare la progettazione del gioco per adattarsi alle tecnologie disponibili]
-))
-
-=== Rischi di analisi e progettazione
-
-#figure(
-  caption: [Cambio dei requisiti],
-  table(
-    columns: (auto, auto),
-    inset: 8pt,
-    align: center + horizon,
-    table.header(table.cell(colspan: 2, [*Cambio dei requisiti*])),
-    [*Descrizione*],[Un cambiamento dei requisiti può influenzare la progettazione del sistema, causando ritardi nello sviluppo],
-    [*Probabilità*],[Bassa],
-    [*Pericolosità*],[Alta],
-    [*Rilevamento*],[Comunicazione frequente con il relatore del progetto per garantire che i requisiti siano chiari e stabili],
-    [*Piano di contingenza*],[Rivedere la progettazione del sistema in caso di cambiamenti dei requisiti, e valutare l'impatto sui tempi di sviluppo.
-  In caso di cambiamenti significativi dei requisiti, si valuterà la possibilità di modificare la pianificazione delle attività per tenere conto dei nuovi requisiti]
-))
-
-#figure(
-  caption: [Errore nella progettazione dell'architettura],
-  table(
-    columns: (auto, auto),
-    inset: 8pt,
-    align: center + horizon,
-    table.header(table.cell(colspan: 2, [*Errore nella progettazione dell'architettura*])),
-    [*Descrizione*],[Un errore nella progettazione dell'architettura può influenzare la qualità del prodotto _software_, causando ritardi nello sviluppo e problemi di integrazione],
-    [*Probabilità*],[Media],
-    [*Pericolosità*],[Alta],
-    [*Rilevamento*],[Monitoraggio delle attività svolte e dei tempi di esecuzione ogni settimana, valutazione della progettazione dell'architettura],
-    [*Piano di contingenza*],[Rivedere la progettazione dell'architettura in caso di problemi, e valutare l'impatto sui tempi di sviluppo]
-))
+_In  questo  capitolo  approfondisco  tutti  i  processi  del  progetto:  sviluppo,  test  e
+validazione. In pratica descrivo cosa ho fatto di preciso, e come l’ho svolto_
 
 == Analisi dei requisiti
 //_Qui descrivo gli attori presenti e tutti i casi d'uso dell'applicazione_
 === Attori
-Il gioco prevede un solo attore, il *giocatore*, cioè l'utente che interagisce con il videogioco, controllando il personaggio e prendendo decisioni durante il gioco.
+Nella stesura dei casi d'uso, ho riportato solo un attore, il *giocatore*, cioè l'utente che interagisce con il videogioco, controllando il personaggio e prendendo decisioni durante il gioco.
 #figure(image("../images/giocatore.png", width: 9%), caption: "Attore principale")
-Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
+Nei casi d'uso del progetto, l'attore principale sarà sempre il giocatore. 
 #set heading(supplement: none)
 #let ap = [*Attori principali:*]
 #let desc = [*Descrizione:*]
@@ -124,11 +24,16 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #let ext = [*Estensioni:*]
 #let gnr = [*Generalizzazioni:*]
 
+
+=== Casi d'uso
+==== Introduzione
+Nelle seguenti sezioni descrivo i casi d'uso dell'applicazione, evidenziando le possibili azioni che il giocatore può svolgere all'interno del videogioco, e come può interagire con gli elementi o _entità_ dell'ambiente circostante.
+Ad esempio, il giocatore può muovere il personaggio, saltare, prendere oggetti, interagire con altri personaggi, etc...
+
 #set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
 *_joypad_*:  dispositivo di _input_ dotato di pulsanti, levette e altri controlli per interagire con il gioco.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
-=== Casi d'uso
 #set heading(numbering: none)
 ==== UC1 - Movimento
 #figure(image("../images/usecase/uc-movimento.png", width: 50%), caption: [Diagramma _UML_ _use case_ sul movimento])
@@ -213,6 +118,7 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve essere vicino ad un'_entità_.\
 #posc il giocatore interagisce con l'_entità_.\
 #gnr - Posizionamento sopra un nodo dell'Albero di decisione.\
+
 #set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
 
 //#gnr - Raccolta collezionabile.\
@@ -280,7 +186,6 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #posc il giocatore tiene l'oggetto e può muoversi con esso.\
 
 // UC10 - Lasciare un oggetto
-#pagebreak()
 ==== UC7 - Lasciare un oggetto
 #figure(image("../images/usecase/uc-lasciare_oggetto.png", width: 60%), caption: [Diagramma _UML_ sul lasciare un oggetto])
 #desc il giocatore può lasciare un oggetto che sta portando.\
@@ -527,10 +432,11 @@ Nei seguenti casi d'uso, l'attore principale sarà sempre il giocatore.
 #prec il giocatore deve soddisfare certe condizioni e deve avere un _joypad_ collegato alla macchina.\
 #posc il giocatore visualizza nella _UI_ il tasto del _joypad_ da premere.\
 */
-#set heading(numbering: "1.")
 #pagebreak()
+#set heading(numbering: "1.")
 === Requisiti
-In questa sezione viene mostrato il numero totale di requisiti del progetto. I requisiti sono divisi in base al *tipo* e alla *priorità*.
+/*In questa sezione riporto il numero totale di requisiti del progetto. */
+I requisiti sono divisi in base al *tipo* e alla *priorità*.
 //#align(center, [*R - [numero] - [tipo] - [priorità]*])
 - *Tipo*: possono essere
   - *Funzionali*: indicano una funzionalità del sistema;
@@ -540,6 +446,8 @@ In questa sezione viene mostrato il numero totale di requisiti del progetto. I r
 - *Priorità*: possono essere
   - *Obbligatori*: necessari per considerare il prodotto completo;
   - *Desiderabili*: non strettamente necessari ma sono un valore aggiunto.
+#v(0.5em)
+La tabella 16 mostra il totale dei requisiti, sempre divisi per tipo e priorità. 
 #figure(
   caption: [Totale requisiti],
   table(
@@ -881,36 +789,38 @@ Tutti i nodi hanno le seguenti caratteristiche:
 - ricevono _callback_ per aggiornarsi ad ogni #gl("frame");
 - si possono estendere con nuove proprietà e funzioni;
 - si possono aggiungere a un altro nodo come figlio. @godot-node
-Inoltre ad ogni nodo si può assegnare uno script, che estende il tipo di quel nodo e aggiunge nuove funzionalità.\
-I principali tipi di nodi che vengono utilizzati in questo progetto sono:
-- `Node`: nodo base da cui vengono estesi tutti gli altri nodi, in questo progetto viene usato principalmente per assegnare classi e inserirle come figlie in altri nodi.
+Inoltre ad ogni nodo posso assegnare uno script, che estende il tipo di quel nodo e aggiunge nuove funzionalità.\
+I principali tipi di nodi forniti da _Godot_ che ho utilizzato in questo progetto sono:
+- `Node`: nodo base da cui vengono estesi tutti gli altri nodi, in questo progetto l'ho usato principalmente per assegnare classi e inserirle come figlie in altri nodi.
 - `Node3D`: rappresenta un oggetto nello spazio tridimensionale.
   - `CharacterBody3D`: rappresenta un personaggio che si può muovere nel gioco, gestendo la sua posizione e interazioni.
   - `Camera3D`: rappresenta una telecamera nello spazio tridimensionale, che può essere utilizzata per visualizzare la _scena_.
   - `MeshInstance3D`: rappresenta un oggetto tridimensionale.
-  - `CollisionShape3D`: rappresenta una forma di collisione nello spazio tridimensionale, utilizzata per gestire le interazioni fisiche tra gli oggetti.
-  - `Area3D`: rappresenta un'area nello spazio tridimensionale, utilizzata per gestire le interazioni tra gli oggetti che entrano ed escono da essa.
+  - `CollisionShape3D`: rappresenta una forma di collisione nello spazio tridimensionale, l'ho utilizzata per gestire le interazioni fisiche tra gli oggetti.
+  - `Area3D`: rappresenta un'area nello spazio tridimensionale. Questa classe l'ho principalmente utilizzata per gestire le interazioni tra gli oggetti che entrano ed escono da essa.
 - `AnimationPlayer`: gestisce le animazioni degli oggetti nella _scena_, permettendo di riprodurre animazioni sul modello 3D, telecamere e altri nodi.
 - `Control`: rappresenta un nodo #gl("ui"), utilizzato per gestire gli elementi dell'interfaccia utente del gioco.\
 
 ==== Scene
-Quando si organizzano nodi in un albero, come il nostro personaggio, possiamo chiamare questa formazione una _scena_. Una volta salvata, la _scena_ si presenta come un nuovo nodo nell’_editor_, dove possiamo aggiungerlo come figlio di un nodo esistente. In questo caso, l’istanza della _scena_ appare come nodo singolo con interni nascosti.
+Un insieme di più nodi in un albero, come il personaggio nella figura 13, viene chiamato _scena_. Una volta salvata, la _scena_ si presenta come un nuovo nodo nell’_editor_, dove posso aggiungerlo come figlio di un nodo esistente. 
 
 #set page(footer-descent: 0%, footer: [
 #align(center+horizon, context([#counter(page).display("1.")]))])
 
-Le scene di consentono di strutturare il codice del gioco in qualunque modo si voglia. Si possono comporre nodi per creare nodi personalizzati e complessi, come un personaggio di gioco che si muove e salta, una barra della vita, una cesta con cui puoi interagire, e molto altro. @godot-node
+In questo caso, l’istanza della _scena_ appare come nodo singolo con interni nascosti.
+
+Le scene di consentono di strutturare il codice del gioco in qualunque modo si voglia. L'_editor_ offre la possibilità di comporre nodi per creare nodi personalizzati e complessi, come un personaggio di gioco che si muove e salta, una barra della vita, una cesta con cui puoi interagire, e molto altro. @godot-node
 #figure(caption: [_Scena_ del personaggio del giocatore], 
 image("../images/godot-scene_example.png"))
-Oltre che a comportarsi come nodi, le scene hanno anche le seguenti caratteristiche:
-- Hanno sempre un nodo `owner`, come il `Player` nel nostro esempio.
-- Si possono salvare sul disco locale e caricarle in seguito.
-- Si possono creare quante più istanze di una _scena_ si desideri. Ad esempio, si possono avere cinque o dieci personaggi nel gioco, creati da una determinata _scena_.
+Nel corso dello _stage_ ho utilizzato anche altre caratteristiche dei nodi.
+//- Una nodo sempre un nodo `owner`, come il `Player` nel nostro esempio.
+- Posso salvare una _scena_ sul disco locale e caricarle in seguito.
+- Posso creare quante più istanze di una _scena_. Ad esempio, in alcuni livelli del gioco, ho inserito più personaggi non giocabili, ognuno con i suoi parametri.
 
 ==== Segnali
 I segnali sono un modo per far comunicare i nodi in maniera asincrona in _Godot_. Ogni classe presenta dei segnali preimpostati ed emessi in determinati momenti, ad esempio quando un nodo viene caricato, questo emette il segnale `ready()`, oppure quando un bottone viene premuto, viene emesso il segnale `pressed()`.\
 I segnali inoltre possono anche contenere dei parametri, che possono essere utilizzati per passare informazioni tra i nodi.\
-Infine, si possono creare segnali personalizzati, che possono essere emessi in qualsiasi momento dal nodo che li ha definiti tramite il metodo `signal.emit(...)`.\
+Infine, si possono creare segnali personalizzati, che possono essere emessi in qualsiasi momento dal nodo che li ha definiti tramite il metodo `signal.emit(...)`. Ho utilizzato molto questa funzionalità per far comunicare i nodi all'interno dei livelli e mandare variabili in maniera asincrona.\
 Ci sono due modi per collegare un segnale ad un altro nodo:
 - tramite l'_editor_: selezionando il nodo che emette il segnale e trascinandolo sul nodo che deve ricevere il segnale, e selezionando il metodo che deve essere chiamato quando il segnale viene emesso;
 - tramite codice: utilizzando il metodo `signal.connect(callable: Callable)` del nodo che emette il segnale, passando come parametro il nome del metodo che deve essere chiamato quando il segnale viene emesso.
@@ -949,8 +859,8 @@ Il giocatore può essere considerata la classe principale di tutta l'applicazion
 Molte variabili presenti nel giocatore sono riferimenti ai suoi nodi figli presenti nella scena, queste variabili sono precedute dalla parola chiave `@onready` nel codice.
 Similmente, molte funzioni della classe servono solo per accedere alle variabili dei suoi nodi figli.
 
-La classe del giocatore ha associate delle classi che offrono funzionalità diverse,
-di seguito vengono descritte in dettaglio quelle più importanti.
+Ho associato alla classe del giocatore delle classi che offrono funzionalità diverse,
+//Di seguito vengono descritte in dettaglio quelle più importanti.
 //==== _Movement_
 #set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
 *_clipping_*: fenomeno che si verifica quando la telecamera o un oggetto solido di un videogioco passa attraverso un altro oggetto solido.\ \
@@ -975,8 +885,8 @@ Di seguito vengono descritte le classi principali associate alla classe `CameraR
 
 ==== `StateMachine`
 #figure(caption: [Diagramma _UML_ sulla struttura della macchina di stati],image("../images/classi/class-state_machine.png"))\
-La macchina di stati è stata utilizzata per controllare meglio i diversi stati in cui il personaggio del giocatore può trovarsi, ad esempio: il movimento, salto...\
-L'uso della macchina di stati, inoltre, ha garantito una gestione più semplice del personaggio del giocatore e ha reso più facile aggiungere o modificare funzionalità a questo.\
+Ho utilizzato la macchina di stati per controllare meglio i diversi stati in cui il personaggio del giocatore può trovarsi, ad esempio: il movimento, salto...\
+L'uso della macchina di stati, inoltre, mi ha garantito una gestione più semplice del personaggio del giocatore e ha reso più facile aggiungere o modificare funzionalità a questo.\
 La classe `StateMachine` si occupa di gestire la transizione degli stati.\
 L'attributo `state` indica lo stato corrente del personaggio del giocatore. Quando riceve il segnale `finished(...)` dallo stato in cui si trova, si occupa di passare allo stato indicato dal segnale, passando gli eventuali dati contenuto nel `Dictionary` allo stato successivo.\
 Tutti gli stati ereditano dalla classe base astratta `State`. Questa include un riferimento al giocatore ed alla macchina di stati.
@@ -996,7 +906,7 @@ Di seguito sono descritti tutte le classi degli stati del personaggio:
 
 #v(0.5em)
 
-La figura mostra il flusso degli stati.
+La figura 16 mostra il flusso degli stati.
 #figure(caption: [Diagramma sul flusso degli stati del giocatore], image("../images/sm-player_states.png", width: 60%))
 //==== _PlayerSavesHandler_
 //==== _GrabItem_
@@ -1005,7 +915,7 @@ La figura mostra il flusso degli stati.
 
 === Entità _interagibili_
 #figure(caption: [Diagramma _UML_ degli oggetti con cui il giocatore può interagire],image("../images/classi/class-interactable.png"))
-Nei livelli sono presenti diverse _entità_ con cui il giocatore può interagire. Di seguito vengono descritte i diversi tipi di _entità_, e le classi che le compongono:
+Nei livelli sono presenti diverse _entità_ con cui il giocatore può interagire. Di seguito descrivo i diversi tipi di _entità_, e le classi che le compongono:
 #v(0.5em)
 - *`InteractableArea`*: classe base astratta che fornisce i metodi alle classi figlie. La classe è composta da un'`Area3D`, che invia i segnali quando il giocatore entra ed esce, e da una classe `Control` che rappresenta la _UI_ che il giocatore visualizza quando entra.
 - *`NPC`*: rappresenta un personaggio non giocabile che ha assegnato una semplice frase come messaggio. Questa frase viene visualizzata in una classe `SimpleProjectLabel`. Presenta anche una classe `Marker3D` che segna la posizione della _UI_, e una classe `NPCModel` che gestisce le animazioni del modello 3D del personaggio.
@@ -1036,8 +946,6 @@ Il metodo `check_minimum_input_left_strength_threshold()` stabilisce la potenza 
 #set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 === Struttura base di un livello
-Ogni livello viene creato con le seguenti classi:
-
 #figure(caption: [Diagramma delle classi di un livello base],image("../images/classi/class-base_level.png", width: auto))
 
 - *`Level`*: classe del livello, non svolge molte funzioni visto che i componenti possono comunicare tra di loro attraverso i segnali. Gli attributi booleani `red_collectibles`, `blue_collectibles` e `green_collectibles` stabiliscono quali tipi di _collezionabili_ sono presenti nel livello, e quindi quali far visualizzare nella _UI_ del giocatore.
@@ -1055,7 +963,7 @@ La classe è composta da:
 === `LinearRegressionGraph`
 Classe base astratta usata per i due tipi di grafico presenti nel livello: orizzontale e verticale.
 Si occupa di svolgere le operazioni di regressione lineare per ottenere la formula della retta $y = a + b x$.\
-Tuttavia, non si può applicare la formula direttamente ad un oggetto 3D.\
+Tuttavia, non posso applicare la formula direttamente ad un oggetto 3D.\
 Il metodo `calculate_a_b()`si occupa di calcolare le variabili `a` e `b` della formula della retta con le seguenti formule:\
 
 #v(1em)
@@ -1107,14 +1015,14 @@ Le trasformazioni globali vengono poi modificate in base al tipo della classe:
   - *`DecisionNodeFinal`*: quando entra un cane nell'area, controlla se l'`id` di questo corrisponde all'`id` associato all'istanza.
 - *`DogBreedsSign`*: oltre all'Albero di decisione nel livello è presente anche un cartello con cui il giocatore può interagire e visualizzare le razze die cani che ha indovinato.\ La classe `DogBreedsSign` rappresenta questo cartello. Questa, è composta da una classe `DogSignUI` che è il contenuto del cartello, contenente tutte le razze dei cani che il giocatore ha indovinato.\ Quando il cartello viene chiuso, emette il segnale `hide_grid()` che chiama il metodo `on_dog_breed_sign_hide_grid()` nella classe `CheckUnlocked`.
 
-- *`CheckUnlocked`*: classe che si occupa di controllare le razze di cani sbloccate e tenere il conto di quelle nuove che il giocatore non ha ancora controllato, nell'attributo `td_to_give`.\ Il valore di questo attributo viene modificato all'inizio del caricamento del livello e quando il giocatore indovina una nuova razza nell'Albero di decisione, ed è la differenza tra l'attributo `value` e il valore `td_given`.\ Al caricamento del livello, riceve il segnale `data_loaded` dal nodo che gestisce i salvataggi `DTSavesHandler`, assegna il valore dell'attributo `td_given`. Quando riceve il segnale `new_breed_unlocked` dall'Albero di decisione, `value` aumenta di 1, ed aggiorna il valore di `td_to_give`.\ Quando riceve il segnale `hide_grid` dal cartello, chiama la funzione per generare i _collezionabili_ tanti quanti il valore di `td_to_give`. 
+- *`CheckUnlocked`*: classe che si occupa di controllare le razze di cani sbloccate e tenere il conto di quelle nuove che il giocatore non ha ancora controllato, nell'attributo `td_to_give`.\ Il valore di questo attributo viene modificato all'inizio del caricamento del livello e quando il giocatore indovina una nuova razza nell'Albero di decisione, ed è la differenza tra l'attributo `value` e il valore `td_given`.\ Al caricamento del livello, riceve il segnale `data_loaded()` dal nodo che gestisce i salvataggi `DTSavesHandler`, assegna il valore dell'attributo `td_given`. Quando riceve il segnale `new_breed_unlocked` dall'Albero di decisione, `value` aumenta di 1, ed aggiorna il valore di `td_to_give`.\ Quando riceve il segnale `hide_grid` dal cartello, chiama la funzione per generare i _collezionabili_ tanti quanti il valore di `td_to_give`. 
 
 === Livello _Causalità_
 ==== Struttura del livello
 #figure(caption: [Diagramma del livello  _Causalità_],image("../images/classi/class-causality_level.png"))
 - *`ACUnit`*: rappresenta un condizionatore. Eredita da `InteractableArea`.\ Il giocatore, quando entra nell'area, può premere il tasto di interazione per accenderlo.\ Quando viene acceso, il valore dell'_array_ nodo padre, in questo caso `ACUnits`, viene aggiornato con il giusto indice.
 - *`ACUnits`*: si occupa di gestire tutte le istanze di `ACUnit`, inserite come nodi figli nella scena.\ Quando viene acceso un condizionatore, emette il segnale `unit_turned_on(index: int)`, passando direttamente l'array aggiornato come argomento nel segnale.\ Quando tutti i condizionatori sono stati accesi, manda il segnale `all_units_on()`, usato in questo caso per far iniziare la scene di intermezzo.
-- *`CutscenesHandler`*: si occupa di gestire le scene di intermezzo nel livello, inserite come nodi figli nella scena. Nonostante la classe è stata pianificata per gestire più scene, alla fine ne è presente solo una.\ Questa classe svolge anche il ruolo da mediatore, ricevendo i segnali dal livello e mandandoli ai nodi figli, gestendo il traffico dei segnali.
+- *`CutscenesHandler`*: si occupa di gestire le scene di intermezzo nel livello, inserite come nodi figli nella scena. Nonostante avessi pianificato di usare la classe per gestire più scene di intermezzo, alla fine ne è presente solo una.\ Questa classe svolge anche il ruolo da mediatore, ricevendo i segnali dal livello e mandandoli ai nodi figli, gestendo il traffico dei segnali.
 /*- *`CausalitySavesHandler`*: gestisce i salvataggi e cambio di variabili all'interno del livello _Causality_. In questa classe, le variabili sono salvate in un `Dictionary`. Quando i salvataggi vengono caricati, la classe emette il segnale `data_loaded()`.*/
 /*
 ==== Scena di intermezzo
@@ -1154,9 +1062,9 @@ In sintesi, la macchina su cui viene testato il gioco offre prestazioni sulla fa
 */
 === Nomenclatura _test_
 Di seguito sono elencate le metodologie di _testing_ che ho utilizzato per verificare e validare il prodotto _software_. Le metodologie di _testing_ sono suddivise in quattro categorie:
-- *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, questi _test_ sono stati svolti con l'_add-on_ della community _GUT - Godot Unit Test_;\
-- *_test_ di integrazione*: _test_ che verificano il corretto funzionamento dell'interazione tra più unità del codice, anche questi svolti con l'_add-on_ _GUT_;\
-- *_test_ di sistema*: _test_ che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche _test_ sulle prestazioni, e sono svolti utilizzando gli strumenti forniti da _Godot_;\
+- *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, ho svolto questi _test_ con l'_add-on_ della _community_ _GUT - Godot Unit Test_;\
+- *_test_ di integrazione*: _test_ che verificano il corretto funzionamento dell'interazione tra più unità dell'applicazione, ho svolto anche questi con l'_add-on_ _GUT_;\
+- *_test_ di sistema*: _test_ che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche _test_ sulle prestazioni, e li ho svolti utilizzando gli strumenti forniti da _Godot_;\
 - *_test_ di accettazione*: _test_ che verificano se il prodotto è pronto per essere rilasciato.
 
 #figure(caption: [Totale _test_ eseguiti], table(
@@ -1321,7 +1229,7 @@ Di seguito sono elencate le metodologie di _testing_ che ho utilizzato per verif
 //_Qui descrivo i risultati raggiunti rispettivamente su piano qualitativo e quantitativo, con copertura dei requisiti, testing e quantità di prodotti_
 //=== Prodotto finale
 === Meccaniche dei livelli
-Di seguito vengono mostrate le meccaniche principali dei livelli.
+In questa sezione mostro delle immagini raffiguranti le meccaniche principali dei livelli.
 #figure(caption: [Immagine del cannone _LR_ per posizionare nuovi punti nel grafico della Regressione lineare], image("../images/screenshot-cannon_lr.png", width: auto))
 //#figure(caption: [Immagine dell'Albero di decisione con i possibili percorsi da seguire], image("../images/screenshot-decision_tree_1.png", width: 90%))
 //#figure(caption: [Immagine di un posizionamento corretto in un nodo finale dell'Albero di decisione], image("../images/screenshot-decision_tree_2.png"))
@@ -1396,9 +1304,9 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
 - *Qualità delle ombre*: Modifica la risoluzione delle ombre. Il valore va da _alto_ a _molto basso_, ovviamente, un valore _alto_ ha un impatto molto più significativo sulle prestazioni rispetto a _molto basso_.
 - *Lingua*: cambia la lingua del gioco. La modifica viene applicata subito e non è necessario un riavvio del gioco.
 */
-=== Copertura dei requisiti
+=== Grado di superamento dei requisiti
 #figure(
-  caption: [Tabella con copertura requisiti],
+  caption: [Tabella con grado di superamento requisiti],
   table(
     columns: (auto, auto, auto, auto,auto),
     inset: 8pt,
@@ -1408,13 +1316,13 @@ Quando il giocatore passa sopra una delle opzioni, viene fornita una sua breve d
     [Qualità],[4],[-],[4],[4],
     [Accessibilità],[3],[3],[6],[4],
     table.cell(colspan: 3, [*Totale*]),[*63*],[*61*]))
-La tabella mostra la copertura dei requisiti funzionali, di qualità e di accessibilità, con un totale di 63 requisiti.
-Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti motivi:
+La tabella 18 mostra il grado di superamento dei requisiti funzionali, di qualità e di accessibilità, con un totale di 63 requisiti.
+Non sono riuscito a soddisfare alcuni dei requisiti di accessibilità desiderabili per i seguenti motivi:
 #v(0.5em)
 - *"Il gioco deve supportare il sistema operativo MacOS"*: nonostante _Godot_ permetta di compilare le applicazioni in un eseguibile per il sistema operativo MacOS, non ho potuto testare il gioco in una macchina con sistema operativo MacOS, quindi non potevo garantire il suo corretto funzionamento;
 - *"Il gioco deve supportare una risoluzione bassa, ad esempio 640\u{00D7}360px"*: sotto una certa risoluzione, gli elementi della _UI_ vengono tagliati dalla finestra, rendendo difficile la navigazione nei menu o leggere le istruzioni sugli _input_ da premere.
-=== Copertura dei _test_
-#figure(caption: [Tabella con copertura _test_ eseguiti], table(
+=== Grado di superamento dei _test_
+#figure(caption: [Tabella con grado di superamento _test_ eseguiti], table(
   columns: (auto, auto, auto),
   inset: 8pt,
   align: center + horizon,
@@ -1426,10 +1334,10 @@ Alcuni dei requisiti desiderabili non sono stati soddisfatti per i seguenti moti
   [*Totale*],[*95*],[*95*]
 ))
 
-La tabella mostra il totale dei _test_ eseguiti, suddivisi per tipologia, con un totale di 95 _test_ eseguiti e superati con successo.
+La tabella 19 mostra il totale dei _test_ eseguiti, suddivisi per tipologia, con un totale di 95 _test_ eseguiti e superati con successo.
 
 === Quantità di prodotti
-A fine _stage_ sono stati prodotti 8 documenti:
+A fine _stage_ ho completato la stesura di 8 documenti:
 - Analisi dei requisiti;
 - Glossario;
 - Piano di progetto;
@@ -1437,7 +1345,7 @@ A fine _stage_ sono stati prodotti 8 documenti:
 - Manuale utente;
 - Specifica tecnica.
 #v(0.5em)
-Inoltre, sono stati prodotte 2 applicazioni:
+Inoltre, durante il periodo di _stage_ ho sviluppato 2 applicazioni dello stesso progetto. La tabella 20 riporta queste applicazioni.
 #figure(caption: [Tabella delle applicazioni prodotte nello _stage_], table(
   columns: (auto, auto),
   inset: 8pt,
@@ -1446,3 +1354,27 @@ Inoltre, sono stati prodotte 2 applicazioni:
   [PoC \ Proof of Concept],[Demo del progetto, che ha come scopo principale quello di dimostrare la fattibilità del concetto, implementando le funzionalità principali],
   [MVP \ Minimum Viable Product],[Versione minima del prodotto che si può considerare pronta per il rilascio. Rappresenta il prodotto finale dello _stage_ e include tutte le funzionalità principali richieste nel progetto],
 ))
+
+=== Rischi occorsi e moitigazione
+/*Durante lo _stage_, ho dovuto affrontare dei problemi che avevo previsto una possibilità nel presentarsi nella sezione 2.5.6. 
+#v(0.5em)*/
+==== *Errata pianificazione dei tempi*
+Lo sviluppo dell'applicazione ha avuto un andamento più veloce di quello che avevo previsto durante la pianificazione e ho finito per avere più tempo a disposizione rispetto a quello pianificato. Quindi, per occupare le ore di scarto ho aggiunto nuove funzionalità non obbligatorie al gioco. Ad esempio ho aggiunto un livello _tutorial_ ed il supporto per i _joypad_ com dispositivo di _input_, con cambio di visualizzazione dei tasti nella guida _UI_, tutte funzionalità che non avevo pianificato di sviluppare.
+
+==== Impegni personali o universitari
+Durante il periodo di _stage_, mi mancava ancora un esame da recuperare.\
+Ho dovuto sostenere l'esame due volte, in due giorni diversi, e questo mi ha fatto perdere alcune ore di _stage_.\
+Nonostante le ore perse, sono comunque riuscito a completare il progetto nei tempi previsti.\
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*_code coverage_*:  metodologia di analisi del codice sorgente che misura la percentuale di codice eseguito durante i test.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+//
+==== Tecnologie non adeguate
+Visto che _Godot_ è un motore di gioco relativamente nuovo rispetto alla concorrenza (_Unity_, _Unreal Engine_...), non è ancora molto diffuso e non ha una grande comunità di sviluppatori.\
+Questo mi ha reso più difficile trovare risorse e supporto durante lo sviluppo del progetto, ed alcune di queste avevano un uso limitato o non erano aggiornate.\
+Ad esempio, volevo implementare un sistema di _CI/CD_ (Continuous Integration/Continuous Deployment) per automatizzare i _test_, tuttavia le risorse che ho trovato erano per lo più obsolete o non funzionanti, dunque ho svolto i _test_ manualmente. Ho avuto lo stesso problema anche per implementare uno strumento di #gl("code_coverage").\
+Al contrario, invece, alcuni _add-on_ e _plugin_ per _Godot_ si sono rivelati molto utili e ben documentati, ad esempio _GUT_, che mi ha facilitato lo svolgimento dei _test_ di unità e di integrazione.
+
+==== Errore nella progettazione dell'architettura
+Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che dimostrasse le funzionalità principali, ma ho trascurato alcuni aspetti architetturali che si sono rivelati problematici in seguito. Ad esempio, non avevo ben definito la gestione dei cambi degli stati del giocatore e delle transizioni tra le diverse schermate, portando a un codice più complesso e difficile da mantenere. Ho dovuto quindi rivedere parte dell'architettura per migliorare la modularità e la manutenibilità del codice.

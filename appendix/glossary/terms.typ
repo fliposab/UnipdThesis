@@ -44,6 +44,12 @@
     description: [pratica di sviluppo _software_ che consente di integrare frequentemente le modifiche del codice in un repository condiviso, garantendo che il codice sia sempre in uno stato funzionante e testato.]
   ),
   (
+    key: "code_coverage",
+    short: [code coverage],
+    description: [metodologia di analisi del codice sorgente che misura la percentuale di codice eseguito durante i test, aiutando a identificare le aree non testate e migliorare la qualità del software.]
+  ),
+  /*
+  (
     key: "clipping",
     short: [clipping],
     description: [fenomeno che si verifica quando la telecamera di un videogioco passa attraverso un oggetto solido, causando la visualizzazione errata della scena.]
@@ -53,7 +59,7 @@
     short: [CPU],
     long: [_Central Processing Unit_],
     description: [unità di elaborazione centrale di un computer, responsabile dell'esecuzione delle istruzioni e della gestione delle operazioni aritmetiche e logiche.]
-  ),
+  ),*/
   (
     key: "database",
     short: [database],
