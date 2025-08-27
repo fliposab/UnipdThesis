@@ -1032,12 +1032,14 @@ La classe `LevelsTransition` si occupa della transizione tra due classi. Il meto
 ==== `InputUIHandler`
 La classe `InputUIHandler` si occupa di controllare i dispositivi di _input_ collegati, e mandare il segnale `device_changed(current_joy: String)` nel caso il nome del dispositivo dell'ultimo _input_ non corrisponda all'attributo `current_joy`.\
 Il metodo `check_minimum_input_left_strength_threshold()` stabilisce la potenza minima che l'_input_ deve superare per mandare il segnale. Questo perché alcuni _joypad_ presentano il problema del #gl("drifting") e la classe potrebbe leggere _input_ che non sono premuti dal giocatore.
-=== Struttura base di un livello
-Ogni livello viene creato con le seguenti classi:
 */
 #set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
+=== Struttura base di un livello
+Ogni livello viene creato con le seguenti classi:
+
 #figure(caption: [Diagramma delle classi di un livello base],image("../images/classi/class-base_level.png", width: auto))
+
 - *`Level`*: classe del livello, non svolge molte funzioni visto che i componenti possono comunicare tra di loro attraverso i segnali. Gli attributi booleani `red_collectibles`, `blue_collectibles` e `green_collectibles` stabiliscono quali tipi di _collezionabili_ sono presenti nel livello, e quindi quali far visualizzare nella _UI_ del giocatore.
 - *`PlayerSpawn`*: classe che si occupa di generare il giocatore nella posizione in cui si trova. Appena generato il giocatore viene assegnato alla classe `Level`
 - *`PauseMenu`*: il menu di pausa, questo viene caricato quando il giocatore preme il rispettivo tasto, mettendo in pausa tutta la scena.
