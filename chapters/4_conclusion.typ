@@ -105,3 +105,7 @@ _Se presenti, in questa sezione descrivo alcune delle mie lacune verso gli argom
 */
 == Pensieri finali
 //_Qui concludo la tesi con  miei pensieri finali sull'ambiente di lavoro, il progetto, e quello che ho imparato per entrare nel mondo del lavoro_
+L'esperienza di _stage_ è stata molto positiva e formativa, permettendomi di mettere in pratica le conoscenze acquisite durante il percorso di studi e di sviluppare nuove competenze tecniche e trasversali.\
+Ho avuto l'opportunità di lavorare su un progetto stimolante e innovativo, che mi ha permesso di approfondire conoscenze di mio interesse personale su _Game Design_ e modellazione 3D in un ambiente professionale e collaborativo.\
+Ho avuto l'occasione di confrontarmi con professionisti del settore, imparando da loro e ricevendo feedback costruttivi sul mio lavoro.\
+Ritengo che questa esperienza mi abbia fornito una base solida per affrontare future sfide nel campo dello sviluppo di giochi e grafica 3D, e sono entusiasta di continuare a crescere e continuare ad imparare nuove tecnologie e metodologie in questo settore, sia in maniera personale che professionale.

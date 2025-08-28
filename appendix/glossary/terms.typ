@@ -27,6 +27,11 @@
     description: [_software_ di modellazione ed animazione 3D _open source_ usato per creare modelli 3D ed animazioni.],
   ),
   (
+    key: "bottleneck",
+    short: [bottleneck],
+    description: [in italiano, _collo di bottiglia_, termine utilizzato in informatica per descrivere un punto di congestione o limitazione nelle prestazioni di un sistema, che può influenzare negativamente l'efficienza complessiva.]
+  ),
+  (
     key: "brainstorming",
     short: [brainstorming],
     description: [tecnica di generazione di idee in gruppo, in cui i partecipanti sono incoraggiati a esprimere liberamente le proprie idee senza giudizio, al fine di stimolare la creatività e trovare soluzioni innovative a un problema.]
@@ -69,12 +74,12 @@
     key: "diagrammi_gannt",
     short: [diagrammi di _Gannt_],
     description: [strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata, le dipendenze e le scadenze delle attività in un formato visivo facile da comprendere.]
-  ),
+  ),/*
   (
     key: "drifting",
     short: [drifting],
     description: [fenomeno che si verifica quando un dispositivo di input, come uno _stick_ analogico, registra movimenti o pressioni anche quando non viene toccato, causando comportamenti indesiderati nel gioco.]
-  ),
+  ),*/
   (
     key: "frame",
     short: [frame],
@@ -193,13 +198,13 @@
     key: "nearest_neighbor",
     short: [Nearest Neighbor],
     description: [algoritmo di apprendimento automatico utilizzato per la classificazione e la regressione, che si basa sull'idea di trovare i punti dati più vicini a un dato punto di input e fare previsioni in base a questi punti.]
-  ),
+  ),/*
   (
     key: "ram",
     short: [RAM],
     long: [_Random Access Memory_],
     description: [memoria volatile e rapida di un computer utilizzata per memorizzare temporaneamente i dati e le istruzioni in uso, consentendo un accesso rapido e diretto.]
-  ),
+  ),*/
   (
     key: "regressione_lineare",
     short: [Regressione lineare],
