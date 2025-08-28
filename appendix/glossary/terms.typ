@@ -53,13 +53,13 @@
     key: "clipping",
     short: [clipping],
     description: [fenomeno che si verifica quando la telecamera di un videogioco passa attraverso un oggetto solido, causando la visualizzazione errata della scena.]
-  ),
+  ),*/
   (
     key: "cpu",
     short: [CPU],
     long: [_Central Processing Unit_],
     description: [unità di elaborazione centrale di un computer, responsabile dell'esecuzione delle istruzioni e della gestione delle operazioni aritmetiche e logiche.]
-  ),*/
+  ),
   (
     key: "database",
     short: [database],
