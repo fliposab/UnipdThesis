@@ -57,14 +57,16 @@ Ho incontrato diversi fattori che hanno reso difficile l'implementazione:
 
 == Esperienze acquisite
 === Competenze tecniche
-Durante lo _stage_, ho avuto l'opportunità di approfondire le mie conoscenze in diversi ambiti tecnici, in particolare nello sviluppo di giochi con _Godot_. Ho imparato a utilizzare il linguaggio _GDScript_ e a sfruttare le funzionalità del motore per implementare meccaniche di gioco complesse. Inoltre, ho acquisito competenze nella gestione delle risorse e nell'ottimizzazione delle prestazioni del gioco.
+Durante lo _stage_, ho avuto l'opportunità di approfondire le mie conoscenze in diversi ambiti tecnici, in particolare nello sviluppo di giochi con _Godot_.\ Ho approfondite le conoscenze cha avevo sul linguaggio _GDScript_ e a sfruttare le funzionalità del motore per implementare meccaniche di gioco complesse ed originali.\
+Inoltre, ho acquisito competenze nella gestione delle risorse e nell'ottimizzazione delle prestazioni del gioco.
 
 === Competenze trasversali
-Durante lo _stage_, ho anche sviluppato competenze trasversali, come la capacità di lavorare in team e di comunicare efficacemente con i membri del gruppo. Ho imparato a gestire il tempo in modo più efficiente e a organizzare il lavoro in base alle scadenze. Queste competenze si sono rivelate fondamentali per il successo del progetto.
-
+Durante lo _stage_, ho anche sviluppato competenze trasversali, come la capacità di comunicare efficacemente con i membri del _team_.\ 
+Ho imparato a gestire il tempo in modo più efficiente, e a organizzare il lavoro in base al tempo a disposizione, alle attività rimaste da svolgere ed alle scadenze di progetto. 
+/*
 === Competenze personali
 Durante lo _stage_, ho lavorato anche sullo sviluppo delle mie competenze personali, come la gestione dello stress e la resilienza. Ho imparato a mantenere la calma in situazioni di pressione e a trovare soluzioni creative ai problemi. Queste competenze mi saranno utili anche in futuro, sia nel lavoro che nella vita privata.
-
+*/
 === Gestione dei rischi
 ==== Introduzione
 Durante lo _stage_, ho dovuto affrontare dei problemi che avevo previsto una possibilità nel presentarsi nella sezione 2.5.6.\
@@ -78,10 +80,6 @@ Durante il periodo di _stage_, mi mancava ancora un esame da recuperare.\
 Ho dovuto sostenere l'esame due volte, in due giorni diversi, e questo mi ha fatto perdere alcune ore di _stage_.\
 Nonostante le ore perse, sono comunque riuscito a completare il progetto nei tempi previsti.\
 
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
-*_code coverage_*:  metodologia di analisi del codice sorgente che misura la percentuale di codice eseguito durante i test.\ \
-#align(center, context([#counter(page).display("1.")]))])])
-
 ==== Tecnologie non adeguate
 Visto che _Godot_ è un motore di gioco relativamente nuovo rispetto alla concorrenza (_Unity_, _Unreal Engine_...), non è ancora molto diffuso e non ha una grande comunità di sviluppatori.\
 Questo mi ha reso più difficile trovare risorse e supporto durante lo sviluppo del progetto, ed alcune di queste avevano un uso limitato o non erano aggiornate.\
@@ -92,63 +90,18 @@ Al contrario, invece, alcuni _add-on_ e _plugin_ per _Godot_ si sono rivelati mo
 Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che dimostrasse le funzionalità principali, ma ho trascurato alcuni aspetti architetturali che si sono rivelati problematici in seguito. Ad esempio, non avevo ben definito la gestione dei cambi degli stati del giocatore e delle transizioni tra le diverse schermate, portando a un codice più complesso e difficile da mantenere. Ho dovuto quindi rivedere parte dell'architettura per migliorare la modularità e la manutenibilità del codice.
 
 == Differenza tra stage e percorso studi
-_Qui tratto della differenza tra gli argomenti trattati durante lo stage e gli argomenti insegnati durante il percorso di studi_
+Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo già affrontato durante il percorso di studi.\
+- _GDSCript_ è un linguaggio di programmazione orientato agli oggetti, fondamento simile a _C++_, che ho dovuto imparare per svolgere un altro progetto durante il percorso di studi.
+- I temi del principale del gioco, _Machine Learning_, l'avevo già approfondito in precedenza durante un corso di studi. Nello specifico, mi ha molto aiutato a trovare temi su cui sviluppare le meccaniche del gioco come l'Albero di decisioni e la Regressione lineare.
+- Durante il progetto del corso di _Ingegneria del software_, ho avuto modo di approfondire gli _LLM_ insieme ad altri miei colleghi. Anche se alla fine non ho implementato questi nel gioco, mi hanno fornito una base teorica utile per comprendere meglio le tecnologie di intelligenza artificiale.\
+#v(0.5em)
+Al contrario, altri temi non erano stati trattati durante il percorso di studi, o lo erano stati in modo superficiale.\ 
+Questo riguardo tecnologie più specifiche, come l'uso di un motore di gioco, o tecnologie di ambito diverso da quello insegnato nel corso di studi, come modellazione 3D.
+
+//_Qui tratto della differenza tra gli argomenti trattati durante lo stage e gli argomenti insegnati durante il percorso di studi_
+/*
 === Lacune sul percorso studi
 _Se presenti, in questa sezione descrivo alcune delle mie lacune verso gli argomenti insegnati nel percorso di studi verso lo stage e/o mondo del lavoro_
-== Pensieri finali
-_Qui concludo la tesi con  miei pensieri finali sull'ambiente di lavoro, il progetto, e quello che ho imparato per entrare nel mondo del lavoro_
-/*
-== Consuntivo finale
-Una volta terminato il progetto ho redatto il consuntivo orario finale nella @fig:tabella-calcolo-ore che suddivide in maniera approssimata le ore dedicate alle varie fasi.
-#v(1em)
-#set table(
-  align: (center+horizon, center+horizon), 
-)
-#figure(
-  caption: [Consuntivo orario finale.],
-  table(
-    columns: 2,
-    table.header([*Fase*], [*Ore*]),
-    [_Onboarding_ del progetto],[5],
-    [Analisi dei requisiti],[30],
-    [...], [...],
-    [*Totale*],[320]
-  )
-)<fig:tabella-calcolo-ore>
-#v(1em)*/
-
-//== Raggiungimento degli obiettivi
-/*
-== Requisiti soddisfatti
-Arrivato alla fine del progetto ho implementato...
-#v(1em)
-#figure(
-  table(
-    columns: (auto, 1fr, 1fr, auto, auto),
-    table.header([*Tipo*], [*Mandatory*], [*Desirable*],[*Optional*], [*Somma*]),
-    [Functional], [0/#getFR(getLen: true).at(0)], [0/#getFR(getLen: true).at(1)], [0/#getFR(getLen: true).at(2)], [0/#getFR(getLen: true).sum()],
-    [Qualitative], [0/#getQR(getLen: true).at(0)], [0/#getQR(getLen: true).at(1)], [0/#getQR(getLen: true).at(2)], [0/#getQR(getLen: true).sum()],
-    [Constraint], [0/#getCR(getLen: true).at(0)], [0/#getCR(getLen: true).at(1)], [0/#getCR(getLen: true).at(2)], [0/#getCR(getLen: true).sum()],
-    [*Totale*],
-      [*0/#{getFR(getLen: true).at(0)+getQR(getLen: true).at(0)+getCR(getLen: true).at(0)}*],
-      [*0/#{getFR(getLen: true).at(1)+getQR(getLen: true).at(1)+getCR(getLen: true).at(1)}*],
-      [*0/#{getFR(getLen: true).at(2)+getQR(getLen: true).at(2)+getCR(getLen: true).at(2)}*],
-      [*0/#{getFR(getLen: true).sum()+getQR(getLen: true).sum()+getCR(getLen: true).sum()}*],
-    align: (center+horizon)
-  ),
-  caption: "Riepilogo dei requisiti soddisfatti."
-)<tab:requisiti-soddisfatti>
-== Rischi occorsi e mitigati
-I rischi emersi durante lo stage sono riportati in @fig:rischi-occorsi.\
-#v(1em)
-#figure(
-  caption: [Rischi occorsi con la loro mitigazione.],
-  table(
-    columns: 2,
-    table.header([*Descrizione*],[*Mitigazione*]),
-    [*R1* -- Descrizione del rischio],[Soluzione]
-  )
-)<fig:rischi-occorsi>
-#v(1em)
-== Valutazione personale
 */
+== Pensieri finali
+//_Qui concludo la tesi con  miei pensieri finali sull'ambiente di lavoro, il progetto, e quello che ho imparato per entrare nel mondo del lavoro_
