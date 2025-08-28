@@ -37,6 +37,13 @@ Nella tabella 21 sono riportati gli obiettivi con il loro codice ed il loro stat
 ))
 
 Non sono riuscito a soddisfare gli ultimi due obiettivi desiderabili (_D-3_ e _D-4_).
+
+#set page(footer-descent: -50%, footer: [#align(top, [#line(length: 100%)
+*_bottleneck_*: punto nel sistema che limita le prestazioni complessive, spesso a causa di risorse insufficienti o sovraccarico di lavoro.\
+*_CPU_ - _Central Processing Unit_*: unità di elaborazione centrale del computer, responsabile dell'esecuzione delle istruzioni e del controllo delle operazioni.\
+*_GPU_ - _Graphics Processing Unit_*: unità di elaborazione grafica, specializzata nel rendering delle immagini e nella gestione delle operazioni grafiche.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 === Obiettivi non superati
 ==== D-3 | Uso di linguaggi come C++ per migliorare le prestazioni
 Durante tutta la durata dello _stage_, non ho mai avuto il bisogno di migliorare le prestazioni del gioco.
@@ -51,6 +58,9 @@ Dal grafico possiamo notare diverse cose:
 Durante lo sviluppo del progetto, ho provato ad implementare un _LLM_ per generare automaticamente i dialoghi tra i personaggi del gioco.\
 Ho incontrato diversi fattori che hanno reso difficile l'implementazione:
 #v(0.5em)
+
+#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
+
 - *Largo uso della _VRAM_*: la comunità di _Godot_ ha sviluppato diversi _add-on_ per integrare _LLM_ nei giochi. Il problema principale degli _LLM_ locali è il fatto che richiedono molta _VRAM_, risorsa che nei videogiochi viene già utilizzata per gestire le texture, i modelli 3D e altri asset grafici. Questo porta rapidamente all'esaurimento della memoria disponibile, causando rallentamenti o crash dell'applicazione, soprattutto su hardware non di fascia alta.
 - *Limitazioni della macchina personale*: la macchina su cui ho svolto il progetto aveva a disposizione 1GB di _VRAM_, limitando molto l'utilizzo di un modello. Durante un _test_, ho provato a integrare un _LLM_ con mezzo miliardo di parametri, in modo da usare meno _VRAM_. Il risultato che ho ottenuto è stata una stringa di frasi e parole incomprensibili.
 - *Lingua*: dato che avevo prefissato l'obiettivo di supportare la lingua italiano ed inglese nel gioco, anche le frasi generate dal modello dovevano essere in italiano o in inglese. Gli unici LLM 'leggeri' che sono riuscito a trovare erano solo in lingua inglese, oppure supportavano più lingue, ma questo significava che i parametri effettivamente usati per l'inglese erano ancora di meno.
@@ -72,6 +82,10 @@ Durante lo _stage_, ho lavorato anche sullo sviluppo delle mie competenze person
 Durante lo _stage_, ho dovuto affrontare dei problemi che avevo previsto una possibilità nel presentarsi nella sezione 2.5.6.\
 Ho dovuto affrontare questi problemi e trovare delle soluzioni per superarli, in modo da poter completare il progetto nei tempi previsti e senza compromettere la qualità del lavoro.
 
+#set page(footer-descent: 15%, footer: [#align(top, [#line(length: 100%)
+*_code coverage_*: unità di misura che indica la percentuale di codice sorgente coperta da test automatici.\
+#align(center, context([#counter(page).display("1.")]))])])
+
 ==== *Errata pianificazione dei tempi*
 Lo sviluppo dell'applicazione ha avuto un andamento più veloce di quello che avevo previsto durante la pianificazione e ho finito per avere più tempo a disposizione rispetto a quello pianificato. Quindi, per occupare le ore di scarto ho aggiunto nuove funzionalità non obbligatorie al gioco. Ad esempio ho aggiunto un livello _tutorial_ ed il supporto per i _joypad_ com dispositivo di _input_, con cambio di visualizzazione dei tasti nella guida _UI_, tutte funzionalità che non avevo pianificato di sviluppare.
 
@@ -88,6 +102,8 @@ Al contrario, invece, alcuni _add-on_ e _plugin_ per _Godot_ si sono rivelati mo
 
 ==== Errore nella progettazione dell'architettura
 Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che dimostrasse le funzionalità principali, ma ho trascurato alcuni aspetti architetturali che si sono rivelati problematici in seguito. Ad esempio, non avevo ben definito la gestione dei cambi degli stati del giocatore e delle transizioni tra le diverse schermate, portando a un codice più complesso e difficile da mantenere. Ho dovuto quindi rivedere parte dell'architettura per migliorare la modularità e la manutenibilità del codice.
+
+#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 == Differenza tra stage e percorso studi
 Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo già affrontato durante il percorso di studi.\
