@@ -35,7 +35,7 @@ Come descritto precedentemente nella sezione 2.4, avevo prefissato degli obietti
   [D-4],[]
 ))
 
-Sempre dalla tabella 21 possiamo notare che non sono riuscito a soddisfare gli ultimi due obiettivi desiderabili. Questi due obiettivi non sono stati soddisfatti a causa di limitazioni tecniche e di risorse, che spiegherò in dettaglio nelle sezioni successive.\
+Sempre dalla tabella 21 possiamo notare che non sono riuscito a soddisfare gli ultimi due obiettivi desiderabili. Questi due obiettivi non sono stati soddisfatti a causa di limitazioni tecniche e di risorse.\
 In generale, sono soddisfatto del lavoro svolto e degli obiettivi raggiunti, anche se ci sono stati alcuni ostacoli lungo il cammino.
 
 #set page(footer-descent: -70%, footer: [#align(top, [#line(length: 100%)
@@ -47,26 +47,26 @@ In generale, sono soddisfatto del lavoro svolto e degli obiettivi raggiunti, anc
 
 === Obiettivi non superati
 ==== D-3 | Uso di linguaggi come C++ per migliorare le prestazioni
-Prima dello sviluppo del _PoC_, ho utilizzato il linguaggio _GDScript_ per sviluppare il progetto. Andare a rimpiazzare il codice, anche se parzialmente con un altro linguaggio di programmazione come _C++_, avrebbe consumato una gran parte del tempo a disposizione, senza garantire un miglioramento significativo delle prestazioni.\
-Per dimostrare questo, ho inserito nella figura 24 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
+Durante lo sviluppo del _PoC_, ho utilizzato il linguaggio _GDScript_ per sviluppare il progetto. Andare a rimpiazzare il codice, anche se parzialmente, con un altro linguaggio di programmazione come _C++_, avrebbe consumato una gran parte del tempo a disposizione, senza garantire un miglioramento significativo delle prestazioni.\
+Per dimostrare quest'ultima parte, ho inserito nella figura 24 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
 #figure(caption: [Grafico del tempo di compilazione di ogni _frame_ del gioco], image("../images/chart-lag_spikes.png"))
 Dal grafico possiamo notare diverse cose:
 #v(0.5em)
 - I tempi di compilazione e _rendering_ tra un _frame_ e l'altro, sono generalmente stabili, con alcune eccezioni presenti durante la transizione di un livello ad un altro a causa del caricamento delle risorse.
-- Il grafico è diviso in 2 sezioni, la prima, a sinistra, mostra il tempo richiesto alla #gl("cpu"), la seconda, a destra, mostra il tempo richiesto alla #gl("gpu"). Come possiamo vedere, la _GPU_ richiede più tempo rispetto alla _CPU_. Cambiare il linguaggio di programmazione aumenterebbe le prestazioni solo della _CPU_, visto che _GDScript_ e _C++_ sono linguaggi di alto livello letti e compilati dalla _CPU_. Ma come possiamo vedere dalla figura 24, questo non aumenterebbe le prestazioni, poiché i lavori sono svolti in parallelo, e la _GPU_ rimarrebbe il #gl("bottleneck") in questo caso.
+- Il grafico è diviso in 2 sezioni, la prima, a sinistra, mostra il tempo richiesto dalla #gl("cpu"), la seconda, a destra, mostra il tempo richiesto dalla #gl("gpu"). Come possiamo vedere, la _GPU_ richiede più tempo rispetto alla _CPU_. Cambiare il linguaggio di programmazione aumenterebbe le prestazioni solo della _CPU_, visto che _GDScript_ e _C++_ sono linguaggi di alto livello letti e compilati dalla _CPU_. Ma come possiamo vedere dalla figura 24, questo non aumenterebbe le prestazioni, poiché i lavori sono svolti in parallelo, e la _GPU_ rimarrebbe il #gl("bottleneck") in questo caso.
 
 #set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 
 ==== D-4 | Implementazione di un modello di _LLM_
 Durante lo sviluppo del progetto, ho provato ad implementare un _LLM_ per generare automaticamente i dialoghi dei personaggi non giocabili nel gioco.\
-Nonostante la comunità di _Godot_ abbia sviluppato diversi _add-on_ per integrare _LLM_ nei giochi, ho incontrato diversi fattori che hanno reso difficile l'implementazione:
+Nonostante la comunità di _Godot_ abbia sviluppato diversi _add-on_ per integrare gli _LLM_ locali nei giochi, ho incontrato diversi fattori che hanno reso difficile l'implementazione:
 #v(0.5em)
 
 - *Largo uso della _VRAM_*: il problema principale degli _LLM_ locali è il fatto che richiedono molta _VRAM_, risorsa che nei videogiochi viene già utilizzata per gestire le texture, i modelli 3D e altri asset grafici. Questo porta rapidamente all'esaurimento della memoria disponibile, causando rallentamenti o crash dell'applicazione, soprattutto su hardware non di fascia alta.
 - *Limitazioni della macchina personale*: la macchina su cui ho svolto il progetto aveva a disposizione 1GB di _VRAM_, limitando molto l'utilizzo di un modello. Durante un _test_, ho provato a integrare un _LLM_ 'leggero', con mezzo miliardo di parametri, in modo da usare meno _VRAM_. Il risultato che ho ottenuto è stata una stringa di frasi e parole incomprensibili.
 - *Lingua*: dato che avevo prefissato l'obiettivo di supportare la lingua italiano ed inglese nel gioco, anche le frasi generate dal modello dovevano essere in italiano o in inglese. Gli unici _LLM_ 'leggeri' che sono riuscito a trovare erano solo in lingua inglese, e se supportavano più lingue significava che i parametri effettivamente usati per l'inglese e italiano erano ancora di meno.
-- *Dimensioni*: un _LLM_ locale ha dimensioni che variano da centinaia di MB a diversi GB. Integrare un modello del genere avrebbe aumentato notevolmente la dimensione finale del gioco, rendendolo meno accessibile per gli utenti con connessioni _internet_ lente, limitate o con poca memoria nel dispositivo. Nel caso avessi voluto usare un _LLM_ diverso per ogni lingua, le dimensioni dell'applicazione finale sarebbero aumentate ulteriormente.
+- *Dimensioni*: un _LLM_ locale ha dimensioni che variano da centinaia di MB a diversi _gigabyte_. Integrare un modello del genere avrebbe aumentato notevolmente la dimensione finale del gioco, rendendolo meno accessibile per gli utenti con connessioni _internet_ lente, limitate o con poca memoria nel dispositivo. Nel caso avessi voluto usare un _LLM_ diverso per ogni lingua, le dimensioni dell'applicazione finale sarebbero aumentate ulteriormente.
 
 #pagebreak()
 == Esperienze acquisite
@@ -92,8 +92,8 @@ Ho dovuto affrontare questi problemi e trovare delle soluzioni per superarli, in
 ==== *Errata pianificazione dei tempi*
 Lo sviluppo dell'applicazione ha avuto un andamento più veloce di quello che avevo previsto durante la pianificazione e ho finito per avere più tempo a disposizione rispetto a quello pianificato. Quindi, per occupare le ore di scarto ho aggiunto nuove funzionalità non obbligatorie al gioco. Ad esempio ho aggiunto un livello _tutorial_ ed il supporto per i _joypad_ com dispositivo di _input_, con cambio di visualizzazione dei tasti nella guida _UI_, tutte funzionalità che non avevo pianificato di sviluppare.
 
-#set page(footer-descent: 15%, footer: [#align(top, [#line(length: 100%)
-*_code coverage_*: unità di misura che indica la percentuale di codice sorgente coperta da test automatici.\
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*_code coverage_*: unità di misura che indica la percentuale di codice sorgente coperta da test automatici.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 ==== Impegni personali o universitari

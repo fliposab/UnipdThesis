@@ -283,7 +283,7 @@ I documenti che dovevo scrivere erano:\
 
 - *Codifica*:\
 Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). Ho salvato i nomi delle classi con una nomenclatura #gl("pascalCase"), mentre i nomi dei _file_ e delle variabili usano #gl("snake_case").
-#set page(footer-descent: -180%, footer: [#align(top, [#line(length: 100%)
+#set page(footer-descent: -170%, footer: [#align(top, [#line(length: 100%)
 *.glb*: formato standard di un modello tridimensionale che legge il modello 3D come un file binario.\
 *.png*: formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.\
 *Blender*: _software_ di modellazione ed animazione 3D usato per creare modelli 3D ed animazioni.
