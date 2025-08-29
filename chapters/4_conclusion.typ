@@ -120,8 +120,8 @@ Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo gi
 - Durante il progetto del corso di _Ingegneria del software_, ho avuto modo di approfondire gli _LLM_ insieme ad altri miei colleghi. Anche se alla fine non ho implementato questi nel gioco, mi hanno fornito una base teorica utile per comprendere meglio le tecnologie di intelligenza artificiale.\
 #v(0.5em)
 Al contrario, altri temi non erano stati trattati durante il percorso di studi, o erano stati trattati, ma in modo superficiale.\ 
-Questo riguardo tecnologie più specifiche e non molto di uso comune, come l'uso di un motore di gioco, o tecnologie di ambito diverso da quello insegnato nel corso di studi, come modellazione 3D.
-
+Questo riguardo tecnologie più specifiche e non molto di uso comune, come l'uso di un motore di gioco, o tecnologie di ambito diverso da quello insegnato nel corso di studi, come modellazione 3D.\
+Non ritengo che inserire questi argomenti nel percorso di studi sarebbe utile, dato che il campo dell'informatica è molto vasto e in continua evoluzione, e non è possibile coprire tutti gli argomenti in modo approfondito.\
 //_Qui tratto della differenza tra gli argomenti trattati durante lo stage e gli argomenti insegnati durante il percorso di studi_
 /*
 === Lacune sul percorso studi
