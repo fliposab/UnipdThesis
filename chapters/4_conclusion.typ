@@ -113,7 +113,7 @@ Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che 
 #set page(footer-descent: 0%, footer: [
 #align(center+horizon, context([#counter(page).display("1.")]))])
 
-== Differenza tra stage e percorso studi
+== Differenza tra _stage_ e percorso studi
 Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo già affrontato durante il percorso di studi.\
 - _GDSCript_ è un linguaggio di programmazione orientato agli oggetti, fondamento su cui si basa anche _C++_, che ho dovuto imparare per svolgere un altro progetto durante il percorso di studi.
 - I temi del principale del gioco di _Machine Learning_, l'i avevo già approfonditi in precedenza durante un corso di studi. Nello specifico, mi ha aiutato molto a trovare temi su cui sviluppare le meccaniche del gioco come l'Albero di decisioni e la Regressione lineare ed il loro funzionamento.
