@@ -12,6 +12,11 @@
     description: [formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.]
   ),
   (
+    key: "add-on",
+    short: [add-on],
+    description: [estensione o componente aggiuntivo che migliora o amplia le funzionalità di un _software_ esistente.]
+  ),
+  (
     key: "alberi_di_decisione",
     short: [Alberi di decisione],
     description: [modello predittivo utilizzato in statistica e _Machine Learning_, che rappresenta le decisioni e le loro possibili conseguenze sotto forma di un albero, facilitando l'interpretazione e la visualizzazione delle scelte.]
@@ -209,6 +214,11 @@
     key: "regressione_lineare",
     short: [Regressione lineare],
     description: [modello statistico utilizzato per analizzare la relazione tra una variabile dipendente e una o più variabili indipendenti, assumendo che questa relazione sia lineare.]
+  ),
+  (
+    key: "rendering",
+    short: [rendering],
+    description: [processo di generazione dell'immagine finale di oggetti 3D, che coinvolge il calcolo della luce, delle ombre, dei riflessi, dei materiali ed altro.]
   ),
   (
     key: "rig",

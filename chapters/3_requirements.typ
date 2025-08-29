@@ -1037,7 +1037,13 @@ Dopo la scena di intermezzo, alcuni personaggi possono cambiare il dialogo a lor
 *_RAM_ - _Random Access Memory_*: memoria piccola e rapida di un computer che consente un accesso rapido e diretto ai dati in uso.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 */
-- *`ChangeNPCIceCreamBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ Funziona nello stesso modo della classe descritta prima, però avviene solo un cambio del dialogo e non c'è la modifica del comportamento.
+- *`ChangeNPCIceCreamBehaviour`*: si occupa di cambiare il comportamento del rispettivo personaggio non giocabile. Viene assegnata ad un nodo figlio del nodo del personaggio.\ 
+
+#set page(footer-descent: 15%, footer: [#align(top, [#line(length: 100%)
+*_add-on_*: estensione che migliora o amplia le funzionalità di un _software_ esistente.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
+Funziona nello stesso modo della classe descritta prima, però avviene solo un cambio del dialogo e non c'è la modifica del comportamento.
 
 - *`NPCIceCreamSave`*: lo scopo della classe è quello di caricare il gruppo di persone davanti alla gelateria nel caso il livello venga caricato quando già tutti i condizionatori sono stati accesi.\ Le persone vengono caricate quando la classe riceve il segnale `change_specific_values()`, in quanto vengono caricate solo ed esclusivamente al caricamento del livello.\
 
@@ -1062,7 +1068,7 @@ In sintesi, la macchina su cui viene testato il gioco offre prestazioni sulla fa
 */
 === Nomenclatura _test_
 Di seguito sono elencate le metodologie di _testing_ che ho utilizzato per verificare e validare il prodotto _software_. Le metodologie di _testing_ sono suddivise in quattro categorie:
-- *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, ho svolto questi _test_ con l'_add-on_ della _community_ _GUT - Godot Unit Test_;\
+- *_test_ di unità*: _test_ che verificano il corretto funzionamento di singole unità del codice, ho svolto questi _test_ con l'#gl("add-on") della _community_ _GUT - Godot Unit Test_;\
 - *_test_ di integrazione*: _test_ che verificano il corretto funzionamento dell'interazione tra più unità dell'applicazione, ho svolto anche questi con l'_add-on_ _GUT_;\
 - *_test_ di sistema*: _test_ che verificano il corretto funzionamento del sistema nel suo complesso, inclusi i requisiti funzionali e non funzionali, comprendono anche _test_ sulle prestazioni, e li ho svolti utilizzando gli strumenti forniti da _Godot_;\
 - *_test_ di accettazione*: _test_ che verificano se il prodotto è pronto per essere rilasciato.
