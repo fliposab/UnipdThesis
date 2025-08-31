@@ -109,10 +109,21 @@ Nonostante la comunità di _Godot_ abbia sviluppato diversi _add-on_ per integra
 === Competenze tecniche
 Durante lo _stage_, ho avuto l'opportunità di approfondire le mie conoscenze in diversi ambiti tecnici, in particolare nello sviluppo di giochi con il motore di gioco _open source_ _Godot_.\ 
 _Godot_ è stato sviluppato nel 2014 e da allora ha guadagnato popolarità grazie alla sua flessibilità e facilità d'uso, rendendo lo sviluppo di giochi accessibile anche a chi ha poca esperienza nel campo della programmazione e, allo stesso tempo, facilitando il lavoro a sviluppatori più esperti. Ho iniziato ad utilizzarlo circa un paio di anni fa, in parallelo al corso di studi, ma non l'ho mai utilizzato per progetti seri, di grandi dimensioni.
-Ho potuto approfondire come gestire diverse animazioni in un modello 3D, creare scene 3D complesse e organizzare i nodi per ottenere comportamenti dinamici nei personaggi e negli oggetti di gioco. Ho imparato a importare asset 3D, configurare materiali e luci, e utilizzare il sistema di animazione di Godot per sincronizzare movimenti e interazioni. Questo mi ha permesso di realizzare ambienti di gioco più realistici e coinvolgenti, migliorando l'esperienza utente complessiva.
-Altro argomento che ho avuto l'opportunità di approfondire è stato il linguaggio di programmazione fornito da _Godot_: _GDScript_, il linguaggio principale, sviluppato appositamente per il motore di gioco.\
-_GDScript_ è pensato per essere semplice da apprendere, con una sintassi simile a _Python_, ma ottimizzato per lo sviluppo rapido di giochi. Ho imparato a sfruttare le sue caratteristiche, come il _typing_ dinamico, il sistema di segnali per la comunicazione tra oggetti e la gestione delle scene, che permette di strutturare il progetto in modo modulare e riutilizzabile. Questo mi ha permesso di scrivere codice più chiaro, mantenibile e facilmente estendibile, migliorando la qualità complessiva del progetto.\
+Ho potuto approfondire come gestire diverse animazioni in un modello 3D, creare scene 3D complesse e organizzare i nodi per ottenere comportamenti dinamici nei personaggi e negli oggetti di gioco.\
 
+#set page(footer-descent: -10%, footer: [#align(top, [#line(length: 100%)
+*_duck typing_*: concetto di programmazione dinamica in cui il tipo o la classe di un oggetto è determinato dal comportamento e dalle proprietà che possiede, piuttosto che dalla sua dichiarazione esplicita.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+//
+
+Ho imparato a importare asset 3D, configurare materiali e luci, e utilizzare il sistema di animazione di Godot per sincronizzare movimenti e interazioni.
+Questo mi ha permesso di realizzare ambienti di gioco più realistici e coinvolgenti, migliorando l'esperienza utente complessiva.\
+Nella figura 25 ho riportato il modello del giocatore, nel _software_ _Blender_, con il numero di triangoli visibili, che è pari a 2.074. Questo numero è abbastanza basso, il che aiuta a mantenere buone prestazioni durante l'esecuzione del gioco, specialmente su _hardware_ meno potente. 
+#figure(caption: [Modello del giocatore con il numero di triangoli visibili], image("../images/numero-triangoli.png", width: 70%))
+Altro argomento che ho avuto l'opportunità di approfondire è stato il linguaggio di programmazione fornito da _Godot_: _GDScript_, il linguaggio principale, sviluppato appositamente per il motore di gioco.\
+_GDScript_ è pensato per essere semplice da apprendere, con una sintassi simile a _Python_, ma ottimizzato per lo sviluppo rapido di giochi. Ho imparato a sfruttare le sue caratteristiche, come il #gl("duck_typing"), il sistema di segnali per la comunicazione tra oggetti e la gestione delle scene, che permette di strutturare il progetto in modo modulare e riutilizzabile. Questo mi ha permesso di scrivere codice più chiaro, mantenibile e facilmente estendibile, migliorando la qualità complessiva del progetto.\
+
+#set page(footer-descent: -10%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 /*Ho approfondito le conoscenze che avevo sul linguaggio _GDScript_ e a sfruttare le funzionalità del motore per implementare meccaniche di gioco complesse ed originali.\ */
 
 /*
@@ -123,11 +134,12 @@ Inoltre, ho acquisito competenze nella gestione delle risorse e nell'ottimizzazi
 === Competenze trasversali
 Durante lo _stage_, ho anche sviluppato competenze trasversali, come la capacità di comunicare efficacemente con i membri del _team_, chiedendo aiuto quando necessario, e fornendo aggiornamenti sullo stato di avanzamento del progetto al relatore.\
 Ho imparato a gestire il tempo in modo più efficiente, pianificando le attività, controllando le scadenze e monitorando i progressi utilizzando vari strumenti per la gestione del progetto.\
-Ho acquisito maggiore autonomia nell'organizzazione del lavoro, prendendo iniziative per risolvere problemi in modo indipendente, e documentando tutte le mie attività, quello che facevo, come lo facevo e quando lo facevo, in maniera specifica, in modo da poter tracciare i miei progressi e facilitare l'organizzazione del lavoro, ad esempio, con le norme da rispettare.\ //facilitare la comunicazione con il relatore.\
+Ho acquisito maggiore autonomia nell'organizzazione del lavoro, prendendo iniziative per risolvere problemi in modo indipendente, e documentando tutte le mie attività, quello che facevo, come lo facevo e quando lo facevo, in maniera specifica, in modo da poter tracciare i miei progressi e facilitare l'organizzazione del lavoro. 
+Ad esempio, nel documento "Norme di progetto", scrivevo le regole che dovevo seguire, come la struttura delle cartelle, le convenzioni di denominazione e le linee guida per la scrittura del codice, nel documento "Specifica tecnica", descrivevo l'architettura del software, rappresentando i componenti principali e le loro interazioni.\
 //imparando a prendere decisioni in modo responsabile e a chiedere supporto quando necessario.\
-Durante lo _stage_, ho dovuto anche svolgere una presentazione davanti a tutti i membri del _team_, illustrando il progetto, le scelte tecniche e le sfide affrontate, questo mi ha aiutato a migliorare le mie capacità di comunicazione, a presentare le mie idee in modo chiaro e conciso, senza contraddizioni, ed anche a gestire l'ansia durante il lavoro.\  
-Infine, l'esperienza di _stage_ mi ha permesso di affinare le mie capacità di _problem solving_, affrontando situazioni impreviste oppure a prevedere i possibili problemi ed avere già un piano di contingenza, trovando soluzioni pratiche ed efficaci.\
-Infine, ho sviluppato una maggiore flessibilità e adattabilità, qualità fondamentali per lavorare in contesti dinamici e in continua evoluzione come quello dello sviluppo _software_.
+Inoltre, durante lo _stage_, ho dovuto anche svolgere una presentazione sullo stato finale del progetto davanti a tutti i membri del _team_, illustrando l'applicazione nel dettaglio, le scelte tecniche e le sfide affrontate. Questo mi ha aiutato a migliorare le mie capacità di comunicazione, a presentare le mie idee in modo chiaro e conciso, senza contraddizioni, ed anche a gestire l'ansia durante il lavoro.\  
+/*'esperienza di _stage_ mi ha permesso di affinare le mie capacità di _problem solving_, affrontando situazioni impreviste oppure a prevedere i possibili problemi ed avere già un piano di contingenza, trovando soluzioni pratiche ed efficaci.\*/
+Infine, ho sviluppato una maggiore flessibilità e adattabilità, qualità fondamentali per lavorare in contesti dinamici e in continua evoluzione come quello dello sviluppo _software_, affinando le mie capacità di _problem solving_, affrontando situazioni impreviste oppure a prevedere i possibili problemi ed avere già un piano di contingenza, trovando soluzioni pratiche ed efficaci.
 
 //PIU SPECIFICO
 
@@ -135,7 +147,7 @@ Infine, ho sviluppato una maggiore flessibilità e adattabilità, qualità fonda
 === Competenze personali
 Durante lo _stage_, ho lavorato anche sullo sviluppo delle mie competenze personali, come la gestione dello stress e la resilienza. Ho imparato a mantenere la calma in situazioni di pressione e a trovare soluzioni creative ai problemi. Queste competenze mi saranno utili anche in futuro, sia nel lavoro che nella vita privata.
 */
-#pagebreak()
+
 == Differenza tra _stage_ e percorso studi
 Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo già affrontato durante il percorso di studi.\
 - _GDSCript_ è un linguaggio di programmazione orientato agli oggetti, fondamento su cui si basa anche _C++_, che ho dovuto imparare per svolgere un altro progetto durante il percorso di studi.

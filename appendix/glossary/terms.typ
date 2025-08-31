@@ -86,6 +86,16 @@
     description: [fenomeno che si verifica quando un dispositivo di input, come uno _stick_ analogico, registra movimenti o pressioni anche quando non viene toccato, causando comportamenti indesiderati nel gioco.]
   ),*/
   (
+    key: "duck_typing",
+    short: [duck typing],
+    description: [concetto di programmazione dinamica in cui il tipo o la classe di un oggetto è determinato dal comportamento e dalle proprietà che possiede, piuttosto che dalla sua dichiarazione esplicita. In altre parole, se un oggetto si comporta come un certo tipo (ad esempio, ha i metodi e le proprietà attese), allora può essere trattato come quel tipo, indipendentemente dalla sua effettiva classe.]
+  ),
+  /*(
+    key: "game_ready",
+    short: [Game Ready],
+    description: [termine usato nell'industria dei videogiochi per descrivere modelli 3D ottimizzati e pronti per essere utilizzati in un motore di gioco, con una bassa quantità di poligoni e texture efficienti per garantire buone prestazioni
+  ),*/
+  (
     key: "frame",
     short: [frame],
     description: [unità di misura temporale utilizzata nei videogiochi e nelle animazioni, che rappresenta un singolo fotogramma di un'animazione o di un ciclo di gioco. Tipicamente sono 60 in un secondo (60 FPS - _Frames Per Second_).]
