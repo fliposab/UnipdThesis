@@ -12,8 +12,11 @@
 
 == Gestione dei rischi e dei problemi incontrati
 === Introduzione
-Durante lo _stage_, ho dovuto affrontare dei problemi che avevo previsto una possibilità nel presentarsi nella sezione 2.5.6.\
-Ho dovuto affrontare questi problemi e trovare delle soluzioni per superarli, in modo da poter completare il progetto nei tempi previsti e senza compromettere la qualità del lavoro.
+/// Cambiare
+Nella sezione 2.5.6 ho descritto i potenziali rischi che avrei potuto incontrare durante la fase di pianificazione del progetto. Alcuni di questi rischi si sono effettivamente verificati, mentre altri no.\
+In questa sezione, descrivo i problemi che ho incontrato durante lo sviluppo del progetto, e come li ho affrontati e risolti.\
+////
+/*Ho dovuto affrontare questi problemi e trovare delle soluzioni per superarli, in modo da poter completare il progetto nei tempi previsti e senza compromettere la qualità del lavoro.*/
 
 === Errata pianificazione dei tempi
 Lo sviluppo dell'applicazione ha avuto un andamento più veloce di quello che avevo previsto durante la pianificazione, e ho finito per avere più tempo a disposizione rispetto a quello pianificato. Tuttavia dovevo comunque dedicare un numero minimo di ore, quindi ho dovuto trovare un modo per sfruttare queste ore in eccesso, in modo che non andassero sprecate.\
@@ -71,9 +74,141 @@ Come descritto precedentemente nella sezione 2.4, avevo concordato degli obietti
   [D-4],[]
 ))
 
-Sempre dalla tabella 21 possiamo notare che non sono riuscito a raggiungere gli ultimi due obiettivi desiderabili. Questi due obiettivi non sono stati raggiunti a causa di limitazioni tecniche e di risorse, e verranno chiariti nella sezione 4.1.2.\
+Sempre dalla tabella 21 possiamo notare che non sono riuscito a raggiungere gli ultimi due obiettivi desiderabili. Questi due obiettivi non sono stati raggiunti a causa di limitazioni tecniche e di risorse.\
 In generale, sono soddisfatto del lavoro svolto e degli obiettivi raggiunti, anche se ci sono stati alcuni ostacoli lungo il cammino.
+Nelle sezioni 4.2.2 e 4.2.3 discuterò in dettaglio gli obiettivi raggiunti e quelli non raggiunti, spiegando le ragioni dietro queste decisioni.
 
+=== Obiettivi raggiunti
+==== O-1 | Realizzazione delle principali meccaniche di gioco
+Le principali meccaniche di gioco che avevo pianificato da implementare e che ho integrato nel progetto sono le seguenti:
+#v(0.5em)
+- Movimento del personaggio principale in un ambiente 3D, con la possibilità di camminare, correre, saltare, con animazioni fluide e una telecamera dinamica che segue il giocatore.
+- Interazione con oggetti e personaggi non giocabili, con dialoghi e scelte multiple che influenzano il corso del gioco. Ho riportato un esempio nella figura 24.
+#figure(caption: [Esempio di dialogo con diverse risposte], image("../images/screenshot-scientist_text_2.png", width: 100%))
+- Possibilità di raccogliere oggetti, portarli con sé e posizionarli in punti specifici per risolvere le sfide presenti nel gioco.
+- Implementazione di un sistema di punteggio, ad esempio, sparsi per ogni livello sono presenti degli oggetti che il giocatore raccoglie automaticamente, e che aumentano il punteggio totale del giocatore.
+
+==== O-2 | Implementazione degli argomenti di AI e ML (regressione lineare, alberi di decisione, Causalità)
+L'obiettivo comprende l'utilizzo di argomenti di _AI_ e _ML_ per creare meccaniche di gioco innovative e coinvolgenti.\
+Tra i vari temi che avevo preso in considerazione, vi erano: la Regressione lineare, gli Alberi di decisione, la Causalità, le Reti neurali e le Macchine a vettori di supporto.\
+Alla fine, ho implementato tre di questi temi, ognuno con il suo rispettivo livello con le sue rispettive meccaniche.\
+La Regressione lineare è stata utilizzata per creare un grafico 3D dove il giocatore può camminare sulla linea e modificare la direzione.\
+Il livello degli Alberi di decisione è stato progettato come un percorso a bivi, dove il giocatore deve scegliere tra due opzioni per proseguire, rappresentando le decisioni che si prendono in un albero di decisione.\
+Infine, il livello della Causalità è stato sviluppato come una sorta di _puzzle_, dove il giocatore deve capire le relazioni di causa-effetto tra diversi oggetti per risolvere il livello.
+
+==== O-3 | Implementazione di salvataggi e caricamenti
+L'ultimo obiettivo obbligatorio che ho raggiunto è stato l'implementazione di un sistema di salvataggi e caricamenti.\
+Il gioco salva in automatico le informazioni principali del gioco durante momenti chiave, come il completamento di un livello o la raccolta di un oggetto importante.\
+Il sistema di caricamenti consente al giocatore di riprendere il gioco, ripristinando tutte le informazioni salvate in precedenza.\
+Per implementare questo sistema, ho utilizzato file di salvataggio in formato _.ini_, che sono facili da leggere e scrivere, e permettono di memorizzare dati strutturati in modo semplice ed efficiente.\
+#figure(caption: [File _.ini_ delle opzioni del gioco])[
+```ini
+[common]
+
+window_mode=2
+window_resolution=1
+resolution_scale=1.0
+anti_aliasing=4
+shadows_quality=2
+max_fps=4
+language="Italiano"
+volume=0.8
+```]
+==== D-1 | Supporto per più lingue (italiano ed inglese)
+Dal menu delle opzioni, il giocatore può scegliere la lingua tra italiano ed inglese. Tutti i testi presenti nel gioco, come i dialoghi, le istruzioni e le opzioni del menu, vengono visualizzati nella lingua selezionata, senza bisogno di dover riavviare il gioco.\ 
+Per implementare questa funzionalità, ho utilizzato dei file _.csv_, che contengono la stringa _chiave_ con tutte le frasi da rimpiazzare nel gioco con la rispettiva lingua. Questo mi ha permesso di gestire facilmente le traduzioni dei testi e di cambiare la lingua in modo dinamico durante l'esecuzione del gioco.\
+Nella figura 25 ho riportato un esempio del menu delle opzioni in lingua inglese, con l'opzione di cambiare lingua già selezionata in modo da mostrare le lingue disponibili.\
+#figure(caption: [Menu delle opzioni in inglese, con possibilità di cambiare lingua], image("../images/screenshot-language.png", width: 90%))
+/*
+#figure(caption: [File _.ini_ delle opzioni del gioco])[
+```csv
+KEYS,it,en
+LOAD_GAME,Carica partita,Load Game
+NEW_GAME,Nuova partita,New Game
+OPTIONS,Opzioni,Options
+```]*/
+
+==== D-2 | Implementazione di _shaders_ utilizzando _OpenGL_
+Durante lo sviluppo del progetto, ho implementato diversi _shaders_ per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_ fornito da _Godot_.\
+Uno di questi materiali personalizzati è il materiale usato per creare le nuvole nel cielo. Queste, in realtà, sono un materiale applicato ad un piano 2D, posizionato sopra la scena.\
+Nella figura 25 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
+#figure(caption: [Esempio del materiale delle nuvole con i parametri modificabili], image("../images/screenshot-clouds_shader.png", width: 90%))
+
+/*
+Nel blocco di codice 3 ho riportato il codice usato per creare questo materiale.
+#figure(caption: [Codice dello _shader_ per le nuvole])[
+\
+
+```GLSL
+shader_type sky;
+render_mode use_half_res_pass;
+//...
+void sky() {
+	vec2 sky_uv = EYEDIR.xz / EYEDIR.y;
+	float day_amount = clamp(LIGHT0_DIRECTION.y, 0.0, 1.0);
+	vec3 gradient_day = mix(day_bottom_color, day_top_color, clamp(EYEDIR.y, 0.0, 1.0)) * day_amount;
+	
+	float sunset_amount = clamp(1.0 - abs(LIGHT0_DIRECTION.y), 0.0, 1.0);
+	vec3 gradient_sunset = mix(sunset_bottom_color, sunset_top_color, clamp(EYEDIR.y, 0.0, 1.0)) * sunset_amount;
+	
+	float night_amount = clamp(-LIGHT0_DIRECTION.y, 0.0, 1.0);
+	vec3 gradient_night = mix(night_bottom_color, night_top_color, clamp(EYEDIR.y, 0.0, 1.0)) * night_amount;
+	
+	
+	vec3 sky_gradients = gradient_day + gradient_sunset + gradient_night;
+	
+	
+	
+	
+	float horizon = 1.0 - abs(EYEDIR.y + horizon_falloff);
+	
+	vec3 horizon_glow_amount_day = clamp(horizon * clamp(LIGHT0_DIRECTION.y, 0.0, 1.0), 0.0, 1.0) * horizon_color_day;
+	vec3 horizon_glow_amount_sunset = clamp(horizon * clamp(1.0 - abs(LIGHT0_DIRECTION.y), 0.0, 1.0), 0.0, 1.0) * horizon_color_sunset;
+	vec3 horizon_glow_night = clamp(horizon * clamp(-LIGHT0_DIRECTION.y, 0.0, 1.0), 0.0, 1.0) * horizon_color_night;
+	
+	vec3 horizon_glow = horizon_glow_amount_day + horizon_glow_amount_sunset + horizon_glow_night;
+	
+	
+	
+	
+	
+	float sun_distance = distance(EYEDIR.xyz, LIGHT0_DIRECTION);
+	float sun_power = 1.0 - clamp(sun_distance / sun_size, 0.0, 1.0);
+	float sun_disc = clamp(sun_power / sun_blur, sun_power, 1.0);
+	vec3 sun = sun_col * sun_disc;
+	
+	
+	
+	float moon_distance = distance(EYEDIR.xyz, -LIGHT0_DIRECTION);
+	float moon_power = 1.0 - clamp(moon_distance / moon_size, 0.0, 1.0);
+	float moon_disc = clamp(moon_power / 0.01, moon_power, 1.0);
+	
+	float moon_crescent_distance = distance(vec3(EYEDIR.x + moon_crescent_offset, EYEDIR.yz), -LIGHT0_DIRECTION);
+	float moon_crescent_power = 1.0 - clamp(moon_crescent_distance / moon_size, 0.0, 1.0);
+	float moon_crescent_disc = clamp(moon_crescent_power / 0.01, moon_crescent_power, 1.0);
+	
+	vec3 moon_crescent = moon_col * moon_crescent_disc;
+	
+	vec3 moon = clamp( (moon_col * moon_disc) - moon_crescent, 0.0 , 1.0);
+	float clouds_movement = TIME * clouds_speed * 0.5;
+	float clouds_base_noise = texture(clouds_texture, (sky_uv + clouds_movement ) * clouds_scale).r;
+	float noise1 = texture(clouds_distort_texture, (sky_uv + clouds_base_noise + (clouds_movement * 0.75)) * clouds_scale).r;
+	float noise2 = texture(clouds_noise_texture, (sky_uv + noise1 + (clouds_movement * 0.25)) * clouds_scale).r;
+	float clouds_noise_value = clamp(noise1 * noise2, 0.0, 1.0) * clamp(EYEDIR.y, 0.0, 1.0);
+	float clouds_value = clamp(smoothstep(clouds_cutoff, clouds_cutoff + clouds_fuzziness, clouds_noise_value), 0.0, 1.0);
+	vec3 clouds = mix(clouds_edge_color,  clouds_main_color , clouds_value) * clouds_value;
+	float clouds_negative = 1.0 - clouds_value;
+	vec3 stars = texture(stars_texture, sky_uv + (stars_speed * TIME)).rgb;
+	stars *= clamp(-LIGHT0_DIRECTION.y, 0.0, 1.0);
+	stars = step(stars_cutoff, stars);
+	vec3 sun_moon = sun + moon;
+	sun_moon = clamp(sun_moon * clouds_negative, 0.0, 1.0);
+	sky_gradients = clamp(sky_gradients * clouds_negative, 0.0, 1.0);
+	vec3 sky = horizon_glow + sky_gradients + sun_moon + stars + clouds;
+	COLOR = sky;
+}
+```
+]*/
 #set page(footer-descent: -70%, footer: [#align(top, [#line(length: 100%)
 *_bottleneck_*: punto nel sistema che limita le prestazioni complessive, spesso a causa di risorse insufficienti o sovraccarico di lavoro.\
 *_CPU_ - _Central Processing Unit_*: unità di elaborazione centrale del computer, responsabile dell'esecuzione delle istruzioni e del controllo delle operazioni.\
@@ -84,7 +219,7 @@ In generale, sono soddisfatto del lavoro svolto e degli obiettivi raggiunti, anc
 === Obiettivi non raggiunti
 ==== D-3 | Uso di linguaggi come C++ per migliorare le prestazioni
 Durante lo sviluppo del _PoC_, ho utilizzato il linguaggio _GDScript_ per sviluppare il progetto. Andare a rimpiazzare il codice, anche se parzialmente, con un altro linguaggio di programmazione come _C++_, avrebbe consumato una gran parte del tempo a disposizione, senza garantire un miglioramento significativo delle prestazioni.\
-Per dimostrare quest'ultima parte, ho inserito nella figura 24 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
+Per dimostrare quest'ultima parte, ho inserito nella figura 25 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
 #figure(caption: [Grafico del tempo di compilazione di ogni _frame_ del gioco], image("../images/chart-lag_spikes.png"))
 Dal grafico possiamo notare diverse cose:
 #v(0.5em)

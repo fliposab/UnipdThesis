@@ -66,8 +66,6 @@ Tra questi temi, sono spiccati di più:
 === Struttura del gioco
 Il progetto si tratta di un videogioco educativo, che ha come obiettivo quello di insegnare i concetti base dell'Intelligenza Artificiale e _Machine Learning_ in modo semplice e divertente.\
 
-
-
 Oltre al livello #gl("tutorial") ed al livello principale, dove il giocatore può scegliere il livello che vuole affrontare, sono presenti 3 livelli, ognuno dei quali insegna un concetto diverso:\
 \
 - il livello della *regressione lineare*, dove la linea nel grafico diventa un ponte su cui il personaggio può camminare, tuttavia la direzione non è corretta e bisogna modificarla aggiungendo nuovi punti nel grafico, modificando la direzione della linea;
@@ -110,7 +108,7 @@ Tra queste aspettative, vi erano:
 
 == Obiettivi
 //_Qui descrivo gli obiettivi e le competenze da acquisire_
-Nella tabella 2, ho elencato gli obiettivi personali fissati, insieme al _tutor_ aziendale, suddivisi in obbligatori e desiderabili.\
+Nella tabella 2, ho elencato gli obiettivi personali concordati insieme al _tutor_ aziendale, suddivisi in obbligatori e desiderabili.\
 Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero. Il prefisso indica con:
 - *O*: gli obiettivi obbligatori, rappresentano le competenze e i risultati minimi da raggiungere durante lo _stage_;
 - *D*: gli obiettivi desiderabili, sono traguardi aggiuntivi che arricchiscono ulteriormente il progetto e l'esperienza formativa.
