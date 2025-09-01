@@ -71,7 +71,7 @@ Come descritto precedentemente nella sezione 2.4, avevo concordato degli obietti
   [D-4],[]
 ))
 
-Sempre dalla tabella 21 possiamo notare che non sono riuscito a soddisfare gli ultimi due obiettivi desiderabili. Questi due obiettivi non sono stati soddisfatti a causa di limitazioni tecniche e di risorse, e verranno chiariti nella sezione 4.1.2.\
+Sempre dalla tabella 21 possiamo notare che non sono riuscito a raggiungere gli ultimi due obiettivi desiderabili. Questi due obiettivi non sono stati raggiunti a causa di limitazioni tecniche e di risorse, e verranno chiariti nella sezione 4.1.2.\
 In generale, sono soddisfatto del lavoro svolto e degli obiettivi raggiunti, anche se ci sono stati alcuni ostacoli lungo il cammino.
 
 #set page(footer-descent: -70%, footer: [#align(top, [#line(length: 100%)
@@ -81,7 +81,7 @@ In generale, sono soddisfatto del lavoro svolto e degli obiettivi raggiunti, anc
 *_rendering_*: processo di generazione dell'immagine finale di oggetti 3D, che coinvolge il calcolo della luce, delle ombre ed altro.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
-=== Obiettivi non superati
+=== Obiettivi non raggiunti
 ==== D-3 | Uso di linguaggi come C++ per migliorare le prestazioni
 Durante lo sviluppo del _PoC_, ho utilizzato il linguaggio _GDScript_ per sviluppare il progetto. Andare a rimpiazzare il codice, anche se parzialmente, con un altro linguaggio di programmazione come _C++_, avrebbe consumato una gran parte del tempo a disposizione, senza garantire un miglioramento significativo delle prestazioni.\
 Per dimostrare quest'ultima parte, ho inserito nella figura 24 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
@@ -117,7 +117,7 @@ Ho potuto approfondire come gestire diverse animazioni in un modello 3D, creare 
 //
 
 Ho imparato a importare asset 3D, configurare materiali e luci, e utilizzare il sistema di animazione di Godot per sincronizzare movimenti e interazioni.
-Questo mi ha permesso di realizzare ambienti di gioco più realistici e coinvolgenti, migliorando l'esperienza utente complessiva.\
+/*Questo mi ha permesso di realizzare ambienti di gioco più realistici e coinvolgenti, migliorando l'esperienza utente complessiva.\*/
 Nella figura 25 ho riportato il modello del giocatore, nel _software_ _Blender_, con il numero di triangoli visibili, che è pari a 2.074. Questo numero è abbastanza basso, il che aiuta a mantenere buone prestazioni durante l'esecuzione del gioco, specialmente su _hardware_ meno potente. 
 #figure(caption: [Modello del giocatore con il numero di triangoli visibili], image("../images/numero-triangoli.png", width: 70%))
 Altro argomento che ho avuto l'opportunità di approfondire è stato il linguaggio di programmazione fornito da _Godot_: _GDScript_, il linguaggio principale, sviluppato appositamente per il motore di gioco.\
@@ -135,7 +135,7 @@ Inoltre, ho acquisito competenze nella gestione delle risorse e nell'ottimizzazi
 Durante lo _stage_, ho anche sviluppato competenze trasversali, come la capacità di comunicare efficacemente con i membri del _team_, chiedendo aiuto quando necessario, e fornendo aggiornamenti sullo stato di avanzamento del progetto al relatore.\
 Ho imparato a gestire il tempo in modo più efficiente, pianificando le attività, controllando le scadenze e monitorando i progressi utilizzando vari strumenti per la gestione del progetto.\
 Ho acquisito maggiore autonomia nell'organizzazione del lavoro, prendendo iniziative per risolvere problemi in modo indipendente, e documentando tutte le mie attività, quello che facevo, come lo facevo e quando lo facevo, in maniera specifica, in modo da poter tracciare i miei progressi e facilitare l'organizzazione del lavoro. 
-Ad esempio, nel documento "Norme di progetto", scrivevo le regole che dovevo seguire, come la struttura delle cartelle, le convenzioni di denominazione e le linee guida per la scrittura del codice, nel documento "Specifica tecnica", descrivevo l'architettura del software, rappresentando i componenti principali e le loro interazioni.\
+Ad esempio, nel documento _Norme di progetto_, scrivevo le regole che dovevo seguire, come la struttura delle cartelle, le convenzioni di denominazione e le linee guida per la scrittura del codice, nel documento _Specifica tecnica_, descrivevo l'architettura del software, rappresentando i componenti principali e le loro interazioni.\
 //imparando a prendere decisioni in modo responsabile e a chiedere supporto quando necessario.\
 Inoltre, durante lo _stage_, ho dovuto anche svolgere una presentazione sullo stato finale del progetto davanti a tutti i membri del _team_, illustrando l'applicazione nel dettaglio, le scelte tecniche e le sfide affrontate. Questo mi ha aiutato a migliorare le mie capacità di comunicazione, a presentare le mie idee in modo chiaro e conciso, senza contraddizioni, ed anche a gestire l'ansia durante il lavoro.\  
 /*'esperienza di _stage_ mi ha permesso di affinare le mie capacità di _problem solving_, affrontando situazioni impreviste oppure a prevedere i possibili problemi ed avere già un piano di contingenza, trovando soluzioni pratiche ed efficaci.\*/
@@ -152,7 +152,7 @@ Durante lo _stage_, ho lavorato anche sullo sviluppo delle mie competenze person
 Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo già affrontato durante il percorso di studi.\
 - _GDSCript_ è un linguaggio di programmazione orientato agli oggetti, fondamento su cui si basa anche _C++_, che ho dovuto imparare per svolgere un altro progetto durante il percorso di studi.
 - I temi del principale del gioco di _Machine Learning_, li avevo già approfonditi in precedenza durante un corso di studi. Nello specifico, mi ha aiutato molto a trovare temi su cui sviluppare le meccaniche del gioco come l'Albero di decisioni e la Regressione lineare ed il loro funzionamento.
-- Durante il progetto del corso di _Ingegneria del software_, ho avuto modo di approfondire gli _LLM_ insieme ad altri miei colleghi. Anche se alla fine non ho implementato questi nel gioco, mi hanno fornito una base teorica utile per comprendere meglio le tecnologie di intelligenza artificiale.\
+- Durante il progetto del corso di _Ingegneria del software_, ho avuto modo di approfondire gli _LLM_ insieme ad altri miei colleghi. Anche se alla fine non ho implementato questi nel gioco, mi hanno fornito una base teorica utile per comprendere e valutare meglio le tecnologie di intelligenza artificiale.\
 #v(0.5em)
 Al contrario, altri temi non erano stati trattati durante il percorso di studi, o erano stati trattati, ma in modo superficiale.\ 
 Questo riguardo tecnologie più specifiche e non molto di uso comune, come l'uso di un motore di gioco, o tecnologie di ambito diverso da quello insegnato nel corso di studi, come modellazione 3D.\
