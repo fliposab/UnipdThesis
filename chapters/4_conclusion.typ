@@ -20,12 +20,10 @@ In questa sezione, descrivo i problemi che ho incontrato durante lo sviluppo del
 
 === Errata pianificazione dei tempi
 Lo sviluppo dell'applicazione ha avuto un andamento più veloce di quello che avevo previsto durante la pianificazione, e ho finito per avere più tempo a disposizione rispetto a quello pianificato. Tuttavia dovevo comunque dedicare un numero minimo di ore, quindi ho dovuto trovare un modo per sfruttare queste ore in eccesso, in modo che non andassero sprecate.\
-Per sfruttare queste ore aggiuntive, ho deciso di implementare funzionalità _extra_ non obbligatorie, come un livello _tutorial_, che si avvia in automatico quando il giocatore avvia una nuova partita, mostrando sullo schermo gli _input_ principali al giocatore e come utilizzarli prima di iniziare la parte principale del gioco, e il supporto per i _joypad_ come dispositivo di _input_, con la visualizzazione dinamica dei tasti nella guida _UI_, che si aggiorna automaticamente quando rileva un _input_ da un dispositivo diverso. Queste aggiunte hanno arricchito il progetto e migliorato l'esperienza utente, pur non essendo state pianificate inizialmente.
+Per sfruttare queste ore aggiuntive, ho deciso di implementare funzionalità _extra_ non obbligatorie, come un livello _tutorial_, che si avvia in automatico quando il giocatore avvia una nuova partita, mostrando sullo schermo gli _input_ principali al giocatore e come utilizzarli prima di iniziare la parte principale del gioco, e il supporto per i _joypad_ come dispositivo di _input_, con la visualizzazione dinamica dei tasti nella guida _UI_, che si aggiorna automaticamente quando rileva un _input_ da un dispositivo diverso.
+#figure(caption: [Esempio del livello _tutorial_ con la guida _UI_ che mostra i tasti di un _joypad_ generico], image("../images/screenshot-joypad.png", width: auto))
+Queste aggiunte hanno arricchito il progetto e migliorato l'esperienza utente, pur non essendo state pianificate inizialmente.
 //Quindi, per occupare le ore di scarto ho aggiunto nuove funzionalità non obbligatorie al gioco. Ad esempio ho aggiunto un livello _tutorial_ ed il supporto per i _joypad_ come dispositivo di _input_, con cambio di visualizzazione dei tasti nella guida _UI_, tutte funzionalità che non avevo pianificato di sviluppare.
-
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
-*_code coverage_*: unità di misura che indica la percentuale di codice sorgente coperta da test automatici.\ \
-#align(center, context([#counter(page).display("1.")]))])])
 
 === Impegni personali o universitari
 Durante il periodo di _stage_, mi mancava ancora un esame da recuperare.\
@@ -33,23 +31,48 @@ Ho dovuto sostenere l'esame due volte, durante la seconda e quarta settmana di _
 //La preparazione per l'esame ha richiesto un impegno aggiuntivo, costringendomi a riorganizzare la pianificazione delle attività e a gestire con maggiore attenzione il tempo a disposizione.\
 //In alcuni momenti, ho dovuto conciliare lo studio per l'esame con le attività di sviluppo del progetto, alternando le due cose per non trascurare nessun aspetto.\
 //Questa situazione mi ha permesso di migliorare le mie capacità di gestione del tempo e di organizzazione personale, imparando a stabilire delle priorità e a rispettare le scadenze nonostante gli imprevisti.\
-Nonostante le ore perse, sono comunque riuscito a completare il progetto nei tempi previsti, dimostrando flessibilità e capacità di adattamento di fronte a impegni personali e universitari concomitanti.\
+Nonostante le ore perse, sono comunque riuscito a completare il progetto nei tempi previsti, raggiungendo tutti gli obiettivi obbligatori concordati con il tutor aziendale, dimostrando flessibilità e capacità di adattamento di fronte a impegni personali e universitari concomitanti.\
+
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*_code coverage_*: unità di misura che indica la percentuale di codice sorgente coperta da test automatici.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 
 === Tecnologie non adeguate
 Visto che _Godot_ è un motore di gioco relativamente nuovo rispetto alla concorrenza attuale (_Unity_, _Unreal Engine_...), non è ancora molto diffuso e non ha una grande comunità di sviluppatori che lo utilizzano, specialmente in maniera professionale.\
 Questo mi ha reso più difficile trovare risorse e supporto durante lo sviluppo del progetto, ed alcune di queste risorse che trovavo avevano un uso limitato o non erano aggiornate per funzionare con la versione più recente di _Godot_.\
-Ad esempio, volevo implementare un sistema di _CI/CD_ (Continuous Integration/Continuous Deployment) per automatizzare i _test_, tuttavia le risorse che ho trovato erano per lo più obsolete o non funzionanti, dunque ho svolto i _test_ manualmente. Ho avuto lo stesso problema anche per implementare uno strumento di #gl("code_coverage").\
+Ad esempio, configurare _Github Actions_ in modo da automatizzare i _test_, tuttavia le risorse che ho trovato erano per lo più obsolete o non funzionanti, dunque ho svolto i _test_ manualmente. 
+/*
+#figure(caption: [File _.yaml_ per configurare _GitHub Actions_ per eseguire i _test_ di unità ed integrazione])[
+```yaml
+name: Gut
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  gut:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Make gut.sh executable
+        run: chmod +x ./Sviluppo/Godot/gut.sh 
+      - name: Gut (gut.sh)
+        run: ./Sviluppo/Godot/gut.sh
+```]*/
+Ho avuto lo stesso problema anche per implementare uno strumento di #gl("code_coverage").\
 Al contrario, invece, alcuni _add-on_ per _Godot_ si sono rivelati molto utili e ben documentati, ad esempio _GUT_, che mi ha facilitato lo svolgimento dei _test_ di unità e di integrazione.
+#figure(caption: [Esempio di _test_ manuale svolto con _GUT_], image("../images/screenshot-test.png", width: 80%))
+
+#set page(footer-descent: 0%, footer: [
+#align(center+horizon, context([#counter(page).display("1.")]))])
 
 === Errore nella progettazione dell'architettura
 Durante lo sviluppo del _PoC_ avevo come priorità svolgere un'applicazione che dimostrasse le funzionalità principali, ma ho trascurato alcuni aspetti architetturali che si sono rivelati problematici in seguito. Ad esempio, non avevo ben definito la gestione dei cambi degli stati del giocatore e delle transizioni tra le diverse schermate, e mi sono preoccupato di più di far funzionare le funzionalità principali, piuttosto che di come strutturare il codice in modo modulare e riutilizzabile.\
 Questo ha portato a dover riscrivere alcune parti del codice in seguito,
 portando a un codice più complesso e difficile da mantenere.\ 
 Ho dovuto quindi rivedere parte dell'architettura per migliorare la modularità e la manutenibilità del codice, attività che ovviamente ha richiesti del tempo aggiuntivo, che avrei potuto usare per implementare nuove funzionalità.\
-
-#set page(footer-descent: 0%, footer: [
-#align(center+horizon, context([#counter(page).display("1.")]))])
-
 
 == Obiettivi stage soddisfatti
 === Grado di soddisfazione degli obiettivi
@@ -83,7 +106,7 @@ Nelle sezioni 4.2.2 e 4.2.3 discuterò in dettaglio gli obiettivi raggiunti e qu
 Le principali meccaniche di gioco che avevo pianificato da implementare e che ho integrato nel progetto sono le seguenti:
 #v(0.5em)
 - Movimento del personaggio principale in un ambiente 3D, con la possibilità di camminare, correre, saltare, con animazioni fluide e una telecamera dinamica che segue il giocatore.
-- Interazione con oggetti e personaggi non giocabili, con dialoghi e scelte multiple che influenzano il corso del gioco. Ho riportato un esempio nella figura 24.
+- Interazione con oggetti e personaggi non giocabili, con dialoghi e scelte multiple che influenzano il corso del gioco. Ho riportato un esempio nella figura 25.
 #figure(caption: [Esempio di dialogo con diverse risposte], image("../images/screenshot-scientist_text_2.png", width: 100%))
 - Possibilità di raccogliere oggetti, portarli con sé e posizionarli in punti specifici per risolvere le sfide presenti nel gioco.
 - Implementazione di un sistema di punteggio, ad esempio, sparsi per ogni livello sono presenti degli oggetti che il giocatore raccoglie automaticamente, e che aumentano il punteggio totale del giocatore.
@@ -117,7 +140,7 @@ volume=0.8
 ==== D-1 | Supporto per più lingue (italiano ed inglese)
 Dal menu delle opzioni, il giocatore può scegliere la lingua tra italiano ed inglese. Tutti i testi presenti nel gioco, come i dialoghi, le istruzioni e le opzioni del menu, vengono visualizzati nella lingua selezionata, senza bisogno di dover riavviare il gioco.\ 
 Per implementare questa funzionalità, ho utilizzato dei file _.csv_, che contengono la stringa _chiave_ con tutte le frasi da rimpiazzare nel gioco con la rispettiva lingua. Questo mi ha permesso di gestire facilmente le traduzioni dei testi e di cambiare la lingua in modo dinamico durante l'esecuzione del gioco.\
-Nella figura 25 ho riportato un esempio del menu delle opzioni in lingua inglese, con l'opzione di cambiare lingua già selezionata in modo da mostrare le lingue disponibili.\
+Nella figura 26 ho riportato un esempio del menu delle opzioni in lingua inglese, con l'opzione di cambiare lingua già selezionata in modo da mostrare le lingue disponibili.\
 #figure(caption: [Menu delle opzioni in inglese, con possibilità di cambiare lingua], image("../images/screenshot-language.png", width: 90%))
 /*
 #figure(caption: [File _.ini_ delle opzioni del gioco])[
@@ -131,7 +154,7 @@ OPTIONS,Opzioni,Options
 ==== D-2 | Implementazione di _shaders_ utilizzando _GDShader_
 Durante lo sviluppo del progetto, ho implementato diversi _shaders_ per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_ fornito da _Godot_.\
 Uno di questi materiali personalizzati è il materiale usato per creare le nuvole nel cielo. Queste, in realtà, sono un materiale applicato ad un piano 2D, posizionato sopra la scena.\
-Nella figura 25 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
+Nella figura 27 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
 #figure(caption: [Esempio del materiale delle nuvole con i parametri modificabili], image("../images/screenshot-clouds_shader.png", width: 90%))
 
 /*
@@ -219,7 +242,7 @@ void sky() {
 === Obiettivi non raggiunti
 ==== D-3 | Uso di linguaggi come C++ per migliorare le prestazioni
 Durante lo sviluppo del _PoC_, ho utilizzato il linguaggio _GDScript_ per sviluppare il progetto. Andare a rimpiazzare il codice, anche se parzialmente, con un altro linguaggio di programmazione come _C++_, avrebbe consumato una gran parte del tempo a disposizione, senza garantire un miglioramento significativo delle prestazioni.\
-Per dimostrare quest'ultima parte, ho inserito nella figura 25 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
+Per dimostrare quest'ultima parte, ho inserito nella figura 28 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
 #figure(caption: [Grafico del tempo di compilazione di ogni _frame_ del gioco], image("../images/chart-lag_spikes.png"))
 Dal grafico possiamo notare diverse cose:
 #v(0.5em)
