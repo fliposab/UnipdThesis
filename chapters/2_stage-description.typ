@@ -93,7 +93,7 @@ Il progetto si inserisce in un mercato in crescita, dove l’innovazione rappres
 La possibile clientela _target_ del progetto è costituita principalmente da giovani e appassionati di tecnologia e videogiochi, interessati sia all’aspetto ludico sia a quello educativo. Il prodotto si rivolge a chi desidera apprendere concetti di Intelligenza Artificiale e _Machine Learning_ in modo interattivo e coinvolgente, offrendo un’esperienza che unisce apprendimento e divertimento. 
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
-*OpenGL*: linguaggio di programmazione grafica utilizzato per creare applicazioni 3D e 2D.\
+*GDShader*: linguaggio di programmazione specifico per la creazione di materiali e _shader_ nel motore di gioco _Godot_.\
 *shader*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 === Aspettative
@@ -130,14 +130,14 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
   [D-1],
   [Supporto della lingua inglese oltre all'italiano, con opzione di cambiare lingua di gioco],
   [D-2],
-  [Implementazione di #glpl("shader"), utilizzando _script_ di tipo #gl("opengl")],
+  [Implementazione di #glpl("shader"), utilizzando _script_ di tipo #gl("gdshader")],
   [D-3],[Uso dei linguaggi _C#sym.hash _ o _C++_ per migliorare le prestazioni],
   [D-4],[Implementazione di un modello di _LLM_ per conversazioni tra personaggi all'interno del gioco]
 ))
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
-*open source*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\
-*motore di gioco*: software progettato per facilitare lo sviluppo di videogiochi, fornendo strumenti e funzionalità per la gestione della grafica, della fisica, dell'audio e di altre componenti del gioco.\ \
+*motore di gioco*: software progettato per facilitare lo sviluppo di videogiochi, fornendo strumenti e funzionalità per la gestione della grafica, della fisica, dell'audio e di altre componenti del gioco.\
+*open source*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 == Vincoli

@@ -111,6 +111,11 @@
     description: [linguaggio di programmazione specifico per il motore di gioco Godot, progettato per essere semplice e intuitivo, con una sintassi simile a _Python_. Viene utilizzato per scrivere _script_ che controllano la logica del gioco, le interazioni e le funzionalità.]
   ),
   (
+    key: "gdshader",
+    short: [GDShader],
+    description: [linguaggio di programmazione specifico per la creazione di materiali e _shader_ nel motore di gioco _Godot_. Ha molte somiglianze con _GLSL ES_.]
+  ),
+  (
     key: "glsl_es",
     short: [GLSL ES],
     long: [_OpenGL Shading Language for Embedded Systems_],
@@ -171,12 +176,12 @@
     long: [_Nonlinear Animation_],
     description: [sistema di gestione delle animazioni in _Blender_ che consente di combinare e sovrapporre diverse animazioni in modo non lineare, permettendo una maggiore flessibilità e controllo sulle animazioni dei modelli 3D.]
   ),
-  (
+  /*(
     key: "opengl",
     short: [OpenGL],
     long: [_Open Graphics Language_],
-    description: [linguaggio di programmazione grafica utilizzato per creare applicazioni 3D e 2D, fornendo un'interfaccia standardizzata per l'interazione con la scheda grafica del computer.],
-  ),
+    description: [_API_ grafica standard utilizzata per creare applicazioni 3D e 2D, progettato per essere portabile su diverse piattaforme e dispositivi. ],
+  ),*/
   (
     key: "pascalCase",
     short: [PascalCase],

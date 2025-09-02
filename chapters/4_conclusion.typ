@@ -128,7 +128,7 @@ NEW_GAME,Nuova partita,New Game
 OPTIONS,Opzioni,Options
 ```]*/
 
-==== D-2 | Implementazione di _shaders_ utilizzando _OpenGL_
+==== D-2 | Implementazione di _shaders_ utilizzando _GDShader_
 Durante lo sviluppo del progetto, ho implementato diversi _shaders_ per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_ fornito da _Godot_.\
 Uno di questi materiali personalizzati è il materiale usato per creare le nuvole nel cielo. Queste, in realtà, sono un materiale applicato ad un piano 2D, posizionato sopra la scena.\
 Nella figura 25 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
