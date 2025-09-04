@@ -243,7 +243,7 @@
   (
     key: "shader",
     short: [shader],
-    description: [programma che calcola l'aspetto visivo di un oggetto 3D, determinando come la luce interagisce con le superfici.]
+    description: [programma o script eseguito sulla GPU che determina come i pixel e i vertici di un modello 3D vengono visualizzati, influenzando l'aspetto visivo dell'oggetto.]
   ),
   (
     key: "singleton",

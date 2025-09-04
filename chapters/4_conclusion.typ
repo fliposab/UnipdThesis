@@ -13,8 +13,8 @@
 == Gestione dei rischi e dei problemi incontrati
 === Introduzione
 /// Cambiare
-Nella sezione 2.5.6 ho descritto i potenziali rischi che avrei potuto incontrare durante la fase di pianificazione del progetto. Alcuni di questi rischi si sono effettivamente verificati, mentre altri no.\
-In questa sezione, descrivo i problemi che ho incontrato durante lo sviluppo del progetto, e come li ho affrontati e risolti.\
+Nella sezione 2.5.6 ho descritto i potenziali rischi che avrei potuto incontrare durante la fase di pianificazione del progetto.\
+In questa sezione, descrivo quali di quei problemi ho incontrato durante lo sviluppo del progetto, e come li ho affrontati per risolverli.\
 ////
 /*Ho dovuto affrontare questi problemi e trovare delle soluzioni per superarli, in modo da poter completare il progetto nei tempi previsti e senza compromettere la qualità del lavoro.*/
 
@@ -144,7 +144,7 @@ Nella figura 27 ho riportato un esempio del menu delle opzioni in lingua inglese
 #figure(caption: [Menu delle opzioni in inglese, con possibilità di cambiare lingua], image("../images/screenshot-language.png", width: 90%))
 
 ==== D-2 | Implementazione di _shaders_ utilizzando _GDShader_
-Durante lo sviluppo del progetto, ho implementato diversi _shaders_ per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_ fornito da _Godot_.\
+Durante lo sviluppo del progetto, ho implementato diversi _script_, del tipo fornito da _Godot_, _.gdshader_, per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_.\
 Uno di questi materiali personalizzati è il materiale usato per creare le nuvole nel cielo. Queste, in realtà, sono un materiale applicato ad un piano 2D, posizionato sopra la scena.\
 Nella figura 28 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
 

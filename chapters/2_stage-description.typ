@@ -94,7 +94,7 @@ La possibile clientela _target_ del progetto è costituita principalmente da gio
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
 *_GDShader_*: linguaggio di programmazione specifico per la creazione di materiali e _shader_ nel motore di gioco _Godot_.\
-*_shader_*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
+*_shader_*: programma o script eseguito sulla GPU che determina come i pixel e i vertici di un modello 3D vengono visualizzati.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 === Aspettative
 //_Qui descrivo le mie aspettative riguardo al progetto da svolgere che avevo prima dell'inizio dello stage_

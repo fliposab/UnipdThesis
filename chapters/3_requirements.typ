@@ -1344,13 +1344,21 @@ Non sono riuscito a soddisfare alcuni dei requisiti di accessibilità desiderabi
 La tabella 19 mostra il totale dei _test_ eseguiti, suddivisi per tipologia, con un totale di 95 _test_ eseguiti e superati con successo.
 
 === Quantità di prodotti
-A fine _stage_ ho completato la stesura di 8 documenti:
+A fine _stage_ ho completato la stesura di 7 documenti:
 - Analisi dei requisiti;
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Analisi-dei-requisiti.pdf")
 - Glossario;
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Glossario.pdf")
 - Piano di progetto;
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Piano-di-progetto.pdf")
 - Piano di qualifica;
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Piano-di-qualifica.pdf")
 - Manuale utente;
-- Specifica tecnica.
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Manuale-utente.pdf")
+- Norme di progetto;
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Norme-di-progetto.pdf")
+- Specifica tecnica;
+  - #link("https://github.com/fliposab/ProgettoStage/blob/main/Documentazione/Specifica-tecnica.pdf")
 #v(0.5em)
 Inoltre, durante il periodo di _stage_ ho sviluppato 2 applicazioni dello stesso progetto. La tabella 20 riporta queste applicazioni.
 #figure(caption: [Tabella delle applicazioni prodotte nello _stage_], table(
@@ -1359,7 +1367,9 @@ Inoltre, durante il periodo di _stage_ ho sviluppato 2 applicazioni dello stesso
   align: center + horizon,
   table.header([*Prodotto*], [*Descrizione*]),
   [PoC \ Proof of Concept],[Demo del progetto, che ha come scopo principale quello di dimostrare la fattibilità del concetto, implementando le funzionalità principali],
+  table.cell(colspan: 2, [#link("https://github.com/fliposab/ProgettoStage/releases/tag/PoC")]),
   [MVP \ Minimum Viable Product],[Versione minima del prodotto che si può considerare pronta per il rilascio. Rappresenta il prodotto finale dello _stage_ e include tutte le funzionalità principali richieste nel progetto],
+  table.cell(colspan: 2, [#link("https://github.com/fliposab/ProgettoStage/releases/tag/v1.0")]),
 ))
 /*
 === Rischi occorsi e moitigazione
