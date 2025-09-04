@@ -31,7 +31,7 @@ L'ambiente lavorativo era caratterizzato da una forte attenzione alla qualità d
 Questo mi ha aiutato a comprendere l'importanza di lavorare in un contesto organizzato e strutturato, dove ogni componente contribuisce al raggiungimento degli obiettivi comuni.
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
-*database*: insieme organizzato di dati, generalmente memorizzato e gestito in modo da facilitarne l'accesso e la manipolazione\ 
+*_database_*: insieme organizzato di dati, generalmente memorizzato e gestito in modo da facilitarne l'accesso e la manipolazione\ 
 *_Microsoft Teams_*: piattaforma di comunicazione e collaborazione sviluppata da Microsoft.\ \ #align(center, context([#counter(page).display("1.")]))])])
 
 == Processi interni utilizzati
