@@ -3,13 +3,13 @@
 #pagebreak(to:"odd")
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
-*Game Design*: disciplina che si occupa della progettazione e dello sviluppo di giochi.\
-*StageIT*: evento orientato al lavoro, dedicato agli studenti per aiutarli a trovare aziende dove svolgere l'attività di _stage_.\ \ 
+*_Game Design_*: disciplina che si occupa della progettazione e dello sviluppo di giochi.\
+*_StageIT_*: evento orientato al lavoro, dedicato agli studenti per aiutarli a trovare aziende dove svolgere l'attività di _stage_.\ \ 
 #align(center, context([#counter(page).display("1.")]))])])
 
 = Lo _stage_<cap:descrizione-stage>
 #text(style: "italic", [
-    In questo capitolo approfondisco il rapporto con l'azienda ospitante verso gli stage in generale, come ha supportato il mio stage, il perché della mia scelta e gli obiettivi e vincoli decisi con il _tutor_ aziendale. Infine verrà messo a confronto il tema dello stage con l'innovazione ed il mercato dove viene inserito il progetto.
+    In questo capitolo approfondisco il rapporto con l'azienda ospitante verso gli stage in generale, come ha supportato il mio stage, il perché della mia scelta e gli obiettivi e vincoli decisi con il _tutor_ aziendale.
 ])
 #v(1em)
 
@@ -31,10 +31,10 @@ Inoltre, il _Game Design_ offre l'opportunità di esplorare la creatività e di 
 
 #set page(footer-descent: -120%, footer: [#align(top, [#line(length: 100%)
 *alberi di decisione*: modello predittivo che rappresenta le decisioni e le loro possibili conseguenze sotto forma di un albero.\
-*Machine Learning*: disciplina che si occupa dello sviluppo di algoritmi che permettono ai computer di apprendere dai dati e migliorare le proprie prestazioni nel tempo senza essere esplicitamente programmati.\
-*Nearest neighbor*: algoritmo di classificazione che assegna un'etichetta a un campione in base alle etichette dei suoi vicini più prossimi nel dataset.\
+*_Machine Learning_*: disciplina che si occupa dello sviluppo di algoritmi che permettono ai computer di apprendere dai dati e migliorare le proprie prestazioni nel tempo senza essere esplicitamente programmati.\
+*_Nearest Neighbor_*: algoritmo di classificazione che assegna un'etichetta a un campione in base alle etichette dei suoi vicini più prossimi nel dataset.\
 *Regressione lineare*: tecnica statistica utilizzata per modellare la relazione tra una variabile dipendente e una o più variabili indipendenti, assumendo una relazione lineare.\
-*Support Vector Machines*: classe di algoritmi di apprendimento che cercano di trovare l'iperpiano ottimale che separa le classi nel dataset.\ \
+*_Support Vector Machines_*: classe di algoritmi di apprendimento che cercano di trovare l'iperpiano ottimale che separa le classi nel dataset.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 Questo tema mi ha permesso di combinare la mia passione per lo sviluppo di applicazioni videoludiche con l'apprendimento di nuove competenze tecniche e di sviluppo, rendendo l'esperienza di _stage_ più coinvolgente e stimolante.
@@ -58,7 +58,7 @@ Tra questi temi, sono spiccati di più:
 - #gl("support_vector_machines").
 
 #set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%) 
-*tutorial*: guida passo-passo che insegna come utilizzare un software o completare un'attività specifica.\ \
+*_tutorial_*: guida passo-passo che insegna come utilizzare un software o completare un'attività specifica.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 == Descrizione del progetto
@@ -93,8 +93,8 @@ Il progetto si inserisce in un mercato in crescita, dove l’innovazione rappres
 La possibile clientela _target_ del progetto è costituita principalmente da giovani e appassionati di tecnologia e videogiochi, interessati sia all’aspetto ludico sia a quello educativo. Il prodotto si rivolge a chi desidera apprendere concetti di Intelligenza Artificiale e _Machine Learning_ in modo interattivo e coinvolgente, offrendo un’esperienza che unisce apprendimento e divertimento. 
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
-*GDShader*: linguaggio di programmazione specifico per la creazione di materiali e _shader_ nel motore di gioco _Godot_.\
-*shader*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
+*_GDShader_*: linguaggio di programmazione specifico per la creazione di materiali e _shader_ nel motore di gioco _Godot_.\
+*_shader_*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 === Aspettative
 //_Qui descrivo le mie aspettative riguardo al progetto da svolgere che avevo prima dell'inizio dello stage_
@@ -137,7 +137,7 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *motore di gioco*: software progettato per facilitare lo sviluppo di videogiochi, fornendo strumenti e funzionalità per la gestione della grafica, della fisica, dell'audio e di altre componenti del gioco.\
-*open source*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
+*_open source_*: modello di sviluppo software che promuove la collaborazione e la condivisione del codice sorgente.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 == Vincoli
@@ -224,9 +224,9 @@ corrisponde a una settimana. Qui sotto ho elencato le attività pianificate per 
   - Sviluppo degli oggetti principali del primo livello, implementando gli elementi della _Regressione lineare_.
 
 #set page(footer-descent: -50%, footer: [#align(top, [#line(length: 100%)
-*PoC*: descrive una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione. \
-*MVP*: descrive la versione minima di un prodotto che include solo le funzionalità essenziali per essere utilizzato dagli utenti.\
-*ticket*: segnalazione o richiesta registrata in un sistema di tracciamento che descrive un'attività da svolgere.\ \
+*_PoC_*: descrive una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione. \
+*_MVP_*: descrive la versione minima di un prodotto che include solo le funzionalità essenziali per essere utilizzato dagli utenti.\
+*_ticket_*: segnalazione o richiesta registrata in un sistema di tracciamento che descrive un'attività da svolgere.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 - *Settimana 3 | 30/06 - 04/07 | 40 ore*:
@@ -262,9 +262,9 @@ Dovevo documentare in modo dettagliato il processo di fornitura, in modo da gara
 I documenti che dovevo scrivere erano:\
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
-*GDScript*: linguaggio di programmazione specifico per il motore di gioco _Godot_, progettato per essere semplice e intuitivo.\
-*PascalCase*: pratica di scrivere parole composte o frasi unendo tutte le parole tra loro, ma lasciando le loro iniziali maiuscole.\
-*snake_case*: pratica di scrivere parole composte separando le parole tramite trattino basso, con tutte le lettere minuscole.\ \
+*_GDScript_*: linguaggio di programmazione specifico per il motore di gioco _Godot_, progettato per essere semplice e intuitivo.\
+*_PascalCase_*: pratica di scrivere parole composte o frasi unendo tutte le parole tra loro, ma lasciando le loro iniziali maiuscole.\
+*_snake_case_*: pratica di scrivere parole composte separando le parole tramite trattino basso, con tutte le lettere minuscole.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 #show figure: set block(breakable: true)
 #figure(caption: [tabella dei documenti], table(
@@ -282,14 +282,14 @@ I documenti che dovevo scrivere erano:\
 - *Codifica*:\
 Tutti i _file_ contenenti codice del gioco sono salvati come file _.gd_, e sono scritti con il linguaggio di programmazione #gl("gdscript"). Ho salvato i nomi delle classi con una nomenclatura #gl("pascalCase"), mentre i nomi dei _file_ e delle variabili usano #gl("snake_case").
 #set page(footer-descent: -170%, footer: [#align(top, [#line(length: 100%)
-*.glb*: formato standard di un modello tridimensionale che legge il modello 3D come un file binario.\
-*.png*: formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.\
-*Blender*: _software_ di modellazione ed animazione 3D usato per creare modelli 3D ed animazioni.
-*IK - Inverse Kinematics*: descrive il processo di calcolo della posizione delle articolazioni di un modello 3D in base alla posizione finale di una parte del corpo.\
-*NLA - Nonlinear Animations*: sistema di gestione delle animazioni in _Blender_ che consente di combinare e sovrapporre diverse animazioni in modo non lineare.\
-*rig*: struttura scheletrica applicata a un modello 3D.\
+*_.glb_*: formato standard di un modello tridimensionale che legge il modello 3D come un file binario.\
+*_.png_*: formato di immagine raster senza perdita di qualità, ampiamente utilizzato per la grafica web e il design digitale.\
+*_Blender_*: _software_ di modellazione ed animazione 3D usato per creare modelli 3D ed animazioni.
+*_IK - Inverse Kinematics_*: descrive il processo di calcolo della posizione delle articolazioni di un modello 3D in base alla posizione finale di una parte del corpo.\
+*_NLA - Nonlinear Animations_*: sistema di gestione delle animazioni in _Blender_ che consente di combinare e sovrapporre diverse animazioni in modo non lineare.\
+*_rig_*: struttura scheletrica applicata a un modello 3D.\
 *materiale*: insieme di proprietà che definiscono l'aspetto visivo di un oggetto 3D, come colore, riflessione, trasparenza.\
-*texture*: immagine  applicata a un modello 3D per fornire dettagli visivi, come colori e _pattern_.\ \
+*_texture_*: immagine  applicata a un modello 3D per fornire dettagli visivi, come colori e _pattern_.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 Per maggiori dettagli sulla nomenclatura, ho seguito le convenzioni della documentazione ufficiale:\
 #link("https://docs.godotengine.org/it/4.x/tutorials/scripting/gdscript/gdscript_styleguide.html")\
@@ -316,8 +316,8 @@ Di norma, 1024 _pixels_ corrispondono a 1 metro.
 
 #v(0.5em)
 #set page(footer-descent: -25%, footer: [#align(top, [#line(length: 100%)
-*GLSL ES - OpenGL Shading Language for Embedded Systems*: linguaggio di shading utilizzato per scrivere _shader_.\
-*Python*: linguaggio di programmazione di alto livello, noto per la sua sintassi semplice e leggibile.\ \
+*_GLSL ES - OpenGL Shading Language for Embedded Systems_*: linguaggio di shading utilizzato per scrivere _shader_.\
+*_Python_*: linguaggio di programmazione di alto livello, noto per la sua sintassi semplice e leggibile.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 - *Verifica e validazione*:\
@@ -345,16 +345,16 @@ Le principali attività di analisi dinamica includevano:\
   table.header([*Nome*], [*Descrizione*], [*Versione*]),
   //fill: (x, y) => if (y == 0) { luma(230) },
   //table.cell([*Codice*], colspan: 3),
-  [GDScript],[Linguaggio di programmazione di alto livello, con sintassi simile a #gl("python"), viene integrato con il motore di gioco _Godot_],[(Legata a _Godot_)],
-  [GDShader],[Linguaggio simile a #gl("glsl_es") 3.0, usato per la creazione di materiali e _shader_ più complessi],[(Legata a _Godot_)],
-  [Typst],[Linguaggio utilizzato per la stesura dei documenti],[0.13.1],
+  [*_GDScript_*],[Linguaggio di programmazione di alto livello, con sintassi simile a #gl("python"), viene integrato con il motore di gioco _Godot_],[(Legata a _Godot_)],
+  [*_GDShader_*],[Linguaggio simile a #gl("glsl_es") 3.0, usato per la creazione di materiali e _shader_ più complessi],[(Legata a _Godot_)],
+  [*_Typst_*],[Linguaggio utilizzato per la stesura dei documenti],[0.13.1],
 ))
 
 #set page(footer-descent: -90%, footer: [#align(top, [#line(length: 100%)
-*CI - Continuos Integration*: processo di integrazione continua delle modifiche del codice in un _repository_ condiviso, garantendo che il codice sia sempre in uno stato funzionante e testato.\
-*CD - Continuos Delivery*: processo di rilascio continuo delle modifiche del codice in produzione, garantendo che il _software_ sia sempre in uno stato utilizzabile.\
-*hosting*: descrive il servizio che consente di archiviare e rendere accessibili _online_ siti _web_, applicazioni o progetti _software_.\
-*push*: descrive l'azione di inviare le modifiche del codice a un _repository_ remoto.\ \
+*_CI - Continuos Integration_*: processo di integrazione continua delle modifiche del codice in un _repository_ condiviso, garantendo che il codice sia sempre in uno stato funzionante e testato.\
+*_CD - Continuos Delivery_*: processo di rilascio continuo delle modifiche del codice in produzione, garantendo che il _software_ sia sempre in uno stato utilizzabile.\
+*_hosting_*: descrive il servizio che consente di archiviare e rendere accessibili _online_ siti _web_, applicazioni o progetti _software_.\
+*_push_*: descrive l'azione di inviare le modifiche del codice a un _repository_ remoto.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 
 #figure(caption: [_Softwares_ scelti], table(
@@ -376,7 +376,10 @@ Le principali attività di analisi dinamica includevano:\
   [_*GitHub\ Actions*_],[Servizio di integrazione continua e distribuzione continua (#gl("ci")/#gl("cd")), utilizzato per compilare i documenti ad ogni #gl("push")],[-],
   [_*Notion*_],[Applicazione per la gestione dei progetti e la collaborazione], [2.53],))
 
-#set page(footer-descent: 0%, footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+//#set page(footer-descent: 0%, footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
+*diagrammi di _Gannt_*: strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata.\ \
+#align(center, context([#counter(page).display("1.")]))])])
 
 #figure(caption: [Tipi di _file_ scelti], table(
   columns: (0.4fr, 1fr, 0.5fr),
@@ -388,10 +391,6 @@ Le principali attività di analisi dinamica includevano:\
   [_*\u{002A}.ini*_],[Tipo di _file_ _plain-text_ utilizzato per salvare i dati del gioco],[-],
   [_*\u{002A}.glb*_],["_GLTF Binary_", _file_ utilizzato per memorizzare i modelli 3D e le loro animazioni in formato binario, in modo da risparmiare spazio e migliorare le prestazioni],[2.0.1]
 ))
-
-#set page(footer-descent: 0%, footer: [#align(top, [#line(length: 100%)
-*diagrammi di _Gannt_*: strumento di gestione dei progetti che rappresenta graficamente le attività pianificate nel tempo, mostrando la durata.\ \
-#align(center, context([#counter(page).display("1.")]))])])
 
 #show figure: set block(breakable: true)
 
@@ -412,6 +411,7 @@ Le principali attività di analisi dinamica includevano:\
 ))
 
 #set page(footer: [#align(center + horizon, context([#counter(page).display("1.")]))])
+
 #figure(
   caption: [Impegni personali o universitari],
   table(

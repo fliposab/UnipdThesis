@@ -32,7 +32,7 @@ Questo mi ha aiutato a comprendere l'importanza di lavorare in un contesto organ
 
 #set page(footer-descent: -40%, footer: [#align(top, [#line(length: 100%)
 *database*: insieme organizzato di dati, generalmente memorizzato e gestito in modo da facilitarne l'accesso e la manipolazione\ 
-*Microsoft Teams*: piattaforma di comunicazione e collaborazione sviluppata da Microsoft.\ \ #align(center, context([#counter(page).display("1.")]))])])
+*_Microsoft Teams_*: piattaforma di comunicazione e collaborazione sviluppata da Microsoft.\ \ #align(center, context([#counter(page).display("1.")]))])])
 
 == Processi interni utilizzati
 /*_Qui descrivo i processi interni utilizzati_*/
@@ -59,12 +59,10 @@ Questi strumenti hanno reso possibile una gestione efficiente delle attività e 
 Zucchetti si rivolge a una clientela molto diversificata, che comprende sia piccole e medie imprese, sia grandi aziende, tutte queste private.\
 Questa varietà di clientela rappresenta uno stimolo costante all'innovazione e all'adattamento dei prodotti alle evoluzioni del mercato, contribuendo a mantenere un'offerta sempre aggiornata e competitiva.
 #figure(image("../images/zucchetti-clientela.png", width: 90%),caption: [Settori e temi di cui si occupa l'azienda. Fonte: Zucchetti])
-Ho potuto osservare una discussione molto aperta e libera tra i membri del team riguardo alle esigenze e alle aspettative dei clienti, modificando i prodotti in base alle richieste e necessità di questi ultimi.\
-/*Fonte immagine:\ 
-#link("https://www.zucchetti.it/it/dms/zucchetti-it/gruppo/chi-siamo/2025_SPROFILO_scheda_profilo_ITA.pdf")\ */
+Ho potuto osservare una discussione molto aperta e libera tra i membri del team riguardo alle esigenze e alle aspettative dei clienti, modificando i prodotti in base alle richieste e necessità di questi ultimi e del mercato.\
 #set page(footer-descent: -40%, footer: [#line(length: 100%) 
-*brainstorming*: tecnica di generazione di idee in gruppo, in cui i partecipanti sono incoraggiati a esprimere liberamente le proprie idee.\
-*LLM - Large Language Model*: modello di intelligenza artificiale progettato per comprendere e generare testo in linguaggio naturale.\ \
+*_brainstorming_*: tecnica di generazione di idee in gruppo, in cui i partecipanti sono incoraggiati a esprimere liberamente le proprie idee.\
+*_LLM - Large Language Model_*: modello di intelligenza artificiale progettato per comprendere e generare testo in linguaggio naturale.\ \
 #align(center, context([#counter(page).display("1.")]))])
 
 === Prodotti e servizi
@@ -98,6 +96,6 @@ Argomento principale delle ricerche che il personale dell'azienda stava svolgend
 *temperatura*: parametro che controlla la casualità delle risposte generate da un LLM.\ \
 #align(center, context([#counter(page).display("1.")]))])
 
-Per la maggior parte, il personale in azienda si occupava di test e addestramento dei vari modelli, cambio dei parametri, ad esempio, la #gl("temperatura"), analizzando gli _output_ che questi generavano, la correttezza di questi, e molto altro. \
+Per la maggior parte, il personale in azienda si occupava di _test_ e addestramento dei vari modelli, cambio dei parametri, ad esempio, la #gl("temperatura"), analizzando gli _output_ che questi generavano, la correttezza di questi, e molto altro. \
 Questa collaborazione  contribuisce a generare nuove soluzioni e a mantenere elevato il livello di competitività sul mercato.\
 La propensione all'innovazione dell'azienda si riflette nella rapidità con cui adotta strumenti digitali e tecnologie emergenti, garantendo così un costante miglioramento dei servizi e delle soluzioni offerte ai clienti.

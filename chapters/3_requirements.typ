@@ -952,6 +952,7 @@ Il metodo `check_minimum_input_left_strength_threshold()` stabilisce la potenza 
 - *`PlayerSpawn`*: classe che si occupa di generare il giocatore nella posizione in cui si trova. Appena generato il giocatore viene assegnato alla classe `Level`
 - *`PauseMenu`*: il menu di pausa, questo viene caricato quando il giocatore preme il rispettivo tasto, mettendo in pausa tutta la scena.
 
+#pagebreak()
 //=== Livello _Regressione lineare_
 === `LRCannon`
 #figure(caption: [Diagramma sul funzionamento di un grafico _Linear Regression_ nel gioco],image("../images/classi/class-linear_regression.png"))

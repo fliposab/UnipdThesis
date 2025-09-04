@@ -106,7 +106,7 @@ Nelle sezioni 4.2.2 e 4.2.3 discuterò in dettaglio gli obiettivi raggiunti e qu
 Le principali meccaniche di gioco che avevo pianificato da implementare e che ho integrato nel progetto sono le seguenti:
 #v(0.5em)
 - Movimento del personaggio principale in un ambiente 3D, con la possibilità di camminare, correre, saltare, con animazioni fluide e una telecamera dinamica che segue il giocatore.
-- Interazione con oggetti e personaggi non giocabili, con dialoghi e scelte multiple che influenzano il corso del gioco. Ho riportato un esempio nella figura 25.
+- Interazione con oggetti e personaggi non giocabili, con dialoghi e scelte multiple che influenzano il corso del gioco. Ho riportato un esempio nella figura 26.
 #figure(caption: [Esempio di dialogo con diverse risposte], image("../images/screenshot-scientist_text_2.png", width: 100%))
 - Possibilità di raccogliere oggetti, portarli con sé e posizionarli in punti specifici per risolvere le sfide presenti nel gioco.
 - Implementazione di un sistema di punteggio, ad esempio, sparsi per ogni livello sono presenti degli oggetti che il giocatore raccoglie automaticamente, e che aumentano il punteggio totale del giocatore.
@@ -140,117 +140,37 @@ volume=0.8
 ==== D-1 | Supporto per più lingue (italiano ed inglese)
 Dal menu delle opzioni, il giocatore può scegliere la lingua tra italiano ed inglese. Tutti i testi presenti nel gioco, come i dialoghi, le istruzioni e le opzioni del menu, vengono visualizzati nella lingua selezionata, senza bisogno di dover riavviare il gioco.\ 
 Per implementare questa funzionalità, ho utilizzato dei file _.csv_, che contengono la stringa _chiave_ con tutte le frasi da rimpiazzare nel gioco con la rispettiva lingua. Questo mi ha permesso di gestire facilmente le traduzioni dei testi e di cambiare la lingua in modo dinamico durante l'esecuzione del gioco.\
-Nella figura 26 ho riportato un esempio del menu delle opzioni in lingua inglese, con l'opzione di cambiare lingua già selezionata in modo da mostrare le lingue disponibili.\
+Nella figura 27 ho riportato un esempio del menu delle opzioni in lingua inglese, con l'opzione di cambiare lingua già selezionata in modo da mostrare le lingue disponibili.\
 #figure(caption: [Menu delle opzioni in inglese, con possibilità di cambiare lingua], image("../images/screenshot-language.png", width: 90%))
-/*
-#figure(caption: [File _.ini_ delle opzioni del gioco])[
-```csv
-KEYS,it,en
-LOAD_GAME,Carica partita,Load Game
-NEW_GAME,Nuova partita,New Game
-OPTIONS,Opzioni,Options
-```]*/
 
 ==== D-2 | Implementazione di _shaders_ utilizzando _GDShader_
 Durante lo sviluppo del progetto, ho implementato diversi _shaders_ per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_ fornito da _Godot_.\
 Uno di questi materiali personalizzati è il materiale usato per creare le nuvole nel cielo. Queste, in realtà, sono un materiale applicato ad un piano 2D, posizionato sopra la scena.\
-Nella figura 27 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
-#figure(caption: [Esempio del materiale delle nuvole con i parametri modificabili], image("../images/screenshot-clouds_shader.png", width: 90%))
+Nella figura 28 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\
 
-/*
-Nel blocco di codice 3 ho riportato il codice usato per creare questo materiale.
-#figure(caption: [Codice dello _shader_ per le nuvole])[
-\
-
-```GLSL
-shader_type sky;
-render_mode use_half_res_pass;
-//...
-void sky() {
-	vec2 sky_uv = EYEDIR.xz / EYEDIR.y;
-	float day_amount = clamp(LIGHT0_DIRECTION.y, 0.0, 1.0);
-	vec3 gradient_day = mix(day_bottom_color, day_top_color, clamp(EYEDIR.y, 0.0, 1.0)) * day_amount;
-	
-	float sunset_amount = clamp(1.0 - abs(LIGHT0_DIRECTION.y), 0.0, 1.0);
-	vec3 gradient_sunset = mix(sunset_bottom_color, sunset_top_color, clamp(EYEDIR.y, 0.0, 1.0)) * sunset_amount;
-	
-	float night_amount = clamp(-LIGHT0_DIRECTION.y, 0.0, 1.0);
-	vec3 gradient_night = mix(night_bottom_color, night_top_color, clamp(EYEDIR.y, 0.0, 1.0)) * night_amount;
-	
-	
-	vec3 sky_gradients = gradient_day + gradient_sunset + gradient_night;
-	
-	
-	
-	
-	float horizon = 1.0 - abs(EYEDIR.y + horizon_falloff);
-	
-	vec3 horizon_glow_amount_day = clamp(horizon * clamp(LIGHT0_DIRECTION.y, 0.0, 1.0), 0.0, 1.0) * horizon_color_day;
-	vec3 horizon_glow_amount_sunset = clamp(horizon * clamp(1.0 - abs(LIGHT0_DIRECTION.y), 0.0, 1.0), 0.0, 1.0) * horizon_color_sunset;
-	vec3 horizon_glow_night = clamp(horizon * clamp(-LIGHT0_DIRECTION.y, 0.0, 1.0), 0.0, 1.0) * horizon_color_night;
-	
-	vec3 horizon_glow = horizon_glow_amount_day + horizon_glow_amount_sunset + horizon_glow_night;
-	
-	
-	
-	
-	
-	float sun_distance = distance(EYEDIR.xyz, LIGHT0_DIRECTION);
-	float sun_power = 1.0 - clamp(sun_distance / sun_size, 0.0, 1.0);
-	float sun_disc = clamp(sun_power / sun_blur, sun_power, 1.0);
-	vec3 sun = sun_col * sun_disc;
-	
-	
-	
-	float moon_distance = distance(EYEDIR.xyz, -LIGHT0_DIRECTION);
-	float moon_power = 1.0 - clamp(moon_distance / moon_size, 0.0, 1.0);
-	float moon_disc = clamp(moon_power / 0.01, moon_power, 1.0);
-	
-	float moon_crescent_distance = distance(vec3(EYEDIR.x + moon_crescent_offset, EYEDIR.yz), -LIGHT0_DIRECTION);
-	float moon_crescent_power = 1.0 - clamp(moon_crescent_distance / moon_size, 0.0, 1.0);
-	float moon_crescent_disc = clamp(moon_crescent_power / 0.01, moon_crescent_power, 1.0);
-	
-	vec3 moon_crescent = moon_col * moon_crescent_disc;
-	
-	vec3 moon = clamp( (moon_col * moon_disc) - moon_crescent, 0.0 , 1.0);
-	float clouds_movement = TIME * clouds_speed * 0.5;
-	float clouds_base_noise = texture(clouds_texture, (sky_uv + clouds_movement ) * clouds_scale).r;
-	float noise1 = texture(clouds_distort_texture, (sky_uv + clouds_base_noise + (clouds_movement * 0.75)) * clouds_scale).r;
-	float noise2 = texture(clouds_noise_texture, (sky_uv + noise1 + (clouds_movement * 0.25)) * clouds_scale).r;
-	float clouds_noise_value = clamp(noise1 * noise2, 0.0, 1.0) * clamp(EYEDIR.y, 0.0, 1.0);
-	float clouds_value = clamp(smoothstep(clouds_cutoff, clouds_cutoff + clouds_fuzziness, clouds_noise_value), 0.0, 1.0);
-	vec3 clouds = mix(clouds_edge_color,  clouds_main_color , clouds_value) * clouds_value;
-	float clouds_negative = 1.0 - clouds_value;
-	vec3 stars = texture(stars_texture, sky_uv + (stars_speed * TIME)).rgb;
-	stars *= clamp(-LIGHT0_DIRECTION.y, 0.0, 1.0);
-	stars = step(stars_cutoff, stars);
-	vec3 sun_moon = sun + moon;
-	sun_moon = clamp(sun_moon * clouds_negative, 0.0, 1.0);
-	sky_gradients = clamp(sky_gradients * clouds_negative, 0.0, 1.0);
-	vec3 sky = horizon_glow + sky_gradients + sun_moon + stars + clouds;
-	COLOR = sky;
-}
-```
-]*/
-#set page(footer-descent: -70%, footer: [#align(top, [#line(length: 100%)
-*_bottleneck_*: punto nel sistema che limita le prestazioni complessive, spesso a causa di risorse insufficienti o sovraccarico di lavoro.\
-*_CPU_ - _Central Processing Unit_*: unità di elaborazione centrale del computer, responsabile dell'esecuzione delle istruzioni e del controllo delle operazioni.\
-*_GPU_ - _Graphics Processing Unit_*: unità di elaborazione grafica, specializzata nel rendering delle immagini e nella gestione delle operazioni grafiche.\
+#set page(footer-descent: -0%, footer: [#align(top, [#line(length: 100%)
 *_rendering_*: processo di generazione dell'immagine finale di oggetti 3D, che coinvolge il calcolo della luce, delle ombre ed altro.\ \
 #align(center, context([#counter(page).display("1.")]))])])
+
+#figure(caption: [Esempio del materiale delle nuvole con i parametri modificabili], image("../images/screenshot-clouds_shader.png", width: 90%))
+
 
 === Obiettivi non raggiunti
 ==== D-3 | Uso di linguaggi come C++ per migliorare le prestazioni
 Durante lo sviluppo del _PoC_, ho utilizzato il linguaggio _GDScript_ per sviluppare il progetto. Andare a rimpiazzare il codice, anche se parzialmente, con un altro linguaggio di programmazione come _C++_, avrebbe consumato una gran parte del tempo a disposizione, senza garantire un miglioramento significativo delle prestazioni.\
-Per dimostrare quest'ultima parte, ho inserito nella figura 28 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
+Per dimostrare quest'ultima parte, ho inserito nella figura 29 un grafico preso all'interno dell'_editor_ durante l'esecuzione del gioco che mostra il tempo di #gl("rendering") per ogni _frame_ in millisecondi.
 #figure(caption: [Grafico del tempo di compilazione di ogni _frame_ del gioco], image("../images/chart-lag_spikes.png"))
+
+#set page(footer-descent: -50%, footer: [#align(top, [#line(length: 100%)
+*_bottleneck_*: punto nel sistema che limita le prestazioni complessive, spesso a causa di risorse insufficienti o sovraccarico di lavoro.\
+*_CPU_ - _Central Processing Unit_*: unità di elaborazione centrale del computer, responsabile dell'esecuzione delle istruzioni e del controllo delle operazioni.\
+*_GPU_ - _Graphics Processing Unit_*: unità di elaborazione grafica, specializzata nel rendering delle immagini e nella gestione delle operazioni grafiche.\ \
+#align(center, context([#counter(page).display("1.")]))])])
+
 Dal grafico possiamo notare diverse cose:
 #v(0.5em)
 - I tempi di compilazione e _rendering_ tra un _frame_ e l'altro, sono generalmente stabili, con alcune eccezioni presenti durante la transizione di un livello ad un altro a causa del caricamento delle risorse.
 - Il grafico è diviso in 2 sezioni, la prima, a sinistra, mostra il tempo richiesto dalla #gl("cpu"), la seconda, a destra, mostra il tempo richiesto dalla #gl("gpu"). Come possiamo vedere, la _GPU_ richiede più tempo rispetto alla _CPU_. Cambiare il linguaggio di programmazione aumenterebbe le prestazioni solo della _CPU_, visto che _GDScript_ e _C++_ sono linguaggi di alto livello letti e compilati dalla _CPU_. Ma come possiamo vedere dalla figura 24, questo non aumenterebbe le prestazioni, poiché i lavori sono svolti in parallelo, e la _GPU_ rimarrebbe il #gl("bottleneck") in questo caso.
-
-#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
-
 
 ==== D-4 | Implementazione di un modello di _LLM_
 Durante lo sviluppo del progetto, ho provato ad implementare un _LLM_ per generare automaticamente i dialoghi dei personaggi non giocabili nel gioco.\
@@ -260,6 +180,10 @@ Nonostante la comunità di _Godot_ abbia sviluppato diversi _add-on_ per integra
 - *Largo uso della _VRAM_*: il problema principale degli _LLM_ locali è il fatto che richiedono molta _VRAM_, risorsa che nei videogiochi viene già utilizzata per gestire le texture, i modelli 3D e altri asset grafici. Questo porta rapidamente all'esaurimento della memoria disponibile, causando rallentamenti o crash dell'applicazione, soprattutto su hardware non di fascia alta.
 - *Limitazioni della macchina personale*: la macchina su cui ho svolto il progetto aveva a disposizione 1GB di _VRAM_, limitando molto l'utilizzo di un modello. Durante un _test_, ho provato a integrare un _LLM_ 'leggero', con mezzo miliardo di parametri, in modo da usare meno _VRAM_. Il risultato che ho ottenuto è stata una stringa di frasi e parole incomprensibili.
 - *Lingua*: dato che avevo concordato con il relatore l'obiettivo di supportare la lingua italiano ed inglese nel gioco, anche le frasi generate dal modello dovevano essere in italiano o in inglese. Gli unici _LLM_ 'leggeri' che sono riuscito a trovare erano solo in lingua inglese, e se supportavano più lingue significava che i parametri effettivamente usati per l'inglese e italiano erano ancora di meno.
+
+#set page(footer-descent: 0%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
+
+
 - *Dimensioni*: un _LLM_ locale ha dimensioni che variano da centinaia di MB a diversi _gigabyte_. Integrare un modello del genere avrebbe aumentato notevolmente la dimensione finale del gioco, rendendolo meno accessibile per gli utenti con connessioni _internet_ lente, limitate o con poca memoria nel dispositivo. Nel caso avessi voluto usare un _LLM_ diverso per ogni lingua, le dimensioni dell'applicazione finale sarebbero aumentate ulteriormente.
 
 == Esperienze acquisite
@@ -269,19 +193,18 @@ Durante lo _stage_, ho avuto l'opportunità di approfondire le mie conoscenze in
 _Godot_ è stato sviluppato nel 2014 e da allora ha guadagnato popolarità grazie alla sua flessibilità e facilità d'uso, rendendo lo sviluppo di giochi accessibile anche a chi ha poca esperienza nel campo della programmazione e, allo stesso tempo, facilitando il lavoro a sviluppatori più esperti. Ho iniziato ad utilizzarlo circa un paio di anni fa, in parallelo al corso di studi, ma non l'ho mai utilizzato per progetti seri, di grandi dimensioni.
 Ho potuto approfondire come gestire diverse animazioni in un modello 3D, creare scene 3D complesse e organizzare i nodi per ottenere comportamenti dinamici nei personaggi e negli oggetti di gioco.\
 
+Ho imparato a importare asset 3D, configurare materiali e luci, e utilizzare il sistema di animazione di Godot per sincronizzare movimenti e interazioni.
+/*Questo mi ha permesso di realizzare ambienti di gioco più realistici e coinvolgenti, migliorando l'esperienza utente complessiva.\*/
+Nella figura 30 ho riportato il modello del giocatore, nel _software_ _Blender_, con il numero di triangoli visibili, che è pari a 2.074. Questo numero è abbastanza basso, il che aiuta a mantenere buone prestazioni durante l'esecuzione del gioco, specialmente su _hardware_ meno potente. 
+#figure(caption: [Modello del giocatore con il numero di triangoli visibili], image("../images/numero-triangoli.png", width: 65%))
+
 #set page(footer-descent: -10%, footer: [#align(top, [#line(length: 100%)
 *_duck typing_*: concetto di programmazione dinamica in cui il tipo o la classe di un oggetto è determinato dal comportamento e dalle proprietà che possiede, piuttosto che dalla sua dichiarazione esplicita.\ \
 #align(center, context([#counter(page).display("1.")]))])])
-//
 
-Ho imparato a importare asset 3D, configurare materiali e luci, e utilizzare il sistema di animazione di Godot per sincronizzare movimenti e interazioni.
-/*Questo mi ha permesso di realizzare ambienti di gioco più realistici e coinvolgenti, migliorando l'esperienza utente complessiva.\*/
-Nella figura 25 ho riportato il modello del giocatore, nel _software_ _Blender_, con il numero di triangoli visibili, che è pari a 2.074. Questo numero è abbastanza basso, il che aiuta a mantenere buone prestazioni durante l'esecuzione del gioco, specialmente su _hardware_ meno potente. 
-#figure(caption: [Modello del giocatore con il numero di triangoli visibili], image("../images/numero-triangoli.png", width: 70%))
 Altro argomento che ho avuto l'opportunità di approfondire è stato il linguaggio di programmazione fornito da _Godot_: _GDScript_, il linguaggio principale, sviluppato appositamente per il motore di gioco.\
 _GDScript_ è pensato per essere semplice da apprendere, con una sintassi simile a _Python_, ma ottimizzato per lo sviluppo rapido di giochi. Ho imparato a sfruttare le sue caratteristiche, come il #gl("duck_typing"), il sistema di segnali per la comunicazione tra oggetti e la gestione delle scene, che permette di strutturare il progetto in modo modulare e riutilizzabile. Questo mi ha permesso di scrivere codice più chiaro, mantenibile e facilmente estendibile, migliorando la qualità complessiva del progetto.\
-
-#set page(footer-descent: -10%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
+//
 /*Ho approfondito le conoscenze che avevo sul linguaggio _GDScript_ e a sfruttare le funzionalità del motore per implementare meccaniche di gioco complesse ed originali.\ */
 
 /*
@@ -305,6 +228,8 @@ Infine, ho sviluppato una maggiore flessibilità e adattabilità, qualità fonda
 === Competenze personali
 Durante lo _stage_, ho lavorato anche sullo sviluppo delle mie competenze personali, come la gestione dello stress e la resilienza. Ho imparato a mantenere la calma in situazioni di pressione e a trovare soluzioni creative ai problemi. Queste competenze mi saranno utili anche in futuro, sia nel lavoro che nella vita privata.
 */
+
+#set page(footer-descent: -10%, footer: [#align(center+horizon, context([#counter(page).display("1.")]))])
 
 == Differenza tra _stage_ e percorso studi
 Alcuni temi che ho dovuto affrontare durante lo _stage_, erano temi che avevo già affrontato durante il percorso di studi.\
