@@ -32,3 +32,23 @@
   - comunità di Godot
   date: 2014
   url: https://docs.godotengine.org/it/4.x/tutorials/scripting/idle_and_physics_processing.html
+
+'godot-language':
+  type: report
+  title: Riferimento GDScript
+  author:
+  - Juan Linietsky
+  - Ariel Manzur
+  - comunità di Godot
+  date: 2014
+  url: https://docs.godotengine.org/it/4.x/tutorials/scripting/gdscript/gdscript_basics.html
+
+'godot-shading':
+  type: report
+  title: Linguaggio di shading
+  author:
+  - Juan Linietsky
+  - Ariel Manzur
+  - comunità di Godot
+  date: 2014
+  url: https://docs.godotengine.org/it/4.x/tutorials/shaders/shader_reference/shading_language.html

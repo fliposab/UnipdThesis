@@ -143,7 +143,9 @@ Per implementare questa funzionalità, ho utilizzato dei file _.csv_, che conten
 Nella figura 27 ho riportato un esempio del menu delle opzioni in lingua inglese, con l'opzione di cambiare lingua già selezionata in modo da mostrare le lingue disponibili.\
 #figure(caption: [Menu delle opzioni in inglese, con possibilità di cambiare lingua], image("../images/screenshot-language.png", width: 90%))
 
-==== D-2 | Implementazione di _shaders_ utilizzando _GDShader_
+==== D-2 | Implementazione di _shaders_ utilizzando _OpenGL_
+Questo obiettivo prevedeva la creazione di _shaders_ personalizzati per migliorare l'aspetto visivo del gioco.
+Nonostante non abbia usato _OpenGL_ direttamente, ho considerato l'obiettivo come raggiunto dato che  ho utilizzato il linguaggio _GDShader_, molto simile a _GLSL ES_, linguaggio usato in _OpenGL_ @godot-shading.\
 Durante lo sviluppo del progetto, ho implementato diversi _script_, del tipo fornito da _Godot_, _.gdshader_, per creare materiali personalizzati, con più funzionalità rispetto al materiale _standard_.\
 Uno di questi materiali personalizzati è il materiale usato per creare le nuvole nel cielo. Queste, in realtà, sono un materiale applicato ad un piano 2D, posizionato sopra la scena.\
 Nella figura 28 ho riportato un esempio di questo materiale, includendo anche tutti i vari parametri (a destra) che si possono modificare per cambiare l'aspetto delle nuvole. Tra questi parametri sono presenti: il colore delle nuvole, le dimensioni, la sfumatura, la velocità di movimento, i dettagli ed altro.\

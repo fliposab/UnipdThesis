@@ -93,7 +93,7 @@ Il progetto si inserisce in un mercato in crescita, dove l’innovazione rappres
 La possibile clientela _target_ del progetto è costituita principalmente da giovani e appassionati di tecnologia e videogiochi, interessati sia all’aspetto ludico sia a quello educativo. Il prodotto si rivolge a chi desidera apprendere concetti di Intelligenza Artificiale e _Machine Learning_ in modo interattivo e coinvolgente, offrendo un’esperienza che unisce apprendimento e divertimento. 
 
 #set page(footer-descent: -20%, footer: [#align(top, [#line(length: 100%)
-*_GDShader_*: linguaggio di programmazione specifico per la creazione di materiali e _shader_ nel motore di gioco _Godot_.\
+*_OpenGL - Open Graphics Library_*: _API_ grafica standard per la creazione di grafica 2D e 3D.\
 *_shader_*: programma o script eseguito sulla GPU che determina come i pixel e i vertici di un modello 3D vengono visualizzati.\ \
 #align(center, context([#counter(page).display("1.")]))])])
 === Aspettative
@@ -130,7 +130,7 @@ Gli obiettivi sono elencati con un codice, costituito da un prefisso e un numero
   [D-1],
   [Supporto della lingua inglese oltre all'italiano, con opzione di cambiare lingua di gioco],
   [D-2],
-  [Implementazione di #glpl("shader"), utilizzando _script_ di tipo #gl("gdshader")],
+  [Implementazione di #glpl("shader"), utilizzando #gl("opengl")],
   [D-3],[Uso dei linguaggi _C#sym.hash _ o _C++_ per migliorare le prestazioni],
   [D-4],[Implementazione di un modello di _LLM_ per conversazioni tra personaggi all'interno del gioco]
 ))
@@ -345,8 +345,8 @@ Le principali attività di analisi dinamica includevano:\
   table.header([*Nome*], [*Descrizione*], [*Versione*]),
   //fill: (x, y) => if (y == 0) { luma(230) },
   //table.cell([*Codice*], colspan: 3),
-  [*_GDScript_*],[Linguaggio di programmazione di alto livello, con sintassi simile a #gl("python"), viene integrato con il motore di gioco _Godot_],[(Legata a _Godot_)],
-  [*_GDShader_*],[Linguaggio simile a #gl("glsl_es") 3.0, usato per la creazione di materiali e _shader_ più complessi],[(Legata a _Godot_)],
+  [*_GDScript_*],[Linguaggio di programmazione di alto livello, con sintassi simile a #gl("python"), viene integrato con il motore di gioco _Godot_ @godot-language],[(Legata a _Godot_)],
+  [*_GDShader_*],[Linguaggio simile a #gl("glsl_es") 3.0, usato per la creazione di materiali e _shader_ più complessi @godot-shading],[(Legata a _Godot_)],
   [*_Typst_*],[Linguaggio utilizzato per la stesura dei documenti],[0.13.1],
 ))
 
